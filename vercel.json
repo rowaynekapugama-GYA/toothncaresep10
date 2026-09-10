@@ -1,0 +1,381 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about.htm",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/meet-our-teams.htm",
+      "destination": "/our-team",
+      "permanent": true
+    },
+    {
+      "source": "/tour-our-clinic.htm",
+      "destination": "/our-clinic",
+      "permanent": true
+    },
+    {
+      "source": "/our-technology.htm",
+      "destination": "/our-technology",
+      "permanent": true
+    },
+    {
+      "source": "/payment-options.htm",
+      "destination": "/payment-options",
+      "permanent": true
+    },
+    {
+      "source": "/new-patient.htm",
+      "destination": "/new-patients",
+      "permanent": true
+    },
+    {
+      "source": "/services.htm",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/offers.htm",
+      "destination": "/offers",
+      "permanent": true
+    },
+    {
+      "source": "/emergency.htm",
+      "destination": "/emergency",
+      "permanent": true
+    },
+    {
+      "source": "/contact.htm",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/general-dentistry.htm",
+      "destination": "/general-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/oral-hygiene.htm",
+      "destination": "/oral-hygiene",
+      "permanent": true
+    },
+    {
+      "source": "/tooth-extraction.htm",
+      "destination": "/tooth-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/gum-treatment.htm",
+      "destination": "/gum-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/laser-treatment.htm",
+      "destination": "/laser-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/mouth-guards-and-splint.htm",
+      "destination": "/mouthguards-and-splints",
+      "permanent": true
+    },
+    {
+      "source": "/mouthguards-and-splint.htm",
+      "destination": "/mouthguards-and-splints",
+      "permanent": true
+    },
+    {
+      "source": "/root-canal-treatment.htm",
+      "destination": "/root-canal-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/wisdom-teeth-surgery.htm",
+      "destination": "/wisdom-teeth-removal",
+      "permanent": true
+    },
+    {
+      "source": "/cosmetic-dentistry.htm",
+      "destination": "/cosmetic-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/teeth-whitening.htm",
+      "destination": "/teeth-whitening",
+      "permanent": true
+    },
+    {
+      "source": "/veneers-and-laminates.htm",
+      "destination": "/veneers-and-laminates",
+      "permanent": true
+    },
+    {
+      "source": "/veneer-and-laminates.htm",
+      "destination": "/veneers-and-laminates",
+      "permanent": true
+    },
+    {
+      "source": "/smile-makeover.htm",
+      "destination": "/smile-makeover",
+      "permanent": true
+    },
+    {
+      "source": "/orthodontics.htm",
+      "destination": "/orthodontics",
+      "permanent": true
+    },
+    {
+      "source": "/invisalign-clear-aligners.htm",
+      "destination": "/clear-aligners",
+      "permanent": true
+    },
+    {
+      "source": "/clear-braces.htm",
+      "destination": "/clear-braces",
+      "permanent": true
+    },
+    {
+      "source": "/metal-braces.htm",
+      "destination": "/metal-braces",
+      "permanent": true
+    },
+    {
+      "source": "/conventional-dental-braces.htm",
+      "destination": "/metal-braces",
+      "permanent": true
+    },
+    {
+      "source": "/restorative-dentistry.htm",
+      "destination": "/restorative-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/white-fillings.htm",
+      "destination": "/white-fillings",
+      "permanent": true
+    },
+    {
+      "source": "/dental-implants.htm",
+      "destination": "/dental-implants",
+      "permanent": true
+    },
+    {
+      "source": "/dental-crowns-and-bridges.htm",
+      "destination": "/crowns-and-bridges",
+      "permanent": true
+    },
+    {
+      "source": "/single-visit-crowns.htm",
+      "destination": "/single-visit-crowns",
+      "permanent": true
+    },
+    {
+      "source": "/dentures.htm",
+      "destination": "/dentures",
+      "permanent": true
+    },
+    {
+      "source": "/childrens-dentistry.htm",
+      "destination": "/childrens-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/children-dentistry.htm",
+      "destination": "/childrens-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/pain-free-dentistry.htm",
+      "destination": "/new-patients#comfort",
+      "permanent": true
+    },
+    {
+      "source": "/new-child-dental-benefit-scheme.htm",
+      "destination": "/payment-options#cdbs",
+      "permanent": true
+    },
+    {
+      "source": "/anti-wrinkle-injections-and-fillers.htm",
+      "destination": "/cosmetic-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/community.htm",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/sponsorships-and-associations.htm",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/awards.htm",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/photo-gallery.htm",
+      "destination": "/our-clinic",
+      "permanent": true
+    },
+    {
+      "source": "/video-gallery.htm",
+      "destination": "/our-clinic",
+      "permanent": true
+    },
+    {
+      "source": "/market-area.htm",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry",
+      "destination": "/general-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/preventative-dentistry",
+      "destination": "/preventative-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/cosmetic-dentistry",
+      "destination": "/cosmetic-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/restorative-dentistry",
+      "destination": "/restorative-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/dental-implants",
+      "destination": "/dental-implants",
+      "permanent": true
+    },
+    {
+      "source": "/services/orthodontics",
+      "destination": "/orthodontics",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry/check-ups",
+      "destination": "/check-ups",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry/tooth-extraction",
+      "destination": "/tooth-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry/wisdom-teeth-removal",
+      "destination": "/wisdom-teeth-removal",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry/root-canal-treatment",
+      "destination": "/root-canal-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/services/general-dentistry/laser-dentistry",
+      "destination": "/laser-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/preventative-dentistry/oral-hygiene",
+      "destination": "/oral-hygiene",
+      "permanent": true
+    },
+    {
+      "source": "/services/preventative-dentistry/gum-treatment",
+      "destination": "/gum-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/services/preventative-dentistry/mouthguards-and-splints",
+      "destination": "/mouthguards-and-splints",
+      "permanent": true
+    },
+    {
+      "source": "/services/preventative-dentistry/childrens-dentistry",
+      "destination": "/childrens-dentistry",
+      "permanent": true
+    },
+    {
+      "source": "/services/cosmetic-dentistry/teeth-whitening",
+      "destination": "/teeth-whitening",
+      "permanent": true
+    },
+    {
+      "source": "/services/cosmetic-dentistry/veneers-and-laminates",
+      "destination": "/veneers-and-laminates",
+      "permanent": true
+    },
+    {
+      "source": "/services/cosmetic-dentistry/smile-makeover",
+      "destination": "/smile-makeover",
+      "permanent": true
+    },
+    {
+      "source": "/services/restorative-dentistry/white-fillings",
+      "destination": "/white-fillings",
+      "permanent": true
+    },
+    {
+      "source": "/services/restorative-dentistry/crowns-and-bridges",
+      "destination": "/crowns-and-bridges",
+      "permanent": true
+    },
+    {
+      "source": "/services/restorative-dentistry/single-visit-crowns",
+      "destination": "/single-visit-crowns",
+      "permanent": true
+    },
+    {
+      "source": "/services/restorative-dentistry/dentures",
+      "destination": "/dentures",
+      "permanent": true
+    },
+    {
+      "source": "/services/orthodontics/clear-aligners",
+      "destination": "/clear-aligners",
+      "permanent": true
+    },
+    {
+      "source": "/services/orthodontics/clear-braces",
+      "destination": "/clear-braces",
+      "permanent": true
+    },
+    {
+      "source": "/services/orthodontics/metal-braces",
+      "destination": "/metal-braces",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/dr-nisheeth-agrawal",
+      "destination": "/dr-nisheeth-agrawal",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/dr-navneet-karan",
+      "destination": "/dr-navneet-karan",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/zoe-xu",
+      "destination": "/zoe-xu",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/support-team",
+      "destination": "/support-team",
+      "permanent": true
+    }
+  ]
+}
