@@ -1,0 +1,674 @@
+{
+ "slug": "areas-we-serve",
+ "name": "Areas We Serve",
+ "path": "/areas-we-serve",
+ "meta": {
+  "title": "Areas We Serve | Tooth n Care East Maitland",
+  "canonical": "https://toothncare.vercel.app/areas-we-serve",
+  "ogTitle": "Areas We Serve | Tooth n Care East Maitland",
+  "ogDescription": "The suburbs Tooth n Care looks after from 135 Lawes Street, East Maitland - Maitland, Rutherford, Thornton, Chisholm, Ashtonfield, Metford, Tenambit, Morpeth, Lorn, Bolwarra, Beresfield and Woodberry.",
+  "ogType": "website",
+  "ogImage": "/images/img-880c59f894.webp",
+  "description": "The suburbs Tooth n Care looks after from 135 Lawes Street, East Maitland - Maitland, Rutherford, Thornton, Chisholm, Ashtonfield, Metford, Tenambit, Morpeth, Lorn, Bolwarra, Beresfield and Woodberry."
+ },
+ "jsonLd": [
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/areas-we-serve#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/areas-we-serve\",\n  \"image\": \"/images/img-880c59f894.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Maitland\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Maitland\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7315527,\n        \"longitude\": 151.5525086\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Rutherford\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Rutherford\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7151729,\n        \"longitude\": 151.5251819\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Thornton\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Thornton\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7783554,\n        \"longitude\": 151.6472659\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Chisholm\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Chisholm\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7577261,\n        \"longitude\": 151.6301924\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Ashtonfield\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Ashtonfield\",\n        \"postalCode\": \"{{site:postcode}}\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7730213,\n        \"longitude\": 151.5989846\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Metford\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Metford\",\n        \"postalCode\": \"{{site:postcode}}\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.766148,\n        \"longitude\": 151.6100542\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Tenambit\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Tenambit\",\n        \"postalCode\": \"{{site:postcode}}\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.740947,\n        \"longitude\": 151.611718\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Morpeth\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Morpeth\",\n        \"postalCode\": \"2321\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7261953,\n        \"longitude\": 151.630056\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Lorn\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Lorn\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7280722,\n        \"longitude\": 151.5581694\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Bolwarra\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Bolwarra\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.6956467,\n        \"longitude\": 151.5829595\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Beresfield\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Beresfield\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.8027136,\n        \"longitude\": 151.6509967\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodberry\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Woodberry\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7939894,\n        \"longitude\": 151.6649033\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://toothncare.vercel.app/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    }\n  ]\n}"
+ ],
+ "sections": [
+  {
+   "key": "areas-we-serve-01-breadcrumbs",
+   "kind": "crumbs",
+   "label": "Breadcrumbs",
+   "tag": "nav",
+   "attrs": {
+    "class": "crumbs",
+    "aria-label": "Breadcrumb"
+   },
+   "template": "<div class=\"wrap\"><a href=\"{{link-address-1}}\">{{link-text-1}}</a><svg width=\"9\" height=\"9\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg><span aria-current=\"page\">{{text-1}}</span></div>",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Home"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Areas We Serve"
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-02-top",
+   "kind": "hero",
+   "label": "Areas we serve",
+   "tag": "section",
+   "attrs": {
+    "class": "p-hero has-img",
+    "id": "top"
+   },
+   "template": "\n  <div class=\"hero-fx\" aria-hidden=\"true\"><i class=\"glow\"></i><i class=\"glow-r\"></i></div>\n  <div class=\"p-hero-bg\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" fetchpriority=\"high\" loading=\"eager\" width=\"1086\" height=\"912\"></div>\n  <div class=\"wrap\">\n    <span class=\"eyebrow rv\">{{small-label-above-the-heading-1}}</span>\n    <h1 class=\"rv\">{{page-heading-1}}</h1>\n    <p class=\"lede rv\">{{intro-paragraph-1}}</p>\n    <div class=\"p-hero-ctas rv\"><a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a><a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a></div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-3eb5e2ff15.webp",
+     "width": "1086",
+     "height": "912"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "The Tooth n Care shopfront at {{site:street}}, East Maitland"
+    },
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Across The Hunter"
+    },
+    {
+     "id": "page-heading-1",
+     "label": "Page heading",
+     "type": "richtext",
+     "value": "Areas <span class=\"accent\">we serve</span>"
+    },
+    {
+     "id": "intro-paragraph-1",
+     "label": "Intro paragraph",
+     "type": "richtext",
+     "value": "One practice on Lawes Street, East Maitland, looking after households from Rutherford to Woodberry - general, cosmetic, restorative and orthodontic care, all under one roof."
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Book Online"
+    },
+    {
+     "id": "button-link-2",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "button-text-2",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "&#9743; Call {{site:phone}}"
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-03-suburbs",
+   "kind": "content",
+   "label": "Find your suburb",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "suburbs"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p>\n  <div class=\"rel-grid\" style=\"margin-top:34px\"><a class=\"rel-card rv\" href=\"{{link-address-1}}\"><b>{{card-title-1}}</b><span>{{text-1}}</span><em>{{link-label-1}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-2}}\"><b>{{card-title-2}}</b><span>{{text-2}}</span><em>{{link-label-2}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-3}}\"><b>{{card-title-3}}</b><span>{{text-3}}</span><em>{{link-label-3}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-4}}\"><b>{{card-title-4}}</b><span>{{text-4}}</span><em>{{link-label-4}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-5}}\"><b>{{card-title-5}}</b><span>{{text-5}}</span><em>{{link-label-5}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-6}}\"><b>{{card-title-6}}</b><span>{{text-6}}</span><em>{{link-label-6}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-7}}\"><b>{{card-title-7}}</b><span>{{text-7}}</span><em>{{link-label-7}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-8}}\"><b>{{card-title-8}}</b><span>{{text-8}}</span><em>{{link-label-8}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-9}}\"><b>{{card-title-9}}</b><span>{{text-9}}</span><em>{{link-label-9}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-10}}\"><b>{{card-title-10}}</b><span>{{text-10}}</span><em>{{link-label-10}}</em></a></div>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Location Pages"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Find your <span class=\"accent\">suburb</span>"
+    },
+    {
+     "id": "intro-paragraph-1",
+     "label": "Intro paragraph",
+     "type": "richtext",
+     "value": "Each page sets out the drive, the route, what we can help with and the questions we are most often asked from that part of the Hunter."
+    },
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-maitland"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Maitland"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "5 km - about 8 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-1",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-rutherford"
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Rutherford"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "10 km - about 13 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-2",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-thornton"
+    },
+    {
+     "id": "card-title-3",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Thornton"
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "7.5 km - about 10 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-3",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-4",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-chisholm"
+    },
+    {
+     "id": "card-title-4",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Chisholm"
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "5 km - about 8 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-4",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-5",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-ashtonfield"
+    },
+    {
+     "id": "card-title-5",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Ashtonfield"
+    },
+    {
+     "id": "text-5",
+     "label": "Text",
+     "type": "richtext",
+     "value": "3 km - about 5 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-5",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-6",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-metford"
+    },
+    {
+     "id": "card-title-6",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Metford"
+    },
+    {
+     "id": "text-6",
+     "label": "Text",
+     "type": "richtext",
+     "value": "3 km - about 5 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-6",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-7",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-tenambit"
+    },
+    {
+     "id": "card-title-7",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Tenambit"
+    },
+    {
+     "id": "text-7",
+     "label": "Text",
+     "type": "richtext",
+     "value": "3.5 km - about 6 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-7",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-8",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-morpeth"
+    },
+    {
+     "id": "card-title-8",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Morpeth"
+    },
+    {
+     "id": "text-8",
+     "label": "Text",
+     "type": "richtext",
+     "value": "6 km - about 9 minutes from {{site:street}}."
+    },
+    {
+     "id": "link-label-8",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-9",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-lorn-bolwarra"
+    },
+    {
+     "id": "card-title-9",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Lorn &amp; Bolwarra"
+    },
+    {
+     "id": "text-9",
+     "label": "Text",
+     "type": "richtext",
+     "value": "5.5 km from Lorn, 8 km from Bolwarra from {{site:street}}."
+    },
+    {
+     "id": "link-label-9",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-10",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentist-beresfield-woodberry"
+    },
+    {
+     "id": "card-title-10",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentist in Beresfield &amp; Woodberry"
+    },
+    {
+     "id": "text-10",
+     "label": "Text",
+     "type": "richtext",
+     "value": "11 km from Beresfield, 10 km from Woodberry from {{site:street}}."
+    },
+    {
+     "id": "link-label-10",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-04-find-us",
+   "kind": "content",
+   "label": "Where we are",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "find-us"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <div class=\"info-grid cols-2\" style=\"margin-top:26px\">\n    <div class=\"info-card rv\"><h3>{{sub-heading-1}}</h3>\n      <dl class=\"hours-grid loc-facts\"><dt>{{question-1}}</dt><dd>{{answer-1}}</dd><dt>{{question-2}}</dt><dd>{{answer-2}}</dd><dt>{{question-3}}</dt><dd>{{answer-3}}</dd><dt>{{question-4}}</dt><dd>{{answer-4}}</dd></dl>\n    </div>\n    <div class=\"info-card rv\"><h3>{{sub-heading-2}}</h3>\n      <dl class=\"hours-grid\"><dt>{{question-5}}</dt><dd>{{answer-5}}</dd><dt>{{question-6}}</dt><dd>{{answer-6}}</dd><dt>{{question-7}}</dt><dd class=\"closed\">{{answer-7}}</dd></dl>\n      <p class=\"fine\" style=\"margin-top:14px\">{{small-print-1}}</p>\n    </div>\n  </div>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Find Us"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Where <span class=\"accent\">we are</span>"
+    },
+    {
+     "id": "sub-heading-1",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "The practice"
+    },
+    {
+     "id": "question-1",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Address"
+    },
+    {
+     "id": "answer-1",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "{{site:street}}, {{site:cityLine}}"
+    },
+    {
+     "id": "question-2",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Phone"
+    },
+    {
+     "id": "answer-2",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "<a href=\"{{site:phoneHref}}\">{{site:phone}}</a>"
+    },
+    {
+     "id": "question-3",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Email"
+    },
+    {
+     "id": "answer-3",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "<a href=\"{{site:emailHref}}\">{{site:email}}</a>"
+    },
+    {
+     "id": "question-4",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Parking"
+    },
+    {
+     "id": "answer-4",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "on site"
+    },
+    {
+     "id": "sub-heading-2",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Opening hours"
+    },
+    {
+     "id": "question-5",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Mon &ndash; Fri"
+    },
+    {
+     "id": "answer-5",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "9:00am &ndash; 6:00pm"
+    },
+    {
+     "id": "question-6",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Saturday"
+    },
+    {
+     "id": "answer-6",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "9:00am &ndash; 4:00pm"
+    },
+    {
+     "id": "question-7",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Sunday"
+    },
+    {
+     "id": "answer-7",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "Closed"
+    },
+    {
+     "id": "small-print-1",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "Walk-ins welcome. Time is kept free each day for emergencies."
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-05-map-and-address",
+   "kind": "map",
+   "label": "Map and address",
+   "tag": "section",
+   "attrs": {
+    "class": "map-band",
+    "aria-label": "Our location"
+   },
+   "template": "\n  <iframe src=\"{{map-address-1}}\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen title=\"Map showing Tooth n Care at {{site:street}}, East Maitland\"></iframe>\n  <div class=\"map-card\">\n    <b>{{card-title-1}}</b>\n    <span>{{text-1}}</span>\n    <a href=\"{{link-address-1}}\">{{link-text-1}}</a>\n    <a class=\"btn btn-ghost map-btn\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n  </div>\n",
+   "fields": [
+    {
+     "id": "map-address-1",
+     "label": "Map address",
+     "type": "text",
+     "value": "{{site:mapEmbed}}"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth n Care"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "{{site:street}},<br>{{site:cityLine}}"
+    },
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "{{site:phone}}"
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:directionsUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Get Directions"
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-06-contact",
+   "kind": "cta",
+   "label": "Book or contact panel",
+   "tag": "section",
+   "attrs": {
+    "class": "split-cta",
+    "id": "contact",
+    "aria-label": "Book online or contact us"
+   },
+   "template": "\n  <div class=\"wrap\">\n    <div class=\"act-grid act-grid-2\">\n      <a class=\"act-card rv\" href=\"{{link-address-1}}\" target=\"_blank\" rel=\"noopener\">\n        <svg class=\"ic\" width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3.5\" y=\"4.5\" width=\"17\" height=\"16\" rx=\"2.5\"/><path d=\"M8 2.5v4M16 2.5v4M3.5 9.5h17\"/><path d=\"m9.5 14.5 2 2 3.5-3.8\"/></svg><b>{{card-title-1}}</b>\n        <span>{{text-1}}</span>\n        <em>{{link-label-1}}</em>\n      </a>\n      <a class=\"act-card rv\" href=\"{{link-address-2}}\">\n        <svg class=\"ic\" width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 11.3c0 4-4 7.2-9 7.2-1 0-2-.1-2.9-.4L4 20l1.2-3.4C3.8 15.3 3 13.4 3 11.3c0-4 4-7.3 9-7.3s9 3.3 9 7.3Z\"/></svg><b>{{card-title-2}}</b>\n        <span>{{text-2}}</span>\n        <em>{{link-label-2}}</em>\n      </a>\n    </div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Book Online"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Choose a time that suits you - any hour, any day."
+    },
+    {
+     "id": "link-label-1",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "Book now <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/contact"
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Contact Us"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Call, email or send us a message - we&rsquo;ll help you work out the next step."
+    },
+    {
+     "id": "link-label-2",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "Get in touch <span class=\"btn-arrow\">&rarr;</span>"
+    }
+   ]
+  },
+  {
+   "key": "areas-we-serve-07-disclaimer",
+   "kind": "disclaimer",
+   "label": "Disclaimer",
+   "tag": "div",
+   "attrs": {
+    "class": "disclaimer"
+   },
+   "template": "\n  <div class=\"wrap\">\n    <p>{{paragraph-1}}</p>\n  </div>\n",
+   "fields": [
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "<em>This information is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Any dental or surgical procedure carries risks. Individual results vary.</em>"
+    }
+   ]
+  }
+ ],
+ "bodyScripts": [
+  {
+   "inline": "\n(function(){\n  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  /* nav scroll state + progress bar */\n  const header = document.getElementById('header');\n  const progress = document.getElementById('progress');\n  addEventListener('scroll', () => {\n    header.classList.toggle('scrolled', scrollY > 40);\n    const h = document.documentElement;\n    progress.style.width = (scrollY / (h.scrollHeight - h.clientHeight) * 100) + '%';\n  }, {passive:true});\n\n  /* mobile menu */\n  const burger = document.getElementById('burger');\n  const menu = document.getElementById('mobileMenu');\n  burger.addEventListener('click', () => {\n    const open = menu.classList.toggle('open');\n    burger.setAttribute('aria-expanded', open);\n  });\n  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));\n\n  /* scroll reveals */\n  const io = new IntersectionObserver(entries => {\n    entries.forEach((e) => {\n      if (e.isIntersecting) {\n        const siblings = [...e.target.parentElement.children].filter(c => c.classList.contains('rv'));\n        const idx = siblings.indexOf(e.target);\n        e.target.style.transitionDelay = reduced ? '0s' : Math.min(idx * 90, 450) + 'ms';\n        e.target.classList.add('in');\n        io.unobserve(e.target);\n      }\n    });\n  }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});\n  document.querySelectorAll('.rv').forEach(el => io.observe(el));\n\n  /* nav dropdowns (Get to Know Us + Services) -- one generic handler */\n  document.querySelectorAll('.nav-links li.has-drop').forEach(function (li) {\n    const trigger = li.querySelector(':scope > a');\n    const drop = li.querySelector(':scope > .drop');\n    if (!trigger || !drop) return;\n    let openT, closeT;\n    const setDrop = (open) => {\n      drop.classList.toggle('open', open);\n      li.classList.toggle('open', open);\n      trigger.setAttribute('aria-expanded', open);\n    };\n    li.addEventListener('mouseenter', () => { clearTimeout(closeT); openT = setTimeout(() => setDrop(true), 120); });\n    li.addEventListener('mouseleave', () => { clearTimeout(openT); closeT = setTimeout(() => setDrop(false), 250); });\n    trigger.addEventListener('click', e => {\n      e.preventDefault();\n      clearTimeout(openT); clearTimeout(closeT);\n      setDrop(!drop.classList.contains('open'));\n    });\n    trigger.addEventListener('focus', () => { clearTimeout(closeT); openT = setTimeout(() => setDrop(true), 120); });\n    document.addEventListener('keydown', e => {\n      if (e.key === 'Escape' && drop.classList.contains('open')) { setDrop(false); trigger.focus(); clearTimeout(openT); }\n    });\n    document.addEventListener('click', e => {\n      if (drop.classList.contains('open') && !li.contains(e.target)) setDrop(false);\n    });\n    drop.addEventListener('focusout', e => {\n      if (!li.contains(e.relatedTarget)) setDrop(false);\n    });\n    drop.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrop(false)));\n  });\n\n  /* vertical photographic menus - forgiving hover + two-column services fly-out */\n  document.querySelectorAll('.nav-links li.has-mega').forEach(function (li) {\n    const trigger = li.querySelector(':scope > a');\n    const panel = li.querySelector(':scope > .vm');\n    if (!trigger || !panel) return;\n    const cats = Array.prototype.slice.call(panel.querySelectorAll('.vm-cat-link'));\n    const panes = Array.prototype.slice.call(panel.querySelectorAll('.vm-pane'));\n    let openT, closeT, intentT;\n\n    const showCat = (key) => {\n      cats.forEach(c => {\n        const on = c.dataset.cat === key;\n        c.classList.toggle('on', on);\n        c.setAttribute('aria-expanded', on);\n      });\n      panes.forEach(p => p.classList.toggle('on', p.dataset.pane === key));\n    };\n    const setOpen = (open) => {\n      panel.classList.toggle('open', open);\n      li.classList.toggle('open', open);\n      trigger.setAttribute('aria-expanded', open);\n      if (!open) { clearTimeout(intentT); if (cats.length) showCat(cats[0].dataset.cat); }\n    };\n    const scheduleOpen = () => { clearTimeout(closeT); openT = setTimeout(() => setOpen(true), 120); };\n    /* generous close: ~450ms, cancelled the moment the pointer re-enters\n       anywhere in the li or the panel (the panel is inside the li, and a\n       hover bridge covers the gap under the trigger) */\n    const scheduleClose = () => { clearTimeout(openT); closeT = setTimeout(() => setOpen(false), 450); };\n    li.addEventListener('mouseenter', scheduleOpen);\n    li.addEventListener('mouseleave', scheduleClose);\n    panel.addEventListener('mouseenter', () => clearTimeout(closeT));\n\n    trigger.addEventListener('click', e => {\n      e.preventDefault();\n      clearTimeout(openT); clearTimeout(closeT);\n      setOpen(!panel.classList.contains('open'));\n    });\n    trigger.addEventListener('focus', scheduleOpen);\n    document.addEventListener('keydown', e => {\n      if (e.key === 'Escape' && panel.classList.contains('open')) {\n        setOpen(false); trigger.focus(); clearTimeout(openT);\n      }\n    });\n    document.addEventListener('click', e => {\n      if (panel.classList.contains('open') && !li.contains(e.target)) setOpen(false);\n    });\n    panel.addEventListener('focusout', e => {\n      if (!li.contains(e.relatedTarget)) setOpen(false);\n    });\n    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));\n\n    if (!cats.length) return; /* Get to Know Us: single column, done */\n\n    /* hover intent: ~100ms so sweeping the list doesn't flicker categories */\n    cats.forEach(c => {\n      c.addEventListener('mouseenter', () => {\n        clearTimeout(intentT);\n        intentT = setTimeout(() => showCat(c.dataset.cat), 100);\n      });\n      c.addEventListener('mouseleave', () => clearTimeout(intentT));\n      c.addEventListener('focus', () => showCat(c.dataset.cat));\n    });\n\n    /* keyboard: Up/Down through categories, Right into treatments, Left back */\n    const activeRows = () => Array.prototype.slice.call(panel.querySelectorAll('.vm-pane.on .vm-srow'));\n    const activeCat = () => cats.filter(c => c.classList.contains('on'))[0] || cats[0];\n    trigger.addEventListener('keydown', e => {\n      if (e.key === 'ArrowDown') { e.preventDefault(); setOpen(true); cats[0].focus(); }\n    });\n    panel.addEventListener('keydown', e => {\n      const el = document.activeElement;\n      const ci = cats.indexOf(el);\n      if (ci !== -1) {\n        if (e.key === 'ArrowDown') { e.preventDefault(); cats[Math.min(ci + 1, cats.length - 1)].focus(); }\n        else if (e.key === 'ArrowUp') {\n          e.preventDefault();\n          if (ci === 0) { setOpen(false); trigger.focus(); } else cats[ci - 1].focus();\n        }\n        else if (e.key === 'ArrowRight') { e.preventDefault(); const r = activeRows(); if (r.length) r[0].focus(); }\n        return;\n      }\n      const rows = activeRows();\n      const ri = rows.indexOf(el);\n      if (ri !== -1) {\n        if (e.key === 'ArrowDown') { e.preventDefault(); rows[Math.min(ri + 1, rows.length - 1)].focus(); }\n        else if (e.key === 'ArrowUp') { e.preventDefault(); if (ri === 0) activeCat().focus(); else rows[ri - 1].focus(); }\n        else if (e.key === 'ArrowLeft') { e.preventDefault(); activeCat().focus(); }\n      }\n    });\n  });\n\n  /* mobile menu accordions (Get to Know Us, Services, and per-category treatments) */\n  document.querySelectorAll('.mm-services').forEach(function (btn) {\n    const panel = document.getElementById(btn.dataset.panel);\n    if (!panel) return;\n    btn.addEventListener('click', function () {\n      const open = panel.classList.toggle('open');\n      btn.setAttribute('aria-expanded', open);\n    });\n  });\n  document.querySelectorAll('.mm-cat-head').forEach(function (h) {\n    h.addEventListener('click', function () {\n      const cat = h.parentElement;\n      const open = cat.classList.toggle('open');\n      h.setAttribute('aria-expanded', open);\n    });\n  });\n\n  /* theme toggle */\n  const tBtn = document.getElementById('themeToggle');\n  if (tBtn) {\n    const label = document.getElementById('themeLabel');\n    const sun = document.getElementById('themeIconSun');\n    const moon = document.getElementById('themeIconMoon');\n    tBtn.addEventListener('click', () => {\n      const root = document.documentElement;\n      const toLight = root.getAttribute('data-theme') !== 'light';\n      root.classList.add('theming');\n      if (toLight) root.setAttribute('data-theme','light');\n      else root.removeAttribute('data-theme');\n      label.textContent = toLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';\n      sun.style.display = toLight ? '' : 'none';\n      moon.style.display = toLight ? 'none' : '';\n      tBtn.setAttribute('aria-pressed', toLight);\n      setTimeout(() => root.classList.remove('theming'), 450);\n    });\n  }\n\n  /* ---- health funds carousel (manual only: arrows, dots, swipe) ---- */\n  const fwTrack = document.getElementById('fundTrack');\n  if (fwTrack) {\n    const fwDots = document.getElementById('fundDots');\n    const cells = Array.prototype.slice.call(fwTrack.children);\n    const fwPrev = document.querySelector('.tm-arrow[data-fw=\"prev\"]');\n    const fwNext = document.querySelector('.tm-arrow[data-fw=\"next\"]');\n    const fwReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n    /* one page = as many whole cells as currently fit in the viewport */\n    const perView = () => {\n      if (!cells[0]) return 1;\n      const w = cells[0].getBoundingClientRect().width;\n      const gap = cells[1] ? cells[1].getBoundingClientRect().left - cells[0].getBoundingClientRect().right : 14;\n      return Math.max(1, Math.round(fwTrack.clientWidth / (w + gap)));\n    };\n    const page = () => fwTrack.clientWidth;\n    const fwMax = () => Math.max(0, fwTrack.scrollWidth - fwTrack.clientWidth);\n    const fwPages = () => Math.max(1, Math.ceil(cells.length / perView()));\n\n    function fwBuildDots(n) {\n      fwDots.innerHTML = '';\n      if (n < 2) return;\n      for (let i = 0; i < n; i++) {\n        const d = document.createElement('button');\n        d.type = 'button';\n        d.className = 'tm-dot';\n        d.setAttribute('aria-label', 'Show health funds, view ' + (i + 1) + ' of ' + n);\n        d.addEventListener('click', () => fwTrack.scrollTo({ left: i * page(), behavior: fwReduce ? 'auto' : 'smooth' }));\n        fwDots.appendChild(d);\n      }\n    }\n    function fwSync() {\n      const n = fwPages(), max = fwMax();\n      if (fwDots.children.length !== (n < 2 ? 0 : n)) fwBuildDots(n);\n      /* the final page is usually a partial scroll, so rounding alone never\n         reaches the last dot -- pin it explicitly once we're at the end */\n      let idx = max <= 0 ? 0 : Math.round(fwTrack.scrollLeft / page());\n      if (fwTrack.scrollLeft >= max - 4) idx = n - 1;\n      idx = Math.min(n - 1, Math.max(0, idx));\n      Array.prototype.forEach.call(fwDots.children, (d, i) => d.classList.toggle('on', i === idx));\n      if (fwPrev) fwPrev.disabled = fwTrack.scrollLeft <= 4;\n      if (fwNext) fwNext.disabled = fwTrack.scrollLeft >= max - 4;\n      const nav = document.querySelector('.fund-nav');\n      if (nav) nav.style.visibility = max <= 4 ? 'hidden' : '';\n    }\n    const fwGo = dir => fwTrack.scrollBy({ left: dir * page(), behavior: fwReduce ? 'auto' : 'smooth' });\n    if (fwPrev) fwPrev.addEventListener('click', () => fwGo(-1));\n    if (fwNext) fwNext.addEventListener('click', () => fwGo(1));\n\n    let fwRaf;\n    fwTrack.addEventListener('scroll', () => { cancelAnimationFrame(fwRaf); fwRaf = requestAnimationFrame(fwSync); }, { passive: true });\n    window.addEventListener('resize', fwSync);\n    window.addEventListener('load', fwSync);\n    if (window.ResizeObserver) new ResizeObserver(fwSync).observe(fwTrack);\n    setTimeout(fwSync, 250);\n    fwSync();\n  }\n\n  /* ---- team slider (manual only: arrows, dots, swipe) ---- */\n  const track = document.getElementById('tmTrack');\n  if (track) {\n    const dotWrap = document.getElementById('tmDots');\n    const cards = Array.prototype.slice.call(track.children);\n    const prev = document.querySelector('.tm-arrow[data-tm=\"prev\"]');\n    const next = document.querySelector('.tm-arrow[data-tm=\"next\"]');\n    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n    /* measured from slide to slide rather than width + a hard-coded gap, so it\n       stays correct whatever the gap is at the current breakpoint */\n    const step = () => {\n      if (cards.length > 1) {\n        const d = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;\n        if (d > 1) return d;\n      }\n      return cards[0] ? cards[0].getBoundingClientRect().width : 300;\n    };\n    const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);\n\n    const pages = () => Math.min(cards.length, Math.ceil(maxScroll() / step()) + 1);\n\n    function buildDots(n) {\n      dotWrap.innerHTML = '';\n      if (n < 2) return;\n      for (let i = 0; i < n; i++) {\n        const d = document.createElement('button');\n        d.type = 'button';\n        d.className = 'tm-dot';\n        d.setAttribute('aria-label', 'Show team members, view ' + (i + 1) + ' of ' + n);\n        d.addEventListener('click', () => track.scrollTo({ left: i * step(), behavior: reduce ? 'auto' : 'smooth' }));\n        dotWrap.appendChild(d);\n      }\n    }\n\n    function sync() {\n      const max = maxScroll();\n      const n = pages();\n      if (dotWrap.children.length !== (n < 2 ? 0 : n)) buildDots(n);\n      const idx = max <= 0 ? 0 : Math.min(n - 1, Math.round(track.scrollLeft / step()));\n      Array.prototype.forEach.call(dotWrap.children, (d, i) => d.classList.toggle('on', i === idx));\n      if (prev) prev.disabled = track.scrollLeft <= 4;\n      if (next) next.disabled = track.scrollLeft >= max - 4;\n      /* nothing to scroll (every card already fits) -> hide the arrows entirely */\n      const nav = document.querySelector('.tm-nav');\n      if (nav) nav.style.visibility = max <= 4 ? 'hidden' : '';\n    }\n    const go = dir => track.scrollBy({ left: dir * step(), behavior: reduce ? 'auto' : 'smooth' });\n    if (prev) prev.addEventListener('click', () => go(-1));\n    if (next) next.addEventListener('click', () => go(1));\n\n    let raf;\n    track.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(sync); }, { passive: true });\n    window.addEventListener('resize', sync);\n    window.addEventListener('load', sync);\n    if (window.ResizeObserver) new ResizeObserver(sync).observe(track);\n    setTimeout(sync, 250);\n    sync();\n  }\n})();\n\n/* ---- FAQ accordion -----------------------------------------------------\n   Scoped per .acc container, so a second accordion elsewhere on the page\n   would not fight with this one. Opens only on click -- nothing autoplays. */\n(function () {\n  document.querySelectorAll('.acc .acc-item').forEach(function (item) {\n    const head = item.querySelector('.acc-head');\n    if (!head) return;\n    head.addEventListener('click', function () {\n      const open = item.classList.contains('open');\n      item.closest('.acc').querySelectorAll('.acc-item.open').forEach(function (o) {\n        o.classList.remove('open');\n        const h = o.querySelector('.acc-head');\n        if (h) h.setAttribute('aria-expanded', 'false');\n      });\n      if (!open) {\n        item.classList.add('open');\n        head.setAttribute('aria-expanded', 'true');\n      }\n    });\n  });\n})();\n\n/* ---- before / after comparison sliders --------------------------------\n   Pointer drag anywhere on the image, or tab to the hidden range input and\n   use the arrow keys. User-driven only -- nothing moves on its own. */\n(function () {\n  document.querySelectorAll('.ba').forEach(function (ba) {\n    const range = ba.querySelector('.ba-range');\n    let pos = 50;\n\n    function set(v) {\n      pos = Math.max(0, Math.min(100, v));\n      ba.style.setProperty('--pos', pos.toFixed(2) + '%');\n      if (range && Math.round(+range.value) !== Math.round(pos)) range.value = Math.round(pos);\n    }\n    function fromEvent(e) {\n      const r = ba.getBoundingClientRect();\n      return r.width ? ((e.clientX - r.left) / r.width) * 100 : 50;\n    }\n\n    let dragging = false;\n    ba.addEventListener('pointerdown', function (e) {\n      if (e.button && e.button !== 0) return;\n      dragging = true;\n      try { ba.setPointerCapture(e.pointerId); } catch (_) {}\n      set(fromEvent(e));\n    });\n    ba.addEventListener('pointermove', function (e) {\n      if (!dragging) return;\n      e.preventDefault();\n      set(fromEvent(e));\n    });\n    const end = function (e) {\n      if (!dragging) return;\n      dragging = false;\n      try { ba.releasePointerCapture(e.pointerId); } catch (_) {}\n    };\n    ba.addEventListener('pointerup', end);\n    ba.addEventListener('pointercancel', end);\n    /* the range is pointer-events:none, so this only ever fires from the keyboard */\n    if (range) range.addEventListener('input', function () { set(+range.value); });\n\n    set(50);\n  });\n})();\n"
+  }
+ ],
+ "headScripts": [],
+ "order": [
+  "progress",
+  "stickyCall",
+  "header",
+  "mobileMenu",
+  "section:0",
+  "section:1",
+  "section:2",
+  "section:3",
+  "section:4",
+  "section:5",
+  "section:6",
+  "footer",
+  "script:0"
+ ]
+}

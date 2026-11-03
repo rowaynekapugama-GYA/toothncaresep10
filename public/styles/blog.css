@@ -1,0 +1,81 @@
+/* Typography for blog posts and the blog listing.
+   Uses the same tokens as the rest of the site so a post never looks foreign. */
+
+.post-body {
+  max-width: 74ch;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.85;
+  font-size: 16.5px;
+}
+
+.post-body > * + * {
+  margin-top: 18px;
+}
+
+.post-body h2 {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--title-dim);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 40px;
+}
+
+.post-body h3 {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 1.9vw, 22px);
+  color: var(--title-dim);
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.post-body a {
+  color: var(--neon);
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.post-body blockquote {
+  margin: 26px 0;
+  padding: 16px 22px;
+  border-left: 2px solid var(--border-bright);
+  background: var(--inset-bg);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+.post-body hr {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: 32px 0;
+}
+
+.post-meta {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--grey-2);
+  margin: 0 0 6px;
+}
+
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--neon);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}

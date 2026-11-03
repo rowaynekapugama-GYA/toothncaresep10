@@ -1,0 +1,117 @@
+[
+ {
+  "rule": "specialist",
+  "contains": "by a specialist",
+  "note": "Referral to a registered specialist, which is the correct use of the word."
+ },
+ {
+  "rule": "specialist",
+  "contains": "referral to a specialist",
+  "note": "Referral to a registered specialist."
+ },
+ {
+  "rule": "specialist",
+  "contains": "reviewed by the practice, and by a s",
+  "note": "A note asking a solicitor to review the page."
+ },
+ {
+  "rule": "guarantee",
+  "contains": "cannot be guaranteed",
+  "note": "A disclaimer, not a claim."
+ },
+ {
+  "rule": "guarantee",
+  "contains": "rather than guaranteed",
+  "note": "A disclaimer, not a claim."
+ },
+ {
+  "rule": "guarantee",
+  "contains": "not actual patients or guaranteed results",
+  "note": "A disclaimer, not a claim."
+ },
+ {
+  "rule": "number-one",
+  "contains": "number one reason treatment overruns",
+  "note": "About missed appointments, not about the practice."
+ },
+ {
+  "rule": "best",
+  "contains": "best available archive images",
+  "note": "An internal note flagged as VERIFY, to be removed once the photo shoot happens."
+ },
+ {
+  "rule": "best",
+  "contains": "best effort",
+  "note": "A code comment about error handling."
+ },
+ {
+  "rule": "pain-free",
+  "contains": "/pain-free-dentistry.htm",
+  "note": "An address on the old site that is redirected. Not wording shown to anyone."
+ },
+ {
+  "rule": "specialist",
+  "contains": "needs a specialist",
+  "note": "Referral to a registered specialist."
+ },
+ {
+  "rule": "specialist",
+  "contains": "registered specialist",
+  "note": "Says plainly that the practice is not a specialist practice."
+ },
+ {
+  "rule": "best",
+  "contains": "likely to work best for you",
+  "note": "About treatment options for one patient, not a claim about the practice."
+ },
+ {
+  "rule": "best",
+  "contains": "whatever suits you best",
+  "note": "About the reader's own preference."
+ },
+ {
+  "rule": "best",
+  "contains": "rather than the best possible one",
+  "note": "A disclaimer about outcomes."
+ },
+ {
+  "rule": "best",
+  "contains": "best time to ring",
+  "note": "About when the phone is quiet."
+ },
+ {
+  "rule": "specialist",
+  "contains": "referral to a paediatric specialist",
+  "note": "Referral to a registered specialist."
+ },
+ {
+  "rule": "pain-free",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "painless",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "guarantee",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "best",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "expert",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "specialist",
+  "contains": "\"guaranteed\", \"best\"",
+  "note": "The client guide listing the words the practice must not use."
+ }
+]

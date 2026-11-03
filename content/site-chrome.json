@@ -1,0 +1,2453 @@
+{
+ "parts": {
+  "progress": {
+   "key": "progress",
+   "kind": "content",
+   "label": "Reading progress bar",
+   "tag": "div",
+   "attrs": {
+    "id": "progress",
+    "aria-hidden": "true"
+   },
+   "template": "",
+   "fields": []
+  },
+  "stickyCall": {
+   "key": "stickyCall",
+   "kind": "content",
+   "label": "Sticky call button",
+   "tag": "a",
+   "attrs": {
+    "class": "sticky-call",
+    "href": "{{site:phoneHref}}",
+    "aria-label": "Call Tooth n Care on {{site:phone}}"
+   },
+   "template": "\n  <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z\"/></svg>\n",
+   "fields": []
+  },
+  "header": {
+   "key": "header",
+   "kind": "content",
+   "label": "Site header",
+   "tag": "header",
+   "attrs": {
+    "id": "header"
+   },
+   "template": "\n  <div class=\"topbar\">\n    <div class=\"topbar-inner\">\n      <a href=\"{{link-address-1}}\" target=\"_blank\" rel=\"noopener\" class=\"tb-item\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>{{site:street}}, {{site:cityLine}}</a>\n      <div class=\"tb-right\">\n        <a href=\"{{link-address-2}}\" class=\"tb-item\">{{link-text-1}}</a>\n        <span class=\"tb-socials\">\n          <a href=\"{{link-address-3}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H7.6V13h2.7v8h3.2Z\"/></svg></a>\n          <a href=\"{{link-address-4}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Instagram\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/><circle cx=\"17.2\" cy=\"6.8\" r=\"1\" fill=\"currentColor\" stroke=\"none\"/></svg></a>\n          <a href=\"{{link-address-5}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"X\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.7 3H21l-7.3 8.3L22 21h-6.7l-5.2-6.3L4.1 21H.9l7.8-8.9L1 3h6.9l4.7 5.8L17.7 3Z\"/></svg></a>\n        </span>\n      </div>\n    </div>\n  </div>\n  <nav class=\"nav\" aria-label=\"Main navigation\">\n    <a class=\"logo\" href=\"{{link-address-6}}\" aria-label=\"Tooth n Care home\">\n      <img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" style=\"height:46px;width:auto\">\n    </a>\n    <ul class=\"nav-links\">\n      <li class=\"has-mega\" id=\"welcomeLi\">\n        <a href=\"{{link-address-7}}\" id=\"welcomeTrigger\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"knowPanel\">Get to Know Us\n          <svg class=\"chev\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>\n        </a>\n        <div class=\"vm\" id=\"knowPanel\" role=\"region\" aria-label=\"Get to Know Us menu\">\n          <a class=\"vm-item\" href=\"{{link-address-8}}\"><span class=\"vm-thumb\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-1}}</b><span>{{text-1}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-9}}\"><span class=\"vm-thumb\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-2}}</b><span>{{text-2}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-10}}\"><span class=\"vm-thumb\"><img src=\"{{image-4}}\" alt=\"{{image-description-alt-text-4}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-3}}</b><span>{{text-3}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-11}}\"><span class=\"vm-thumb\"><img src=\"{{image-5}}\" alt=\"{{image-description-alt-text-5}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-4}}</b><span>{{text-4}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-12}}\"><span class=\"vm-thumb\"><img src=\"{{image-6}}\" alt=\"{{image-description-alt-text-6}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-5}}</b><span>{{text-5}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-13}}\"><span class=\"vm-thumb\"><img src=\"{{image-7}}\" alt=\"{{image-description-alt-text-7}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-6}}</b><span>{{text-6}}</span></span></a>\n          <a class=\"vm-item\" href=\"{{link-address-14}}\"><span class=\"vm-thumb\"><img src=\"{{image-8}}\" alt=\"{{image-description-alt-text-8}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-7}}</b><span>{{text-7}}</span></span></a><a class=\"vm-item\" href=\"{{link-address-15}}\"><span class=\"vm-thumb\"><img src=\"{{image-9}}\" alt=\"{{image-description-alt-text-9}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-8}}</b><span>{{text-8}}</span></span></a>\n        </div>\n      </li>\n      <li class=\"has-mega\" id=\"svcLi\">\n        <a href=\"{{link-address-16}}\" id=\"svcTrigger\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"megaPanel\">Services\n          <svg class=\"chev\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>\n        </a>\n        <div class=\"vm vm-fly\" id=\"megaPanel\" role=\"region\" aria-label=\"Services menu\">\n          <div class=\"vm-cols\">\n            <div class=\"vm-cats\">\n            <a class=\"vm-item vm-cat-link on\" href=\"{{link-address-17}}\" data-cat=\"general-dentistry\" aria-expanded=\"true\"><span class=\"vm-thumb\"><img src=\"{{image-10}}\" alt=\"{{image-description-alt-text-10}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-9}}</b><span>{{text-9}}</span></span></a>\n            <a class=\"vm-item vm-cat-link\" href=\"{{link-address-18}}\" data-cat=\"cosmetic-dentistry\" aria-expanded=\"false\"><span class=\"vm-thumb\"><img src=\"{{image-11}}\" alt=\"{{image-description-alt-text-11}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-10}}</b><span>{{text-10}}</span></span></a>\n            <a class=\"vm-item vm-cat-link\" href=\"{{link-address-19}}\" data-cat=\"restorative-dentistry\" aria-expanded=\"false\"><span class=\"vm-thumb\"><img src=\"{{image-12}}\" alt=\"{{image-description-alt-text-12}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-11}}</b><span>{{text-11}}</span></span></a>\n            <a class=\"vm-item vm-cat-link\" href=\"{{link-address-20}}\" data-cat=\"orthodontics\" aria-expanded=\"false\"><span class=\"vm-thumb\"><img src=\"{{image-13}}\" alt=\"{{image-description-alt-text-13}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-12}}</b><span>{{text-12}}</span></span></a>\n            <a class=\"vm-item vm-cat-link\" href=\"{{link-address-21}}\" data-cat=\"emergency\" aria-expanded=\"false\"><span class=\"vm-thumb\"><img src=\"{{image-14}}\" alt=\"{{image-description-alt-text-14}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-13}}</b><span>{{text-13}}</span></span></a>\n            </div>\n            <div class=\"vm-panes\">\n            <div class=\"vm-pane on\" data-pane=\"general-dentistry\" role=\"group\" aria-label=\"General Dentistry treatments\">\n              <a class=\"vm-srow\" href=\"{{link-address-22}}\"><span class=\"vm-thumb\"><img src=\"{{image-15}}\" alt=\"{{image-description-alt-text-15}}\" loading=\"lazy\"></span><b>{{card-title-14}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-23}}\"><span class=\"vm-thumb\"><img src=\"{{image-16}}\" alt=\"{{image-description-alt-text-16}}\" loading=\"lazy\"></span><b>{{card-title-15}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-24}}\"><span class=\"vm-thumb\"><img src=\"{{image-17}}\" alt=\"{{image-description-alt-text-17}}\" loading=\"lazy\"></span><b>{{card-title-16}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-25}}\"><span class=\"vm-thumb\"><img src=\"{{image-18}}\" alt=\"{{image-description-alt-text-18}}\" loading=\"lazy\"></span><b>{{card-title-17}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-26}}\"><span class=\"vm-thumb\"><img src=\"{{image-19}}\" alt=\"{{image-description-alt-text-19}}\" loading=\"lazy\"></span><b>{{card-title-18}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-27}}\"><span class=\"vm-thumb\"><img src=\"{{image-20}}\" alt=\"{{image-description-alt-text-20}}\" loading=\"lazy\"></span><b>{{card-title-19}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-28}}\"><span class=\"vm-thumb\"><img src=\"{{image-21}}\" alt=\"{{image-description-alt-text-21}}\" loading=\"lazy\"></span><b>{{card-title-20}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-29}}\"><span class=\"vm-thumb\"><img src=\"{{image-22}}\" alt=\"{{image-description-alt-text-22}}\" loading=\"lazy\"></span><b>{{card-title-21}}</b></a>\n            </div>\n            <div class=\"vm-pane\" data-pane=\"cosmetic-dentistry\" role=\"group\" aria-label=\"Cosmetic Dentistry treatments\">\n              <a class=\"vm-srow\" href=\"{{link-address-30}}\"><span class=\"vm-thumb\"><img src=\"{{image-23}}\" alt=\"{{image-description-alt-text-23}}\" loading=\"lazy\"></span><b>{{card-title-22}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-31}}\"><span class=\"vm-thumb\"><img src=\"{{image-24}}\" alt=\"{{image-description-alt-text-24}}\" loading=\"lazy\"></span><b>{{card-title-23}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-32}}\"><span class=\"vm-thumb\"><img src=\"{{image-25}}\" alt=\"{{image-description-alt-text-25}}\" loading=\"lazy\"></span><b>{{card-title-24}}</b></a>\n            </div>\n            <div class=\"vm-pane\" data-pane=\"restorative-dentistry\" role=\"group\" aria-label=\"Restorative Dentistry treatments\">\n              <a class=\"vm-srow\" href=\"{{link-address-33}}\"><span class=\"vm-thumb\"><img src=\"{{image-26}}\" alt=\"{{image-description-alt-text-26}}\" loading=\"lazy\"></span><b>{{card-title-25}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-34}}\"><span class=\"vm-thumb\"><img src=\"{{image-27}}\" alt=\"{{image-description-alt-text-27}}\" loading=\"lazy\"></span><b>{{card-title-26}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-35}}\"><span class=\"vm-thumb\"><img src=\"{{image-28}}\" alt=\"{{image-description-alt-text-28}}\" loading=\"lazy\"></span><b>{{card-title-27}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-36}}\"><span class=\"vm-thumb\"><img src=\"{{image-29}}\" alt=\"{{image-description-alt-text-29}}\" loading=\"lazy\"></span><b>{{card-title-28}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-37}}\"><span class=\"vm-thumb\"><img src=\"{{image-30}}\" alt=\"{{image-description-alt-text-30}}\" loading=\"lazy\"></span><b>{{card-title-29}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-38}}\"><span class=\"vm-thumb\"><img src=\"{{image-31}}\" alt=\"{{image-description-alt-text-31}}\" loading=\"lazy\"></span><b>{{card-title-30}}</b></a>\n            </div>\n            <div class=\"vm-pane\" data-pane=\"orthodontics\" role=\"group\" aria-label=\"Orthodontics treatments\">\n              <a class=\"vm-srow\" href=\"{{link-address-39}}\"><span class=\"vm-thumb\"><img src=\"{{image-32}}\" alt=\"{{image-description-alt-text-32}}\" loading=\"lazy\"></span><b>{{card-title-31}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-40}}\"><span class=\"vm-thumb\"><img src=\"{{image-33}}\" alt=\"{{image-description-alt-text-33}}\" loading=\"lazy\"></span><b>{{card-title-32}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-41}}\"><span class=\"vm-thumb\"><img src=\"{{image-34}}\" alt=\"{{image-description-alt-text-34}}\" loading=\"lazy\"></span><b>{{card-title-33}}</b></a>\n            </div>\n            <div class=\"vm-pane\" data-pane=\"emergency\" role=\"group\" aria-label=\"Emergency Dentistry treatments\">\n              <a class=\"vm-srow\" href=\"{{link-address-42}}\"><span class=\"vm-thumb\"><img src=\"{{image-35}}\" alt=\"{{image-description-alt-text-35}}\" loading=\"lazy\"></span><b>{{card-title-34}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-43}}\"><span class=\"vm-thumb\"><img src=\"{{image-36}}\" alt=\"{{image-description-alt-text-36}}\" loading=\"lazy\"></span><b>{{card-title-35}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-44}}\"><span class=\"vm-thumb\"><img src=\"{{image-37}}\" alt=\"{{image-description-alt-text-37}}\" loading=\"lazy\"></span><b>{{card-title-36}}</b></a>\n              <a class=\"vm-srow\" href=\"{{link-address-45}}\"><span class=\"vm-thumb\"><img src=\"{{image-38}}\" alt=\"{{image-description-alt-text-38}}\" loading=\"lazy\"></span><b>{{card-title-37}}</b></a>\n            </div>\n            </div>\n          </div>\n        </div>\n      </li>\n      <li>{{list-item-1}}</li>\n      <li>{{list-item-2}}</li>\n      <li>{{list-item-3}}</li>\n    </ul>\n    <div class=\"nav-cta\">\n      <a class=\"btn btn-ghost nav-book nav-call\" href=\"{{button-link-1}}\">{{button-text-1}}</a>\n      <a class=\"btn btn-primary nav-book\" href=\"{{button-link-2}}\" target=\"_blank\" rel=\"noopener\">{{button-text-2}}</a>\n      <button class=\"burger\" id=\"burger\" aria-label=\"Open menu\" aria-expanded=\"false\"><span></span><span></span><span></span></button>\n    </div>\n  </nav>\n\n  \n\n",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:mapUrl}}"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:emailHref}}"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "{{site:email}}"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:facebook}}"
+    },
+    {
+     "id": "link-address-4",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:instagram}}"
+    },
+    {
+     "id": "link-address-5",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:twitter}}"
+    },
+    {
+     "id": "link-address-6",
+     "label": "Link address",
+     "type": "href",
+     "value": "/"
+    },
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-09b604b050.webp"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "Tooth n Care, Smile With Confidence"
+    },
+    {
+     "id": "link-address-7",
+     "label": "Link address",
+     "type": "href",
+     "value": "/about"
+    },
+    {
+     "id": "link-address-8",
+     "label": "Link address",
+     "type": "href",
+     "value": "/about"
+    },
+    {
+     "id": "image-2",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-3d8678d4cd.webp"
+    },
+    {
+     "id": "image-description-alt-text-2",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "About Us"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Who we are and how we care"
+    },
+    {
+     "id": "link-address-9",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-team"
+    },
+    {
+     "id": "image-3",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-e82999ad17.webp"
+    },
+    {
+     "id": "image-description-alt-text-3",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Meet the Team"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Say hello to the friendly faces who&rsquo;ll be looking after your smile journey"
+    },
+    {
+     "id": "link-address-10",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-clinic"
+    },
+    {
+     "id": "image-4",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7321cde74.webp"
+    },
+    {
+     "id": "image-description-alt-text-4",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-3",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Location &amp; Clinic Tour"
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Find us on Lawes Street and take a look inside our modern clinic"
+    },
+    {
+     "id": "link-address-11",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-technology"
+    },
+    {
+     "id": "image-5",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-9d662d6e5c.webp"
+    },
+    {
+     "id": "image-description-alt-text-5",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-4",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Our Technology"
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Advanced tools, gentle treatment and better outcomes for you"
+    },
+    {
+     "id": "link-address-12",
+     "label": "Link address",
+     "type": "href",
+     "value": "/envision-your-smile"
+    },
+    {
+     "id": "image-6",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c32aa476e9.webp"
+    },
+    {
+     "id": "image-description-alt-text-6",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-5",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Envision Your Smile"
+    },
+    {
+     "id": "text-5",
+     "label": "Text",
+     "type": "richtext",
+     "value": "See what&rsquo;s possible with cosmetic and restorative dental solutions"
+    },
+    {
+     "id": "link-address-13",
+     "label": "Link address",
+     "type": "href",
+     "value": "/new-patients"
+    },
+    {
+     "id": "image-7",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-6b9feba35d.webp"
+    },
+    {
+     "id": "image-description-alt-text-7",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-6",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "New Patients Welcome"
+    },
+    {
+     "id": "text-6",
+     "label": "Text",
+     "type": "richtext",
+     "value": "We make getting started easy and stress-free"
+    },
+    {
+     "id": "link-address-14",
+     "label": "Link address",
+     "type": "href",
+     "value": "/nervous-patients"
+    },
+    {
+     "id": "image-8",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-352788c5fc.webp"
+    },
+    {
+     "id": "image-description-alt-text-8",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-7",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Feeling Nervous? Start Here"
+    },
+    {
+     "id": "text-7",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Gentle care at your pace, with comfort options"
+    },
+    {
+     "id": "link-address-15",
+     "label": "Link address",
+     "type": "href",
+     "value": "/areas-we-serve"
+    },
+    {
+     "id": "image-9",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-e37e37408c.webp"
+    },
+    {
+     "id": "image-description-alt-text-9",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-8",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Areas We Serve"
+    },
+    {
+     "id": "text-8",
+     "label": "Text",
+     "type": "richtext",
+     "value": "The Hunter suburbs we look after, from Rutherford to Woodberry"
+    },
+    {
+     "id": "link-address-16",
+     "label": "Link address",
+     "type": "href",
+     "value": "/services"
+    },
+    {
+     "id": "link-address-17",
+     "label": "Link address",
+     "type": "href",
+     "value": "/general-dentistry"
+    },
+    {
+     "id": "image-10",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-26174f482b.webp"
+    },
+    {
+     "id": "image-description-alt-text-10",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-9",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "General Dentistry"
+    },
+    {
+     "id": "text-9",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Everything you need to keep your smile healthy."
+    },
+    {
+     "id": "link-address-18",
+     "label": "Link address",
+     "type": "href",
+     "value": "/cosmetic-dentistry"
+    },
+    {
+     "id": "image-11",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp"
+    },
+    {
+     "id": "image-description-alt-text-11",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-10",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Cosmetic Dentistry"
+    },
+    {
+     "id": "text-10",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Feel confident about the smile you share."
+    },
+    {
+     "id": "link-address-19",
+     "label": "Link address",
+     "type": "href",
+     "value": "/restorative-dentistry"
+    },
+    {
+     "id": "image-12",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-958d12a1d2.webp"
+    },
+    {
+     "id": "image-description-alt-text-12",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-11",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Restorative Dentistry"
+    },
+    {
+     "id": "text-11",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Restore the health, strength and function of your smile."
+    },
+    {
+     "id": "link-address-20",
+     "label": "Link address",
+     "type": "href",
+     "value": "/orthodontics"
+    },
+    {
+     "id": "image-13",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-a23f5c341d.webp"
+    },
+    {
+     "id": "image-description-alt-text-13",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-12",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Orthodontics"
+    },
+    {
+     "id": "text-12",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Straighter smiles for children, teens and adults."
+    },
+    {
+     "id": "link-address-21",
+     "label": "Link address",
+     "type": "href",
+     "value": "/emergency"
+    },
+    {
+     "id": "image-14",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-513beda25c.webp"
+    },
+    {
+     "id": "image-description-alt-text-14",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-13",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Emergency Dentistry"
+    },
+    {
+     "id": "text-13",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Dental problem that can&rsquo;t wait? We&rsquo;re here to help."
+    },
+    {
+     "id": "link-address-22",
+     "label": "Link address",
+     "type": "href",
+     "value": "/check-ups"
+    },
+    {
+     "id": "image-15",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-15",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-14",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Check-ups &amp; Examinations"
+    },
+    {
+     "id": "link-address-23",
+     "label": "Link address",
+     "type": "href",
+     "value": "/oral-hygiene"
+    },
+    {
+     "id": "image-16",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-26174f482b.webp"
+    },
+    {
+     "id": "image-description-alt-text-16",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-15",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Scale, Clean &amp; Oral Hygiene"
+    },
+    {
+     "id": "link-address-24",
+     "label": "Link address",
+     "type": "href",
+     "value": "/gum-treatment"
+    },
+    {
+     "id": "image-17",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-522b7eab80.webp"
+    },
+    {
+     "id": "image-description-alt-text-17",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-16",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Gum Treatment"
+    },
+    {
+     "id": "link-address-25",
+     "label": "Link address",
+     "type": "href",
+     "value": "/childrens-dentistry"
+    },
+    {
+     "id": "image-18",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c3cc9872f0.webp"
+    },
+    {
+     "id": "image-description-alt-text-18",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-17",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Children's Dentistry"
+    },
+    {
+     "id": "link-address-26",
+     "label": "Link address",
+     "type": "href",
+     "value": "/mouthguards-and-splints"
+    },
+    {
+     "id": "image-19",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-522b7eab80.webp"
+    },
+    {
+     "id": "image-description-alt-text-19",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-18",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Mouthguards &amp; Splints"
+    },
+    {
+     "id": "link-address-27",
+     "label": "Link address",
+     "type": "href",
+     "value": "/tooth-extraction"
+    },
+    {
+     "id": "image-20",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-20",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-19",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth Extraction"
+    },
+    {
+     "id": "link-address-28",
+     "label": "Link address",
+     "type": "href",
+     "value": "/wisdom-teeth-removal"
+    },
+    {
+     "id": "image-21",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-21",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-20",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Wisdom Teeth Removal"
+    },
+    {
+     "id": "link-address-29",
+     "label": "Link address",
+     "type": "href",
+     "value": "/laser-dentistry"
+    },
+    {
+     "id": "image-22",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4700f6418b.webp"
+    },
+    {
+     "id": "image-description-alt-text-22",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-21",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Laser Dentistry"
+    },
+    {
+     "id": "link-address-30",
+     "label": "Link address",
+     "type": "href",
+     "value": "/teeth-whitening"
+    },
+    {
+     "id": "image-23",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-0df9515d9e.webp"
+    },
+    {
+     "id": "image-description-alt-text-23",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-22",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Teeth Whitening"
+    },
+    {
+     "id": "link-address-31",
+     "label": "Link address",
+     "type": "href",
+     "value": "/veneers-and-laminates"
+    },
+    {
+     "id": "image-24",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-24",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-23",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Veneers &amp; Laminates"
+    },
+    {
+     "id": "link-address-32",
+     "label": "Link address",
+     "type": "href",
+     "value": "/smile-makeover"
+    },
+    {
+     "id": "image-25",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-a23f5c341d.webp"
+    },
+    {
+     "id": "image-description-alt-text-25",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-24",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Smile Makeover"
+    },
+    {
+     "id": "link-address-33",
+     "label": "Link address",
+     "type": "href",
+     "value": "/white-fillings"
+    },
+    {
+     "id": "image-26",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-958d12a1d2.webp"
+    },
+    {
+     "id": "image-description-alt-text-26",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-25",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "White Fillings"
+    },
+    {
+     "id": "link-address-34",
+     "label": "Link address",
+     "type": "href",
+     "value": "/root-canal-treatment"
+    },
+    {
+     "id": "image-27",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-27",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-26",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Root Canal Treatment"
+    },
+    {
+     "id": "link-address-35",
+     "label": "Link address",
+     "type": "href",
+     "value": "/crowns-and-bridges"
+    },
+    {
+     "id": "image-28",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-28",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-27",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Crowns &amp; Bridges"
+    },
+    {
+     "id": "link-address-36",
+     "label": "Link address",
+     "type": "href",
+     "value": "/single-visit-crowns"
+    },
+    {
+     "id": "image-29",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-29",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-28",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Single-Visit Crowns"
+    },
+    {
+     "id": "link-address-37",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dental-implants"
+    },
+    {
+     "id": "image-30",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-30",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-29",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dental Implants"
+    },
+    {
+     "id": "link-address-38",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentures"
+    },
+    {
+     "id": "image-31",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-31",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-30",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentures"
+    },
+    {
+     "id": "link-address-39",
+     "label": "Link address",
+     "type": "href",
+     "value": "/metal-braces"
+    },
+    {
+     "id": "image-32",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-53b0a9992a.webp"
+    },
+    {
+     "id": "image-description-alt-text-32",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-31",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Metal Braces"
+    },
+    {
+     "id": "link-address-40",
+     "label": "Link address",
+     "type": "href",
+     "value": "/clear-braces"
+    },
+    {
+     "id": "image-33",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp"
+    },
+    {
+     "id": "image-description-alt-text-33",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-32",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Clear Braces"
+    },
+    {
+     "id": "link-address-41",
+     "label": "Link address",
+     "type": "href",
+     "value": "/clear-aligners"
+    },
+    {
+     "id": "image-34",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp"
+    },
+    {
+     "id": "image-description-alt-text-34",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-33",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Clear Aligners"
+    },
+    {
+     "id": "link-address-42",
+     "label": "Link address",
+     "type": "href",
+     "value": "/tooth-extraction"
+    },
+    {
+     "id": "image-35",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-35",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-34",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth Extraction"
+    },
+    {
+     "id": "link-address-43",
+     "label": "Link address",
+     "type": "href",
+     "value": "/root-canal-treatment"
+    },
+    {
+     "id": "image-36",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-36",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-35",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Root Canal Treatment"
+    },
+    {
+     "id": "link-address-44",
+     "label": "Link address",
+     "type": "href",
+     "value": "/white-fillings"
+    },
+    {
+     "id": "image-37",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-958d12a1d2.webp"
+    },
+    {
+     "id": "image-description-alt-text-37",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-36",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "White Fillings"
+    },
+    {
+     "id": "link-address-45",
+     "label": "Link address",
+     "type": "href",
+     "value": "/conditions-we-treat"
+    },
+    {
+     "id": "image-38",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c3cc9872f0.webp"
+    },
+    {
+     "id": "image-description-alt-text-38",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-37",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Conditions We Treat"
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/payment-options\">Fees &amp; Payment Options</a>"
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/faq\">FAQ</a>"
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/contact\">Contact</a>"
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "☏ {{site:phone}}"
+    },
+    {
+     "id": "button-link-2",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "button-text-2",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Book Online"
+    }
+   ]
+  },
+  "mobileMenu": {
+   "key": "mobileMenu",
+   "kind": "content",
+   "label": "Mobile menu",
+   "tag": "div",
+   "attrs": {
+    "class": "mobile-menu",
+    "id": "mobileMenu"
+   },
+   "template": "\n  <a href=\"{{link-address-1}}\">{{link-text-1}}</a>\n  <button class=\"mm-services\" data-panel=\"mmKnowGrid\" aria-expanded=\"false\">Get to Know Us <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></button>\n  <div class=\"mm-list\" id=\"mmKnowGrid\">\n    <a class=\"vm-item\" href=\"{{link-address-2}}\"><span class=\"vm-thumb\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-1}}</b><span>{{text-1}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-3}}\"><span class=\"vm-thumb\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-2}}</b><span>{{text-2}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-4}}\"><span class=\"vm-thumb\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-3}}</b><span>{{text-3}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-5}}\"><span class=\"vm-thumb\"><img src=\"{{image-4}}\" alt=\"{{image-description-alt-text-4}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-4}}</b><span>{{text-4}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-6}}\"><span class=\"vm-thumb\"><img src=\"{{image-5}}\" alt=\"{{image-description-alt-text-5}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-5}}</b><span>{{text-5}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-7}}\"><span class=\"vm-thumb\"><img src=\"{{image-6}}\" alt=\"{{image-description-alt-text-6}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-6}}</b><span>{{text-6}}</span></span></a>\n    <a class=\"vm-item\" href=\"{{link-address-8}}\"><span class=\"vm-thumb\"><img src=\"{{image-7}}\" alt=\"{{image-description-alt-text-7}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-7}}</b><span>{{text-7}}</span></span></a><a class=\"vm-item\" href=\"{{link-address-9}}\"><span class=\"vm-thumb\"><img src=\"{{image-8}}\" alt=\"{{image-description-alt-text-8}}\" loading=\"lazy\"></span><span class=\"vm-txt\"><b>{{card-title-8}}</b><span>{{text-8}}</span></span></a>\n  </div>\n  <button class=\"mm-services\" id=\"mmServices\" data-panel=\"mmSvc\" aria-expanded=\"false\">Services <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></button>\n  <div class=\"mm-svc\" id=\"mmSvc\">\n    <div class=\"mm-cat\">\n      <button class=\"mm-cat-head\" type=\"button\" aria-expanded=\"false\"><b>General Dentistry <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></b><span>{{text-9}}</span></button>\n      <div class=\"mm-treats\">\n        <a class=\"vm-srow\" href=\"{{link-address-10}}\"><span class=\"vm-thumb\"><img src=\"{{image-9}}\" alt=\"{{image-description-alt-text-9}}\" loading=\"lazy\"></span><b>{{card-title-9}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-11}}\"><span class=\"vm-thumb\"><img src=\"{{image-10}}\" alt=\"{{image-description-alt-text-10}}\" loading=\"lazy\"></span><b>{{card-title-10}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-12}}\"><span class=\"vm-thumb\"><img src=\"{{image-11}}\" alt=\"{{image-description-alt-text-11}}\" loading=\"lazy\"></span><b>{{card-title-11}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-13}}\"><span class=\"vm-thumb\"><img src=\"{{image-12}}\" alt=\"{{image-description-alt-text-12}}\" loading=\"lazy\"></span><b>{{card-title-12}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-14}}\"><span class=\"vm-thumb\"><img src=\"{{image-13}}\" alt=\"{{image-description-alt-text-13}}\" loading=\"lazy\"></span><b>{{card-title-13}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-15}}\"><span class=\"vm-thumb\"><img src=\"{{image-14}}\" alt=\"{{image-description-alt-text-14}}\" loading=\"lazy\"></span><b>{{card-title-14}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-16}}\"><span class=\"vm-thumb\"><img src=\"{{image-15}}\" alt=\"{{image-description-alt-text-15}}\" loading=\"lazy\"></span><b>{{card-title-15}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-17}}\"><span class=\"vm-thumb\"><img src=\"{{image-16}}\" alt=\"{{image-description-alt-text-16}}\" loading=\"lazy\"></span><b>{{card-title-16}}</b></a>\n        <a class=\"mm-viewcat\" href=\"{{link-address-18}}\">{{link-text-2}}</a>\n      </div>\n    </div>\n    <div class=\"mm-cat\">\n      <button class=\"mm-cat-head\" type=\"button\" aria-expanded=\"false\"><b>Cosmetic Dentistry <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></b><span>{{text-10}}</span></button>\n      <div class=\"mm-treats\">\n        <a class=\"vm-srow\" href=\"{{link-address-19}}\"><span class=\"vm-thumb\"><img src=\"{{image-17}}\" alt=\"{{image-description-alt-text-17}}\" loading=\"lazy\"></span><b>{{card-title-17}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-20}}\"><span class=\"vm-thumb\"><img src=\"{{image-18}}\" alt=\"{{image-description-alt-text-18}}\" loading=\"lazy\"></span><b>{{card-title-18}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-21}}\"><span class=\"vm-thumb\"><img src=\"{{image-19}}\" alt=\"{{image-description-alt-text-19}}\" loading=\"lazy\"></span><b>{{card-title-19}}</b></a>\n        <a class=\"mm-viewcat\" href=\"{{link-address-22}}\">{{link-text-3}}</a>\n      </div>\n    </div>\n    <div class=\"mm-cat\">\n      <button class=\"mm-cat-head\" type=\"button\" aria-expanded=\"false\"><b>Restorative Dentistry <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></b><span>{{text-11}}</span></button>\n      <div class=\"mm-treats\">\n        <a class=\"vm-srow\" href=\"{{link-address-23}}\"><span class=\"vm-thumb\"><img src=\"{{image-20}}\" alt=\"{{image-description-alt-text-20}}\" loading=\"lazy\"></span><b>{{card-title-20}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-24}}\"><span class=\"vm-thumb\"><img src=\"{{image-21}}\" alt=\"{{image-description-alt-text-21}}\" loading=\"lazy\"></span><b>{{card-title-21}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-25}}\"><span class=\"vm-thumb\"><img src=\"{{image-22}}\" alt=\"{{image-description-alt-text-22}}\" loading=\"lazy\"></span><b>{{card-title-22}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-26}}\"><span class=\"vm-thumb\"><img src=\"{{image-23}}\" alt=\"{{image-description-alt-text-23}}\" loading=\"lazy\"></span><b>{{card-title-23}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-27}}\"><span class=\"vm-thumb\"><img src=\"{{image-24}}\" alt=\"{{image-description-alt-text-24}}\" loading=\"lazy\"></span><b>{{card-title-24}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-28}}\"><span class=\"vm-thumb\"><img src=\"{{image-25}}\" alt=\"{{image-description-alt-text-25}}\" loading=\"lazy\"></span><b>{{card-title-25}}</b></a>\n        <a class=\"mm-viewcat\" href=\"{{link-address-29}}\">{{link-text-4}}</a>\n      </div>\n    </div>\n    <div class=\"mm-cat\">\n      <button class=\"mm-cat-head\" type=\"button\" aria-expanded=\"false\"><b>Orthodontics <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></b><span>{{text-12}}</span></button>\n      <div class=\"mm-treats\">\n        <a class=\"vm-srow\" href=\"{{link-address-30}}\"><span class=\"vm-thumb\"><img src=\"{{image-26}}\" alt=\"{{image-description-alt-text-26}}\" loading=\"lazy\"></span><b>{{card-title-26}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-31}}\"><span class=\"vm-thumb\"><img src=\"{{image-27}}\" alt=\"{{image-description-alt-text-27}}\" loading=\"lazy\"></span><b>{{card-title-27}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-32}}\"><span class=\"vm-thumb\"><img src=\"{{image-28}}\" alt=\"{{image-description-alt-text-28}}\" loading=\"lazy\"></span><b>{{card-title-28}}</b></a>\n        <a class=\"mm-viewcat\" href=\"{{link-address-33}}\">{{link-text-5}}</a>\n      </div>\n    </div>\n    <div class=\"mm-cat\">\n      <button class=\"mm-cat-head\" type=\"button\" aria-expanded=\"false\"><b>Emergency Dentistry <svg class=\"chev\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></b><span>{{text-13}}</span></button>\n      <div class=\"mm-treats\">\n        <a class=\"vm-srow\" href=\"{{link-address-34}}\"><span class=\"vm-thumb\"><img src=\"{{image-29}}\" alt=\"{{image-description-alt-text-29}}\" loading=\"lazy\"></span><b>{{card-title-29}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-35}}\"><span class=\"vm-thumb\"><img src=\"{{image-30}}\" alt=\"{{image-description-alt-text-30}}\" loading=\"lazy\"></span><b>{{card-title-30}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-36}}\"><span class=\"vm-thumb\"><img src=\"{{image-31}}\" alt=\"{{image-description-alt-text-31}}\" loading=\"lazy\"></span><b>{{card-title-31}}</b></a>\n        <a class=\"vm-srow\" href=\"{{link-address-37}}\"><span class=\"vm-thumb\"><img src=\"{{image-32}}\" alt=\"{{image-description-alt-text-32}}\" loading=\"lazy\"></span><b>{{card-title-32}}</b></a>\n        <a class=\"mm-viewcat\" href=\"{{link-address-38}}\">{{link-text-6}}</a>\n      </div>\n    </div>\n  </div>\n  <a href=\"{{link-address-39}}\">{{link-text-7}}</a><a href=\"{{link-address-40}}\">{{link-text-8}}</a><a href=\"{{link-address-41}}\">{{link-text-9}}</a>\n  <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Home"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/about"
+    },
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-3d8678d4cd.webp"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "About Us"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Who we are and how we care"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-team"
+    },
+    {
+     "id": "image-2",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-e82999ad17.webp"
+    },
+    {
+     "id": "image-description-alt-text-2",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Meet the Team"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Say hello to the friendly faces who&rsquo;ll be looking after your smile journey"
+    },
+    {
+     "id": "link-address-4",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-clinic"
+    },
+    {
+     "id": "image-3",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7321cde74.webp"
+    },
+    {
+     "id": "image-description-alt-text-3",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-3",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Location &amp; Clinic Tour"
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Find us on Lawes Street and take a look inside our modern clinic"
+    },
+    {
+     "id": "link-address-5",
+     "label": "Link address",
+     "type": "href",
+     "value": "/our-technology"
+    },
+    {
+     "id": "image-4",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-9d662d6e5c.webp"
+    },
+    {
+     "id": "image-description-alt-text-4",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-4",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Our Technology"
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Advanced tools, gentle treatment and better outcomes for you"
+    },
+    {
+     "id": "link-address-6",
+     "label": "Link address",
+     "type": "href",
+     "value": "/envision-your-smile"
+    },
+    {
+     "id": "image-5",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c32aa476e9.webp"
+    },
+    {
+     "id": "image-description-alt-text-5",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-5",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Envision Your Smile"
+    },
+    {
+     "id": "text-5",
+     "label": "Text",
+     "type": "richtext",
+     "value": "See what&rsquo;s possible with cosmetic and restorative dental solutions"
+    },
+    {
+     "id": "link-address-7",
+     "label": "Link address",
+     "type": "href",
+     "value": "/new-patients"
+    },
+    {
+     "id": "image-6",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-6b9feba35d.webp"
+    },
+    {
+     "id": "image-description-alt-text-6",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-6",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "New Patients Welcome"
+    },
+    {
+     "id": "text-6",
+     "label": "Text",
+     "type": "richtext",
+     "value": "We make getting started easy and stress-free"
+    },
+    {
+     "id": "link-address-8",
+     "label": "Link address",
+     "type": "href",
+     "value": "/nervous-patients"
+    },
+    {
+     "id": "image-7",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-352788c5fc.webp"
+    },
+    {
+     "id": "image-description-alt-text-7",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-7",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Feeling Nervous? Start Here"
+    },
+    {
+     "id": "text-7",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Gentle care at your pace, with comfort options"
+    },
+    {
+     "id": "link-address-9",
+     "label": "Link address",
+     "type": "href",
+     "value": "/areas-we-serve"
+    },
+    {
+     "id": "image-8",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-e37e37408c.webp"
+    },
+    {
+     "id": "image-description-alt-text-8",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-8",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Areas We Serve"
+    },
+    {
+     "id": "text-8",
+     "label": "Text",
+     "type": "richtext",
+     "value": "The Hunter suburbs we look after, from Rutherford to Woodberry"
+    },
+    {
+     "id": "text-9",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Everything you need to keep your smile healthy."
+    },
+    {
+     "id": "link-address-10",
+     "label": "Link address",
+     "type": "href",
+     "value": "/check-ups"
+    },
+    {
+     "id": "image-9",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-9",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-9",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Check-ups &amp; Examinations"
+    },
+    {
+     "id": "link-address-11",
+     "label": "Link address",
+     "type": "href",
+     "value": "/oral-hygiene"
+    },
+    {
+     "id": "image-10",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-26174f482b.webp"
+    },
+    {
+     "id": "image-description-alt-text-10",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-10",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Scale, Clean &amp; Oral Hygiene"
+    },
+    {
+     "id": "link-address-12",
+     "label": "Link address",
+     "type": "href",
+     "value": "/gum-treatment"
+    },
+    {
+     "id": "image-11",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-522b7eab80.webp"
+    },
+    {
+     "id": "image-description-alt-text-11",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-11",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Gum Treatment"
+    },
+    {
+     "id": "link-address-13",
+     "label": "Link address",
+     "type": "href",
+     "value": "/childrens-dentistry"
+    },
+    {
+     "id": "image-12",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c3cc9872f0.webp"
+    },
+    {
+     "id": "image-description-alt-text-12",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-12",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Children's Dentistry"
+    },
+    {
+     "id": "link-address-14",
+     "label": "Link address",
+     "type": "href",
+     "value": "/mouthguards-and-splints"
+    },
+    {
+     "id": "image-13",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-522b7eab80.webp"
+    },
+    {
+     "id": "image-description-alt-text-13",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-13",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Mouthguards &amp; Splints"
+    },
+    {
+     "id": "link-address-15",
+     "label": "Link address",
+     "type": "href",
+     "value": "/tooth-extraction"
+    },
+    {
+     "id": "image-14",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-14",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-14",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth Extraction"
+    },
+    {
+     "id": "link-address-16",
+     "label": "Link address",
+     "type": "href",
+     "value": "/wisdom-teeth-removal"
+    },
+    {
+     "id": "image-15",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-15",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-15",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Wisdom Teeth Removal"
+    },
+    {
+     "id": "link-address-17",
+     "label": "Link address",
+     "type": "href",
+     "value": "/laser-dentistry"
+    },
+    {
+     "id": "image-16",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4700f6418b.webp"
+    },
+    {
+     "id": "image-description-alt-text-16",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-16",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Laser Dentistry"
+    },
+    {
+     "id": "link-address-18",
+     "label": "Link address",
+     "type": "href",
+     "value": "/general-dentistry"
+    },
+    {
+     "id": "link-text-2",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "View General Dentistry <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "text-10",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Feel confident about the smile you share."
+    },
+    {
+     "id": "link-address-19",
+     "label": "Link address",
+     "type": "href",
+     "value": "/teeth-whitening"
+    },
+    {
+     "id": "image-17",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-0df9515d9e.webp"
+    },
+    {
+     "id": "image-description-alt-text-17",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-17",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Teeth Whitening"
+    },
+    {
+     "id": "link-address-20",
+     "label": "Link address",
+     "type": "href",
+     "value": "/veneers-and-laminates"
+    },
+    {
+     "id": "image-18",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-18",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-18",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Veneers &amp; Laminates"
+    },
+    {
+     "id": "link-address-21",
+     "label": "Link address",
+     "type": "href",
+     "value": "/smile-makeover"
+    },
+    {
+     "id": "image-19",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-a23f5c341d.webp"
+    },
+    {
+     "id": "image-description-alt-text-19",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-19",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Smile Makeover"
+    },
+    {
+     "id": "link-address-22",
+     "label": "Link address",
+     "type": "href",
+     "value": "/cosmetic-dentistry"
+    },
+    {
+     "id": "link-text-3",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "View Cosmetic Dentistry <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "text-11",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Restore the health, strength and function of your smile."
+    },
+    {
+     "id": "link-address-23",
+     "label": "Link address",
+     "type": "href",
+     "value": "/white-fillings"
+    },
+    {
+     "id": "image-20",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-958d12a1d2.webp"
+    },
+    {
+     "id": "image-description-alt-text-20",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-20",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "White Fillings"
+    },
+    {
+     "id": "link-address-24",
+     "label": "Link address",
+     "type": "href",
+     "value": "/root-canal-treatment"
+    },
+    {
+     "id": "image-21",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-21",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-21",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Root Canal Treatment"
+    },
+    {
+     "id": "link-address-25",
+     "label": "Link address",
+     "type": "href",
+     "value": "/crowns-and-bridges"
+    },
+    {
+     "id": "image-22",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-22",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-22",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Crowns &amp; Bridges"
+    },
+    {
+     "id": "link-address-26",
+     "label": "Link address",
+     "type": "href",
+     "value": "/single-visit-crowns"
+    },
+    {
+     "id": "image-23",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-23",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-23",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Single-Visit Crowns"
+    },
+    {
+     "id": "link-address-27",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dental-implants"
+    },
+    {
+     "id": "image-24",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-24",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-24",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dental Implants"
+    },
+    {
+     "id": "link-address-28",
+     "label": "Link address",
+     "type": "href",
+     "value": "/dentures"
+    },
+    {
+     "id": "image-25",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-4286fa36e3.webp"
+    },
+    {
+     "id": "image-description-alt-text-25",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-25",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Dentures"
+    },
+    {
+     "id": "link-address-29",
+     "label": "Link address",
+     "type": "href",
+     "value": "/restorative-dentistry"
+    },
+    {
+     "id": "link-text-4",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "View Restorative Dentistry <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "text-12",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Straighter smiles for children, teens and adults."
+    },
+    {
+     "id": "link-address-30",
+     "label": "Link address",
+     "type": "href",
+     "value": "/metal-braces"
+    },
+    {
+     "id": "image-26",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-53b0a9992a.webp"
+    },
+    {
+     "id": "image-description-alt-text-26",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-26",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Metal Braces"
+    },
+    {
+     "id": "link-address-31",
+     "label": "Link address",
+     "type": "href",
+     "value": "/clear-braces"
+    },
+    {
+     "id": "image-27",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp"
+    },
+    {
+     "id": "image-description-alt-text-27",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-27",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Clear Braces"
+    },
+    {
+     "id": "link-address-32",
+     "label": "Link address",
+     "type": "href",
+     "value": "/clear-aligners"
+    },
+    {
+     "id": "image-28",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp"
+    },
+    {
+     "id": "image-description-alt-text-28",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-28",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Clear Aligners"
+    },
+    {
+     "id": "link-address-33",
+     "label": "Link address",
+     "type": "href",
+     "value": "/orthodontics"
+    },
+    {
+     "id": "link-text-5",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "View Orthodontics <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "text-13",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Dental problem that can&rsquo;t wait? We&rsquo;re here to help."
+    },
+    {
+     "id": "link-address-34",
+     "label": "Link address",
+     "type": "href",
+     "value": "/tooth-extraction"
+    },
+    {
+     "id": "image-29",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-5c044f2a43.webp"
+    },
+    {
+     "id": "image-description-alt-text-29",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-29",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth Extraction"
+    },
+    {
+     "id": "link-address-35",
+     "label": "Link address",
+     "type": "href",
+     "value": "/root-canal-treatment"
+    },
+    {
+     "id": "image-30",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c6ae80440c.webp"
+    },
+    {
+     "id": "image-description-alt-text-30",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-30",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Root Canal Treatment"
+    },
+    {
+     "id": "link-address-36",
+     "label": "Link address",
+     "type": "href",
+     "value": "/white-fillings"
+    },
+    {
+     "id": "image-31",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-958d12a1d2.webp"
+    },
+    {
+     "id": "image-description-alt-text-31",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-31",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "White Fillings"
+    },
+    {
+     "id": "link-address-37",
+     "label": "Link address",
+     "type": "href",
+     "value": "/conditions-we-treat"
+    },
+    {
+     "id": "image-32",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-c3cc9872f0.webp"
+    },
+    {
+     "id": "image-description-alt-text-32",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": ""
+    },
+    {
+     "id": "card-title-32",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Conditions We Treat"
+    },
+    {
+     "id": "link-address-38",
+     "label": "Link address",
+     "type": "href",
+     "value": "/emergency"
+    },
+    {
+     "id": "link-text-6",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "View Emergency Dentistry <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-39",
+     "label": "Link address",
+     "type": "href",
+     "value": "/payment-options"
+    },
+    {
+     "id": "link-text-7",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Fees &amp; Payments"
+    },
+    {
+     "id": "link-address-40",
+     "label": "Link address",
+     "type": "href",
+     "value": "/faq"
+    },
+    {
+     "id": "link-text-8",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "FAQ"
+    },
+    {
+     "id": "link-address-41",
+     "label": "Link address",
+     "type": "href",
+     "value": "/contact"
+    },
+    {
+     "id": "link-text-9",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Contact"
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Book Online"
+    }
+   ]
+  },
+  "footer": {
+   "key": "footer",
+   "kind": "content",
+   "label": "Site footer",
+   "tag": "footer",
+   "attrs": {},
+   "template": "\n  <div class=\"wrap\">\n    <div class=\"foot-grid foot-grid-5\">\n      <div class=\"foot-brand\">\n        <a class=\"logo\" href=\"{{link-address-1}}\">\n          <img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" style=\"height:54px;width:auto\">\n        </a>\n        <p>{{paragraph-1}}</p>\n        <div class=\"socials\">\n          <a href=\"{{link-address-2}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H7.6V13h2.7v8h3.2Z\"/></svg></a>\n          <a href=\"{{link-address-3}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Instagram\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/><circle cx=\"17.2\" cy=\"6.8\" r=\"1\" fill=\"currentColor\" stroke=\"none\"/></svg></a>\n          <a href=\"{{link-address-4}}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Twitter / X\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.7 3H21l-7.3 8.3L22 21h-6.7l-5.2-6.3L4.1 21H.9l7.8-8.9L1 3h6.9l4.7 5.8L17.7 3Zm-1.2 16h1.9L6.9 4.9H4.9L16.5 19Z\"/></svg></a>\n        </div>\n        <button class=\"theme-toggle\" id=\"themeToggle\" aria-pressed=\"false\">\n          <svg id=\"themeIconMoon\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z\"/></svg>\n          <svg id=\"themeIconSun\" style=\"display:none\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4\"/></svg>\n          <span id=\"themeLabel\">{{text-1}}</span>\n        </button>\n      </div>\n      <div>\n        <h4>{{small-heading-1}}</h4>\n        <ul>\n          <li>{{list-item-1}}</li>\n          <li>{{list-item-2}}</li>\n          <li>{{list-item-3}}</li>\n          <li>{{list-item-4}}</li>\n          <li>{{list-item-5}}</li>\n          <li>{{list-item-6}}</li>\n          <li>{{list-item-7}}</li>\n          <li>{{list-item-8}}</li>\n        </ul>\n      </div>\n      <div>\n        <h4>{{small-heading-2}}</h4>\n        <ul>\n          <li>{{list-item-9}}</li>\n          <li>{{list-item-10}}</li>\n          <li>{{list-item-11}}</li>\n          <li>{{list-item-12}}</li>\n          <li>{{list-item-13}}</li>\n          <li>{{list-item-14}}</li>\n          <li>{{list-item-15}}</li>\n          <li>{{list-item-16}}</li>{{site:blogLink}}\n        </ul>\n      </div>\n      <div>\n        <h4>{{small-heading-3}}</h4>\n        <dl class=\"hours-grid\">\n          <dt>{{question-1}}</dt><dd>{{answer-1}}</dd>\n          <dt>{{question-2}}</dt><dd>{{answer-2}}</dd>\n          <dt>{{question-3}}</dt><dd class=\"closed\">{{answer-3}}</dd>\n        </dl>\n        <p class=\"hours-note\">{{paragraph-2}}</p>\n      </div>\n      <div>\n        <h4>{{small-heading-4}}</h4>\n        <ul>\n          <li>{{list-item-17}}</li>\n          <li>{{list-item-18}}</li>\n          <li>{{list-item-19}}</li>\n        </ul>\n      </div>\n    </div>\n    <div class=\"foot-areas\">\n      <b>{{card-title-1}}</b>\n      <ul><li>{{list-item-20}}</li><li>{{list-item-21}}</li><li>{{list-item-22}}</li><li>{{list-item-23}}</li><li>{{list-item-24}}</li><li>{{list-item-25}}</li><li>{{list-item-26}}</li><li>{{list-item-27}}</li><li>{{list-item-28}}</li><li>{{list-item-29}}</li><li class=\"foot-areas-all\">{{list-item-30}}</li></ul>\n    </div>\n    <div class=\"foot-funds\">{{text-2}}</div>\n    <div class=\"foot-base\">\n      <span>{{text-3}}</span>\n      <span>{{text-4}}</span>\n    </div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/"
+    },
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-09b604b050.webp"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "Tooth n Care, Smile With Confidence"
+    },
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Modern dentistry. Genuine care. A boutique smile studio in the heart of East Maitland, NSW."
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:facebook}}"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:instagram}}"
+    },
+    {
+     "id": "link-address-4",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:twitter}}"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Switch to Light Mode"
+    },
+    {
+     "id": "small-heading-1",
+     "label": "Small heading",
+     "type": "richtext",
+     "value": "Services"
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/general-dentistry\">General Dentistry</a>"
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/cosmetic-dentistry\">Cosmetic Dentistry</a>"
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/restorative-dentistry\">Restorative Dentistry</a>"
+    },
+    {
+     "id": "list-item-4",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/orthodontics\">Orthodontics</a>"
+    },
+    {
+     "id": "list-item-5",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/emergency\">Emergency Dentistry</a>"
+    },
+    {
+     "id": "list-item-6",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/preventative-dentistry\">Preventative Dentistry</a>"
+    },
+    {
+     "id": "list-item-7",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dental-implants\">Dental Implants</a>"
+    },
+    {
+     "id": "list-item-8",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/conditions-we-treat\">Conditions We Treat</a>"
+    },
+    {
+     "id": "small-heading-2",
+     "label": "Small heading",
+     "type": "richtext",
+     "value": "Quick Links"
+    },
+    {
+     "id": "list-item-9",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/about\">About Us</a>"
+    },
+    {
+     "id": "list-item-10",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/our-team\">Meet the Team</a>"
+    },
+    {
+     "id": "list-item-11",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/envision-your-smile\">Envision Your Smile</a>"
+    },
+    {
+     "id": "list-item-12",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/offers\">Offers</a>"
+    },
+    {
+     "id": "list-item-13",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/new-patients\">New Patients</a>"
+    },
+    {
+     "id": "list-item-14",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/payment-options\">Fees &amp; Payment Options</a>"
+    },
+    {
+     "id": "list-item-15",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/faq\">FAQ</a>"
+    },
+    {
+     "id": "list-item-16",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/contact\">Contact</a>"
+    },
+    {
+     "id": "small-heading-3",
+     "label": "Small heading",
+     "type": "richtext",
+     "value": "Opening Hours"
+    },
+    {
+     "id": "question-1",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Mon – Fri"
+    },
+    {
+     "id": "answer-1",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "9:00am – 6:00pm"
+    },
+    {
+     "id": "question-2",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Saturday"
+    },
+    {
+     "id": "answer-2",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "9:00am – 4:00pm"
+    },
+    {
+     "id": "question-3",
+     "label": "Question",
+     "type": "richtext",
+     "value": "Sunday"
+    },
+    {
+     "id": "answer-3",
+     "label": "Answer",
+     "type": "richtext",
+     "value": "Closed"
+    },
+    {
+     "id": "paragraph-2",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Walk-ins welcome<br>Emergency appointments available"
+    },
+    {
+     "id": "small-heading-4",
+     "label": "Small heading",
+     "type": "richtext",
+     "value": "Contact"
+    },
+    {
+     "id": "list-item-17",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"{{site:phoneHref}}\">{{site:phone}}</a>"
+    },
+    {
+     "id": "list-item-18",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"{{site:emailHref}}\">{{site:email}}</a>"
+    },
+    {
+     "id": "list-item-19",
+     "label": "List item",
+     "type": "richtext",
+     "value": "{{site:street}},<br>{{site:cityLine}}"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Areas We Serve"
+    },
+    {
+     "id": "list-item-20",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-maitland\">Maitland</a>"
+    },
+    {
+     "id": "list-item-21",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-rutherford\">Rutherford</a>"
+    },
+    {
+     "id": "list-item-22",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-thornton\">Thornton</a>"
+    },
+    {
+     "id": "list-item-23",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-chisholm\">Chisholm</a>"
+    },
+    {
+     "id": "list-item-24",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-ashtonfield\">Ashtonfield</a>"
+    },
+    {
+     "id": "list-item-25",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-metford\">Metford</a>"
+    },
+    {
+     "id": "list-item-26",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-tenambit\">Tenambit</a>"
+    },
+    {
+     "id": "list-item-27",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-morpeth\">Morpeth</a>"
+    },
+    {
+     "id": "list-item-28",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-lorn-bolwarra\">Lorn &amp; Bolwarra</a>"
+    },
+    {
+     "id": "list-item-29",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/dentist-beresfield-woodberry\">Beresfield &amp; Woodberry</a>"
+    },
+    {
+     "id": "list-item-30",
+     "label": "List item",
+     "type": "richtext",
+     "value": "<a href=\"/areas-we-serve\">All areas &rarr;</a>"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "\n      <b>Health Funds</b>\n      All major health funds welcome, with on-the-spot HICAPS claiming so you only pay any gap - HCF, Bupa, Medibank, nib, CBHS, Teachers Health, Defence Health, Australian Unity and GMHBA, plus CDBS for eligible children. Interest-free payment plans available through Humm and DentiCare (criteria, fees and T&amp;Cs apply). <a href=\"/payment-options\">Fees &amp; payment plans</a>.\n    "
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "© 2026 Tooth n Care. All rights reserved."
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "<a href=\"/privacy-policy\">Privacy</a> &middot; <a href=\"/terms\">Terms</a> &middot; <a href=\"/sitemap\">Sitemap</a> &middot; Serving East Maitland · Maitland · Hunter Valley"
+    }
+   ]
+  }
+ },
+ "notes": [
+  {
+   "part": "header",
+   "page": "index",
+   "kept": {
+    "link-address-6": "#top"
+   }
+  },
+  {
+   "part": "header",
+   "page": "sitemap",
+   "normalised": "markup differs from the 57 page version and was brought into line with it"
+  },
+  {
+   "part": "mobileMenu",
+   "page": "index",
+   "kept": {
+    "link-address-1": "#top"
+   }
+  },
+  {
+   "part": "footer",
+   "page": "index",
+   "normalised": "markup differs from the 57 page version and was brought into line with it"
+  },
+  {
+   "part": "footer",
+   "page": "sitemap",
+   "normalised": "markup differs from the 57 page version and was brought into line with it"
+  }
+ ]
+}

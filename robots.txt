@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://toothncare.vercel.app/sitemap.xml

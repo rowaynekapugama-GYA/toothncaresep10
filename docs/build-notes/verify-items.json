@@ -1,0 +1,74 @@
+[
+ {
+  "page": "/contact",
+  "section": "Tell us what’s on your mind",
+  "field": "Paragraph",
+  "text": "Privacy notice. Anything you send here is stored and handled under the Australian Privacy Principles and used only to answer your enquiry. We never ask for clinical or health information through this form. [VERIFY] form endpoint not yet connected - submissions are disabled until a secure destination is confirmed."
+ },
+ {
+  "page": "/dr-navneet-karan",
+  "section": "General dentist, and a Fellow of the Royal Australasian College of Dental Surgeons",
+  "field": "Text",
+  "text": "General dentist, registered with AHPRA [VERIFY reg. no.]"
+ },
+ {
+  "page": "/dr-nisheeth-agrawal",
+  "section": "General dentist, and the person who started this practice",
+  "field": "Text",
+  "text": "General dentist, registered with AHPRA [VERIFY reg. no.]"
+ },
+ {
+  "page": "/faq",
+  "section": "Orthodontics",
+  "field": "Paragraph",
+  "text": "We provide clear aligner treatment. [VERIFY] whether the practice is a current Invisalign provider and licensed to use the brand name - until that&rsquo;s confirmed we describe the treatment generically."
+ },
+ {
+  "page": "/offers",
+  "section": "Offers with the terms up front",
+  "field": "Text",
+  "text": "[VERIFY price]"
+ },
+ {
+  "page": "/offers",
+  "section": "Offers with the terms up front",
+  "field": "Paragraph",
+  "text": "Whitening is only appropriate for some teeth and some conditions - we&rsquo;ll assess yours first and tell you honestly what to expect. [VERIFY] current price and RRP comparison to be confirmed before publishing."
+ },
+ {
+  "page": "/our-clinic",
+  "section": "A few corners of the practice",
+  "field": "Paragraph",
+  "text": "Photographs of our own practice. [VERIFY] a professional photo shoot is still recommended before launch - these are the best available archive images."
+ },
+ {
+  "page": "/privacy-policy",
+  "section": "Who we are",
+  "field": "Paragraph",
+  "text": "This site uses only the cookies necessary for it to function, such as remembering whether you have selected light or dark mode. We do not use advertising cookies or sell browsing data. [VERIFY] if analytics are added before launch, this section must be updated to name the provider and explain the opt-out."
+ },
+ {
+  "page": "/privacy-policy",
+  "section": "Who we are",
+  "field": "Paragraph",
+  "text": "We review this policy periodically. This version was published in August 2026. [VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live."
+ },
+ {
+  "page": "/teeth-whitening",
+  "section": "Cost & health funds",
+  "field": "Paragraph",
+  "text": "We offer in-chair Philips ZOOM whitening at a discounted rate and custom take-home trays. [VERIFY] current pricing to be confirmed before publication. Whitening is a cosmetic treatment, so health fund rebates are usually minimal or nil - we&rsquo;ll be clear about that before you book."
+ },
+ {
+  "page": "/terms",
+  "section": "About these terms",
+  "field": "Paragraph",
+  "text": "Questions about these terms can go to {{site:email}} or {{site:phone}}. [VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live."
+ },
+ {
+  "page": "/zoe-xu",
+  "section": "Oral health therapist, treating children and adults",
+  "field": "Text",
+  "text": "Oral health therapist, registered with AHPRA [VERIFY reg. no.]"
+ }
+]

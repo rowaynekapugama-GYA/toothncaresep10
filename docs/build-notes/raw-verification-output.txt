@@ -1,0 +1,37 @@
+### 1. TypeScript
+tsc --noEmit: no errors
+
+### 2. Banned wording
+
+em dashes: 0   phrases to review: 0   already reviewed and allowed: 24
+
+### 3. Secrets
+
+no secrets found
+
+### 4. External images
+
+no pictures are loaded from another site
+
+### 5. Content model round trip
+body reconstruction exact: 0/59 pages
+
+
+### 6. Parity with the approved build
+BODY exact on 55/59 pages
+HEAD comparison:
+  title            {'same': 59}
+  description      {'same': 59}
+  og:title         {'same': 59}
+  og:description   {'same': 59}
+  canonical_path   {'same': 58, 'DIFF': 1}
+  jsonld           {'same': 59}
+  og:image         {'added': 48, 'same': 11}
+  canonical_path differs on: ['page-not-found']
+      page-not-found DIFF /404 -> /page-not-found
+
+### 7. Redirects and the 404
+redirects: 75 of 75 return the right status and destination
+/no-such-page            status 404, practice 404 page: yes
+/services/old-thing      status 404, practice 404 page: yes
+/dentist-nowhere         status 404, practice 404 page: yes

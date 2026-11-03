@@ -1,0 +1,858 @@
+{
+ "slug": "clear-braces",
+ "name": "Clear (Ceramic) Braces",
+ "path": "/clear-braces",
+ "meta": {
+  "title": "Ceramic Clear Braces in East Maitland | Tooth n Care",
+  "canonical": "https://toothncare.vercel.app/clear-braces",
+  "ogTitle": "Ceramic Clear Braces in East Maitland | Tooth n Care",
+  "ogDescription": "Clear ceramic braces in East Maitland - tooth-coloured brackets that work like traditional braces but are far less visible. Costs, care and the trade-offs.",
+  "ogType": "website",
+  "description": "Clear ceramic braces in East Maitland - tooth-coloured brackets that work like traditional braces but are far less visible. Costs, care and the trade-offs."
+ },
+ "jsonLd": [
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"name\": \"{{site:practiceName}}\",\n  \"description\": \"Modern family, cosmetic and emergency dental studio in East Maitland, NSW.\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"areaServed\": [\"East Maitland\", \"Maitland\", \"Hunter Valley\"],\n  \"openingHoursSpecification\": [\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"},\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Saturday\", \"opens\": \"09:00\", \"closes\": \"16:00\"}\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"hasMap\": \"{{site:mapUrl}}\"\n}",
+  "{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://toothncare.vercel.app\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Services\", \"item\": \"https://toothncare.vercel.app/services\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Orthodontics\", \"item\": \"https://toothncare.vercel.app/orthodontics\"}, {\"@type\": \"ListItem\", \"position\": 4, \"name\": \"Clear (Ceramic) Braces\"}]}",
+  "{\"@context\": \"https://schema.org\", \"@type\": \"MedicalProcedure\", \"name\": \"Clear (Ceramic) Braces\", \"description\": \"Clear ceramic bracket orthodontic treatment for teenagers and adults in East Maitland NSW.\", \"url\": \"https://toothncare.vercel.app/clear-braces\", \"provider\": {\"@type\": \"Dentist\", \"name\": \"{{site:practiceName}}\", \"telephone\": \"{{site:phoneE164}}\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"{{site:street}}\", \"addressLocality\": \"{{site:suburb}}\", \"postalCode\": \"{{site:postcode}}\", \"addressRegion\": \"{{site:state}}\", \"addressCountry\": \"AU\"}}}"
+ ],
+ "sections": [
+  {
+   "key": "clear-braces-01-breadcrumbs",
+   "kind": "crumbs",
+   "label": "Breadcrumbs",
+   "tag": "nav",
+   "attrs": {
+    "class": "crumbs",
+    "aria-label": "Breadcrumb"
+   },
+   "template": "<div class=\"wrap\"><a href=\"{{link-address-1}}\">{{link-text-1}}</a><svg width=\"9\" height=\"9\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg><a href=\"{{link-address-2}}\">{{link-text-2}}</a><svg width=\"9\" height=\"9\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg><a href=\"{{link-address-3}}\">{{link-text-3}}</a><svg width=\"9\" height=\"9\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg><span aria-current=\"page\">{{text-1}}</span></div>",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Home"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/services"
+    },
+    {
+     "id": "link-text-2",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Services"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "/orthodontics"
+    },
+    {
+     "id": "link-text-3",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "Orthodontics"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Clear (Ceramic) Braces"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-02-top",
+   "kind": "hero",
+   "label": "Fixed and discreet, working while you sleep",
+   "tag": "section",
+   "attrs": {
+    "class": "p-hero has-img",
+    "id": "top"
+   },
+   "template": "\n  <div class=\"hero-fx\" aria-hidden=\"true\"><i class=\"glow\"></i><i class=\"glow-r\"></i></div>\n  <div class=\"p-hero-bg\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" fetchpriority=\"high\" width=\"1600\" height=\"900\"></div>\n  <div class=\"wrap\">\n    <span class=\"eyebrow rv\">{{small-label-above-the-heading-1}}</span>\n    <h1 class=\"rv\">{{page-heading-1}}</h1>\n    <p class=\"lede rv\">{{intro-paragraph-1}}</p>\n    <div class=\"p-hero-ctas rv\"><a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a><a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a></div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp",
+     "width": "1600",
+     "height": "900"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "Clear ceramic braces at Tooth n Care East Maitland"
+    },
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Clear (Ceramic) Braces"
+    },
+    {
+     "id": "page-heading-1",
+     "label": "Page heading",
+     "type": "richtext",
+     "value": "Fixed and discreet, working <span class=\"accent\">while you sleep</span>"
+    },
+    {
+     "id": "intro-paragraph-1",
+     "label": "Intro paragraph",
+     "type": "richtext",
+     "value": "Ceramic braces work exactly like metal ones, with tooth-coloured brackets instead of steel. Fixed in place, so they keep working whether you remember them or not."
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Book Online"
+    },
+    {
+     "id": "button-link-2",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "button-text-2",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "&#9743; Call {{site:phone}}"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-03-signs",
+   "kind": "content",
+   "label": "Ceramic braces may be the right choice",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "signs"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <ul class=\"rv\" style=\"margin:22px 0 0;padding-left:20px;display:grid;gap:11px;font-weight:300;color:var(--grey);max-width:70ch\">\n    <li>{{list-item-1}}</li><li>{{list-item-2}}</li><li>{{list-item-3}}</li><li>{{list-item-4}}</li><li>{{list-item-5}}</li><li>{{list-item-6}}</li>\n  </ul>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "When It&rsquo;s Needed"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Ceramic braces may be the right <span class=\"accent\">choice</span>"
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "You want discretion but don&rsquo;t trust yourself to wear removable aligners consistently"
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Your case involves movements that aligners handle less predictably"
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "You&rsquo;re an adult in a client-facing role"
+    },
+    {
+     "id": "list-item-4",
+     "label": "List item",
+     "type": "richtext",
+     "value": "You want treatment that works continuously without daily decisions"
+    },
+    {
+     "id": "list-item-5",
+     "label": "List item",
+     "type": "richtext",
+     "value": "You&rsquo;d find removing and replacing trays before every meal impractical"
+    },
+    {
+     "id": "list-item-6",
+     "label": "List item",
+     "type": "richtext",
+     "value": "You have good oral hygiene, or are willing to raise your game for the duration"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-04-appointment",
+   "kind": "content",
+   "label": "What actually happens",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "appointment"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <div class=\"ap-steps\"><div class=\"ap-step rv\"><div class=\"ap-step-top\">{{text-1}}</div><div class=\"ap-step-rule\" aria-hidden=\"true\"></div><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p></div><div class=\"ap-step rv\"><div class=\"ap-step-top\">{{text-2}}</div><div class=\"ap-step-rule\" aria-hidden=\"true\"></div><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p></div><div class=\"ap-step rv\"><div class=\"ap-step-top\">{{text-3}}</div><div class=\"ap-step-rule\" aria-hidden=\"true\"></div><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p></div><div class=\"ap-step rv\"><div class=\"ap-step-top\">{{text-4}}</div><div class=\"ap-step-rule\" aria-hidden=\"true\"></div><h3>{{sub-heading-4}}</h3><p>{{paragraph-4}}</p></div></div>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "At The Appointment"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "What actually <span class=\"accent\">happens</span>"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "<span class=\"ap-step-big\">01<em>/</em></span>"
+    },
+    {
+     "id": "sub-heading-1",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Records &amp; planning"
+    },
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Photographs, X-rays and a digital scan, then a treatment plan showing what will move, in what order, and roughly how long it will take."
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "<span class=\"ap-step-big\">02<em>/</em></span>"
+    },
+    {
+     "id": "sub-heading-2",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Fitting"
+    },
+    {
+     "id": "paragraph-2",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Brackets are bonded to each tooth and a wire threaded through. Around an hour, and it doesn&rsquo;t hurt - though the teeth will ache for a few days afterwards as pressure begins."
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "<span class=\"ap-step-big\">03<em>/</em></span>"
+    },
+    {
+     "id": "sub-heading-3",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Adjustments"
+    },
+    {
+     "id": "paragraph-3",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Every six to eight weeks the wire is changed or tightened to progress the movement. Each adjustment brings a day or two of tenderness."
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "<span class=\"ap-step-big\">04<em>/</em></span>"
+    },
+    {
+     "id": "sub-heading-4",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Removal &amp; retention"
+    },
+    {
+     "id": "paragraph-4",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Brackets are removed, adhesive polished off, and retainers fitted immediately - usually a fixed wire behind the front teeth, a removable retainer at night, or both."
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-05-recovery-aftercare",
+   "kind": "content",
+   "label": "Recovery & aftercare",
+   "tag": "section",
+   "attrs": {
+    "class": "pg"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"split-grid\">\n    <div class=\"rv\">\n      <div class=\"sec-head\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n      <ul style=\"margin:20px 0 0;padding-left:20px;display:grid;gap:11px;font-weight:300;color:var(--grey)\">\n        <li>{{list-item-1}}</li><li>{{list-item-2}}</li><li>{{list-item-3}}</li><li>{{list-item-4}}</li><li>{{list-item-5}}</li><li>{{list-item-6}}</li><li>{{list-item-7}}</li><li>{{list-item-8}}</li>\n      </ul>\n    </div>\n    <div class=\"sec-img rv\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" width=\"1000\" height=\"800\" loading=\"lazy\"></div>\n  </div>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Afterwards"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Recovery &amp; aftercare"
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Soft food for a few days after fitting and after each adjustment."
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Avoid hard, sticky and chewy foods for the whole treatment - toffee, hard nuts, ice, crusty bread. They break brackets and add months."
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Cut apples and carrots into pieces rather than biting into them."
+    },
+    {
+     "id": "list-item-4",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Brush after every meal and use interdental brushes around the brackets. Braces make cleaning harder and decay risk higher."
+    },
+    {
+     "id": "list-item-5",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Orthodontic wax over anything rubbing the cheek or lip."
+    },
+    {
+     "id": "list-item-6",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Never cut a poking wire - reposition it gently or cover it with wax and ring us."
+    },
+    {
+     "id": "list-item-7",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Wear a fitted mouthguard for any contact sport."
+    },
+    {
+     "id": "list-item-8",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Come to every adjustment. Missed appointments are the main reason treatment overruns."
+    },
+    {
+     "id": "image-1",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-d7098759b1.webp",
+     "width": "1000",
+     "height": "800"
+    },
+    {
+     "id": "image-description-alt-text-1",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "Clear ceramic braces at Tooth n Care"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-06-alternatives",
+   "kind": "content",
+   "label": "Other ways to go",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "alternatives"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <div class=\"info-grid\"><div class=\"info-card rv\"><svg class=\"ic\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"10\" r=\"6\"/><path d=\"m8.5 15.2-1.7 5.3 5.2-2.6 5.2 2.6-1.7-5.3\"/><path d=\"m12 7 .9 1.9 2.1.3-1.5 1.5.4 2.1-1.9-1-1.9 1 .4-2.1-1.5-1.5 2.1-.3L12 7Z\"/></svg><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><p class=\"fine\">{{small-print-1}}</p></div><div class=\"info-card rv\"><svg class=\"ic\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 21s7.5-3.2 7.5-9V5.6L12 3 4.5 5.6V12c0 5.8 7.5 9 7.5 9Z\"/><path d=\"m8.8 11.8 2.2 2.2 4.2-4.4\"/></svg><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><p class=\"fine\">{{small-print-2}}</p></div><div class=\"info-card rv\"><svg class=\"ic\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5.6c-1.6-1.9-4.4-2.5-6.2-.9C4 6.4 3.6 9 4.3 11.1c.8 2.6 1.4 5.6 2.2 8.2.3 1 1.7 1 2 0l1.3-4.6c.4-1.4 2-1.4 2.4 0l1.3 4.6c.3 1 1.7 1 2 0 .8-2.6 1.4-5.6 2.2-8.2.7-2.1.3-4.7-1.5-6.4-1.8-1.6-4.6-1-6.2.9Z\"/></svg><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p><p class=\"fine\">{{small-print-3}}</p></div></div>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Alternatives We&rsquo;d Also Discuss"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Other ways to <span class=\"accent\">go</span>"
+    },
+    {
+     "id": "sub-heading-1",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Metal braces"
+    },
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Stronger, smaller brackets, usually cheaper, and less prone to staining. The visible option, and still the workhorse of orthodontics."
+    },
+    {
+     "id": "small-print-1",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "<a href=\"/metal-braces\">Read more &rarr;</a>"
+    },
+    {
+     "id": "sub-heading-2",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Clear aligners"
+    },
+    {
+     "id": "paragraph-2",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Removable and even less visible, but they only work while worn and handle some movements less predictably."
+    },
+    {
+     "id": "small-print-2",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "<a href=\"/clear-aligners\">Read more &rarr;</a>"
+    },
+    {
+     "id": "sub-heading-3",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Cosmetic alternatives"
+    },
+    {
+     "id": "paragraph-3",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "For minor irregularity, bonding or veneers can create the appearance of alignment quickly - at the cost of enamel, and without fixing the underlying position."
+    },
+    {
+     "id": "small-print-3",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "<a href=\"/veneers-and-laminates\">Read more &rarr;</a>"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-07-risks",
+   "kind": "content",
+   "label": "The honest downsides",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "risks"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n  <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p>\n  <ul class=\"rv\" style=\"margin:20px 0 0;padding-left:20px;display:grid;gap:11px;font-weight:300;color:var(--grey);max-width:74ch\">\n    <li>{{list-item-1}}</li><li>{{list-item-2}}</li><li>{{list-item-3}}</li><li>{{list-item-4}}</li><li>{{list-item-5}}</li><li>{{list-item-6}}</li><li>{{list-item-7}}</li><li>{{list-item-8}}</li><li>{{list-item-9}}</li>\n  </ul>\n</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Risks &amp; Considerations"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "The honest <span class=\"accent\">downsides</span>"
+    },
+    {
+     "id": "intro-paragraph-1",
+     "label": "Intro paragraph",
+     "type": "richtext",
+     "value": "No treatment is risk-free, and you should hear this before you decide rather than afterwards."
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Ceramic brackets are larger and more brittle than metal ones, so they break more easily and can add appointments and time."
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "The elastic ties around the brackets stain with coffee, tea, red wine, curry and smoking. They&rsquo;re changed at every adjustment, but they will discolour between visits."
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Ceramic is harder than enamel, so brackets on lower teeth can wear the opposing upper teeth in some bites. We assess this before recommending them."
+    },
+    {
+     "id": "list-item-4",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Treatment can be slightly slower than with metal braces, since more force must be applied cautiously."
+    },
+    {
+     "id": "list-item-5",
+     "label": "List item",
+     "type": "richtext",
+     "value": "They cost more than metal braces."
+    },
+    {
+     "id": "list-item-6",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Decalcification, permanent white marks around where brackets sat, is a real risk with poor cleaning, and it is not reversible."
+    },
+    {
+     "id": "list-item-7",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Gum inflammation and swelling around brackets is common if hygiene slips."
+    },
+    {
+     "id": "list-item-8",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Expect discomfort for a few days after fitting and each adjustment, and initial irritation to cheeks and lips."
+    },
+    {
+     "id": "list-item-9",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Relapse without retention is certain. Retainers are for life in some form."
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-08-cost",
+   "kind": "content",
+   "label": "Cost & health funds",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "cost"
+   },
+   "template": "<div class=\"wrap\">\n  <div class=\"info-grid cols-2\">\n    <div class=\"info-card rv\"><svg class=\"ic\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"5\" width=\"19\" height=\"14\" rx=\"2.5\"/><path d=\"M2.5 9.5h19M6 14.5h4\"/></svg><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><p class=\"fine\">{{small-print-1}}</p></div>\n    <div class=\"info-card rv\"><svg class=\"ic\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 11.3c0 4-4 7.2-9 7.2-1 0-2-.1-2.9-.4L4 20l1.2-3.4C3.8 15.3 3 13.4 3 11.3c0-4 4-7.3 9-7.3s9 3.3 9 7.3Z\"/></svg><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><p class=\"fine\">{{small-print-2}}</p></div>\n  </div>\n</div>",
+   "fields": [
+    {
+     "id": "sub-heading-1",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Cost &amp; health funds"
+    },
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Ceramic braces cost more than metal braces and are usually paid in instalments across treatment. Health funds with orthodontic cover typically contribute an annual amount, so treatment spanning two calendar years can attract two years of benefit. Payment plans are available (lending criteria, fees and T&amp;Cs apply)."
+    },
+    {
+     "id": "small-print-1",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "<a href=\"/payment-options\">Fees &amp; payment plans &rarr;</a>"
+    },
+    {
+     "id": "sub-heading-2",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Get a written plan"
+    },
+    {
+     "id": "paragraph-2",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Before anything starts you&rsquo;ll have a written treatment plan with costs, inclusions and any conditions spelled out, plus an estimate of your health fund rebate checked at the desk."
+    },
+    {
+     "id": "small-print-2",
+     "label": "Small print",
+     "type": "richtext",
+     "value": "<a href=\"{{site:bookingUrl}}\" target=\"_blank\" rel=\"noopener\">Book an assessment &rarr;</a>"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-09-related-pages",
+   "kind": "related",
+   "label": "Related pages",
+   "tag": "section",
+   "attrs": {
+    "class": "pg-related"
+   },
+   "template": "\n  <div class=\"wrap\">\n    <div class=\"sec-head rv\">\n      <span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span>\n      <h2>{{heading-1}}</h2>\n    </div>\n    <div class=\"rel-grid\"><a class=\"rel-card rv\" href=\"{{link-address-1}}\"><b>{{card-title-1}}</b><span>{{text-1}}</span><em>{{link-label-1}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-2}}\"><b>{{card-title-2}}</b><span>{{text-2}}</span><em>{{link-label-2}}</em></a><a class=\"rel-card rv\" href=\"{{link-address-3}}\"><b>{{card-title-3}}</b><span>{{text-3}}</span><em>{{link-label-3}}</em></a></div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Keep Exploring"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Related <span class=\"accent\">pages</span>"
+    },
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "/metal-braces"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Metal Braces"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Stronger, cheaper, and the same result."
+    },
+    {
+     "id": "link-label-1",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/clear-aligners"
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Clear Aligners"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Removable and less visible again."
+    },
+    {
+     "id": "link-label-2",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-3",
+     "label": "Link address",
+     "type": "href",
+     "value": "/mouthguards-and-splints"
+    },
+    {
+     "id": "card-title-3",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Mouthguards &amp; Splints"
+    },
+    {
+     "id": "text-3",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Sports protection while in braces."
+    },
+    {
+     "id": "link-label-3",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "View page <span class=\"btn-arrow\">&rarr;</span>"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-10-contact",
+   "kind": "cta",
+   "label": "Book or contact panel",
+   "tag": "section",
+   "attrs": {
+    "class": "split-cta",
+    "id": "contact",
+    "aria-label": "Book online or contact us"
+   },
+   "template": "\n  <div class=\"wrap\">\n    <div class=\"act-grid act-grid-2\">\n      <a class=\"act-card rv\" href=\"{{link-address-1}}\" target=\"_blank\" rel=\"noopener\">\n        <svg class=\"ic\" width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3.5\" y=\"4.5\" width=\"17\" height=\"16\" rx=\"2.5\"/><path d=\"M8 2.5v4M16 2.5v4M3.5 9.5h17\"/><path d=\"m9.5 14.5 2 2 3.5-3.8\"/></svg><b>{{card-title-1}}</b>\n        <span>{{text-1}}</span>\n        <em>{{link-label-1}}</em>\n      </a>\n      <a class=\"act-card rv\" href=\"{{link-address-2}}\">\n        <svg class=\"ic\" width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 11.3c0 4-4 7.2-9 7.2-1 0-2-.1-2.9-.4L4 20l1.2-3.4C3.8 15.3 3 13.4 3 11.3c0-4 4-7.3 9-7.3s9 3.3 9 7.3Z\"/></svg><b>{{card-title-2}}</b>\n        <span>{{text-2}}</span>\n        <em>{{link-label-2}}</em>\n      </a>\n    </div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Book Online"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Choose a time that suits you - any hour, any day."
+    },
+    {
+     "id": "link-label-1",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "Book now <span class=\"btn-arrow\">&rarr;</span>"
+    },
+    {
+     "id": "link-address-2",
+     "label": "Link address",
+     "type": "href",
+     "value": "/contact"
+    },
+    {
+     "id": "card-title-2",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Contact Us"
+    },
+    {
+     "id": "text-2",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Call, email or send us a message - we&rsquo;ll help you work out the next step."
+    },
+    {
+     "id": "link-label-2",
+     "label": "Link label",
+     "type": "richtext",
+     "value": "Get in touch <span class=\"btn-arrow\">&rarr;</span>"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-11-map-and-address",
+   "kind": "map",
+   "label": "Map and address",
+   "tag": "section",
+   "attrs": {
+    "class": "map-band",
+    "aria-label": "Our location"
+   },
+   "template": "\n  <iframe src=\"{{map-address-1}}\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen title=\"Tooth n Care, {{site:street}}, {{site:cityLine}}\"></iframe>\n  <div class=\"map-card\">\n    <b>{{card-title-1}}</b>\n    <span>{{text-1}}</span>\n    <a href=\"{{link-address-1}}\">{{link-text-1}}</a>\n    <a class=\"btn btn-ghost map-btn\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n  </div>\n",
+   "fields": [
+    {
+     "id": "map-address-1",
+     "label": "Map address",
+     "type": "text",
+     "value": "{{site:mapEmbed}}"
+    },
+    {
+     "id": "card-title-1",
+     "label": "Card title",
+     "type": "richtext",
+     "value": "Tooth n Care"
+    },
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "{{site:street}},<br>{{site:cityLine}}"
+    },
+    {
+     "id": "link-address-1",
+     "label": "Link address",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "link-text-1",
+     "label": "Link text",
+     "type": "richtext",
+     "value": "{{site:phone}}"
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:directionsUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Get Directions"
+    }
+   ]
+  },
+  {
+   "key": "clear-braces-12-disclaimer",
+   "kind": "disclaimer",
+   "label": "Disclaimer",
+   "tag": "div",
+   "attrs": {
+    "class": "disclaimer"
+   },
+   "template": "\n  <div class=\"wrap\">\n    <p>{{paragraph-1}}</p>\n  </div>\n",
+   "fields": [
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "<em>This information is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Any dental or surgical procedure carries risks. Individual results vary. Before proceeding with treatment we encourage you to ask questions and, if you wish, seek a second opinion from a qualified health practitioner.</em>"
+    }
+   ]
+  }
+ ],
+ "bodyScripts": [
+  {
+   "inline": "\n(function(){\n  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  /* nav scroll state + progress bar */\n  const header = document.getElementById('header');\n  const progress = document.getElementById('progress');\n  addEventListener('scroll', () => {\n    header.classList.toggle('scrolled', scrollY > 40);\n    const h = document.documentElement;\n    progress.style.width = (scrollY / (h.scrollHeight - h.clientHeight) * 100) + '%';\n  }, {passive:true});\n\n  /* mobile menu */\n  const burger = document.getElementById('burger');\n  const menu = document.getElementById('mobileMenu');\n  burger.addEventListener('click', () => {\n    const open = menu.classList.toggle('open');\n    burger.setAttribute('aria-expanded', open);\n  });\n  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));\n\n  /* scroll reveals */\n  const io = new IntersectionObserver(entries => {\n    entries.forEach((e) => {\n      if (e.isIntersecting) {\n        const siblings = [...e.target.parentElement.children].filter(c => c.classList.contains('rv'));\n        const idx = siblings.indexOf(e.target);\n        e.target.style.transitionDelay = reduced ? '0s' : Math.min(idx * 90, 450) + 'ms';\n        e.target.classList.add('in');\n        io.unobserve(e.target);\n      }\n    });\n  }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});\n  document.querySelectorAll('.rv').forEach(el => io.observe(el));\n\n  /* nav dropdowns (Get to Know Us + Services) -- one generic handler */\n  document.querySelectorAll('.nav-links li.has-drop').forEach(function (li) {\n    const trigger = li.querySelector(':scope > a');\n    const drop = li.querySelector(':scope > .drop');\n    if (!trigger || !drop) return;\n    let openT, closeT;\n    const setDrop = (open) => {\n      drop.classList.toggle('open', open);\n      li.classList.toggle('open', open);\n      trigger.setAttribute('aria-expanded', open);\n    };\n    li.addEventListener('mouseenter', () => { clearTimeout(closeT); openT = setTimeout(() => setDrop(true), 120); });\n    li.addEventListener('mouseleave', () => { clearTimeout(openT); closeT = setTimeout(() => setDrop(false), 250); });\n    trigger.addEventListener('click', e => {\n      e.preventDefault();\n      clearTimeout(openT); clearTimeout(closeT);\n      setDrop(!drop.classList.contains('open'));\n    });\n    trigger.addEventListener('focus', () => { clearTimeout(closeT); openT = setTimeout(() => setDrop(true), 120); });\n    document.addEventListener('keydown', e => {\n      if (e.key === 'Escape' && drop.classList.contains('open')) { setDrop(false); trigger.focus(); clearTimeout(openT); }\n    });\n    document.addEventListener('click', e => {\n      if (drop.classList.contains('open') && !li.contains(e.target)) setDrop(false);\n    });\n    drop.addEventListener('focusout', e => {\n      if (!li.contains(e.relatedTarget)) setDrop(false);\n    });\n    drop.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrop(false)));\n  });\n\n  /* vertical photographic menus - forgiving hover + two-column services fly-out */\n  document.querySelectorAll('.nav-links li.has-mega').forEach(function (li) {\n    const trigger = li.querySelector(':scope > a');\n    const panel = li.querySelector(':scope > .vm');\n    if (!trigger || !panel) return;\n    const cats = Array.prototype.slice.call(panel.querySelectorAll('.vm-cat-link'));\n    const panes = Array.prototype.slice.call(panel.querySelectorAll('.vm-pane'));\n    let openT, closeT, intentT;\n\n    const showCat = (key) => {\n      cats.forEach(c => {\n        const on = c.dataset.cat === key;\n        c.classList.toggle('on', on);\n        c.setAttribute('aria-expanded', on);\n      });\n      panes.forEach(p => p.classList.toggle('on', p.dataset.pane === key));\n    };\n    const setOpen = (open) => {\n      panel.classList.toggle('open', open);\n      li.classList.toggle('open', open);\n      trigger.setAttribute('aria-expanded', open);\n      if (!open) { clearTimeout(intentT); if (cats.length) showCat(cats[0].dataset.cat); }\n    };\n    const scheduleOpen = () => { clearTimeout(closeT); openT = setTimeout(() => setOpen(true), 120); };\n    /* generous close: ~450ms, cancelled the moment the pointer re-enters\n       anywhere in the li or the panel (the panel is inside the li, and a\n       hover bridge covers the gap under the trigger) */\n    const scheduleClose = () => { clearTimeout(openT); closeT = setTimeout(() => setOpen(false), 450); };\n    li.addEventListener('mouseenter', scheduleOpen);\n    li.addEventListener('mouseleave', scheduleClose);\n    panel.addEventListener('mouseenter', () => clearTimeout(closeT));\n\n    trigger.addEventListener('click', e => {\n      e.preventDefault();\n      clearTimeout(openT); clearTimeout(closeT);\n      setOpen(!panel.classList.contains('open'));\n    });\n    trigger.addEventListener('focus', scheduleOpen);\n    document.addEventListener('keydown', e => {\n      if (e.key === 'Escape' && panel.classList.contains('open')) {\n        setOpen(false); trigger.focus(); clearTimeout(openT);\n      }\n    });\n    document.addEventListener('click', e => {\n      if (panel.classList.contains('open') && !li.contains(e.target)) setOpen(false);\n    });\n    panel.addEventListener('focusout', e => {\n      if (!li.contains(e.relatedTarget)) setOpen(false);\n    });\n    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));\n\n    if (!cats.length) return; /* Get to Know Us: single column, done */\n\n    /* hover intent: ~100ms so sweeping the list doesn't flicker categories */\n    cats.forEach(c => {\n      c.addEventListener('mouseenter', () => {\n        clearTimeout(intentT);\n        intentT = setTimeout(() => showCat(c.dataset.cat), 100);\n      });\n      c.addEventListener('mouseleave', () => clearTimeout(intentT));\n      c.addEventListener('focus', () => showCat(c.dataset.cat));\n    });\n\n    /* keyboard: Up/Down through categories, Right into treatments, Left back */\n    const activeRows = () => Array.prototype.slice.call(panel.querySelectorAll('.vm-pane.on .vm-srow'));\n    const activeCat = () => cats.filter(c => c.classList.contains('on'))[0] || cats[0];\n    trigger.addEventListener('keydown', e => {\n      if (e.key === 'ArrowDown') { e.preventDefault(); setOpen(true); cats[0].focus(); }\n    });\n    panel.addEventListener('keydown', e => {\n      const el = document.activeElement;\n      const ci = cats.indexOf(el);\n      if (ci !== -1) {\n        if (e.key === 'ArrowDown') { e.preventDefault(); cats[Math.min(ci + 1, cats.length - 1)].focus(); }\n        else if (e.key === 'ArrowUp') {\n          e.preventDefault();\n          if (ci === 0) { setOpen(false); trigger.focus(); } else cats[ci - 1].focus();\n        }\n        else if (e.key === 'ArrowRight') { e.preventDefault(); const r = activeRows(); if (r.length) r[0].focus(); }\n        return;\n      }\n      const rows = activeRows();\n      const ri = rows.indexOf(el);\n      if (ri !== -1) {\n        if (e.key === 'ArrowDown') { e.preventDefault(); rows[Math.min(ri + 1, rows.length - 1)].focus(); }\n        else if (e.key === 'ArrowUp') { e.preventDefault(); if (ri === 0) activeCat().focus(); else rows[ri - 1].focus(); }\n        else if (e.key === 'ArrowLeft') { e.preventDefault(); activeCat().focus(); }\n      }\n    });\n  });\n\n  /* mobile menu accordions (Get to Know Us, Services, and per-category treatments) */\n  document.querySelectorAll('.mm-services').forEach(function (btn) {\n    const panel = document.getElementById(btn.dataset.panel);\n    if (!panel) return;\n    btn.addEventListener('click', function () {\n      const open = panel.classList.toggle('open');\n      btn.setAttribute('aria-expanded', open);\n    });\n  });\n  document.querySelectorAll('.mm-cat-head').forEach(function (h) {\n    h.addEventListener('click', function () {\n      const cat = h.parentElement;\n      const open = cat.classList.toggle('open');\n      h.setAttribute('aria-expanded', open);\n    });\n  });\n\n  /* theme toggle */\n  const tBtn = document.getElementById('themeToggle');\n  if (tBtn) {\n    const label = document.getElementById('themeLabel');\n    const sun = document.getElementById('themeIconSun');\n    const moon = document.getElementById('themeIconMoon');\n    tBtn.addEventListener('click', () => {\n      const root = document.documentElement;\n      const toLight = root.getAttribute('data-theme') !== 'light';\n      root.classList.add('theming');\n      if (toLight) root.setAttribute('data-theme','light');\n      else root.removeAttribute('data-theme');\n      label.textContent = toLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';\n      sun.style.display = toLight ? '' : 'none';\n      moon.style.display = toLight ? 'none' : '';\n      tBtn.setAttribute('aria-pressed', toLight);\n      setTimeout(() => root.classList.remove('theming'), 450);\n    });\n  }\n\n  /* ---- health funds carousel (manual only: arrows, dots, swipe) ---- */\n  const fwTrack = document.getElementById('fundTrack');\n  if (fwTrack) {\n    const fwDots = document.getElementById('fundDots');\n    const cells = Array.prototype.slice.call(fwTrack.children);\n    const fwPrev = document.querySelector('.tm-arrow[data-fw=\"prev\"]');\n    const fwNext = document.querySelector('.tm-arrow[data-fw=\"next\"]');\n    const fwReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n    /* one page = as many whole cells as currently fit in the viewport */\n    const perView = () => {\n      if (!cells[0]) return 1;\n      const w = cells[0].getBoundingClientRect().width;\n      const gap = cells[1] ? cells[1].getBoundingClientRect().left - cells[0].getBoundingClientRect().right : 14;\n      return Math.max(1, Math.round(fwTrack.clientWidth / (w + gap)));\n    };\n    const page = () => fwTrack.clientWidth;\n    const fwMax = () => Math.max(0, fwTrack.scrollWidth - fwTrack.clientWidth);\n    const fwPages = () => Math.max(1, Math.ceil(cells.length / perView()));\n\n    function fwBuildDots(n) {\n      fwDots.innerHTML = '';\n      if (n < 2) return;\n      for (let i = 0; i < n; i++) {\n        const d = document.createElement('button');\n        d.type = 'button';\n        d.className = 'tm-dot';\n        d.setAttribute('aria-label', 'Show health funds, view ' + (i + 1) + ' of ' + n);\n        d.addEventListener('click', () => fwTrack.scrollTo({ left: i * page(), behavior: fwReduce ? 'auto' : 'smooth' }));\n        fwDots.appendChild(d);\n      }\n    }\n    function fwSync() {\n      const n = fwPages(), max = fwMax();\n      if (fwDots.children.length !== (n < 2 ? 0 : n)) fwBuildDots(n);\n      /* the final page is usually a partial scroll, so rounding alone never\n         reaches the last dot -- pin it explicitly once we're at the end */\n      let idx = max <= 0 ? 0 : Math.round(fwTrack.scrollLeft / page());\n      if (fwTrack.scrollLeft >= max - 4) idx = n - 1;\n      idx = Math.min(n - 1, Math.max(0, idx));\n      Array.prototype.forEach.call(fwDots.children, (d, i) => d.classList.toggle('on', i === idx));\n      if (fwPrev) fwPrev.disabled = fwTrack.scrollLeft <= 4;\n      if (fwNext) fwNext.disabled = fwTrack.scrollLeft >= max - 4;\n      const nav = document.querySelector('.fund-nav');\n      if (nav) nav.style.visibility = max <= 4 ? 'hidden' : '';\n    }\n    const fwGo = dir => fwTrack.scrollBy({ left: dir * page(), behavior: fwReduce ? 'auto' : 'smooth' });\n    if (fwPrev) fwPrev.addEventListener('click', () => fwGo(-1));\n    if (fwNext) fwNext.addEventListener('click', () => fwGo(1));\n\n    let fwRaf;\n    fwTrack.addEventListener('scroll', () => { cancelAnimationFrame(fwRaf); fwRaf = requestAnimationFrame(fwSync); }, { passive: true });\n    window.addEventListener('resize', fwSync);\n    window.addEventListener('load', fwSync);\n    if (window.ResizeObserver) new ResizeObserver(fwSync).observe(fwTrack);\n    setTimeout(fwSync, 250);\n    fwSync();\n  }\n\n  /* ---- team slider (manual only: arrows, dots, swipe) ---- */\n  const track = document.getElementById('tmTrack');\n  if (track) {\n    const dotWrap = document.getElementById('tmDots');\n    const cards = Array.prototype.slice.call(track.children);\n    const prev = document.querySelector('.tm-arrow[data-tm=\"prev\"]');\n    const next = document.querySelector('.tm-arrow[data-tm=\"next\"]');\n    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n    /* measured from slide to slide rather than width + a hard-coded gap, so it\n       stays correct whatever the gap is at the current breakpoint */\n    const step = () => {\n      if (cards.length > 1) {\n        const d = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;\n        if (d > 1) return d;\n      }\n      return cards[0] ? cards[0].getBoundingClientRect().width : 300;\n    };\n    const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);\n\n    const pages = () => Math.min(cards.length, Math.ceil(maxScroll() / step()) + 1);\n\n    function buildDots(n) {\n      dotWrap.innerHTML = '';\n      if (n < 2) return;\n      for (let i = 0; i < n; i++) {\n        const d = document.createElement('button');\n        d.type = 'button';\n        d.className = 'tm-dot';\n        d.setAttribute('aria-label', 'Show team members, view ' + (i + 1) + ' of ' + n);\n        d.addEventListener('click', () => track.scrollTo({ left: i * step(), behavior: reduce ? 'auto' : 'smooth' }));\n        dotWrap.appendChild(d);\n      }\n    }\n\n    function sync() {\n      const max = maxScroll();\n      const n = pages();\n      if (dotWrap.children.length !== (n < 2 ? 0 : n)) buildDots(n);\n      const idx = max <= 0 ? 0 : Math.min(n - 1, Math.round(track.scrollLeft / step()));\n      Array.prototype.forEach.call(dotWrap.children, (d, i) => d.classList.toggle('on', i === idx));\n      if (prev) prev.disabled = track.scrollLeft <= 4;\n      if (next) next.disabled = track.scrollLeft >= max - 4;\n      /* nothing to scroll (every card already fits) -> hide the arrows entirely */\n      const nav = document.querySelector('.tm-nav');\n      if (nav) nav.style.visibility = max <= 4 ? 'hidden' : '';\n    }\n    const go = dir => track.scrollBy({ left: dir * step(), behavior: reduce ? 'auto' : 'smooth' });\n    if (prev) prev.addEventListener('click', () => go(-1));\n    if (next) next.addEventListener('click', () => go(1));\n\n    let raf;\n    track.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(sync); }, { passive: true });\n    window.addEventListener('resize', sync);\n    window.addEventListener('load', sync);\n    if (window.ResizeObserver) new ResizeObserver(sync).observe(track);\n    setTimeout(sync, 250);\n    sync();\n  }\n})();\n\n/* ---- FAQ accordion -----------------------------------------------------\n   Scoped per .acc container, so a second accordion elsewhere on the page\n   would not fight with this one. Opens only on click -- nothing autoplays. */\n(function () {\n  document.querySelectorAll('.acc .acc-item').forEach(function (item) {\n    const head = item.querySelector('.acc-head');\n    if (!head) return;\n    head.addEventListener('click', function () {\n      const open = item.classList.contains('open');\n      item.closest('.acc').querySelectorAll('.acc-item.open').forEach(function (o) {\n        o.classList.remove('open');\n        const h = o.querySelector('.acc-head');\n        if (h) h.setAttribute('aria-expanded', 'false');\n      });\n      if (!open) {\n        item.classList.add('open');\n        head.setAttribute('aria-expanded', 'true');\n      }\n    });\n  });\n})();\n\n/* ---- before / after comparison sliders --------------------------------\n   Pointer drag anywhere on the image, or tab to the hidden range input and\n   use the arrow keys. User-driven only -- nothing moves on its own. */\n(function () {\n  document.querySelectorAll('.ba').forEach(function (ba) {\n    const range = ba.querySelector('.ba-range');\n    let pos = 50;\n\n    function set(v) {\n      pos = Math.max(0, Math.min(100, v));\n      ba.style.setProperty('--pos', pos.toFixed(2) + '%');\n      if (range && Math.round(+range.value) !== Math.round(pos)) range.value = Math.round(pos);\n    }\n    function fromEvent(e) {\n      const r = ba.getBoundingClientRect();\n      return r.width ? ((e.clientX - r.left) / r.width) * 100 : 50;\n    }\n\n    let dragging = false;\n    ba.addEventListener('pointerdown', function (e) {\n      if (e.button && e.button !== 0) return;\n      dragging = true;\n      try { ba.setPointerCapture(e.pointerId); } catch (_) {}\n      set(fromEvent(e));\n    });\n    ba.addEventListener('pointermove', function (e) {\n      if (!dragging) return;\n      e.preventDefault();\n      set(fromEvent(e));\n    });\n    const end = function (e) {\n      if (!dragging) return;\n      dragging = false;\n      try { ba.releasePointerCapture(e.pointerId); } catch (_) {}\n    };\n    ba.addEventListener('pointerup', end);\n    ba.addEventListener('pointercancel', end);\n    /* the range is pointer-events:none, so this only ever fires from the keyboard */\n    if (range) range.addEventListener('input', function () { set(+range.value); });\n\n    set(50);\n  });\n})();\n"
+  }
+ ],
+ "headScripts": [],
+ "order": [
+  "progress",
+  "stickyCall",
+  "header",
+  "mobileMenu",
+  "section:0",
+  "section:1",
+  "section:2",
+  "section:3",
+  "section:4",
+  "section:5",
+  "section:6",
+  "section:7",
+  "section:8",
+  "section:9",
+  "section:10",
+  "section:11",
+  "footer",
+  "script:0"
+ ]
+}

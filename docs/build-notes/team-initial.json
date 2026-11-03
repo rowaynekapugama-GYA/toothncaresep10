@@ -1,0 +1,34 @@
+[
+ {
+  "name": "Dr Nisheeth Agrawal",
+  "role": "Principal Dentist",
+  "bio": "Nearly ten years looking after Hunter smiles, with a special interest in veneers, wisdom teeth surgery, dentures and full-mouth rehabilitation.",
+  "photo": "/images/img-c3cc9872f0.webp",
+  "profileUrl": "/dr-nisheeth-agrawal",
+  "sortOrder": 0
+ },
+ {
+  "name": "Dr Navneet Karan",
+  "role": "Dentist",
+  "bio": "A Fellow of the Royal Australasian College of Dental Surgeons, working across Newcastle and the Hunter since 2017. Calm, unhurried, happiest with the tricky cases.",
+  "photo": "/images/img-4700f6418b.webp",
+  "profileUrl": "/dr-navneet-karan",
+  "sortOrder": 1
+ },
+ {
+  "name": "Zoe Xu",
+  "role": "Oral Health Therapist",
+  "bio": "Preventative and restorative care for every age, from children’s check-ups to gum disease management - and never in a rush to explain things properly.",
+  "photo": "/images/img-522b7eab80.webp",
+  "profileUrl": "/zoe-xu",
+  "sortOrder": 2
+ },
+ {
+  "name": "Support Team",
+  "role": "Dental Assistant",
+  "bio": "With us since 2019, helping out right across the practice and the familiar face beside you through every appointment.",
+  "photo": "/images/img-4286fa36e3.webp",
+  "profileUrl": "/support-team",
+  "sortOrder": 3
+ }
+]

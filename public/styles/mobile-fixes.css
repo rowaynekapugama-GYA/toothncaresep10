@@ -1,0 +1,207 @@
+/* Mobile pass for the Tooth n Care port.
+   Every rule here fixes something that only shows up on a phone or a tablet.
+   Nothing changes the approved desktop layout. */
+
+/* ---- 1. nothing may scroll sideways ---- */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ---- 2. opening hours: let the day and time wrap instead of pushing out ---- */
+@media (max-width: 520px) {
+  .hours-grid {
+    column-gap: 12px;
+  }
+
+  .hours-grid dt,
+  .hours-grid dd {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ---- 3. tap targets ----
+   The guideline is 44px. These are the controls that fell short on a phone. */
+@media (max-width: 760px) {
+  .topbar .tb-item {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    min-height: 44px;
+  }
+
+  .acc-head {
+    min-height: 48px;
+  }
+
+  /* carousel dots keep their look and gain a finger sized hit area */
+  .tm-dots,
+  .dots,
+  .fw-dots {
+    gap: 16px;
+  }
+
+  .tm-dot,
+  .dots button,
+  .fw-dot {
+    position: relative;
+  }
+
+  .tm-dot::after,
+  .dots button::after,
+  .fw-dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 44px;
+    width: calc(100% + 16px);
+  }
+
+  /* phone numbers and small print links are easier to hit */
+  .map-card a,
+  .os-fine a,
+  .foot-areas a,
+  .foot-funds a,
+  .fine a {
+    display: inline-block;
+    padding: 5px 2px;
+  }
+
+  .crumbs a,
+  .crumbs span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .btn,
+  .burger,
+  .p-hero-ctas a,
+  .hero-ctas a,
+  .nav-cta a {
+    min-height: 44px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger {
+    min-width: 46px;
+  }
+
+  .foot-grid a,
+  .mobile-menu a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .socials a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ---- 4. the map keeps a sensible shape on a narrow screen ---- */
+@media (max-width: 760px) {
+  .map-band iframe {
+    min-height: 300px;
+  }
+}
+
+/* ---- 5. sticky call bar: Call and Book, side by side, clear of the footer ---- */
+.sticky-bar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .sticky-call {
+    display: none !important;
+  }
+
+  .sticky-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1002;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(127, 246, 240, 0.18);
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.45);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .sticky-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 56px;
+    font-family: var(--font-head);
+    font-size: 12px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sticky-bar .sb-call {
+    background: var(--panel);
+    color: var(--neon);
+  }
+
+  .sticky-bar .sb-book {
+    background: var(--aqua);
+    color: #04292b;
+  }
+
+  .sticky-bar svg {
+    flex: none;
+  }
+
+  /* room for the bar so it never covers the last line of the page */
+  body {
+    padding-bottom: 56px;
+  }
+
+  .disclaimer {
+    padding-bottom: 40px;
+  }
+}
+
+/* ---- 6. iOS zooms any field whose text is under 16px ---- */
+@media (max-width: 760px) {
+  input:not([type='checkbox']):not([type='radio']),
+  select,
+  textarea,
+  #hsInput,
+  .hero-search input {
+    font-size: 16px;
+  }
+}
+
+/* ---- 7. long words and links never push a card wider than the screen ---- */
+@media (max-width: 520px) {
+  .info-card,
+  .rel-card,
+  .act-card,
+  .tcard,
+  .visit-card {
+    overflow-wrap: anywhere;
+  }
+}

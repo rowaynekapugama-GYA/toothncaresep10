@@ -1,0 +1,407 @@
+/* Tooth n Care dashboard styling.
+   A fixed menu down the left with icons, content on the right, and the
+   practice accent colour on anything you can press. */
+
+:root {
+  --tnc-accent: #4fd8d2;
+  --tnc-accent-strong: #7ff6f0;
+  --tnc-ink: #0b1112;
+  --tnc-sidebar: #10191b;
+  --tnc-sidebar-line: rgba(127, 246, 240, 0.14);
+}
+
+.nav {
+  background: var(--tnc-sidebar);
+  border-right: 1px solid var(--tnc-sidebar-line);
+  color: #cfdadb;
+}
+
+/* the hamburger belongs to small screens only */
+.nav__header {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .nav__header {
+    display: block;
+  }
+}
+
+.tnc-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 8px 0 18px;
+
+  &__brand {
+    display: block;
+    padding: 14px 18px 16px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--tnc-sidebar-line);
+
+    img {
+      display: block;
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 18px;
+    color: #cfdadb;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    border-left: 3px solid transparent;
+
+    &:hover {
+      background: rgba(127, 246, 240, 0.07);
+      color: #fff;
+    }
+
+    &.is-active {
+      background: rgba(79, 216, 210, 0.16);
+      border-left-color: var(--tnc-accent);
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+
+  &__icon svg {
+    width: 19px;
+    height: 19px;
+    display: block;
+  }
+
+  &__foot {
+    padding: 14px 18px 0;
+    border-top: 1px solid var(--tnc-sidebar-line);
+  }
+
+  &__logout {
+    color: #9fb0b2;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--tnc-accent-strong);
+    }
+  }
+}
+
+.tnc-logo img {
+  display: block;
+  width: auto;
+}
+
+/* ---------- dashboard home ---------- */
+
+.tnc-dash {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 26px;
+
+  &__welcome h2 {
+    margin: 0 0 6px;
+    font-size: 24px;
+  }
+
+  &__welcome p {
+    margin: 0;
+    max-width: 62ch;
+    opacity: 0.85;
+  }
+
+  &__publish {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border: 1px solid var(--theme-elevation-150);
+    border-radius: 10px;
+    background: var(--theme-elevation-50);
+
+    &.is-waiting {
+      border-color: var(--tnc-accent);
+      box-shadow: inset 4px 0 0 var(--tnc-accent);
+    }
+
+    div {
+      display: grid;
+      gap: 3px;
+    }
+
+    span {
+      font-size: 13px;
+      opacity: 0.75;
+    }
+  }
+
+  &__note {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+
+    &--ok {
+      background: rgba(79, 216, 210, 0.14);
+    }
+
+    &--bad {
+      background: rgba(222, 92, 92, 0.16);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+  }
+
+  &__enquiries {
+    padding: 16px 18px;
+    border: 1px solid var(--theme-elevation-150);
+    border-radius: 10px;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 10px;
+      padding: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    a {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: baseline;
+      text-decoration: none;
+      color: inherit;
+      padding: 7px 9px;
+      border-radius: 7px;
+
+      &:hover {
+        background: var(--theme-elevation-50);
+      }
+    }
+
+    em {
+      margin-left: auto;
+      font-style: normal;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  }
+
+  &__setup {
+    padding: 16px 18px;
+    border: 1px dashed var(--theme-elevation-200);
+    border-radius: 10px;
+
+    p {
+      margin: 6px 0 12px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.tnc-card {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: var(--tnc-accent);
+  }
+
+  span {
+    font-size: 13px;
+    opacity: 0.75;
+  }
+}
+
+.tnc-btn {
+  appearance: none;
+  border: 1px solid var(--theme-elevation-200);
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  &--primary {
+    background: var(--tnc-accent);
+    border-color: var(--tnc-accent);
+    color: #04292b;
+    font-weight: 600;
+  }
+}
+
+.tnc-link {
+  color: var(--tnc-accent);
+  font-size: 13px;
+}
+
+.tnc-muted {
+  opacity: 0.7;
+}
+
+/* ---------- editors ---------- */
+
+.tnc-ahpra {
+  margin: 0 0 18px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 201, 138, 0.5);
+  background: rgba(232, 201, 138, 0.1);
+
+  strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 3px;
+    font-size: 13.5px;
+  }
+}
+
+.tnc-preview {
+  align-self: center;
+  margin-right: 10px;
+  color: var(--tnc-accent);
+  font-size: 14px;
+}
+
+.tnc-counted {
+  position: relative;
+
+  &__count {
+    display: block;
+    margin-top: -8px;
+    font-size: 12px;
+    opacity: 0.7;
+
+    &.is-near {
+      color: #d49a3a;
+      opacity: 1;
+    }
+
+    &.is-over {
+      color: #d35b5b;
+      opacity: 1;
+    }
+  }
+}
+
+.tnc-serp {
+  display: grid;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 10px;
+  background: #fff;
+  color: #202124;
+  max-width: 620px;
+
+  &__url {
+    font-size: 12.5px;
+    color: #4d5156;
+  }
+
+  &__title {
+    font-size: 19px;
+    color: #1a0dab;
+    line-height: 1.3;
+  }
+
+  &__desc {
+    font-size: 13.5px;
+    color: #4d5156;
+    line-height: 1.5;
+  }
+}
+
+.tnc-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 10px;
+
+  &__user {
+    font-size: 13px;
+    opacity: 0.75;
+  }
+
+  &__view {
+    font-size: 13.5px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--tnc-accent);
+    color: var(--tnc-accent);
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(79, 216, 210, 0.12);
+    }
+  }
+}
+
+.nav__hamburger {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+}
+
+.tnc-export {
+  margin: 0 0 16px;
+}
+
+.tnc-dash__setup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

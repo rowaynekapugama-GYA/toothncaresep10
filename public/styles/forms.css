@@ -1,0 +1,56 @@
+/* Enquiry form: the honeypot, the status line and the disabled state while sending. */
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.cform .form-status {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 1px;
+}
+
+.cform .form-status.is-ok {
+  color: var(--neon);
+}
+
+.cform .form-status.is-bad {
+  color: #ff9a9a;
+}
+
+.cform .form-status a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cform .field.has-error input,
+.cform .field.has-error textarea,
+.cform .field.has-error select {
+  border-color: #ff9a9a;
+}
+
+.cform .field-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #ff9a9a;
+}
+
+.cform button[aria-busy='true'] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* iOS zooms any input whose text is under 16px, so the form never goes below it */
+@media (max-width: 760px) {
+  .cform input,
+  .cform select,
+  .cform textarea {
+    font-size: 16px;
+  }
+}
