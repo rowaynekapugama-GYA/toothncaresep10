@@ -113,5 +113,35 @@
   "rule": "specialist",
   "contains": "\"guaranteed\", \"best\"",
   "note": "The client guide listing the words the practice must not use."
+ },
+ {
+  "rule": "pain-free",
+  "contains": "No claims such as &ldquo;pain-free&rdquo;",
+  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+ },
+ {
+  "rule": "guarantee",
+  "contains": "&ldquo;guaranteed&rdquo;, &ldquo;best",
+  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+ },
+ {
+  "rule": "best",
+  "contains": "&ldquo;best&rdquo; or &ldquo;expert",
+  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+ },
+ {
+  "rule": "expert",
+  "contains": "&ldquo;expert&rdquo;, and no w",
+  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+ },
+ {
+  "rule": "best",
+  "contains": "Titles work best between",
+  "note": "Dashboard help text about title length, not a claim."
+ },
+ {
+  "rule": "best",
+  "contains": "Best at 1200 by 630 pixels",
+  "note": "Dashboard help text about image size, not a claim."
  }
 ]

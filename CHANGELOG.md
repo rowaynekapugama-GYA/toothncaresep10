@@ -2,6 +2,57 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.1.0] - 2026-11-03
+
+The client dashboard is now the GYA standard dashboard, the same one as
+Coastal Dental and Precision Dental. The website itself is unchanged: every
+page renders exactly as before.
+
+### Added
+
+- The standard dashboard at `/admin`: branded sign in page, dark sidebar
+  (Dashboard, Pages, Blog Posts, Media Library, Team, Enquiries, SEO, Site
+  Settings, Redirects, Users), and a home screen with the publish status,
+  quick actions, latest enquiries and recent edits.
+- The visual page editor. The page is shown exactly as it looks on the
+  website, at desktop width or in a phone frame. Click any words to change
+  them in place, click any photo to replace it (from the library or by
+  uploading), and use the panel on the right for the selected item, every
+  photo on the page with its description, the page's SEO, and its sections
+  (drag to reorder, hide or show, or open one as a form). Save changes, then
+  Publish website.
+- The footer's plain words, including the opening hours, can be changed from
+  any page. The menu, and anything holding the phone, email or address, stay
+  locked: those details come from Site Settings.
+- Blog post editor with headings, lists, quotes, links and photos, a featured
+  photo, category, author, date, summary and SEO, plus Publish, Unpublish and
+  Delete. The AHPRA reminder sits at the top.
+- Users screen with temporary passwords. A new user chooses their own password
+  at first sign in.
+- Notes on each enquiry.
+- GA4 and Meta Pixel IDs in Site Settings now switch tracking on. The default
+  share image, default title and description, and the hide the whole site
+  switch now take effect.
+- `npm run qa:editor`: all 59 pages render byte for byte the same in the editor
+  as on the website once the editor's markers are taken out.
+
+### Changed
+
+- Payload's own screens moved to `/cms`, for GYA administrators only. Editors
+  who open it are refused.
+- The first login is made on the dashboard's sign in page while
+  `ALLOW_FIRST_USER=true`. Payload's create first user screen stays closed.
+- Blog posts are stored as clean HTML instead of Payload's rich text format.
+  This removed the rich text editor and with it three of the four open
+  security advisories. Existing rich text columns are kept, not dropped.
+- Pages hidden from Google are left out of the sitemap.
+- Site Settings shows only the details the website actually uses.
+
+### Database
+
+- Migration `20261103_102912_client_dashboard` adds the post body, enquiry
+  notes and the must change password flag. It runs on the next deploy.
+
 ## [2.0.1] - 2026-11-03
 
 Fixes three problems in 2.0.0 that would have shown up on the first real

@@ -1,6 +1,6 @@
 # Looking after the Tooth n Care website
 
-This is everything you need to change wording, swap pictures and write news for
+This is everything you need to change wording, swap photos and write news for
 the practice. No training required, and nothing here can break the website.
 
 ---
@@ -8,7 +8,10 @@ the practice. No training required, and nothing here can break the website.
 ## Signing in
 
 Go to **toothncare.com.au/admin** and sign in with the email address and
-password GYA set up for you.
+temporary password GYA sent you. The first time, you are asked to choose your
+own password: at least 10 characters, with letters and numbers.
+
+Forgotten your password? Ask GYA to reset it.
 
 Down the left you will see:
 
@@ -17,11 +20,11 @@ Down the left you will see:
 | **Dashboard** | The front page. Publish from here. |
 | **Pages** | Every page of the website. |
 | **Blog Posts** | News and advice articles. |
-| **Media Library** | Every picture. |
-| **Team** | The people listed on the site. |
+| **Media Library** | Every photo. |
+| **Team** | Opens the Our Team page, ready to edit. |
 | **Enquiries** | Messages sent through the contact form. |
 | **SEO** | What Google shows when someone finds you. |
-| **Site Settings** | Phone, hours, address, booking link, social pages. |
+| **Site Settings** | Phone, email, address, booking link and social pages. |
 
 ---
 
@@ -29,81 +32,113 @@ Down the left you will see:
 
 **Changes are not live until you press Publish website.**
 
-Save as often as you like. When you are happy, go to **Dashboard** and press
-**Publish website**. The site rebuilds and your changes are live a couple of
-minutes later. The Dashboard tells you when there are changes waiting.
+Press **Save changes** as often as you like. When you are happy, press
+**Publish website** (on any page, or on the Dashboard). The site rebuilds and
+your changes are live a few minutes later. The Dashboard tells you when there
+are changes waiting.
 
 ---
 
 ## Changing wording on a page
 
-1. **Pages**, then click the page you want.
-2. You will see the page broken into sections, in the order they appear:
-   *Hero banner*, *What actually happens*, *Related pages*, and so on.
-3. Click a section to open it, then click the item you want to change.
-   Items are named plainly: **Heading**, **Paragraph**, **List item**,
-   **Button text**.
-4. Type your change and press **Save**.
-5. **Preview page** at the top shows you the page as it is now. Your change
-   appears there after you publish.
+1. **Pages**, then **Edit** next to the page you want.
+2. The page opens exactly as it looks on the website. Move the mouse over it:
+   anything you can change shows a dotted outline.
+3. **Click the words** and type. The font, size and colour stay as they are.
+   Use **Bold**, **Italic** and **Link** on the right if you need them.
+4. Press **Esc** when you are done with that part.
+5. Press **Save changes** at the top. The top bar says **Unsaved changes** until
+   you do, and **All changes saved** afterwards. If you try to leave with
+   unsaved changes, the dashboard asks first.
 
-### Things written in double curly brackets
+**Desktop** and **Mobile** at the top switch between the computer and phone
+view. **View** opens the live page in a new tab.
 
-You will sometimes see `{{site:phone}}` or `{{site:email}}` in the wording.
-Leave those exactly as they are. They fill in automatically from **Site
-Settings**, which is how the phone number stays the same on all 59 pages. If
-you need to change the phone number, change it once in Site Settings.
+### Shaded words
 
-### Moving a section up or down
+The phone number, email address and street address are shaded. They fill in
+from **Site Settings**, which is how the phone number stays the same on all 59
+pages. To change one, change it once in Site Settings.
 
-Grab the handle on the left of a section (the six dots) and drag it. The page
-follows the new order.
+### The footer and opening hours
 
-### Taking a section off a page
+The footer is the same on every page. Its plain words, including the **opening
+hours**, can be clicked and changed on any page, and the change shows on every
+page. The opening hours are also written on the **Contact** page: change them
+there too.
 
-Open the section and tick **Hide this section**. It disappears from the website
-but stays here, so you can bring it back at any time.
+The menu cannot be changed here. Ask GYA.
+
+### Moving, hiding or showing a section
+
+Open the **Sections** tab on the right.
+
+- **Drag the dots** on the left of a section to move it up or down the page.
+- **The eye** hides a section, or shows it again. A hidden section stays here,
+  so you can bring it back at any time.
+- **Click a section's name** to jump to it on the page. **Open it** (the arrow)
+  to edit everything in it as a form.
+
+The breadcrumbs and the top banner always stay at the top.
 
 ---
 
-## Changing a picture
+## Changing a photo
 
-1. Open the page, open the section, open the item called **Picture**.
-2. **Choose from library** picks one already on the site.
-   **Upload** adds a new one from your computer.
-3. Fill in the **description (alt text)**. One short sentence describing what
-   is in the picture, for people using a screen reader and for Google.
+1. On the page, **click the photo**. (For the large banner photos, click
+   anywhere on the photo that is not a button.)
+2. On the right, **Choose from library** picks one already in the Media
+   Library, and **Upload** adds a new one from your computer. **Put back the
+   original photo** undoes it.
+3. Write a short **Photo description**: one sentence describing what is in the
+   photo, for people using a screen reader and for Google.
+
+Every photo on the page is also listed under **Photos on this page** on the
+right, with its description and a **Replace** button.
 
 A few things worth knowing:
 
-- Replace a picture with one of a similar shape, or the layout will shift.
-  The old size is shown under **Current picture**.
-- Uploads are shrunk to a sensible size and converted automatically. You do not
-  need to resize anything first.
-- If you replace a picture in the **Media Library**, it changes everywhere that
-  picture is used. That is usually what you want.
+- Replace a photo with one of a similar shape, or the layout will shift.
+- Uploads are resized and compressed automatically. You do not need to do
+  anything first.
+- Replacing a photo in the **Media Library** changes it everywhere it is used.
 - **Never upload a photograph of a patient**, or a before and after picture,
   without written consent and a word with GYA first.
 
 ---
 
+## How the page looks in Google
+
+Open a page, then the **SEO** tab:
+
+- **Title in Google** and **Description in Google**, with a character count and
+  a preview of how it may look.
+- **Share image**, shown when the page is shared on Facebook or in a message.
+- **Hide this page from Google**. The page stays on the website but search
+  engines are asked not to list it.
+
+The **SEO** screen in the menu lists every page and post together, and **Worth
+a look** shows the ones whose title or description is missing, short or long.
+
+---
+
 ## Writing a blog post
 
-1. **Blog Posts**, **Create New**.
-2. Fill in the **Headline**, the **Web address** (lower case, words joined with
-   hyphens, for example `caring-for-new-braces`), a **Short summary**, and the
-   **Article** itself.
-3. Add a **Main picture** if you have one.
-4. Under **Search engines**, write a page title and description. You will see a
-   preview of how it looks in Google as you type.
-5. **Save as draft** while you are working. **Publish** when it is ready.
-6. Press **Publish website** on the Dashboard.
+1. **Blog Posts**, **Write a new post**.
+2. Fill in the **Title**. The **Web address** fills in from it.
+3. Write the post. Use **Heading** for each main part and **Subheading** inside
+   it. **Photo** adds a photo from the Media Library.
+4. On the right, add a **Featured photo** (needed before publishing), the
+   **Author**, a **Category** and a short **Summary**.
+5. Under **SEO**, write the title and description for Google.
+6. **Save draft** while you are working. **Publish this post** when it is ready,
+   then press **Publish website**.
 
-The **Blog** link in the footer, the entry in the sitemap and the markup Google
-reads all appear by themselves once your first post is published.
+The **Blog** link in the footer, the entry in the sitemap and the information
+Google reads all appear by themselves once your first post is published.
 
-To schedule a post, set the **Publish date** to a date in the future and save it
-as a draft. To take a post down, open it and choose **Unpublish**.
+To take a post down, open it and choose **Unpublish (make it a draft)**, then
+**Publish website**. **Delete post** removes it for good.
 
 ---
 
@@ -113,10 +148,11 @@ as a draft. To take a post down, open it and choose **Unpublish**.
 page it was sent from and the person's details. They are emailed to reception as
 well, so this is your backup if one ever lands in spam.
 
-**Download all enquiries as a spreadsheet** at the top of the list gives you a
-CSV you can open in Excel.
+Click a name to read the message and add **Notes for the team**. Tick
+**Followed up** once you have dealt with one. The number beside Enquiries in
+the menu is how many are still to follow up.
 
-Tick **Followed up** once you have dealt with one.
+**Download for Excel (CSV)** gives you every enquiry as a spreadsheet.
 
 ---
 
@@ -124,23 +160,21 @@ Tick **Followed up** once you have dealt with one.
 
 **Site Settings** is the one place for:
 
-- Phone number, email address, street address
-- Opening hours
-- Online booking link
+- Practice name, phone number, email address and street address
+- Online booking link, Google Maps link and directions link
 - Facebook, Instagram and X
-- Health funds
-- Practice name, tagline and logo
+- The default title, description and share image for Google
 
-Change something here and it changes everywhere on the website. Press **Publish
-website** afterwards.
+Change something here and it changes everywhere on the website. Press **Save
+settings**, then **Publish website**.
 
 ---
 
 ## The team
 
-**Team** lists the people shown on the site. You can add someone, change their
-role or description, reorder them by dragging, or tick **Hide from the website**
-if someone is on leave.
+**Team** in the menu opens the **Our Team** page. Click a name, a role or a
+description to change it, and click a photo to replace it, exactly like any
+other page. Each dentist's own page is under **Pages**, in the **Team** group.
 
 **Names, roles and qualifications must come from the practice.** Never add a
 qualification, a title or an AHPRA registration number that has not been given
@@ -151,8 +185,8 @@ to you in writing.
 ## What you must not write
 
 Dental advertising in Australia is regulated by AHPRA, and the practice is
-responsible for what is on its website. A reminder sits at the top of the page
-and blog editors. In short:
+responsible for what is on its website. A reminder sits at the top of the blog
+editor. In short:
 
 - **No patient testimonials or reviews about clinical care.** Not even a good
   one. Reviews on Google are fine where they are; they must not be copied here.
@@ -160,7 +194,7 @@ and blog editors. In short:
   unless the person really is a registered specialist.
 - **No before and after photographs** without talking to GYA first.
 - **Every surgical or invasive procedure page needs its risks paragraph.** Do
-  not delete one.
+  not delete or hide one.
 - **Offers must say the exact price, what is included and when the offer ends.**
 - **No urgency wording**: no "limited time only", no countdowns, no "hurry".
 - **"Free" or "complimentary"** only where the practice has approved it.
@@ -172,8 +206,10 @@ something down afterwards.
 
 ## If something goes wrong
 
-- **You changed something and want it back**: open the page, press the three
-  dots at the top and look at **Versions**. You can restore an earlier one.
+- **You changed something by mistake and have not saved**: leave the page and
+  choose to leave without saving. Nothing changes.
+- **You saved it but have not published**: change it back and save again. The
+  website still shows the old version until you publish.
 - **Publish website says publishing is not set up**: your changes are saved.
   Tell GYA and they will fix the connection.
 - **The contact form says it could not send**: the message is still recorded

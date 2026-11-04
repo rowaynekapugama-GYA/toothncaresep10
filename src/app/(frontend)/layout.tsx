@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { DEFAULTS } from '@/site.config'
 import { siteUrl } from '@/lib/urls'
+import Tracking from '@/components/Tracking'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
@@ -20,6 +21,7 @@ export default function FrontendLayout({ children }: { children: ReactNode }) {
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="stylesheet" href={FONTS} precedence="fonts" />
         {children}
+        <Tracking />
       </body>
     </html>
   )

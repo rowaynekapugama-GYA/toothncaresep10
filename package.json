@@ -1,6 +1,6 @@
 {
   "name": "toothncare-web",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,28 +13,39 @@
     "pull": "tsx scripts/pull-content.ts",
     "qa:banned": "node scripts/qa-banned.mjs",
     "qa:secrets": "node scripts/qa-secrets.mjs",
-    "qa": "npm run typecheck && npm run qa:banned && npm run qa:secrets && npm run qa:images",
-    "qa:images": "node scripts/qa-images.mjs"
+    "qa": "npm run typecheck && npm run qa:banned && npm run qa:secrets && npm run qa:images && npm run qa:editor",
+    "qa:images": "node scripts/qa-images.mjs",
+    "qa:editor": "tsx scripts/qa-editor.ts"
   },
   "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
     "@payloadcms/db-postgres": "3.92.1",
     "@payloadcms/next": "3.92.1",
-    "@payloadcms/plugin-seo": "3.92.1",
-    "@payloadcms/richtext-lexical": "3.92.1",
     "@payloadcms/storage-vercel-blob": "3.92.1",
     "@payloadcms/ui": "3.92.1",
+    "@tiptap/core": "3.32.2",
+    "@tiptap/extension-image": "3.32.2",
+    "@tiptap/extension-link": "3.32.2",
+    "@tiptap/extensions": "3.32.2",
+    "@tiptap/pm": "3.32.2",
+    "@tiptap/react": "3.32.2",
+    "@tiptap/starter-kit": "3.32.2",
     "dotenv": "^18.0.4",
     "graphql": "^16.8.1",
     "next": "16.4.4",
     "payload": "3.92.1",
     "react": "19.2.9",
     "react-dom": "19.2.9",
+    "sanitize-html": "2.18.1",
     "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "@types/sanitize-html": "2.16.2",
     "sass": "^1.105.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"

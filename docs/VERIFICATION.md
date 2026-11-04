@@ -214,7 +214,70 @@ differ. The dashboard was opened in Chromium after logging in: menu, page list
 and page editor load with no console errors. `npm run qa` passes: no em dashes,
 no phrases to review, no secrets, no pictures from another site.
 
-## 9. What could not be tested here
+## 9. Version 2.1.0: the standard dashboard, run on 3 November 2026
+
+Next.js 16.4.4, Payload 3.92.1, local Postgres 16. Browser checks were driven
+in Chromium with Playwright.
+
+### The editor shows the real page
+
+| Check | Result |
+| --- | --- |
+| `npm run qa:editor`: each page rendered plain and marked for editing, markers removed | 59 of 59 byte for byte the same. 5,941 pieces of wording, 216 photos and 783 links marked |
+| The editor's plain render against the built website, as parsed HTML (tags, attributes, text) | 59 of 59 the same |
+| Pixel comparison, saved page preview against the live page, 1280 and 390 wide | Homepage, Check-ups, Maitland, Contact, Our Team and FAQ: same heights, 0.00% to 0.11% of pixels different (moving slider frames), except one phone homepage run at 1.76% from the hero carousel's timing |
+| Random reorders and hides, 1,770 of them across all 59 pages: preview against what Save writes and the build then publishes | All agree. No section ever moves past the footer or a page script (FAQ and Conditions We Treat have sections after one) |
+
+### Dashboard, driven in the browser (48 checks, all pass)
+
+- Signed out `/admin` goes to sign in; a wrong password is refused politely.
+- Sidebar: Dashboard, Pages, Blog Posts, Media Library, Team, Enquiries, SEO,
+  Site Settings, Redirects, Users. Team opens the Our Team page editor.
+- Pages lists all 59. The homepage editor marks 124 pieces of wording and 19
+  photos and lists the photos with their descriptions.
+- Clicking a heading and typing: status turns to Unsaved changes, the panel
+  shows Editing words, Save writes it to the database.
+- Clicking the hero photo (under its text overlay) opens the photo card; an
+  upload replaces it on the page; a description typed in the photo list
+  changes the page's alt text.
+- Sections: 11 listed on Check-ups; hiding one takes it off the page; a
+  section opens as a form. SEO tab counters work. Mobile shows a 390 wide frame.
+- Footer: the opening hours are editable; the menu has no editable words and
+  clicking it explains where it is changed.
+- Leaving with unsaved changes asks first, from the menu and from the Pages
+  button.
+- Publish website without a hook explains that it is not set up.
+- Site Settings: a new phone number shows in the editor preview straight away.
+- Blog: a post written, given a featured photo, published, listed, unpublished
+  and deleted.
+- Media, Enquiries, SEO, Redirects (75) and Users screens load.
+- A new editor account: forced to choose a password at first sign in; no
+  Redirects, Users, Import or GYA only settings; `/admin/users` and
+  `/admin/redirects` answer 404; `/cms` refuses them; they can edit and save a
+  page; the SEO tab has no canonical field.
+
+### Edits reach the website, and the round trip is exact
+
+A build from the dashboard after the checks above published every change: the
+edited heading, the uploaded photo and its description, the hidden section
+gone, the new SEO title, the footer hours and the editor's edit. Reset to the
+repository's content, then a build: every file in `content/` came back byte for
+byte as the repository has it.
+
+### Fresh rollout
+
+New empty database, `ALLOW_FIRST_USER=true`: both migrations applied, the build
+left `content/` alone, `/admin` showed Create the first login, the account was
+made and landed on the Dashboard with the Import panel, Import added 143 items,
+Import pictures added all 42 photos, Pages listed 59. Without the flag the sign
+in page is normal, `/cms/create-first-user` is 404 and a second first-register
+is refused (403).
+
+`npm run qa`: no em dashes, nothing new to review (six help text lines added to
+the reviewed list), no secrets, no pictures from another site, editor parity
+59 of 59.
+
+## 10. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

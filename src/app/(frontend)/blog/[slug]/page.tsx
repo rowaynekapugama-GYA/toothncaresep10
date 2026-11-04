@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import BlogShell from '@/components/BlogShell'
-import RichText from '@/components/RichText'
+import { applyTokens, siteTokens } from '@/lib/site'
 import { formatDate, getPost, getPosts } from '@/lib/blog'
 import { absolute, isPreview, siteUrl } from '@/lib/urls'
 import { DEFAULTS } from '@/site.config'
@@ -73,9 +73,10 @@ export default async function BlogPost({ params }: Props) {
             {formatDate(post.publishedAt)}
             {post.author ? ` - ${post.author}` : ''}
           </p>
-          <div className="post-body rv in">
-            <RichText value={post.content} />
-          </div>
+          <div
+            className="post-body rv in"
+            dangerouslySetInnerHTML={{ __html: applyTokens(post.body ?? '', siteTokens()) }}
+          />
           <a className="post-back" href="/blog">
             <span aria-hidden="true">&larr;</span> All posts
           </a>

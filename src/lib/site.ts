@@ -7,9 +7,23 @@ export type SiteSettings = typeof DEFAULTS & Record<string, unknown>
 
 let cache: SiteSettings | null = null
 
+/** The client defaults with whatever the dashboard saved on top. One level merge, arrays replaced wholesale. */
+export function mergeSettings(saved: Record<string, unknown>): SiteSettings {
+  const merged: Record<string, unknown> = { ...DEFAULTS }
+  for (const [k, v] of Object.entries(saved)) {
+    if (v === null || v === undefined || v === '') continue
+    const base = (DEFAULTS as Record<string, unknown>)[k]
+    merged[k] =
+      base && typeof base === 'object' && !Array.isArray(base) && typeof v === 'object' && !Array.isArray(v)
+        ? { ...(base as object), ...(v as object) }
+        : v
+  }
+  return merged as SiteSettings
+}
+
 /**
  * Site Settings as the build sees them: the client defaults with whatever the
- * dashboard has written on top. One level merge, arrays replaced wholesale.
+ * dashboard has written to content/site-settings.json on top.
  */
 export function getSettings(): SiteSettings {
   if (cache) return cache
@@ -22,16 +36,7 @@ export function getSettings(): SiteSettings {
       saved = {}
     }
   }
-  const merged: Record<string, unknown> = { ...DEFAULTS }
-  for (const [k, v] of Object.entries(saved)) {
-    if (v === null || v === undefined || v === '') continue
-    const base = (DEFAULTS as Record<string, unknown>)[k]
-    merged[k] =
-      base && typeof base === 'object' && !Array.isArray(base) && typeof v === 'object' && !Array.isArray(v)
-        ? { ...(base as object), ...(v as object) }
-        : v
-  }
-  cache = merged as SiteSettings
+  cache = mergeSettings(saved)
   return cache
 }
 
@@ -39,7 +44,11 @@ const digits = (s: string) => s.replace(/[^0-9]/g, '')
 
 /** The values that {{site:...}} tokens in the content resolve to. */
 export function siteTokens(): Record<string, string> {
-  const s = getSettings()
+  return tokensFor(getSettings())
+}
+
+/** The token values for a given set of settings (the dashboard preview passes its own). */
+export function tokensFor(s: SiteSettings): Record<string, string> {
   const a = s.address
   const mapQuery = encodeURIComponent(`${a.street}, ${a.suburb} ${a.state} ${a.postcode}`)
   return {

@@ -4,8 +4,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { getPayload } from 'payload'
 import config from '@payload-config'
-import { docToPage, orderedPage, sectionDocToPart, mediaUrl, type PageDoc } from '../src/sitekit/sync'
+import { docToPage, orderedPage, sectionDocToPart, mediaUrl, settingsFileFromGlobal, type PageDoc } from '../src/sitekit/sync'
 import type { Part } from '../src/lib/parts'
+import { cleanPostBody } from '../src/sitekit/sanitize'
 
 const CONTENT = path.join(process.cwd(), 'content')
 
@@ -77,35 +78,7 @@ async function main() {
   const settings = clean(
     (await payload.findGlobal({ slug: 'site-settings', depth: 1 })) as unknown as Record<string, unknown>,
   )
-  const recipients = (settings.enquiryRecipients as { address?: string }[] | undefined) ?? []
-  const logo = mediaUrl(settings.logo as never)
-  write('site-settings.json', {
-    practiceName: settings.practiceName,
-    tagline: settings.tagline,
-    ...(logo ? { logo } : {}),
-    colours: settings.colours,
-    phone: settings.phone,
-    phoneHref: settings.phone ? `tel:${String(settings.phone).replace(/[^0-9]/g, '')}` : undefined,
-    email: settings.email,
-    address: settings.address,
-    hours: ((settings.hours as Record<string, unknown>[] | undefined) ?? []).map((h) => ({
-      days: h.days,
-      opens: h.opens,
-      closes: h.closes,
-    })),
-    bookingUrl: settings.bookingUrl,
-    mapEmbed: settings.mapEmbed,
-    mapUrl: settings.mapUrl,
-    directionsUrl: settings.directionsUrl,
-    socials: settings.socials,
-    enquiryRecipients: recipients.map((r) => r.address).filter(Boolean),
-    tracking: settings.tracking,
-    features: settings.features,
-    healthFunds: ((settings.healthFunds as Record<string, unknown>[] | undefined) ?? []).map((f) => ({
-      name: f.name,
-      logo: mediaUrl(f.logo as never),
-    })),
-  })
+  write('site-settings.json', settingsFileFromGlobal(settings))
 
   // ---- search engine defaults -------------------------------------------
   const seo = clean((await payload.findGlobal({ slug: 'seo', depth: 1 })) as unknown as Record<string, unknown>)
@@ -142,7 +115,7 @@ async function main() {
       categorySlug: (p.category as { slug?: string } | null)?.slug ?? null,
       featuredImage: mediaUrl(p.featuredImage as never),
       featuredImageAlt: (p.featuredImage as { alt?: string } | null)?.alt ?? '',
-      content: p.content ?? null,
+      body: cleanPostBody(String(p.body ?? '')),
       meta: {
         title: (p.meta as Record<string, unknown> | undefined)?.title ?? p.title,
         description: (p.meta as Record<string, unknown> | undefined)?.description ?? p.excerpt ?? '',

@@ -7,7 +7,7 @@ const KNOWN = new Set(known as string[])
 const NOT_FOUND = '/page-not-found'
 const NOT_FOUND_HEADER = 'x-tnc-not-found'
 
-const RESERVED = ['/_next', '/api', '/admin', '/images', '/styles', '/fonts', '/media']
+const RESERVED = ['/_next', '/api', '/admin', '/cms', '/images', '/styles', '/fonts', '/media']
 
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
@@ -21,9 +21,10 @@ export const config = {
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl
 
-  // The create first user screen only exists during the one-off setup. The
-  // API behind it is guarded separately in sitekit/hooks/firstUserGate.ts.
-  if (pathname.startsWith('/admin/create-first-user') && process.env.ALLOW_FIRST_USER !== 'true') {
+  // Payload's own create first user screen is never used: the first login is
+  // made on /admin/login during the one-off setup. The API behind both is
+  // guarded separately in sitekit/hooks/firstUserGate.ts.
+  if (pathname.startsWith('/cms/create-first-user') && process.env.ALLOW_FIRST_USER !== 'true') {
     return new NextResponse('Not found', { status: 404, headers: { 'x-robots-tag': 'noindex' } })
   }
   if (KNOWN.has(pathname)) return NextResponse.next()

@@ -4,6 +4,7 @@ import PageBody from '@/components/PageBody'
 import { allSlugs, getPage } from '@/lib/content'
 import { absolute, isPreview, siteUrl } from '@/lib/urls'
 import { DEFAULTS } from '@/site.config'
+import { getSeoDefaults } from '@/lib/seo'
 
 export const dynamicParams = true
 
@@ -27,13 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!page) return {}
   const { meta } = page
   const canonical = `${siteUrl()}${page.path === '/' ? '/' : page.path}`
-  const image = absolute(meta.ogImage || DEFAULTS.ogImage)
+  const seo = getSeoDefaults()
+  const image = absolute(meta.ogImage || seo.defaultOgImage || DEFAULTS.ogImage)
   const noindex =
-    isPreview() || page.slug === 'page-not-found' || (meta.robots ?? '').includes('noindex')
+    isPreview() || !!seo.noindexSite || page.slug === 'page-not-found' || (meta.robots ?? '').includes('noindex')
 
   return {
-    title: { absolute: meta.title ?? DEFAULTS.practiceName },
-    description: meta.description,
+    title: { absolute: meta.title || seo.defaultTitle || DEFAULTS.practiceName },
+    description: meta.description || seo.defaultDescription,
     alternates: { canonical },
     robots: noindex ? { index: false, follow: false } : undefined,
     openGraph: {

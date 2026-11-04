@@ -47,5 +47,6 @@ export const Enquiries: CollectionConfig = {
     },
     { name: 'emailError', type: 'text', admin: { readOnly: true, condition: (d) => d?.emailStatus === 'failed' } },
     { name: 'followedUp', type: 'checkbox', label: 'Followed up' },
+    { name: 'notes', type: 'textarea', label: 'Notes for the team' },
   ],
 }

@@ -11,7 +11,8 @@ export type Post = {
   categorySlug: string | null
   featuredImage: string | null
   featuredImageAlt: string
-  content: unknown
+  /** clean article HTML, written by the dashboard's article editor */
+  body: string
   meta: { title?: string; description?: string; ogImage?: string | null; noindex?: boolean }
 }
 

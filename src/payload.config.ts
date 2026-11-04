@@ -2,7 +2,6 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import sharp from 'sharp'
 
@@ -30,28 +29,27 @@ const origins = [
 
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL || undefined,
+  // The practice uses the GYA dashboard at /admin (src/app/(dashboard)). Payload's
+  // own screens move to /cms and only GYA administrators can open them.
+  routes: { admin: '/cms', api: '/api' },
   admin: {
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname, '..') },
     avatar: 'default',
     meta: {
-      titleSuffix: ' - Tooth n Care',
-      description: 'Website dashboard for Tooth n Care, East Maitland.',
+      titleSuffix: ' - Tooth n Care (GYA)',
+      description: 'Advanced settings for the Tooth n Care website. GYA only.',
     },
     components: {
-      Nav: '@/sitekit/admin/Nav#Nav',
       graphics: {
         Logo: '@/sitekit/admin/Logo#Logo',
         Icon: '@/sitekit/admin/Logo#Icon',
       },
-      beforeDashboard: ['@/sitekit/admin/BeforeDashboard#BeforeDashboard'],
-      actions: ['@/sitekit/admin/HeaderActions#HeaderActions'],
     },
   },
   // the order here is the order of the menu down the left hand side
   collections: [Pages, Posts, Categories, Media, Team, Enquiries, Redirects, Users],
   globals: [Seo, SiteSettings, SiteStatus],
-  editor: lexicalEditor(),
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URL || '' },
     push: false,

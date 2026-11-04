@@ -31,6 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pages = allSlugs()
     .filter((slug) => !EXCLUDE.has(slug))
+    // pages hidden from Google in the dashboard are left out of the sitemap too
+    .filter((slug) => !(getPage(slug)?.meta.robots ?? '').includes('noindex'))
     .map((slug) => {
       const page = getPage(slug)
       return {

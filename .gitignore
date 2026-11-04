@@ -6,4 +6,4 @@ work
 *.log
 .DS_Store
 tsconfig.tsbuildinfo
-media/
+/media/

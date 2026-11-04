@@ -5,8 +5,11 @@ same addresses, now with a dashboard the practice can use on its own.
 
 - **Public site**: Next.js App Router, static at build time. It never reads the
   database while someone is looking at a page.
-- **Dashboard**: Payload CMS at `/admin`, on Neon Postgres, with pictures on
-  Vercel Blob.
+- **Dashboard**: the GYA standard client dashboard at `/admin` (the same one as
+  Coastal Dental and Precision Dental): a dark sidebar, and a visual page
+  editor where the practice clicks words on the real page to change them and
+  clicks a photo to replace it. It runs on Payload CMS, Neon Postgres and
+  Vercel Blob. Payload's own screens are at `/cms`, for GYA administrators only.
 - **How a change goes live**: the practice edits in `/admin`, presses
   **Publish website**, which calls a Vercel deploy hook. The build pulls
   everything out of the database into `content/*.json` and then builds the site
@@ -46,7 +49,7 @@ copy of the list in `.env.example`.
 | --- | --- | --- |
 | `DATABASE_URL` | Neon Postgres connection string. Vercel adds this when you connect Neon. | Yes |
 | `PAYLOAD_SECRET` | A random string of at least 32 characters (`openssl rand -hex 32` makes one). Sessions are signed with it. Do not change it after go live or everyone is logged out. The build stops with a clear message if `DATABASE_URL` is set and this is missing or short. | Yes |
-| `NEXT_PUBLIC_SERVER_URL` | The address the site is served from, no trailing slash. Staging: the `cms` preview address while testing, then `https://toothncaresep10.vercel.app` once merged. Live: `https://toothncare.com.au` | Yes |
+| `NEXT_PUBLIC_SERVER_URL` | The address the dashboard is used on, no trailing slash. Sign in only works from this address and from Vercel's own addresses for the deployment, so set it to the domain people will actually type. Changing it needs a redeploy. Staging: the `cms` preview address while testing, then `https://toothncaresep10.vercel.app` once merged. Live: `https://toothncare.com.au` | Yes |
 | `BLOB_READ_WRITE_TOKEN` | Vercel Blob. Without it, uploads are written to disk and lost on the next deploy. | Yes |
 | `PUBLISH_HOOK_URL` | The deploy hook. The **Publish website** button calls it. Without it the button explains that publishing is not set up yet, and nothing is lost. | Yes |
 | `SMTP2GO_API_KEY` | Enquiry email. Without it the form saves the enquiry and tells the visitor to ring instead. | Yes |
@@ -115,9 +118,11 @@ a preview address can be indexed by mistake.
 
 ### First login
 
-1. With `ALLOW_FIRST_USER=true` set, open `https://<your address>/admin`. It asks
-   you to create the first user. Use a GYA address. This first account is
-   always made an **Administrator (GYA)**, whatever role is chosen.
+1. With `ALLOW_FIRST_USER=true` set, open `https://<your address>/admin`. The
+   sign in page shows **Create the first login** instead. Use a GYA address.
+   This first account is always an **Administrator (GYA)**. (If the first login
+   was already made on Payload's old screen, skip this step: that account still
+   works.)
 2. On the Dashboard, press **Import website content**. This loads the 59 pages,
    the header and footer, the team, the redirects, the practice details and the
    search engine defaults. It is safe to press twice: it skips anything already
@@ -125,8 +130,10 @@ a preview address can be indexed by mistake.
 3. Press **Import pictures into the Media Library**. This copies the 42
    photographs already on the site into the library so the practice can reuse
    them. It needs `BLOB_READ_WRITE_TOKEN` to be set first.
-4. Add the practice login: **Users**, **Create**, role **Editor (practice)**.
-   An editor cannot see Users, Redirects or the tracking IDs.
+4. Add the practice login: **Users**, **Add a user**, role **Editor (practice)**.
+   It gets a temporary password, and the practice chooses their own the first
+   time they sign in. An editor cannot see Users, Redirects, the Import buttons
+   or the GYA only settings, and those addresses answer 404 for them.
 5. Remove `ALLOW_FIRST_USER` and redeploy.
 
 ### Every deploy
@@ -197,8 +204,6 @@ below. None of them has been deleted.
 - [ ] Hand the practice `docs/HOW-TO-UPDATE.md` and their editor login.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
       `https://toothncare.com.au/admin/create-first-user` answers 404.
-- [ ] Retrofit the visual page editor (GYA Client Dashboard Standard) before
-      handover. This build still edits pages through forms.
 
 ### Open `[VERIFY]` items
 
@@ -263,8 +268,12 @@ public/
 scripts/            build, seed, pull, and the quality checks
 src/
   app/(frontend)/     the public site
-  app/(payload)/      the dashboard
-  sitekit/            collections, globals, dashboard components, sync
+  app/(dashboard)/    the client dashboard at /admin (screens and the page preview)
+  app/(payload)/      Payload's own screens at /cms, GYA only, and its API
+  app/api/dashboard/  saving pages and changing passwords
+  dashboard/          the GYA standard dashboard: editors, UI, the page renderer
+    brand.ts            the only client specific file in it
+  sitekit/            collections, globals, hooks, sync
   lib/                content loading, tokens, structured data
   site.config.ts      the practice's default values
 ```
@@ -278,7 +287,8 @@ src/
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run seed` | Load `content/*.json` into the database. `-- --overwrite` resets it |
 | `npm run pull` | Write the database out to `content/*.json` |
-| `npm run qa` | Typecheck, banned wording, secrets, external pictures |
+| `npm run qa` | Typecheck, banned wording, secrets, external pictures, editor parity |
+| `npm run qa:editor` | Proves the page editor shows exactly the page the website renders, on all 59 pages |
 
 ---
 
@@ -304,11 +314,15 @@ src/
   `middleware.ts`. It sends unknown addresses to the practice's 404 page and
   hides the first user screen. If its list of known pages is ever empty it lets
   every request through rather than blocking the site.
-- **Known security advisories** (`npm audit`, 3 November 2026): one critical
-  (`dompurify`) and three high (`@lexical/headless`,
-  `@payloadcms/richtext-lexical`, `happy-dom`), all inside the dashboard's rich
-  text editor, which only signed in users can reach. None has a fix released
-  yet. Run `npm audit` and update Payload when one lands.
+- **Known security advisories** (`npm audit --omit=dev`, 3 November 2026): one
+  critical, in `dompurify` inside the code editor of Payload's own screens at
+  `/cms`, which only GYA administrators can open. No fix has been released.
+  Nothing high. The rich text editor that carried the others has been removed.
+- **Settings the website does not use are not shown.** The original kit had
+  fields for opening hours, health funds, the tagline, brand colours and the
+  feature switches, but the approved pages write those into their own wording,
+  so changing them did nothing. Opening hours are edited on the page (the
+  footer and the Contact page), and the rest is GYA's to change in code.
 - **What the merge replaces**: the 59 static HTML files and the static
   `vercel.json` on `main`. All 75 of its redirects are in
   `content/redirects.json`, and every page's wording is the same apart from the

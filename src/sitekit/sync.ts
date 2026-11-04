@@ -227,3 +227,41 @@ export function orderedPage(page: Page): Record<string, unknown> {
     ...(page.chromeOverrides ? { chromeOverrides: page.chromeOverrides } : {}),
   }
 }
+
+/**
+ * Site Settings as content/site-settings.json holds them. The build writes the
+ * file from this, and the dashboard preview uses it directly, so both resolve
+ * {{site:...}} tokens the same way. Expects the global read at depth 1.
+ */
+export function settingsFileFromGlobal(raw: Record<string, unknown>): Record<string, unknown> {
+  const settings = JSON.parse(JSON.stringify(raw, (_k, v) => (v === null ? undefined : v))) as Record<string, unknown>
+  const recipients = (settings.enquiryRecipients as { address?: string }[] | undefined) ?? []
+  const logo = mediaUrl(settings.logo as never)
+  return {
+    practiceName: settings.practiceName,
+    tagline: settings.tagline,
+    ...(logo ? { logo } : {}),
+    colours: settings.colours,
+    phone: settings.phone,
+    phoneHref: settings.phone ? `tel:${String(settings.phone).replace(/[^0-9]/g, '')}` : undefined,
+    email: settings.email,
+    address: settings.address,
+    hours: ((settings.hours as Record<string, unknown>[] | undefined) ?? []).map((h) => ({
+      days: h.days,
+      opens: h.opens,
+      closes: h.closes,
+    })),
+    bookingUrl: settings.bookingUrl,
+    mapEmbed: settings.mapEmbed,
+    mapUrl: settings.mapUrl,
+    directionsUrl: settings.directionsUrl,
+    socials: settings.socials,
+    enquiryRecipients: recipients.map((r) => r.address).filter(Boolean),
+    tracking: settings.tracking,
+    features: settings.features,
+    healthFunds: ((settings.healthFunds as Record<string, unknown>[] | undefined) ?? []).map((f) => ({
+      name: f.name,
+      logo: mediaUrl(f.logo as never),
+    })),
+  }
+}

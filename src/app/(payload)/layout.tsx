@@ -5,7 +5,7 @@ import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts'
 import '@payloadcms/next/css'
 import React from 'react'
 
-import { importMap } from './admin/importMap'
+import { importMap } from './cms/importMap'
 import './custom.scss'
 
 type Args = { children: React.ReactNode }

@@ -292,21 +292,10 @@ export interface Post {
    * One or two sentences, shown on the blog listing.
    */
   excerpt?: string | null;
-  content: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
+  /**
+   * Written in the dashboard's article editor. Stored as clean HTML: headings, paragraphs, lists, quotes, links and pictures only.
+   */
+  body?: string | null;
   meta?: {
     /**
      * Shown as the headline in Google. Aim for 50 to 60 characters.
@@ -393,6 +382,7 @@ export interface Enquiry {
   emailStatus?: ('sent' | 'failed') | null;
   emailError?: string | null;
   followedUp?: boolean | null;
+  notes?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -433,6 +423,7 @@ export interface User {
    * Editors can change wording, photos, posts and SEO. Administrators also manage users, redirects and tracking IDs.
    */
   role: 'admin' | 'editor';
+  mustChangePassword?: boolean | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -713,7 +704,7 @@ export interface PostsSelect<T extends boolean = true> {
   author?: T;
   featuredImage?: T;
   excerpt?: T;
-  content?: T;
+  body?: T;
   meta?:
     | T
     | {
@@ -793,6 +784,7 @@ export interface EnquiriesSelect<T extends boolean = true> {
   emailStatus?: T;
   emailError?: T;
   followedUp?: T;
+  notes?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -815,6 +807,7 @@ export interface RedirectsSelect<T extends boolean = true> {
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
   role?: T;
+  mustChangePassword?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

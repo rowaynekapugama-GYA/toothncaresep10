@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { adminOnly, adminOrEditor, publishedOrStaff } from '../access'
 import { seoFields } from '../fields/seo'
 import { touchSite } from '../hooks/touchSite'
+import { cleanPostBody } from '../sanitize'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
@@ -84,7 +85,18 @@ export const Posts: CollectionConfig = {
       label: 'Short summary',
       admin: { description: 'One or two sentences, shown on the blog listing.' },
     },
-    { name: 'content', type: 'richText', label: 'Article', required: true },
+    {
+      name: 'body',
+      type: 'textarea',
+      maxLength: 400000,
+      label: 'Article',
+      admin: {
+        description:
+          'Written in the dashboard\'s article editor. Stored as clean HTML: headings, paragraphs, '
+          + 'lists, quotes, links and pictures only.',
+      },
+      hooks: { beforeChange: [({ value }) => (typeof value === 'string' ? cleanPostBody(value) : value)] },
+    },
     {
       type: 'tabs',
       tabs: [{ label: 'Search engines', fields: seoFields() }],
