@@ -87,7 +87,7 @@
      "id": "intro-paragraph-1",
      "label": "Intro paragraph",
      "type": "richtext",
-     "value": "Two dentists, an oral health therapist and a support team who will actually remember you between visits."
+     "value": "Three dentists, an oral health therapist, a hygienist and a support team who will actually remember you between visits."
     },
     {
      "id": "button-link-1",
@@ -123,7 +123,7 @@
    "attrs": {
     "class": "pg"
    },
-   "template": "<div class=\"wrap\"><div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div><p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p><div class=\"team-grid\"><a class=\"tcard rv\" href=\"{{link-address-1}}\"><div class=\"tcard-photo\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-1}}</span><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><em>{{link-label-1}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-2}}\"><div class=\"tcard-photo\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-2}}</span><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><em>{{link-label-2}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-3}}\"><div class=\"tcard-photo\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-3}}</span><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p><em>{{link-label-3}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-4}}\"><div class=\"tcard-photo\"><img src=\"{{image-4}}\" alt=\"{{image-description-alt-text-4}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-4}}</span><h3>{{sub-heading-4}}</h3><p>{{paragraph-4}}</p><em>{{link-label-4}}</em></div></a></div></div>",
+   "template": "<div class=\"wrap\"><div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div><p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p><div class=\"team-grid\"><a class=\"tcard rv\" href=\"{{link-address-1}}\"><div class=\"tcard-photo\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-1}}</span><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><em>{{link-label-1}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-2}}\"><div class=\"tcard-photo\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-2}}</span><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><em>{{link-label-2}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-3}}\"><div class=\"tcard-photo\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-3}}</span><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p><em>{{link-label-3}}</em></div></a></div></div>",
    "fields": [
     {
      "id": "small-label-above-the-heading-1",
@@ -271,50 +271,6 @@
     },
     {
      "id": "link-label-3",
-     "label": "Link label",
-     "type": "richtext",
-     "value": "View profile <span class=\"btn-arrow\">&rarr;</span>"
-    },
-    {
-     "id": "link-address-4",
-     "label": "Link address",
-     "type": "href",
-     "value": "/support-team"
-    },
-    {
-     "id": "image-4",
-     "label": "Image",
-     "type": "image",
-     "value": "/images/img-fe35fabe7c.webp",
-     "width": "800",
-     "height": "600"
-    },
-    {
-     "id": "image-description-alt-text-4",
-     "label": "Image description (alt text)",
-     "type": "alt",
-     "value": "Penny Phanmani, dental assistant at Tooth n Care"
-    },
-    {
-     "id": "text-4",
-     "label": "Text",
-     "type": "richtext",
-     "value": "Dental Assistant"
-    },
-    {
-     "id": "sub-heading-4",
-     "label": "Sub heading",
-     "type": "richtext",
-     "value": "Penny"
-    },
-    {
-     "id": "paragraph-4",
-     "label": "Paragraph",
-     "type": "richtext",
-     "value": "With us since 2019, helping out right across the practice and the familiar face beside you through every appointment."
-    },
-    {
-     "id": "link-label-4",
      "label": "Link label",
      "type": "richtext",
      "value": "View profile <span class=\"btn-arrow\">&rarr;</span>"

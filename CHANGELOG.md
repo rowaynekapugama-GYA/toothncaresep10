@@ -2,6 +2,40 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.3.0] - 2026-11-04
+
+Changes the practice asked for on 4 November 2026.
+
+### Changed
+
+- Penny (Penelope Phanmani) has left the practice and is off the website: her
+  slide in the homepage team slider (now Dr Nish, Dr Nav and Zoe), her card on
+  Our Team, the Support Team page, the sentence about her on the ten suburb
+  pages, and "penny" in the homepage search words.
+- The Support Team page is gone. `/support-team` and `/our-team/support-team`
+  now redirect to `/our-team`. The Support Team card on the Dr Nish and Dr Nav
+  pages is now Meet the Team, and the HTML sitemap no longer lists it.
+- Our Team intro now reads "Three dentists, an oral health therapist, a
+  hygienist and a support team who will actually remember you between visits."
+- Directions say "near Your Discount Chemist and Australia Post" and no longer
+  mention the hair salon: Contact (Getting here), New Patients (Getting here)
+  and the FAQ answer to "Where exactly are you?", including the version Google
+  reads. Parking, public transport and accessibility lines are unchanged.
+
+### Database
+
+- Migration `20261104_100000_team_and_directions` makes the same changes in
+  the dashboard. A section is replaced only if it is still exactly as the site
+  shipped it; if it was changed in the dashboard, only the words this release
+  changes are updated where they are still the old words, and anything else is
+  left alone and named in the build log. The Support Team page and its Team
+  entry are deleted and the two redirects are added.
+
+### Still to come
+
+- Names and roles for the other dentist, the hygienist and the assistants,
+  from the practice. They go on Our Team as name cards until there are photos.
+
 ## [2.2.0] - 2026-11-04
 
 ### Fixed

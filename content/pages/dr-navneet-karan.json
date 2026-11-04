@@ -298,19 +298,19 @@
      "id": "link-address-3",
      "label": "Link address",
      "type": "href",
-     "value": "/support-team"
+     "value": "/our-team"
     },
     {
      "id": "card-title-3",
      "label": "Card title",
      "type": "richtext",
-     "value": "Support Team"
+     "value": "Meet the Team"
     },
     {
      "id": "text-3",
      "label": "Text",
      "type": "richtext",
-     "value": "The people who keep the day running."
+     "value": "Say hello to the friendly faces looking after you."
     },
     {
      "id": "link-label-3",

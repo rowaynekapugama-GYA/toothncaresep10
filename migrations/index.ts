@@ -1,6 +1,7 @@
 import * as migration_20260928_041509_initial from './20260928_041509_initial';
 import * as migration_20261103_102912_client_dashboard from './20261103_102912_client_dashboard';
 import * as migration_20261104_090000_restore_original_photos from './20261104_090000_restore_original_photos';
+import * as migration_20261104_100000_team_and_directions from './20261104_100000_team_and_directions';
 
 export const migrations = [
   {
@@ -17,5 +18,10 @@ export const migrations = [
     up: migration_20261104_090000_restore_original_photos.up,
     down: migration_20261104_090000_restore_original_photos.down,
     name: '20261104_090000_restore_original_photos'
+  },
+  {
+    up: migration_20261104_100000_team_and_directions.up,
+    down: migration_20261104_100000_team_and_directions.down,
+    name: '20261104_100000_team_and_directions'
   },
 ];

@@ -290,7 +290,18 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | Import pictures on a dashboard that already had the 42 old imports | 49 added, 42 skipped, 18 relabelled with their website descriptions |
 | `npm run qa` | clean; editor parity 59 of 59 |
 
-## 11. What could not be tested here
+## 11. Version 2.3.0: team and directions, run on 4 November 2026
+
+| Check | Result |
+| --- | --- |
+| Pages, after the build | no "Penny", "Penelope", "Phanmani", "hair salon" or "support-team" on the homepage, Our Team, any suburb page, the profile pages, the sitemap, FAQ, Contact or New Patients |
+| Homepage team slider in the browser | 3 slides, 3 dots, arrows work, no script errors |
+| `/support-team` and `/our-team/support-team` | 308 to `/our-team` |
+| Imported dashboard (v2.2.0 state), migrate then pull | the pull gave back the repository's v2.3.0 content byte for byte, including redirects, known paths and team |
+| Dashboard with edits made in it (a suburb heading, an Our Team card's wording, a hidden Contact section) | Penny's sentence removed and the heading edit kept; the edited Our Team section left alone and named in the log; the hidden Contact section stayed hidden with the new directions; Support Team page deleted; both redirects added |
+| `npm run qa` | clean; editor parity 58 of 58 |
+
+## 12. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

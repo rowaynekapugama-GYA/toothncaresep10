@@ -205,6 +205,12 @@ below. None of them has been deleted.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
       `https://toothncare.com.au/admin/create-first-user` answers 404.
 
+### Waiting on the practice (4 November 2026)
+
+- Names and roles of the other dentist, the hygienist and the dental
+  assistants. Our Team shows three cards until then, which leaves the second
+  column of the last row empty.
+
 ### Open `[VERIFY]` items
 
 | Page | What needs confirming |
