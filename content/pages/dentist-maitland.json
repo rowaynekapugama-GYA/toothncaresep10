@@ -8,11 +8,11 @@
   "ogTitle": "Dentist in Maitland | Tooth n Care East Maitland",
   "ogDescription": "A family dental practice five minutes from Maitland. Check-ups, cosmetic, implants and orthodontics. Open Saturdays. Call 02 4933 4667.",
   "ogType": "website",
-  "ogImage": "/images/img-880c59f894.webp",
+  "ogImage": "/images/img-0451df991a.webp",
   "description": "A family dental practice five minutes from Maitland. Check-ups, cosmetic, implants and orthodontics. Open Saturdays. Call 02 4933 4667."
  },
  "jsonLd": [
-  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-maitland#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-maitland\",\n  \"image\": \"/images/img-880c59f894.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Maitland\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Maitland\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7315527,\n        \"longitude\": 151.5525086\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-maitland#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-maitland\",\n  \"image\": \"/images/img-0451df991a.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Maitland\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Maitland\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7315527,\n        \"longitude\": 151.5525086\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How far is the practice from the Maitland town centre?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Around 5 km - eight minutes across the river, with parking on site.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do I need a referral?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"No. Bookings can be made directly, either online or over the phone.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Can the whole family be seen in one trip?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Usually. Tell reception how many appointments you need and we will group them where the diary allows.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What should I do in a dental emergency?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Ring {{site:phone}} as early in the day as possible. Time is set aside each day for problems that cannot wait.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Are you open outside business hours?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We run until 6:00pm on weekdays and until 4:00pm on Saturdays.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"I have not seen a dentist in years. Is that a problem?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Not at all. We look properly, explain what we find without judgement, and put together a plan that fits your circumstances and your budget.\"\n      }\n    }\n  ]\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://toothncare.vercel.app/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Dentist in Maitland\",\n      \"item\": \"https://toothncare.vercel.app/dentist-maitland\"\n    }\n  ]\n}"
  ],
@@ -218,7 +218,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-26174f482b.webp",
+     "value": "/images/img-337715a311.webp",
      "width": "1600",
      "height": "900"
     },
@@ -244,7 +244,7 @@
      "id": "image-2",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-4286fa36e3.webp",
+     "value": "/images/img-185b536179.webp",
      "width": "1600",
      "height": "900"
     },
@@ -270,7 +270,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-4700f6418b.webp",
+     "value": "/images/img-af0f4d08d4.webp",
      "width": "1600",
      "height": "900"
     },
@@ -296,7 +296,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-53b0a9992a.webp",
+     "value": "/images/img-f0f764d868.webp",
      "width": "1600",
      "height": "900"
     },
@@ -322,7 +322,7 @@
      "id": "image-5",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-513beda25c.webp",
+     "value": "/images/img-b3083d64da.webp",
      "width": "1600",
      "height": "900"
     },

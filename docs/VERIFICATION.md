@@ -277,7 +277,20 @@ is refused (403).
 the reviewed list), no secrets, no pictures from another site, editor parity
 59 of 59.
 
-## 10. What could not be tested here
+## 10. Version 2.2.0: the original photos, run on 4 November 2026
+
+| Check | Result |
+| --- | --- |
+| Rowayne downloaded all 58 photo addresses from the r20 build on his Mac | 58 of 58 arrived and opened as images |
+| Every photo on every page lined up with the same page in r20, in order (before and after band excluded, it is not shown) | 3,303 photo spots now show the r20 original for that spot; 1,102 photos that were embedded in r20 unchanged; 0 problems |
+| Our Team at 1280, r20 (with its original photos served locally) against v2.2.0 | 0.25% of pixels different (text rendering) |
+| Teeth Whitening and Dr Nisheeth Agrawal, same comparison | banner, portraits and photos identical by eye; the rest of the difference is the 30px shift from the September port's form and wording changes |
+| An imported dashboard database still holding the old paths, then a build | migration changed 229 photo spots; the pull gave back the repository's fixed content byte for byte |
+| An empty database | migration changed nothing |
+| Import pictures on a dashboard that already had the 42 old imports | 49 added, 42 skipped, 18 relabelled with their website descriptions |
+| `npm run qa` | clean; editor parity 59 of 59 |
+
+## 11. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

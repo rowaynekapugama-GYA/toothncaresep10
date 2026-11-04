@@ -164,7 +164,7 @@ Everything below was flagged rather than done quietly.
 | No `og:image` at all | 48 pages now have one, absolute |
 | `sitemap.html` had "Envision Your Smile" in its header menu but not its footer, the opposite of every other page | now matches the other 58 |
 | An inline `grid-template-columns` on the four step grid outranked the mobile media queries, so those pages scrolled sideways on a phone | 19 pages |
-| Every image was hotlinked from imgur, Unsplash or a CDN | all 42 now ship in the repository as WebP |
+| Every image was hotlinked from imgur, Unsplash or a CDN | all now ship in the repository as WebP. **Correction (v2.2.0):** in September only the photos embedded in the pages were brought across; the 49 remote ones were shown as clinic photographs instead. v2.2.0 restores the originals. |
 
 ### Deliberate differences
 

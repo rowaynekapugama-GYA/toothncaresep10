@@ -2,6 +2,33 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.2.0] - 2026-11-04
+
+### Fixed
+
+- The practice's own photos are back. The September port could not download
+  the photos the approved r20 build loaded from imgur, Unsplash and an image
+  CDN, and showed clinic photographs in their place without saying so (44
+  photo addresses had been pointed at 16 local files). Affected: the four team
+  portraits on the homepage, Our Team and the profile pages, about 30
+  treatment photos used in the menu and service tiles on every page, the
+  homepage search thumbnails, the background photo behind the page banners,
+  and the share and schema images. All 49 originals now ship in
+  `public/images` as WebP, each in the spot r20 used it: 229 photo fields,
+  15 structured data blocks, 11 share images, 28 search thumbnails and 59
+  stylesheets.
+- The default share image is the real shopfront photo.
+- Import pictures into the Media Library gives every photo the description
+  the website uses for it (search for "Nish" now finds his portrait), and
+  relabels photos imported earlier with the generic description.
+
+### Database
+
+- Migration `20261104_090000_restore_original_photos` updates the dashboard's
+  built in photo paths to the originals, only where they are still the old
+  ones. A photo chosen in the dashboard, and every word, is left alone. On an
+  empty database it does nothing.
+
 ## [2.1.0] - 2026-11-03
 
 The client dashboard is now the GYA standard dashboard, the same one as

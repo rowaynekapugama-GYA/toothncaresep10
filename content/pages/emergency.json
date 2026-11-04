@@ -61,7 +61,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-513beda25c.webp",
+     "value": "/images/img-b3083d64da.webp",
      "width": "1600",
      "height": "900"
     },
@@ -407,7 +407,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-5c044f2a43.webp"
+     "value": "/images/img-a111c93647.webp"
     },
     {
      "id": "image-description-alt-text-1",
@@ -443,7 +443,7 @@
      "id": "image-2",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c6ae80440c.webp"
+     "value": "/images/img-dbd32bb4bb.webp"
     },
     {
      "id": "image-description-alt-text-2",
@@ -479,7 +479,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-958d12a1d2.webp"
+     "value": "/images/img-8431b5c0b7.webp"
     },
     {
      "id": "image-description-alt-text-3",
@@ -515,7 +515,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c3cc9872f0.webp"
+     "value": "/images/img-76ca461600.webp"
     },
     {
      "id": "image-description-alt-text-4",
@@ -558,7 +558,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-513beda25c.webp",
+     "value": "/images/img-b3083d64da.webp",
      "width": "1000",
      "height": "800"
     },

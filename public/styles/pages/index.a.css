@@ -18,7 +18,7 @@
   background-color:#060c0d;
   /* the local asset stays as the bottom layer, so if the hosted photo is ever
      slow or unreachable the band still has an image behind the copy */
-  background-image:url("/images/img-4286fa36e3.webp");
+  background-image:url("/images/img-645aba0db7.webp");
   background-size:cover,cover;
   background-position:center 42%,center 42%;
   background-repeat:no-repeat,no-repeat;

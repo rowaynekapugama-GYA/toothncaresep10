@@ -10,9 +10,14 @@ export const dynamic = 'force-dynamic'
 
 type Manifest = Record<string, { file: string; w: number; h: number }>
 
+const GENERIC = 'Tooth n Care, East Maitland'
+
 /**
  * Copies the photographs already on the website into the Media Library so the
- * practice can reuse them. Safe to run more than once.
+ * practice can reuse them, each described the way the website describes it
+ * (so "Nish" or "whitening" finds it). Safe to run more than once: photos
+ * already there are skipped, and any still carrying the old one-size-fits-all
+ * description get their proper one.
  */
 export async function POST() {
   const payload = await getPayload({ config })
@@ -27,6 +32,10 @@ export async function POST() {
     return NextResponse.json({ error: 'No picture list found in the repository.' }, { status: 404 })
   }
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as Manifest
+  const labelsPath = path.join(process.cwd(), 'docs', 'build-notes', 'image-labels.json')
+  const labels = (fs.existsSync(labelsPath) ? JSON.parse(fs.readFileSync(labelsPath, 'utf8')) : {}) as Record<string, string>
+  const labelFor = (file: string) => (labels[file] || GENERIC).slice(0, 250)
+  let relabelled = 0
 
   let added = 0
   let skipped = 0
@@ -46,6 +55,12 @@ export async function POST() {
       depth: 0,
     })
     if (existing.docs[0]) {
+      const doc = existing.docs[0] as { id: number | string; alt?: string }
+      const better = labelFor(entry.file)
+      if (doc.alt === GENERIC && better !== GENERIC) {
+        await payload.update({ collection: 'media', id: doc.id, depth: 0, data: { alt: better } as never })
+        relabelled++
+      }
       skipped++
       continue
     }
@@ -53,7 +68,7 @@ export async function POST() {
       await payload.create({
         collection: 'media',
         depth: 0,
-        data: { alt: 'Tooth n Care, East Maitland' } as never,
+        data: { alt: labelFor(entry.file) } as never,
         file: {
           data: fs.readFileSync(filePath),
           mimetype: 'image/webp',
@@ -71,7 +86,7 @@ export async function POST() {
     message:
       `Media Library updated. ${added} pictures added`
       + `${skipped ? `, ${skipped} already there` : ''}`
+      + `${relabelled ? `, ${relabelled} given their proper description` : ''}`
       + `${failed.length ? `, ${failed.length} could not be read` : ''}.`
-      + (added ? ' Please give each one a short description on its page.' : ''),
   })
 }

@@ -8,11 +8,11 @@
   "ogTitle": "Dentist in Lorn & Bolwarra | Tooth n Care East Maitland",
   "ogDescription": "Dental care for Lorn, Bolwarra and Bolwarra Heights. Check-ups, cosmetic dentistry, implants and orthodontics in East Maitland. Call 02 4933 4667.",
   "ogType": "website",
-  "ogImage": "/images/img-880c59f894.webp",
+  "ogImage": "/images/img-0451df991a.webp",
   "description": "Dental care for Lorn, Bolwarra and Bolwarra Heights. Check-ups, cosmetic dentistry, implants and orthodontics in East Maitland. Call 02 4933 4667."
  },
  "jsonLd": [
-  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-lorn-bolwarra#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-lorn-bolwarra\",\n  \"image\": \"/images/img-880c59f894.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Lorn\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Lorn\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7280722,\n        \"longitude\": 151.5581694\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Bolwarra\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Bolwarra\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.6956467,\n        \"longitude\": 151.5829595\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-lorn-bolwarra#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-lorn-bolwarra\",\n  \"image\": \"/images/img-0451df991a.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Lorn\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Lorn\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7280722,\n        \"longitude\": 151.5581694\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Bolwarra\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Bolwarra\",\n        \"postalCode\": \"2320\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.6956467,\n        \"longitude\": 151.5829595\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How far is the practice?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Nine minutes or so from Lorn, and about eleven from Bolwarra and Bolwarra Heights.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you provide dental implants?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Yes. They are assessed and planned here, with the stages, timeframe and risks set out before you decide.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What is involved in a smile makeover?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Several treatments planned together, whitening, veneers, crowns or orthodontics among them, designed around your teeth and what you would like changed.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Can I have a consultation without committing to treatment?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Certainly. A consultation exists to gather information and weigh options. Nothing proceeds until you say so.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How long do crowns and veneers last?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"That depends on the material, your bite and how they are cared for. We will give you a realistic expectation for your own situation.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you use digital imaging?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We do. It helps us plan treatment and lets you see what we are looking at.\"\n      }\n    }\n  ]\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://toothncare.vercel.app/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Dentist in Lorn &amp; Bolwarra\",\n      \"item\": \"https://toothncare.vercel.app/dentist-lorn-bolwarra\"\n    }\n  ]\n}"
  ],
@@ -218,7 +218,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c6ae80440c.webp",
+     "value": "/images/img-3af9b90f68.webp",
      "width": "1600",
      "height": "900"
     },
@@ -244,7 +244,7 @@
      "id": "image-2",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-4286fa36e3.webp",
+     "value": "/images/img-2732f36440.webp",
      "width": "1600",
      "height": "900"
     },
@@ -270,7 +270,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-5c044f2a43.webp",
+     "value": "/images/img-5eb23240c3.webp",
      "width": "1600",
      "height": "900"
     },
@@ -296,7 +296,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-a23f5c341d.webp",
+     "value": "/images/img-9ccb48fe2f.webp",
      "width": "1600",
      "height": "900"
     },
@@ -348,7 +348,7 @@
      "id": "image-6",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-53b0a9992a.webp",
+     "value": "/images/img-f0f764d868.webp",
      "width": "1600",
      "height": "900"
     },
@@ -374,7 +374,7 @@
      "id": "image-7",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-26174f482b.webp",
+     "value": "/images/img-8b932cb032.webp",
      "width": "1600",
      "height": "900"
     },

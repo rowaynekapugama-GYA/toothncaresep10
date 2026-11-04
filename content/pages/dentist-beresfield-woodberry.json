@@ -8,11 +8,11 @@
   "ogTitle": "Dentist Beresfield & Woodberry | Tooth n Care",
   "ogDescription": "Dental care twelve minutes from Beresfield and Woodberry. Check-ups, implants, braces and emergency appointments. Open Saturdays. Call 02 4933 4667.",
   "ogType": "website",
-  "ogImage": "/images/img-880c59f894.webp",
+  "ogImage": "/images/img-0451df991a.webp",
   "description": "Dental care twelve minutes from Beresfield and Woodberry. Check-ups, implants, braces and emergency appointments. Open Saturdays. Call 02 4933 4667."
  },
  "jsonLd": [
-  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-beresfield-woodberry#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-beresfield-woodberry\",\n  \"image\": \"/images/img-880c59f894.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Beresfield\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Beresfield\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.8027136,\n        \"longitude\": 151.6509967\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodberry\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Woodberry\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7939894,\n        \"longitude\": 151.6649033\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-beresfield-woodberry#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-beresfield-woodberry\",\n  \"image\": \"/images/img-0451df991a.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Beresfield\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Beresfield\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.8027136,\n        \"longitude\": 151.6509967\n      }\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodberry\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Woodberry\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7939894,\n        \"longitude\": 151.6649033\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How long does the drive take?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Eleven to twelve minutes up the New England Highway.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you have late appointments?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We run until 6:00pm on weeknights and 4:00pm on Saturdays. The later times are sought after, so book ahead where you can.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Can I be seen the same day for pain?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Call first thing and we will do what the schedule permits. Urgent time is set aside daily.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you treat children as well as adults?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Yes, from a first visit right through to orthodontics and adult treatment.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do I need to bring previous X-rays?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Useful if you have them, but not required. New images can be taken where they are needed.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Is there parking?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Yes, on site at {{site:street}}.\"\n      }\n    }\n  ]\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://toothncare.vercel.app/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Dentist in Beresfield &amp; Woodberry\",\n      \"item\": \"https://toothncare.vercel.app/dentist-beresfield-woodberry\"\n    }\n  ]\n}"
  ],
@@ -218,7 +218,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c6ae80440c.webp",
+     "value": "/images/img-37e08b3a35.webp",
      "width": "1600",
      "height": "900"
     },
@@ -238,7 +238,7 @@
      "id": "image-2",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c3cc9872f0.webp",
+     "value": "/images/img-e80d1ec308.webp",
      "width": "1600",
      "height": "900"
     },
@@ -258,7 +258,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-958d12a1d2.webp",
+     "value": "/images/img-8431b5c0b7.webp",
      "width": "1600",
      "height": "900"
     },
@@ -278,7 +278,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-5c044f2a43.webp",
+     "value": "/images/img-a111c93647.webp",
      "width": "1600",
      "height": "900"
     },
@@ -298,7 +298,7 @@
      "id": "image-5",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c6ae80440c.webp",
+     "value": "/images/img-3af9b90f68.webp",
      "width": "1600",
      "height": "900"
     },
@@ -318,7 +318,7 @@
      "id": "image-6",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-0df9515d9e.webp",
+     "value": "/images/img-f4fe7ffc4c.webp",
      "width": "1600",
      "height": "900"
     },
@@ -338,7 +338,7 @@
      "id": "image-7",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-53b0a9992a.webp",
+     "value": "/images/img-3633b2da4e.webp",
      "width": "1600",
      "height": "900"
     },
@@ -358,7 +358,7 @@
      "id": "image-8",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-513beda25c.webp",
+     "value": "/images/img-b3083d64da.webp",
      "width": "1600",
      "height": "900"
     },

@@ -8,11 +8,11 @@
   "ogTitle": "Dentist in Thornton | Tooth n Care East Maitland",
   "ogDescription": "Family dental care ten minutes from Thornton. Check-ups, children's dentistry, implants, aligners and emergencies. Open Saturdays. Call 02 4933 4667.",
   "ogType": "website",
-  "ogImage": "/images/img-880c59f894.webp",
+  "ogImage": "/images/img-0451df991a.webp",
   "description": "Family dental care ten minutes from Thornton. Check-ups, children's dentistry, implants, aligners and emergencies. Open Saturdays. Call 02 4933 4667."
  },
  "jsonLd": [
-  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-thornton#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-thornton\",\n  \"image\": \"/images/img-880c59f894.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Thornton\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Thornton\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7783554,\n        \"longitude\": 151.6472659\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
+  "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"@id\": \"https://toothncare.vercel.app/dentist-thornton#practice\",\n  \"name\": \"{{site:practiceName}}\",\n  \"url\": \"https://toothncare.vercel.app/dentist-thornton\",\n  \"image\": \"/images/img-0451df991a.webp\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": -32.7520106,\n    \"longitude\": 151.5904216\n  },\n  \"hasMap\": \"{{site:mapUrl}}\",\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"09:00\",\n      \"closes\": \"18:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"16:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"City\",\n      \"name\": \"Thornton\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressLocality\": \"Thornton\",\n        \"postalCode\": \"2322\",\n        \"addressRegion\": \"{{site:state}}\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -32.7783554,\n        \"longitude\": 151.6472659\n      }\n    }\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"{{site:bookingUrl}}\",\n      \"actionPlatform\": [\n        \"http://schema.org/DesktopWebPlatform\",\n        \"http://schema.org/MobileWebPlatform\"\n      ]\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Dental appointment\"\n    }\n  }\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How far is the practice?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"About 7.5 km, which is normally a ten-minute drive.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Can you see the family in one trip?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Frequently, yes. Mention how many appointments you need when booking and we will try to line them up.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"When should my child first see a dentist?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Around the time the first teeth arrive. Those early appointments are short and take the mystery out of the place.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you make sports mouthguards?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We do, custom-fitted here. They sit better and stay put far more reliably than a boil-and-bite guard.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Are clear aligners available for adults?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Yes. We will assess your teeth first and go through what would suit your case.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What if my child chips a tooth on the weekend?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Phone {{site:phone}}. Saturdays run to 4:00pm and emergency slots are held open.\"\n      }\n    }\n  ]\n}",
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://toothncare.vercel.app/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Areas We Serve\",\n      \"item\": \"https://toothncare.vercel.app/areas-we-serve\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Dentist in Thornton\",\n      \"item\": \"https://toothncare.vercel.app/dentist-thornton\"\n    }\n  ]\n}"
  ],
@@ -218,7 +218,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-26174f482b.webp",
+     "value": "/images/img-7f06f38f05.webp",
      "width": "1600",
      "height": "900"
     },
@@ -244,7 +244,7 @@
      "id": "image-2",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-c3cc9872f0.webp",
+     "value": "/images/img-e80d1ec308.webp",
      "width": "1600",
      "height": "900"
     },
@@ -270,7 +270,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-4286fa36e3.webp",
+     "value": "/images/img-185b536179.webp",
      "width": "1600",
      "height": "900"
     },
@@ -296,7 +296,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-53b0a9992a.webp",
+     "value": "/images/img-f0f764d868.webp",
      "width": "1600",
      "height": "900"
     },
@@ -322,7 +322,7 @@
      "id": "image-5",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-4700f6418b.webp",
+     "value": "/images/img-af0f4d08d4.webp",
      "width": "1600",
      "height": "900"
     },
@@ -348,7 +348,7 @@
      "id": "image-6",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-513beda25c.webp",
+     "value": "/images/img-b3083d64da.webp",
      "width": "1600",
      "height": "900"
     },

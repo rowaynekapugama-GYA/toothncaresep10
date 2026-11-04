@@ -15,5 +15,5 @@ export const BRAND = {
   /** shown in the Google preview while a description is being typed */
   phone: '02 4933 4667',
   /** the default share picture when a page sets none */
-  defaultOg: '/images/img-880c59f894.webp',
+  defaultOg: '/images/img-0451df991a.webp',
 } as const
