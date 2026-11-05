@@ -26,7 +26,12 @@ const quiet = (command, args) => spawnSync(command, args, { stdio: 'inherit', sh
 
 const UNSET_MARKER = 'set-PAYLOAD_SECRET-before-deploying'
 
-if (process.env.DATABASE_URL) {
+// BUILD_WITHOUT_DB=1 is a check build on someone's computer (update-and-deploy.sh):
+// it must not run migrations on, or pull content from, the live database even
+// when a local .env points at it. Vercel never sets it.
+const withoutDb = process.env.BUILD_WITHOUT_DB === '1'
+
+if (process.env.DATABASE_URL && !withoutDb) {
   // Dashboard sessions are signed with PAYLOAD_SECRET. With a database attached
   // and the placeholder secret from the public repository, anyone could forge
   // an administrator session, so refuse to build rather than go live like that.
@@ -49,7 +54,9 @@ if (process.env.DATABASE_URL) {
     console.log('> could not pull content, building from the files already in the repo')
   }
 } else {
-  console.log('> no DATABASE_URL, building from the content files in the repo')
+  console.log(withoutDb
+    ? '> BUILD_WITHOUT_DB=1, building from the content files in the repo without touching the database'
+    : '> no DATABASE_URL, building from the content files in the repo')
 }
 
 console.log('> building the site')

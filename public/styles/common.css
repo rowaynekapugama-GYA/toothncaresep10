@@ -161,6 +161,8 @@
 .form-note{font-size:13px;color:var(--grey-2);border:1px dashed var(--border-bright);border-radius:14px;padding:14px 18px}
 @media(max-width:700px){.cform .row{grid-template-columns:1fr}}
 @media(max-width:900px){.team-grid,.profile-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+/* an odd number of team cards: the last one sits centred under the pair above it instead of leaving a gap (v2.4.0) */
+@media(min-width:901px){.team-grid>.tcard:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 10px)}}
 @media(max-width:600px){.gallery{grid-template-columns:1fr}.gallery figure.wide{grid-column:span 1;aspect-ratio:4/3}}
 /* light theme adjustments */
 [data-theme="light"] .crumbs,[data-theme="light"] .info-card,[data-theme="light"] .rel-card,

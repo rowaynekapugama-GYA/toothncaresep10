@@ -301,7 +301,24 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | Dashboard with edits made in it (a suburb heading, an Our Team card's wording, a hidden Contact section) | Penny's sentence removed and the heading edit kept; the edited Our Team section left alone and named in the log; the hidden Contact section stayed hidden with the new directions; Support Team page deleted; both redirects added |
 | `npm run qa` | clean; editor parity 58 of 58 |
 
-## 12. What could not be tested here
+## 12. Version 2.4.0: homepage photo and team tidy, run on 5 November 2026
+
+| Check | Result |
+| --- | --- |
+| Supplied photo (1672 x 941) cropped inside its frame | 770 x 616 (5:4), no frame, glow, logo or tooth icon left; 40 KB WebP |
+| Homepage About Us at 390, 768 and 1440px | new photo shown, same slot size as before (340 x 212, 718 x 448, 538 x 430), header and phone call bar unchanged over it |
+| Old photo | still used on About (Our story) and New Patients (Getting here), so kept; not used as a share image or in structured data |
+| Our Team at 1440px | two cards then the third centred under them; 390 and 768px one card per row as before |
+| Every page in the sitemap (55) and every internal link, photo, stylesheet and script on them (258) | all 200, or a redirect to a 200; no mention of the removed team member, her photo or `support-team` |
+| `/support-team` and `/our-team/support-team` | 308 to `/our-team` |
+| Imported dashboard (v2.3.0 state), migrate then pull | homepage photo and description changed, About and New Patients untouched; the pull gave back the repository's v2.4.0 content byte for byte |
+| Dashboard where the homepage photo had been changed, plus a section still using the removed photo | photo left alone; the section named as a warning in the build log |
+| `BUILD_WITHOUT_DB=1 npm run build` with a database configured | no migration or pull, builds from the files |
+| `npm run build`, `npm run qa` | clean, no warnings; editor parity 58 of 58 |
+| `update-and-deploy.sh` against a copy of the GitHub repository (with a local `.env` pointing at a database, and a `.vercel` folder) | backup branch pushed; main committed and pushed; the pushed tree is identical to the zip file for file; `.env` and `.vercel` kept and not committed; the database not touched; cms moved forward |
+| The same script with a zip that does not build | stopped before committing, folder put back exactly as it was, nothing pushed to main |
+
+## 13. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

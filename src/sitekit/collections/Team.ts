@@ -2,6 +2,13 @@ import type { CollectionConfig } from 'payload'
 import { adminOnly, adminOrEditor } from '../access'
 import { touchSite } from '../hooks/touchSite'
 
+// TODO(v2.4.0, 5 Nov 2026): team names and photos are pending client confirmation.
+// Nish is sending the full, correctly spelt names (and roles) of the staff he wants
+// on the website, and Christine is gathering photos of staff who are happy to appear.
+// Until both arrive, leave Dr Nish, Dr Nav and Zoe exactly as they are and add no one.
+// The team list lives in content/team.json (rewritten from the dashboard at build, so it
+// cannot hold a comment) and in the Our Team page and homepage team slider sections.
+
 export const Team: CollectionConfig = {
   slug: 'team',
   labels: { singular: 'Team member', plural: 'Team' },

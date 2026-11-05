@@ -2,6 +2,53 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.4.0] - 2026-11-05
+
+Changes the practice asked for on 5 November 2026 (Christine).
+
+### Changed
+
+- Homepage About Us ("We're here to care"): the Smile With Confidence sign
+  photo is replaced by the treatment room corridor photo the practice sent.
+  The supplied image had a neon frame, glow wave, logo and tooth icon baked
+  in; it is cropped to the photo inside the frame (770 x 616, the slot's 5:4
+  shape) as `public/images/img-1b9897ccd3.webp`, with the description
+  "Tooth n Care treatment room corridor, with numbered rooms and teal wave
+  glass panels". The old photo is still used on About (Our story) and New
+  Patients (Getting here), so it stays there and the file is kept.
+- Our Team: with three cards in a two column grid, the third card sat alone
+  with a gap beside it. An odd last card is now centred under the pair above
+  it on screens wider than 900px (`public/styles/common.css`). Phones and
+  tablets show one card per row as before.
+
+### Removed
+
+- The dental assistant removed in 2.3.0: her photo file
+  (`public/images/img-fe35fabe7c.webp`), her entry in the fallback team list
+  used for a first import (`docs/build-notes/team-initial.json`), the
+  photo's line in `docs/build-notes/remote-map.json`, and the old Support
+  Team page from the dashboard's Team group. The redirects from
+  `/support-team` and `/our-team/support-team` to `/our-team` added in 2.3.0
+  stay.
+
+### Added
+
+- `BUILD_WITHOUT_DB=1 npm run build` builds from the content files without
+  touching the database, even when a local `.env` points at it. Used by
+  `update-and-deploy.sh` for its check build. Vercel never sets it.
+- `.vercel` in `.gitignore`, so a folder linked with the Vercel CLI is never
+  committed.
+- A TODO in `src/sitekit/collections/Team.ts`: names and photos are pending
+  from the practice (Nish for names and spelling, Christine for photos).
+
+### Database
+
+- Migration `20261105_090000_home_about_photo` makes the homepage photo
+  change in the dashboard, only where the photo is still the one the site
+  shipped with, and updates the description only if it is still the old
+  one. It also names in the build log any section that still uses the removed
+  team photo.
+
 ## [2.3.0] - 2026-11-04
 
 Changes the practice asked for on 4 November 2026.

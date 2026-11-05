@@ -7,7 +7,7 @@ export const metadata = { title: 'Pages' }
 const MAIN = new Set(['index', 'about', 'services', 'contact', 'our-team', 'our-clinic', 'our-technology', 'new-patients',
   'payment-options', 'offers', 'emergency', 'faq', 'nervous-patients', 'areas-we-serve', 'conditions-we-treat', 'envision-your-smile'])
 const LEGAL = new Set(['privacy-policy', 'terms', 'sitemap', 'page-not-found'])
-const TEAM = new Set(['dr-navneet-karan', 'dr-nisheeth-agrawal', 'zoe-xu', 'support-team'])
+const TEAM = new Set(['dr-navneet-karan', 'dr-nisheeth-agrawal', 'zoe-xu'])
 
 function groupOf(slug: string): string {
   if (MAIN.has(slug)) return 'Main pages'

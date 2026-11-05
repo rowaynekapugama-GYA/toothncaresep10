@@ -4,7 +4,7 @@ import { partToSectionDoc, sectionDocToPart, type SectionDoc } from '../src/site
 import type { Part } from '../src/lib/parts'
 
 /**
- * v2.3.0, asked for by the practice on 4 November 2026: Penny has left, so her
+ * v2.3.0, asked for by the practice on 4 November 2026: the dental assistant has left, so her
  * homepage slide, Our Team card, Support Team page and mentions on the suburb
  * pages come off; the directions say "near Your Discount Chemist and Australia
  * Post" with no hair salon; the Our Team intro counts the current team.

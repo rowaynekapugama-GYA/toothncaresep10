@@ -7,3 +7,4 @@ work
 .DS_Store
 tsconfig.tsbuildinfo
 /media/
+.vercel
