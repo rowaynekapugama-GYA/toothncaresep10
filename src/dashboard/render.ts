@@ -222,6 +222,7 @@ pd-e:focus{outline:2px solid #4FD8D2;background-color:rgba(79,216,210,.10)}
 pd-e:empty{display:inline-block;min-width:4ch}
 pd-e:empty::before{content:'Add words';opacity:.45;font-style:italic}
 .pd-tok{background:rgba(79,216,210,.22);border-radius:3px;padding:0 2px;cursor:default}
+.pd-tok:empty{display:none}
 img[data-pdi]{cursor:pointer}
 img[data-pdi]:hover{outline:3px solid rgba(79,216,210,.9);outline-offset:-3px}
 img.pd-sel,img.pd-sel:hover{outline:3px solid #4FD8D2;outline-offset:-3px}

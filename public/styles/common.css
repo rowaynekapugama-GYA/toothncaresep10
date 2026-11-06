@@ -129,6 +129,8 @@
 .tcard h3{font-family:var(--font-display);font-weight:400;color:var(--white);font-size:clamp(22px,2vw,28px);margin:0}
 .tcard p{font-size:15px;font-weight:300;line-height:1.66;color:var(--grey);margin:0}
 .tcard em{font-style:normal;margin-top:6px;font-family:var(--font-head);font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua)}
+/* AHPRA registration number (src/team.config.ts). Only present when a number is filled in (v2.5.0) */
+.ahpra-reg{display:block;margin-top:10px;font-family:var(--font-head);font-size:10.5px;font-weight:400;font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-2);line-height:1.5}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(38px,4vw,54px)}
 .gallery figure{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,.61,.36,1)}

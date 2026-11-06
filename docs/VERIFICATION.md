@@ -318,7 +318,23 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | `update-and-deploy.sh` against a copy of the GitHub repository (with a local `.env` pointing at a database, and a `.vercel` folder) | backup branch pushed; main committed and pushed; the pushed tree is identical to the zip file for file; `.env` and `.vercel` kept and not committed; the database not touched; cms moved forward |
 | The same script with a zip that does not build | stopped before committing, folder put back exactly as it was, nothing pushed to main |
 
-## 13. What could not be tested here
+## 13. Version 2.5.0: role titles and AHPRA fields, run on 6 November 2026
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.4.0 against v2.5.0, whole HTML including titles, descriptions, share tags and structured data | 52 identical; the other 3 (the profiles) differ only by the removed "[VERIFY reg. no.]" marker |
+| A test copy with sample numbers for Dr Nish and Zoe, Dr Nav left empty, and Zoe's title changed | numbers shown on the Our Team cards, homepage slides and profiles, Dr Nav shows nothing; the new title appears on her card, profile, Google title and description, structured data, FAQ and Check-ups; the Our Team intro read "two dental hygienists"; Person structured data has the AHPRA identifier only for the two filled in |
+| Empty numbers at 390 and 1440px | no AHPRA line and no "[VERIFY" anywhere on Our Team, the homepage or the profiles |
+| "TBC", "XXXX" and "DEN123" as a number | the build stops and names the line to fix |
+| `npm run qa:roles` on v2.4.0 content | 26 typed role titles and registration placeholders found |
+| `npm run qa:roles` on v2.5.0 content | none |
+| Imported dashboard (v2.4.0 state), migrate then pull | 30 spots changed; the pull gave back the repository's v2.5.0 content byte for byte |
+| Dashboard with a reworded FAQ answer and Zoe's Google title edited | those two left alone and named in the build log; the other 28 changed. Undoing the migration put everything back |
+| Page editor on Zoe's page, then save | role words shown as shaded words, empty AHPRA placeholder hidden; after typing and saving, both placeholders are still in the saved wording |
+| `update-toothncare-v2.5.0.sh` against a copy of the GitHub repository, started on the cms branch, with a local `.env` pointing at a database and a `.vercel` folder | switched to main, pulled, backup branch pushed, build passed without touching the database, committed and pushed; the pushed tree is identical to the zip file for file; `.env` and `.vercel` kept and not committed; cms moved forward |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+
+## 14. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

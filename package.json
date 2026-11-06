@@ -1,6 +1,6 @@
 {
   "name": "toothncare-web",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,9 +13,10 @@
     "pull": "tsx scripts/pull-content.ts",
     "qa:banned": "node scripts/qa-banned.mjs",
     "qa:secrets": "node scripts/qa-secrets.mjs",
-    "qa": "npm run typecheck && npm run qa:banned && npm run qa:secrets && npm run qa:images && npm run qa:editor",
+    "qa": "npm run typecheck && npm run qa:banned && npm run qa:secrets && npm run qa:images && npm run qa:roles && npm run qa:editor",
     "qa:images": "node scripts/qa-images.mjs",
-    "qa:editor": "tsx scripts/qa-editor.ts"
+    "qa:editor": "tsx scripts/qa-editor.ts",
+    "qa:roles": "node scripts/qa-roles.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "6.3.1",

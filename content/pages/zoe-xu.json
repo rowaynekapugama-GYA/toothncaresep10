@@ -3,17 +3,17 @@
  "name": "Zoe Xu",
  "path": "/zoe-xu",
  "meta": {
-  "title": "Zoe Xu | Oral Health Therapist, Tooth n Care East Maitland",
+  "title": "Zoe Xu | {{site:zoeRole}}, Tooth n Care East Maitland",
   "canonical": "https://toothncare.vercel.app/zoe-xu",
-  "ogTitle": "Zoe Xu | Oral Health Therapist, Tooth n Care East Maitland",
-  "ogDescription": "Zoe is an oral health therapist providing preventative and restorative care for children and adults - cleans, fillings, sealants, gum disease management and whitening.",
+  "ogTitle": "Zoe Xu | {{site:zoeRole}}, Tooth n Care East Maitland",
+  "ogDescription": "Zoe is {{site:zoeRoleA}} providing preventative and restorative care for children and adults - cleans, fillings, sealants, gum disease management and whitening.",
   "ogType": "website",
-  "description": "Zoe is an oral health therapist providing preventative and restorative care for children and adults - cleans, fillings, sealants, gum disease management and whitening."
+  "description": "Zoe is {{site:zoeRoleA}} providing preventative and restorative care for children and adults - cleans, fillings, sealants, gum disease management and whitening."
  },
  "jsonLd": [
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"name\": \"{{site:practiceName}}\",\n  \"description\": \"Modern family, cosmetic and emergency dental studio in East Maitland, NSW.\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"areaServed\": [\"East Maitland\", \"Maitland\", \"Hunter Valley\"],\n  \"openingHoursSpecification\": [\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"},\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Saturday\", \"opens\": \"09:00\", \"closes\": \"16:00\"}\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"hasMap\": \"{{site:mapUrl}}\"\n}",
   "{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://toothncare.vercel.app\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Our Team\", \"item\": \"https://toothncare.vercel.app/our-team\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Zoe Xu\"}]}",
-  "{\"@context\": \"https://schema.org\", \"@type\": \"Person\", \"name\": \"Zoe Xu\", \"jobTitle\": \"Oral Health Therapist\", \"description\": \"Oral health therapist providing preventative and restorative dental care for children and adults, including cleans, fillings, fissure sealants, gum disease management and professional whitening.\", \"url\": \"https://toothncare.vercel.app/zoe-xu\", \"image\": \"/images/img-968a038ab5.webp\", \"worksFor\": {\"@type\": \"Dentist\", \"name\": \"{{site:practiceName}}\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"{{site:street}}\", \"addressLocality\": \"{{site:suburb}}\", \"postalCode\": \"{{site:postcode}}\", \"addressRegion\": \"{{site:state}}\", \"addressCountry\": \"AU\"}, \"telephone\": \"{{site:phoneE164}}\"}}"
+  "{\"@context\": \"https://schema.org\", \"@type\": \"Person\", \"name\": \"Zoe Xu\", \"jobTitle\": \"{{site:zoeRole}}\", \"ahpraRegistration\": \"{{site:zoeAhpraNumber}}\", \"ahpraDivision\": \"{{site:zoeAhpraDivision}}\", \"description\": \"{{site:zoeRoleSentence}} providing preventative and restorative dental care for children and adults, including cleans, fillings, fissure sealants, gum disease management and professional whitening.\", \"url\": \"https://toothncare.vercel.app/zoe-xu\", \"image\": \"/images/img-968a038ab5.webp\", \"worksFor\": {\"@type\": \"Dentist\", \"name\": \"{{site:practiceName}}\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"{{site:street}}\", \"addressLocality\": \"{{site:suburb}}\", \"postalCode\": \"{{site:postcode}}\", \"addressRegion\": \"{{site:state}}\", \"addressCountry\": \"AU\"}, \"telephone\": \"{{site:phoneE164}}\"}}"
  ],
  "sections": [
   {
@@ -86,7 +86,7 @@
      "id": "intro-paragraph-1",
      "label": "Intro paragraph",
      "type": "richtext",
-     "value": "Oral health therapist. Preventative and restorative care for every age, gentle with children and grown-ups alike, and never in a rush to explain things properly."
+     "value": "{{site:zoeRoleSentence}}. Preventative and restorative care for every age, gentle with children and grown-ups alike, and never in a rush to explain things properly."
     },
     {
      "id": "button-link-1",
@@ -136,13 +136,13 @@
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "Zoe Xu, oral health therapist at Tooth n Care"
+     "value": "Zoe Xu, {{site:zoeRoleLower}} at Tooth n Care"
     },
     {
      "id": "heading-1",
      "label": "Heading",
      "type": "richtext",
-     "value": "Oral health therapist, treating children and adults"
+     "value": "{{site:zoeRoleSentence}}, treating children and adults"
     },
     {
      "id": "paragraph-1",
@@ -166,7 +166,7 @@
      "id": "text-1",
      "label": "Text",
      "type": "richtext",
-     "value": "Oral health therapist, registered with AHPRA <span class=\"verify\">[VERIFY reg. no.]</span>"
+     "value": "{{site:zoeRoleSentence}}, registered with AHPRA{{site:zoeAhpra}}"
     },
     {
      "id": "text-2",

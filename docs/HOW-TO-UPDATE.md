@@ -180,6 +180,11 @@ other page. Each dentist's own page is under **Pages**, in the **Team** group.
 qualification, a title or an AHPRA registration number that has not been given
 to you in writing.
 
+Job titles such as "Oral Health Therapist", and AHPRA registration numbers,
+are shaded on the page, like the phone number. GYA looks after them so they
+stay the same on every page, in Google and in the information search engines
+read. To change one, email GYA with the new title or number.
+
 ---
 
 ## What you must not write

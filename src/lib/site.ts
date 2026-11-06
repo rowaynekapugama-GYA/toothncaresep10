@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { DEFAULTS } from '@/site.config'
 import { hasBlog } from '@/lib/blog'
+import { teamTokens } from '@/team.config'
 
 export type SiteSettings = typeof DEFAULTS & Record<string, unknown>
 
@@ -72,6 +73,8 @@ export function tokensFor(s: SiteSettings): Record<string, string> {
     twitter: s.socials.twitter,
     logo: s.logo,
     blogLink: hasBlog() ? '<li><a href="/blog">Blog</a></li>' : '',
+    // role titles and AHPRA details, from src/team.config.ts
+    ...teamTokens(),
   }
 }
 

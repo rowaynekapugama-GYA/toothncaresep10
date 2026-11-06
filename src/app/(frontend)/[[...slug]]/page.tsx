@@ -5,6 +5,8 @@ import { allSlugs, getPage } from '@/lib/content'
 import { absolute, isPreview, siteUrl } from '@/lib/urls'
 import { DEFAULTS } from '@/site.config'
 import { getSeoDefaults } from '@/lib/seo'
+import { siteTokens } from '@/lib/site'
+import { applyTokens } from '@/lib/tokens'
 
 export const dynamicParams = true
 
@@ -26,7 +28,10 @@ export function generateStaticParams(): { slug?: string[] }[] {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getPage(slugFrom((await params).slug))
   if (!page) return {}
-  const { meta } = page
+  // titles and descriptions can hold {{site:...}} placeholders (role titles from src/team.config.ts)
+  const tokens = siteTokens()
+  const t = (s: string | undefined) => (s ? applyTokens(s, tokens) : s)
+  const meta = { ...page.meta, title: t(page.meta.title), description: t(page.meta.description), ogTitle: t(page.meta.ogTitle), ogDescription: t(page.meta.ogDescription) }
   const canonical = `${siteUrl()}${page.path === '/' ? '/' : page.path}`
   const seo = getSeoDefaults()
   const image = absolute(meta.ogImage || seo.defaultOgImage || DEFAULTS.ogImage)

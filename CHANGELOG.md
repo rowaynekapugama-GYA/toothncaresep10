@@ -2,6 +2,54 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.5.0] - 2026-11-06
+
+Getting ready for the practice's confirmation of the oral health team's role
+titles and everyone's AHPRA registration numbers (Christine, 5 November).
+Nothing visible changes yet, apart from the three "[VERIFY reg. no.]" markers.
+
+### Added
+
+- `src/team.config.ts`: the one place for role titles and AHPRA details. It
+  holds the oral health team's shared heading, and for Dr Nish, Dr Nav, Zoe and
+  the second oral health team member (name to come): name, role title, AHPRA
+  number and division. The numbers are empty, marked TODO. The file lists the
+  Dental Board of Australia divisions for reference.
+- Placeholders in the pages instead of typed role titles, 30 spots on 7 pages:
+  the Our Team card, intro and Google description; Zoe's profile (heading,
+  intro, credential line, photo description, Google title and description,
+  structured data); the related page cards on Dr Nish's and Dr Nav's
+  profiles; the FAQ and Check-ups answers that name Zoe's role, including the
+  FAQ version Google reads.
+- An "AHPRA Reg. No." line on every team card (Our Team and the homepage team
+  slider) and on each profile's credential line. While a number is empty it
+  renders nothing at all. Styled small and grey (`.ahpra-reg` in
+  `public/styles/common.css`).
+- Each profile's Person structured data gets an AHPRA `identifier` only when a
+  number is filled in (`src/lib/jsonld.ts`).
+- Google titles and descriptions can now hold `{{site:...}}` placeholders
+  (`src/app/(frontend)/[[...slug]]/page.tsx`).
+- The dashboard shows the new placeholders as shaded words, like the phone
+  number, and in forms as `{zoe-role}` and so on (`src/dashboard/util.ts`); an
+  empty AHPRA placeholder is hidden in the editor (`src/dashboard/render.ts`).
+- `npm run qa:roles` (`scripts/qa-roles.mjs`), part of `npm run qa`: fails if a
+  role title or a registration placeholder is typed into a page again.
+- A malformed AHPRA number, or a title with quotes or angle brackets, stops the
+  build with a message naming the line to fix.
+
+### Removed
+
+- The "[VERIFY reg. no.]" markers on Dr Nish's, Dr Nav's and Zoe's profiles.
+  The line now reads "..., registered with AHPRA" and gets the number once it
+  is filled in.
+
+### Database
+
+- Migration `20261106_090000_role_titles_and_ahpra` makes the same 30 changes
+  in the dashboard, each only where the wording is still exactly the old
+  wording, and names any spot that was reworded in the dashboard in the build
+  log. Data: `src/sitekit/data/release-2-5-0.ts`.
+
 ## [2.4.0] - 2026-11-05
 
 Changes the practice asked for on 5 November 2026 (Christine).

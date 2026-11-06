@@ -361,7 +361,7 @@
      "id": "paragraph-3",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Children under 18 usually see Zoe, our oral health therapist, and eligible children can be bulk billed through CDBS."
+     "value": "Children under 18 usually see Zoe, our {{site:zoeRoleLower}}, and eligible children can be bulk billed through CDBS."
     },
     {
      "id": "small-print-2",

@@ -6,9 +6,9 @@
   "title": "Meet the Team | Tooth n Care East Maitland",
   "canonical": "https://toothncare.vercel.app/our-team",
   "ogTitle": "Meet the Team | Tooth n Care East Maitland",
-  "ogDescription": "Meet the dentists, oral health therapist and support team at Tooth n Care in East Maitland - who they are, what they do, and how they work.",
+  "ogDescription": "Meet the dentists, {{site:oralHealthHeadingLower}} and support team at Tooth n Care in East Maitland - who they are, what they do, and how they work.",
   "ogType": "website",
-  "description": "Meet the dentists, oral health therapist and support team at Tooth n Care in East Maitland - who they are, what they do, and how they work."
+  "description": "Meet the dentists, {{site:oralHealthHeadingLower}} and support team at Tooth n Care in East Maitland - who they are, what they do, and how they work."
  },
  "jsonLd": [
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"name\": \"{{site:practiceName}}\",\n  \"description\": \"Modern family, cosmetic and emergency dental studio in East Maitland, NSW.\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"areaServed\": [\"East Maitland\", \"Maitland\", \"Hunter Valley\"],\n  \"openingHoursSpecification\": [\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"},\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Saturday\", \"opens\": \"09:00\", \"closes\": \"16:00\"}\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"hasMap\": \"{{site:mapUrl}}\"\n}",
@@ -87,7 +87,7 @@
      "id": "intro-paragraph-1",
      "label": "Intro paragraph",
      "type": "richtext",
-     "value": "Three dentists, an oral health therapist, a hygienist and a support team who will actually remember you between visits."
+     "value": "Three dentists, {{site:oralHealthTeamInSentence}} and a support team who will actually remember you between visits."
     },
     {
      "id": "button-link-1",
@@ -179,7 +179,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Nearly ten years looking after Hunter smiles, with a special interest in veneers, wisdom teeth surgery, dentures and full-mouth rehabilitation."
+     "value": "Nearly ten years looking after Hunter smiles, with a special interest in veneers, wisdom teeth surgery, dentures and full-mouth rehabilitation.{{site:nishAhpra}}"
     },
     {
      "id": "link-label-1",
@@ -223,7 +223,7 @@
      "id": "paragraph-2",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "A Fellow of the Royal Australasian College of Dental Surgeons, working across Newcastle and the Hunter since 2017. Calm, unhurried, happiest with the tricky cases."
+     "value": "A Fellow of the Royal Australasian College of Dental Surgeons, working across Newcastle and the Hunter since 2017. Calm, unhurried, happiest with the tricky cases.{{site:navAhpra}}"
     },
     {
      "id": "link-label-2",
@@ -249,13 +249,13 @@
      "id": "image-description-alt-text-3",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "Zoe Xu, oral health therapist at Tooth n Care"
+     "value": "Zoe Xu, {{site:zoeRoleLower}} at Tooth n Care"
     },
     {
      "id": "text-3",
      "label": "Text",
      "type": "richtext",
-     "value": "Oral Health Therapist"
+     "value": "{{site:zoeRole}}"
     },
     {
      "id": "sub-heading-3",
@@ -267,7 +267,7 @@
      "id": "paragraph-3",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Preventative and restorative care for every age, from children&rsquo;s check-ups to gum disease management - and never in a rush to explain things properly."
+     "value": "Preventative and restorative care for every age, from children&rsquo;s check-ups to gum disease management - and never in a rush to explain things properly.{{site:zoeAhpra}}"
     },
     {
      "id": "link-label-3",

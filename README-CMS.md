@@ -205,19 +205,19 @@ below. None of them has been deleted.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
       `https://toothncare.com.au/admin/create-first-user` answers 404.
 
-### Waiting on the practice (4 November 2026)
+### Waiting on the practice (6 November 2026)
 
 - Names and roles of the other dentist, the hygienist and the dental
-  assistants. Our Team shows three cards until then, which leaves the second
-  column of the last row empty.
+  assistants. Our Team shows three cards until then; the third is centred.
+- The role title for the oral health team (Zoe and the second team member):
+  one shared heading or one each. Edit `src/team.config.ts`.
+- AHPRA registration numbers for every practitioner. Edit `src/team.config.ts`;
+  an empty number shows nothing on the site.
 
 ### Open `[VERIFY]` items
 
 | Page | What needs confirming |
 | --- | --- |
-| `/dr-nisheeth-agrawal` | AHPRA registration number |
-| `/dr-navneet-karan` | AHPRA registration number |
-| `/zoe-xu` | AHPRA registration number |
 | `/faq` | Whether the practice is a current Invisalign provider and licensed to use the brand name. Until that is confirmed the page says "clear aligner treatment". |
 | `/offers` | The exact price on the offer, and that the offer period and inclusions are right |
 | `/offers` | The whitening wording |
@@ -282,7 +282,27 @@ src/
   sitekit/            collections, globals, hooks, sync
   lib/                content loading, tokens, structured data
   site.config.ts      the practice's default values
+  team.config.ts      role titles and AHPRA registration numbers: the one place to change them
 ```
+
+### Role titles and AHPRA numbers
+
+`src/team.config.ts` is the only place a practitioner's role title or AHPRA
+registration number is written. The pages hold placeholders that fill in from
+it when the site builds, in the same way `{{site:phone}}` fills in from Site
+Settings: `{{site:zoeRole}}` (as on a card), `{{site:zoeRoleLower}}` and
+`{{site:zoeRoleSentence}}` (mid-sentence and at the start of one),
+`{{site:zoeRoleA}}` ("an oral health therapist"), `{{site:zoeAhpra}}` (the
+"AHPRA Reg. No." line, or nothing), and in structured data
+`"ahpraRegistration": "{{site:zoeAhpraNumber}}"`, which becomes a schema.org
+identifier only when a number is filled in. The same set exists for `nish`,
+`nav` and `oralHealth2`. In the dashboard they show as shaded words, like the
+phone number, and in forms as `{zoe-role}`.
+
+Change a value, commit and push; nothing else needs touching. A malformed
+AHPRA number (not three letters and ten digits) or a title containing quotes
+or angle brackets stops the build with a message saying which line to fix.
+`npm run qa:roles` fails if a role title is ever typed into a page again.
 
 ### Commands
 
@@ -293,7 +313,8 @@ src/
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run seed` | Load `content/*.json` into the database. `-- --overwrite` resets it |
 | `npm run pull` | Write the database out to `content/*.json` |
-| `npm run qa` | Typecheck, banned wording, secrets, external pictures, editor parity |
+| `npm run qa` | Typecheck, banned wording, secrets, external pictures, role titles, editor parity |
+| `npm run qa:roles` | Fails if a role title or a registration placeholder is typed into a page instead of coming from `src/team.config.ts` |
 | `npm run qa:editor` | Proves the page editor shows exactly the page the website renders, on all 59 pages |
 
 ---
