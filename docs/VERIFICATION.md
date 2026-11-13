@@ -366,7 +366,18 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | Team screen in the browser | listed the 12 support staff; adding, renaming, reordering and removing saved and survived a reload; the Our Team page editor preview showed the change |
 | `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
 
-## 16. What could not be tested here
+## 16. Version 2.7.1: favicon, run on 13 November 2026
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.7.0 against v2.7.1, whole HTML | the only difference on every page is the four icon and manifest lines in the head |
+| `/favicon.ico`, `/icon.svg`, `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`, `/site.webmanifest` | all 200 with the right content type |
+| Blog and dashboard sign in page | icon present |
+| Icon at 16, 32 and 48px on light and dark backgrounds | tooth outline readable at 16px |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+| `update-toothncare-v2.7.1.sh` against a copy of the GitHub repository | committed and pushed; pushed tree identical to the zip |
+
+## 17. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

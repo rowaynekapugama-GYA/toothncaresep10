@@ -7,6 +7,15 @@ import Tracking from '@/components/Tracking'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: { default: `${DEFAULTS.practiceName} | Dentist in ${DEFAULTS.address.suburb}`, template: '%s' },
+  // the round tooth mark from the logo (v2.7.1): browser tab, bookmarks, Google results, phone home screens
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
+  manifest: '/site.webmanifest',
 }
 
 const FONTS =

@@ -7,7 +7,7 @@ export const BRAND = {
   domain: 'toothncare.com.au',
   /** shown on the dark sidebar and on the dark strip at the top of the sign in card */
   logoOnDark: '/images/img-09b604b050.webp',
-  favicon: '/images/img-09b604b050.webp',
+  favicon: '/icon.svg',
   /** for "Good morning" and the dates in Enquiries */
   timeZone: 'Australia/Sydney',
   /** shown as the author of a new post until someone changes it */

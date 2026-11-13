@@ -2,6 +2,22 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.7.1] - 2026-11-13
+
+### Added
+
+- A favicon: the round tooth mark from the Tooth n Care logo, redrawn as a
+  vector from the logo file so it stays sharp at every size, in the site's
+  aqua with a slightly bolder outline so it reads at browser tab size.
+  - `public/icon.svg` (modern browsers), `public/favicon.ico` (16, 32 and
+    48px, older browsers and Google results), `public/apple-touch-icon.png`
+    (180px, square, for iPhone and iPad home screens), `public/icon-192.png`
+    and `public/icon-512.png` with `public/site.webmanifest` (Android).
+  - Declared in `src/app/(frontend)/layout.tsx`, so every page and blog post
+    gets it.
+- The dashboard uses the same icon in its browser tab and in the Google
+  preview on the SEO panel (`src/dashboard/brand.ts`; it was the wide logo).
+
 ## [2.7.0] - 2026-11-11
 
 Changes from the practice on 11 November 2026 (Christine, three emails). Ships
