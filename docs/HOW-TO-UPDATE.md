@@ -21,7 +21,7 @@ Down the left you will see:
 | **Pages** | Every page of the website. |
 | **Blog Posts** | News and advice articles. |
 | **Media Library** | Every photo. |
-| **Team** | Opens the Our Team page, ready to edit. |
+| **Team** | The support team on the Our Team page: add, move or remove people. |
 | **Enquiries** | Messages sent through the contact form. |
 | **SEO** | What Google shows when someone finds you. |
 | **Site Settings** | Phone, email, address, booking link and social pages. |
@@ -172,9 +172,32 @@ settings**, then **Publish website**.
 
 ## The team
 
-**Team** in the menu opens the **Our Team** page. Click a name, a role or a
-description to change it, and click a photo to replace it, exactly like any
-other page. Each dentist's own page is under **Pages**, in the **Team** group.
+### The dentists and Zoe
+
+Their cards are part of the **Our Team** page (and the team slider on the
+**Home** page). Open the page under **Pages** (or **Team**, then **edit the Our
+Team page**), click a name, a role or a description to change it, and click a
+photo to replace it, exactly like any other page. Each dentist's own page is
+under **Pages**, in the **Team** group. Dr Rav's card shows the letter R until
+a photo is added: click it and choose **Upload**.
+
+### The support team
+
+**Team** in the menu lists the support team shown on Our Team, under two
+headings: **Patient Experience Coordinators** (reception) and **Clinical Care
+Coordinators** (dental assistants and nurses).
+
+- **Add a person**: type their first name, tick their group (or both), press
+  **Add**.
+- **Change a name or group**: change it in the list and press **Save** on that
+  row.
+- **Move someone**: the arrows change the order they appear in.
+- **Remove someone**: **Remove**.
+- **Photo**: **Choose photo**, then press **Save**. Until there is a photo,
+  the card shows the first letter of their name.
+
+Then press **Publish website**. Someone ticked in both groups appears under
+both headings.
 
 **Names, roles and qualifications must come from the practice.** Never add a
 qualification, a title or an AHPRA registration number that has not been given

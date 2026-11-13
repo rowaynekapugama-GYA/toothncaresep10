@@ -205,7 +205,16 @@ below. None of them has been deleted.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
       `https://toothncare.com.au/admin/create-first-user` answers 404.
 
-### Waiting on the practice (6 November 2026)
+### Waiting on the practice (11 November 2026)
+
+- Dr Rav: full name, how Rav would like to be shown, a short bio and a photo.
+- AHPRA registration numbers for Dr Nish, Dr Nav, Dr Rav and Zoe. The numbers
+  sent on 11 November are Medicare provider numbers and are not published.
+- Holly: surname, or "main receptionist"; Riley's group; the spelling of every
+  support team name, and that each person is happy to be named.
+- Support team photos, each with that person's written agreement.
+
+### Earlier (6 November 2026)
 
 - Names and roles of the other dentist, the hygienist and the dental
   assistants. Our Team shows three cards until then; the third is centred.
@@ -282,7 +291,8 @@ src/
   sitekit/            collections, globals, hooks, sync
   lib/                content loading, tokens, structured data
   site.config.ts      the practice's default values
-  team.config.ts      role titles and AHPRA registration numbers: the one place to change them
+  team.config.ts      role titles, AHPRA registration numbers, and the support team headings and layout
+  lib/supportTeam.ts  builds the support team section on Our Team from the Team list
 ```
 
 ### Role titles and AHPRA numbers
@@ -296,7 +306,7 @@ Settings: `{{site:zoeRole}}` (as on a card), `{{site:zoeRoleLower}}` and
 "AHPRA Reg. No." line, or nothing), and in structured data
 `"ahpraRegistration": "{{site:zoeAhpraNumber}}"`, which becomes a schema.org
 identifier only when a number is filled in. The same set exists for `nish`,
-`nav` and `oralHealth2`. In the dashboard they show as shaded words, like the
+`nav` and `rav`. In the dashboard they show as shaded words, like the
 phone number, and in forms as `{zoe-role}`.
 
 Change a value, commit and push; nothing else needs touching. A malformed

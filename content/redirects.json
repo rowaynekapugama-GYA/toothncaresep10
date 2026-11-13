@@ -151,7 +151,7 @@
  },
  {
   "from": "/our-team/support-team",
-  "to": "/our-team",
+  "to": "/our-team#support-team",
   "type": "permanent"
  },
  {
@@ -336,7 +336,7 @@
  },
  {
   "from": "/support-team",
-  "to": "/our-team",
+  "to": "/our-team#support-team",
   "type": "permanent"
  },
  {

@@ -3,6 +3,7 @@ import path from 'node:path'
 import { DEFAULTS } from '@/site.config'
 import { hasBlog } from '@/lib/blog'
 import { teamTokens } from '@/team.config'
+import { supportTeamTokens, type SupportMember } from '@/lib/supportTeam'
 
 export type SiteSettings = typeof DEFAULTS & Record<string, unknown>
 
@@ -45,11 +46,25 @@ const digits = (s: string) => s.replace(/[^0-9]/g, '')
 
 /** The values that {{site:...}} tokens in the content resolve to. */
 export function siteTokens(): Record<string, string> {
-  return tokensFor(getSettings())
+  return tokensFor(getSettings(), getTeam())
+}
+
+let teamCache: SupportMember[] | null = null
+
+/** The Team list as the build sees it: content/team.json, written from the dashboard. */
+export function getTeam(): SupportMember[] {
+  if (teamCache) return teamCache
+  const file = path.join(process.cwd(), 'content', 'team.json')
+  try {
+    teamCache = fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, 'utf8')) as SupportMember[]) : []
+  } catch {
+    teamCache = []
+  }
+  return teamCache
 }
 
 /** The token values for a given set of settings (the dashboard preview passes its own). */
-export function tokensFor(s: SiteSettings): Record<string, string> {
+export function tokensFor(s: SiteSettings, team: SupportMember[] = []): Record<string, string> {
   const a = s.address
   const mapQuery = encodeURIComponent(`${a.street}, ${a.suburb} ${a.state} ${a.postcode}`)
   return {
@@ -75,6 +90,8 @@ export function tokensFor(s: SiteSettings): Record<string, string> {
     blogLink: hasBlog() ? '<li><a href="/blog">Blog</a></li>' : '',
     // role titles and AHPRA details, from src/team.config.ts
     ...teamTokens(),
+    // the support team on Our Team, from the dashboard's Team list
+    ...supportTeamTokens(team),
   }
 }
 

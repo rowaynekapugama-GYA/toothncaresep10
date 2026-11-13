@@ -223,6 +223,14 @@
   "h": 900,
   "w": 1600
  },
+ "3d49338cd8": {
+  "alpha": false,
+  "bytes": 144478,
+  "file": "/images/img-3d49338cd8.webp",
+  "from": "client supplied 11 Nov 2026 (reception photo 013B8DDF), cropped for the New Patients (Getting here) slot, 21:8",
+  "h": 637,
+  "w": 1672
+ },
  "3d8678d4cd": {
   "alpha": false,
   "bytes": 9968,
@@ -575,14 +583,6 @@
   "h": 1600,
   "w": 1067
  },
- "d7098759b1": {
-  "alpha": false,
-  "bytes": 44544,
-  "file": "/images/img-d7098759b1.webp",
-  "from": "WEBP",
-  "h": 867,
-  "w": 1300
- },
  "d7321cde74": {
   "alpha": false,
   "bytes": 22182,
@@ -638,6 +638,14 @@
   "from": "WEBP",
   "h": 934,
   "w": 1400
+ },
+ "e78e6ffb10": {
+  "alpha": false,
+  "bytes": 119250,
+  "file": "/images/img-e78e6ffb10.webp",
+  "from": "client supplied 11 Nov 2026 (reception photo 013B8DDF), cropped for the About Us (Our story) slot, 5:4",
+  "h": 941,
+  "w": 1176
  },
  "e80d1ec308": {
   "alpha": false,

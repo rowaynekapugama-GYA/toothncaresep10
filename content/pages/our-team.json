@@ -123,7 +123,7 @@
    "attrs": {
     "class": "pg"
    },
-   "template": "<div class=\"wrap\"><div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div><p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p><div class=\"team-grid\"><a class=\"tcard rv\" href=\"{{link-address-1}}\"><div class=\"tcard-photo\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-1}}</span><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><em>{{link-label-1}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-2}}\"><div class=\"tcard-photo\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-2}}</span><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><em>{{link-label-2}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-3}}\"><div class=\"tcard-photo\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-3}}</span><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p><em>{{link-label-3}}</em></div></a></div></div>",
+   "template": "<div class=\"wrap\"><div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div><p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p><div class=\"team-grid\"><a class=\"tcard rv\" href=\"{{link-address-1}}\"><div class=\"tcard-photo\"><img src=\"{{image-1}}\" alt=\"{{image-description-alt-text-1}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-1}}</span><h3>{{sub-heading-1}}</h3><p>{{paragraph-1}}</p><em>{{link-label-1}}</em></div></a><a class=\"tcard rv\" href=\"{{link-address-2}}\"><div class=\"tcard-photo\"><img src=\"{{image-2}}\" alt=\"{{image-description-alt-text-2}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-2}}</span><h3>{{sub-heading-2}}</h3><p>{{paragraph-2}}</p><em>{{link-label-2}}</em></div></a><div class=\"tcard rv\"><div class=\"tcard-photo tcard-ph\"><span class=\"tcard-fallback\" aria-hidden=\"true\">R</span><img src=\"{{image-4}}\" alt=\"{{image-description-alt-text-4}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-4}}</span><h3>{{sub-heading-4}}</h3>{{site:ravAhpra}}</div></div><a class=\"tcard rv\" href=\"{{link-address-3}}\"><div class=\"tcard-photo\"><img src=\"{{image-3}}\" alt=\"{{image-description-alt-text-3}}\" width=\"800\" height=\"600\" loading=\"lazy\"></div><div class=\"tcard-body\"><span class=\"tcard-role\">{{text-3}}</span><h3>{{sub-heading-3}}</h3><p>{{paragraph-3}}</p><em>{{link-label-3}}</em></div></a></div></div>",
    "fields": [
     {
      "id": "small-label-above-the-heading-1",
@@ -232,6 +232,32 @@
      "value": "View profile <span class=\"btn-arrow\">&rarr;</span>"
     },
     {
+     "id": "image-4",
+     "label": "Image",
+     "type": "image",
+     "value": "/images/img-52e7b1f5ba.webp",
+     "width": "800",
+     "height": "600"
+    },
+    {
+     "id": "image-description-alt-text-4",
+     "label": "Image description (alt text)",
+     "type": "alt",
+     "value": "Dr Rav, dentist at Tooth n Care"
+    },
+    {
+     "id": "text-4",
+     "label": "Text",
+     "type": "richtext",
+     "value": "Dentist"
+    },
+    {
+     "id": "sub-heading-4",
+     "label": "Sub heading",
+     "type": "richtext",
+     "value": "Dr Rav"
+    },
+    {
      "id": "link-address-3",
      "label": "Link address",
      "type": "href",
@@ -274,6 +300,31 @@
      "label": "Link label",
      "type": "richtext",
      "value": "View profile <span class=\"btn-arrow\">&rarr;</span>"
+    }
+   ]
+  },
+  {
+   "key": "our-team-03b-support-team",
+   "kind": "content",
+   "label": "Our support team",
+   "tag": "section",
+   "attrs": {
+    "class": "pg",
+    "id": "support-team"
+   },
+   "template": "<div class=\"wrap\"><div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>{{site:supportTeam}}</div>",
+   "fields": [
+    {
+     "id": "small-label-above-the-heading-1",
+     "label": "Small label above the heading",
+     "type": "richtext",
+     "value": "Support Team"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "Our support <span class=\"accent\">team</span>"
     }
    ]
   },
@@ -527,6 +578,7 @@
   "section:4",
   "section:5",
   "section:6",
+  "section:7",
   "footer",
   "script:0"
  ]

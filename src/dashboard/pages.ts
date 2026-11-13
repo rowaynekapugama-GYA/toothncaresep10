@@ -198,7 +198,16 @@ export async function chromeFor(payload: Payload): Promise<Chrome> {
 export async function tokensFromDashboard(payload: Payload): Promise<Record<string, string>> {
   const g = await payload.findGlobal({ slug: 'site-settings', depth: 1, overrideAccess: true }).catch(() => null)
   const saved = g ? settingsFileFromGlobal(g as unknown as Record<string, unknown>) : {}
-  return tokensFor(mergeSettings(saved))
+  const team = await payload.find({ collection: 'team', limit: 500, depth: 1, pagination: false, sort: 'sortOrder', overrideAccess: true }).catch(() => null)
+  const members = ((team?.docs ?? []) as unknown as Record<string, unknown>[]).map((t) => ({
+    name: String(t.name ?? ''),
+    patientExperience: !!t.patientExperience,
+    clinicalCare: !!t.clinicalCare,
+    roleLine: (t.roleLine as string) ?? '',
+    photo: mediaUrl(t.photo as never),
+    hidden: !!t.hidden,
+  }))
+  return tokensFor(mergeSettings(saved), members)
 }
 
 // ---------------------------------------------------------------- the footer

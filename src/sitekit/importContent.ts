@@ -124,6 +124,9 @@ export async function importContent(payload: Payload, { overwrite = false } = {}
       registration: member.registration ?? '',
       bio: member.bio ?? '',
       profileUrl: member.profileUrl ?? '',
+      patientExperience: !!member.patientExperience,
+      clinicalCare: !!member.clinicalCare,
+      roleLine: member.roleLine ?? '',
       sortOrder: index,
       hidden: false,
     }

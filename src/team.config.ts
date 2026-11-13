@@ -62,25 +62,25 @@ export type Practitioner = {
 }
 
 // ---------------------------------------------------------------------------
-// The oral health team (the two staff Christine wrote about on 5 Nov 2026)
+// The oral health team (Zoe; the hygienist is leaving, Christine 11 Nov 2026)
 // ---------------------------------------------------------------------------
 
 export const ORAL_HEALTH_TEAM = {
   /**
-   * The shared heading for the oral health team. Used where the site names the
-   * group rather than a person: the Our Team page description in Google
+   * The heading for the oral health team. Used where the site names the group
+   * rather than a person: the Our Team page description in Google
    * ("Meet the dentists, oral health therapist and support team ...").
-   * TODO: awaiting from client. Nish is confirming the heading both staff fall
-   * under, or whether each has their own named role.
+   * Confirmed by Nish, 11 Nov 2026: "Oral health therapists for Zoe".
    */
   heading: 'Oral Health Therapist',
   /**
-   * How the Our Team intro names the two of them, mid-sentence:
-   * "Three dentists, an oral health therapist, a hygienist and a support team ..."
-   * Leave empty to have it worked out from the two role titles below
-   * (two different titles: "an oral health therapist, a hygienist";
-   * the same title twice: "two oral health therapists").
-   * Fill it in only if that does not read right.
+   * How the Our Team intro names the oral health team, mid-sentence:
+   * "Three dentists, an oral health therapist and a support team ..."
+   * Leave empty to have it worked out from the role titles of the people with
+   * a roleTitle below (one person: "an oral health therapist"; two with the
+   * same title: "two oral health therapists"; different titles: "an oral
+   * health therapist, a dental hygienist"). Fill it in only if that does not
+   * read right.
    */
   inTeamSentence: '',
 }
@@ -104,26 +104,44 @@ export const PRACTITIONERS = {
     ahpraDivision: '', // TODO: awaiting from client (expected: Dentist)
     profilePath: '/dr-navneet-karan',
   },
+  /**
+   * The third dentist (Christine, 11 Nov 2026). Only the first name is known,
+   * so the cards say "Dr Rav" and "Dentist", with no bio or profile page yet.
+   */
+  rav: {
+    name: 'Dr Rav', // TODO: awaiting from client (full name and how Rav would like to be shown)
+    roleTitle: null,
+    ahpraNumber: '', // TODO: awaiting from client (the AHPRA number, starting DEN, not the Medicare provider number)
+    ahpraDivision: '', // TODO: awaiting from client (expected: Dentist)
+    profilePath: null,
+  },
   zoe: {
     name: 'Zoe Xu',
-    roleTitle: 'Oral Health Therapist', // TODO: awaiting from client (Nish to confirm)
-    ahpraNumber: '', // TODO: awaiting from client
+    roleTitle: 'Oral Health Therapist', // confirmed by Nish, 11 Nov 2026 (must match her AHPRA division)
+    ahpraNumber: '', // TODO: awaiting from client (the AHPRA number, starting DEN, not the Medicare provider number)
     ahpraDivision: '', // TODO: awaiting from client
     profilePath: '/zoe-xu',
   },
-  /**
-   * The second member of the oral health team. Not on the website yet: the
-   * name, card and photo come when Nish and Christine send them. Until then
-   * the title is only used by the Our Team intro sentence.
-   */
-  oralHealth2: {
-    name: '', // TODO: awaiting from client (full name, correct spelling, from Nish)
-    roleTitle: 'Hygienist', // TODO: awaiting from client (Nish to confirm)
-    ahpraNumber: '', // TODO: awaiting from client
-    ahpraDivision: '', // TODO: awaiting from client
-    profilePath: null,
-  },
 } satisfies Record<string, Practitioner>
+
+// ---------------------------------------------------------------------------
+// The support team section on Our Team (Nish's headings, 11 Nov 2026)
+// ---------------------------------------------------------------------------
+// The people themselves (names, which group, order, photo) are kept in the
+// dashboard: Team. Only the headings and the layout are set here.
+
+export const SUPPORT_TEAM = {
+  /**
+   * 'groups': two groups under their own headings; someone in both groups
+   *   (Jorja, Ton) appears in both.
+   * 'combined': one grid, each card with its role line underneath the photo.
+   */
+  layout: 'groups' as 'groups' | 'combined',
+  patientExperience: { heading: 'Patient Experience Coordinators', role: 'Patient Experience Coordinator' },
+  clinicalCare: { heading: 'Clinical Care Coordinators', role: 'Clinical Care Coordinator' },
+  /** The role line for someone in both groups, in the 'combined' layout. */
+  both: 'Patient Experience and Clinical Care Coordinator',
+}
 
 // ===========================================================================
 // Nothing below here needs editing.
@@ -194,10 +212,21 @@ export function teamTokens(): Record<string, string> {
   out.oralHealthHeading = heading
   out.oralHealthHeadingLower = lower(heading)
 
-  const a = PRACTITIONERS.zoe.roleTitle ?? ''
-  const b = PRACTITIONERS.oralHealth2.roleTitle ?? ''
+  // everyone with a role title managed here is on the oral health team
+  const titles = KEYS.map((k) => (PRACTITIONERS[k] as Practitioner).roleTitle).filter((x): x is string => !!x)
   const given = checkText('ORAL_HEALTH_TEAM.inTeamSentence', ORAL_HEALTH_TEAM.inTeamSentence)
+  const same = titles.length > 1 && titles.every((x) => lower(x) === lower(titles[0]))
+  const NUMBER = ['', 'one', 'two', 'three', 'four', 'five']
   out.oralHealthTeamInSentence = given
-    || (lower(a) === lower(b) ? `two ${plural(lower(a))}` : [withArticle(a), withArticle(b)].filter(Boolean).join(', '))
+    || (same ? `${NUMBER[titles.length] ?? titles.length} ${plural(lower(titles[0]))}` : titles.map(withArticle).join(', '))
+
+  for (const [k, v] of Object.entries({
+    'SUPPORT_TEAM.patientExperience.heading': SUPPORT_TEAM.patientExperience.heading,
+    'SUPPORT_TEAM.patientExperience.role': SUPPORT_TEAM.patientExperience.role,
+    'SUPPORT_TEAM.clinicalCare.heading': SUPPORT_TEAM.clinicalCare.heading,
+    'SUPPORT_TEAM.clinicalCare.role': SUPPORT_TEAM.clinicalCare.role,
+    'SUPPORT_TEAM.both': SUPPORT_TEAM.both,
+  })) checkText(k, v)
+  if (!['groups', 'combined'].includes(SUPPORT_TEAM.layout)) fail(`SUPPORT_TEAM.layout must be 'groups' or 'combined'`)
   return out
 }

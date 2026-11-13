@@ -6,7 +6,10 @@
   "registration": "",
   "bio": "Nearly ten years looking after Hunter smiles, with a special interest in veneers, wisdom teeth surgery, dentures and full-mouth rehabilitation.",
   "photo": null,
-  "profileUrl": "/dr-nisheeth-agrawal"
+  "profileUrl": "/dr-nisheeth-agrawal",
+  "patientExperience": false,
+  "clinicalCare": false,
+  "roleLine": ""
  },
  {
   "name": "Dr Navneet Karan",
@@ -15,7 +18,10 @@
   "registration": "",
   "bio": "A Fellow of the Royal Australasian College of Dental Surgeons, working across Newcastle and the Hunter since 2017. Calm, unhurried, happiest with the tricky cases.",
   "photo": null,
-  "profileUrl": "/dr-navneet-karan"
+  "profileUrl": "/dr-navneet-karan",
+  "patientExperience": false,
+  "clinicalCare": false,
+  "roleLine": ""
  },
  {
   "name": "Zoe Xu",
@@ -24,6 +30,165 @@
   "registration": "",
   "bio": "Preventative and restorative care for every age, from children’s check-ups to gum disease management - and never in a rush to explain things properly.",
   "photo": null,
-  "profileUrl": "/zoe-xu"
+  "profileUrl": "/zoe-xu",
+  "patientExperience": false,
+  "clinicalCare": false,
+  "roleLine": ""
+ },
+ {
+  "name": "Dr Rav",
+  "role": "Dentist",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": false,
+  "roleLine": ""
+ },
+ {
+  "name": "Holly",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": true,
+  "clinicalCare": false,
+  "roleLine": ""
+ },
+ {
+  "name": "Jorja",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": true,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Kathryn",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": true,
+  "clinicalCare": false,
+  "roleLine": ""
+ },
+ {
+  "name": "Ton",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": true,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Debbie",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Mursel",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Christine",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Layeba",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Malal",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Tanu",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Libby",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
+ },
+ {
+  "name": "Riley",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": false,
+  "clinicalCare": true,
+  "roleLine": ""
  }
 ]

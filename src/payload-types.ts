@@ -359,6 +359,12 @@ export interface Team {
   bio?: string | null;
   photo?: (number | null) | Media;
   profileUrl?: string | null;
+  patientExperience?: boolean | null;
+  clinicalCare?: boolean | null;
+  /**
+   * Shown under the name when the support team is one combined grid. Leave empty to use the group name.
+   */
+  roleLine?: string | null;
   sortOrder?: number | null;
   hidden?: boolean | null;
   updatedAt: string;
@@ -764,6 +770,9 @@ export interface TeamSelect<T extends boolean = true> {
   bio?: T;
   photo?: T;
   profileUrl?: T;
+  patientExperience?: T;
+  clinicalCare?: T;
+  roleLine?: T;
   sortOrder?: T;
   hidden?: T;
   updatedAt?: T;

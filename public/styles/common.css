@@ -163,6 +163,24 @@
 .form-note{font-size:13px;color:var(--grey-2);border:1px dashed var(--border-bright);border-radius:14px;padding:14px 18px}
 @media(max-width:700px){.cform .row{grid-template-columns:1fr}}
 @media(max-width:900px){.team-grid,.profile-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+/* v2.7.0: a team card without a photo yet shows the first letter of the name, like the homepage slider */
+.tcard-ph{position:relative}
+.tcard-ph img{position:relative;z-index:1}
+.tcard-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center;font-family:var(--font-display);font-size:clamp(64px,8vw,110px);line-height:1;color:var(--neon);background:linear-gradient(160deg,#122224,#0b1516)}
+/* v2.7.0: support team name cards (Our Team). Rows are centred, so a short last row sits in the middle */
+.st-groups{display:grid;gap:clamp(34px,4vw,52px);margin-top:clamp(30px,3.5vw,46px)}
+.st-heading{margin:0 0 18px;font-family:var(--font-head);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-2);text-align:center}
+.st-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.st-card{flex:0 0 calc((100% - 16px) / 2);min-width:0}
+.st-card:hover{border-color:var(--border);box-shadow:none}
+.st-photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(160deg,#122224,#0b1516)}
+.st-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.st-mono{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-display);font-size:clamp(40px,6vw,64px);line-height:1;color:var(--neon)}
+.st-body{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 12px 18px;text-align:center}
+.st-body .tcard-role{font-size:9.5px;letter-spacing:.16em;line-height:1.5}
+.st-name{margin:0;font-family:var(--font-display);font-weight:400;font-size:clamp(19px,1.7vw,23px);color:var(--white);overflow-wrap:anywhere}
+@media(min-width:560px){.st-card{flex-basis:calc((100% - 48px) / 4)}}
+@media(min-width:1200px){.st-card{flex-basis:calc((100% - 64px) / 5)}}
 /* an odd number of team cards: the last one sits centred under the pair above it instead of leaving a gap (v2.4.0) */
 @media(min-width:901px){.team-grid>.tcard:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 10px)}}
 @media(max-width:600px){.gallery{grid-template-columns:1fr}.gallery figure.wide{grid-column:span 1;aspect-ratio:4/3}}

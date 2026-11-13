@@ -334,7 +334,39 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | `update-toothncare-v2.5.0.sh` against a copy of the GitHub repository, started on the cms branch, with a local `.env` pointing at a database and a `.vercel` folder | switched to main, pulled, backup branch pushed, build passed without touching the database, committed and pushed; the pushed tree is identical to the zip file for file; `.env` and `.vercel` kept and not committed; cms moved forward |
 | `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
 
-## 14. What could not be tested here
+## 14. Version 2.6.0: reception photo, run on 11 November 2026
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.5.0 against v2.6.0, whole HTML | 53 identical; About and New Patients differ only by the photo file and its description |
+| Every internal link, photo, stylesheet and script on those pages (259) | all 200, or a redirect to a 200 |
+| `img-d7098759b1` on any page | none |
+| About Us photo at 390, 768 and 1440px | slot 340 x 212, 718 x 448 and 538 x 430, as before; whole sign and tooth logo in frame |
+| New Patients photo at 390, 768 and 1440px | slot 340 x 128, 718 x 272 and 1150 x 437, as before; whole sign and tooth logo in frame |
+| Imported dashboard (v2.5.0 state), migrate then pull | both slots changed; the pull gave back the repository's v2.6.0 content byte for byte |
+| Dashboard where the About Us photo had been changed | About left alone and named as a warning in the build log; New Patients changed. Undoing the migration put the old file name back |
+| `update-toothncare-v2.6.0.sh` against a copy of the GitHub repository, started on the cms branch, with a local `.env` pointing at a database and a `.vercel` folder | switched to main, pulled, backup branch pushed, build passed without touching the database, committed and pushed; the pushed tree is identical to the zip file for file; `.env` and `.vercel` kept and not committed; cms moved forward |
+| The same script with a zip that does not build | stopped before committing, folder put back exactly as it was, nothing pushed |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+
+## 15. Version 2.7.0: team roster, support team, hygienist removed, run on 11 November 2026
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.5.0 (live) against v2.7.0, whole HTML | 51 identical; Our Team (intro, Dr Rav, support team), Home (Dr Rav's slide, Zoe now 04/) and the 2.6.0 photo on About and New Patients are the only differences. FAQ, Check-ups, Zoe's profile and the other token pages are identical |
+| "hygienist" on any page of the built site | none |
+| Every internal link, photo, stylesheet and script (260) | all 200, or a redirect to a 200 |
+| `/support-team`, `/our-team/support-team` | 308 to `/our-team#support-team` |
+| Our Team and the homepage slider at 320, 390, 768, 1440 and 1920px, both support team layouts | no sideways scrolling; support cards 2 to a row on phones, 4 on tablets, 5 on wide screens, short last rows centred; slider has 4 slides and 4 dots, no script errors |
+| `npm run qa:roles` with a hygienist put back in the config and in the Team list | both found, fails |
+| Imported dashboard (v2.5.0 state), migrate then pull | the pull gave back the repository's v2.7.0 content byte for byte (Our Team, Home, Team list, redirects) |
+| Dashboard with Dr Nish's card wording edited and a "Holly" already in the Team list | the cards section left alone and named in the log; the support team section still added; Holly not added twice. Undoing the migration removed only what it added (the practice's Holly kept) |
+| `update-toothncare-v2.7.0.sh` against a copy of the GitHub repository (v2.5.0 on main), started on the cms branch, with a local `.env` and a `.vercel` folder | switched to main, pulled, backup branch pushed, build passed without touching the database, committed and pushed; pushed tree identical to the zip; `.env` and `.vercel` kept; cms moved forward |
+| The same script with a zip that does not build | stopped before committing, folder put back exactly as it was, nothing pushed |
+| Team screen in the browser | listed the 12 support staff; adding, renaming, reordering and removing saved and survived a reload; the Our Team page editor preview showed the change |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+
+## 16. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

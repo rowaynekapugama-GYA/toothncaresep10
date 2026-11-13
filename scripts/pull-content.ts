@@ -147,6 +147,9 @@ async function main() {
         bio: t.bio ?? '',
         photo: mediaUrl(t.photo as never),
         profileUrl: t.profileUrl ?? '',
+        patientExperience: !!t.patientExperience,
+        clinicalCare: !!t.clinicalCare,
+        roleLine: t.roleLine ?? '',
       })),
   )
 

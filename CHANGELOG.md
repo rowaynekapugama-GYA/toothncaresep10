@@ -2,6 +2,102 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.7.0] - 2026-11-11
+
+Changes from the practice on 11 November 2026 (Christine, three emails). Ships
+together with 2.6.0.
+
+### Changed
+
+- Our Team intro: "Three dentists, an oral health therapist and a support team
+  who will actually remember you between visits." The hygienist is leaving, so
+  the second oral health team slot (`oralHealth2`) is gone from
+  `src/team.config.ts`; the sentence is worked out from the one title left.
+  Nothing else on the site named the hygienist as a person (checked on every
+  page).
+- Zoe's title stays "Oral Health Therapist", now confirmed by Nish.
+- `/support-team` and `/our-team/support-team` now land on the new support
+  team section (`/our-team#support-team`).
+
+### Added
+
+- Dr Rav, the third dentist, on Our Team (between Dr Nav and Zoe) and in the
+  homepage team slider (slide 3 of 4), as "Dr Rav", "Dentist". No bio,
+  profile page or profile link yet. The photo spot shows the letter R until a
+  photo is uploaded in the page editor (a transparent placeholder,
+  `public/images/img-52e7b1f5ba.webp`, sits over the letter). AHPRA line ready
+  (`rav` in `src/team.config.ts`), empty for now.
+- A support team section on Our Team, under Nish's headings: Patient
+  Experience Coordinators (Holly, Jorja, Kathryn, Ton) and Clinical Care
+  Coordinators (Jorja, Ton, Debbie, Mursel, Christine, Layeba, Malal, Tanu,
+  Libby, Riley). First names only, a card each with the first letter where a
+  photo will go. Rows are centred, so a short last row sits in the middle.
+  Built from the Team list by `src/lib/supportTeam.ts` into the placeholder
+  `{{site:supportTeam}}`.
+- A second layout for it, one combined grid with each person's role line;
+  switch with `SUPPORT_TEAM.layout` in `src/team.config.ts`.
+- A **Team** screen in the dashboard (`/admin/team`): add, rename, regroup,
+  reorder, remove people and choose their photo. The dentists and Zoe stay on
+  the Our Team page, linked from there. The Team list can now be edited and
+  deleted from by the practice, and has three new fields: Patient Experience
+  Coordinator, Clinical Care Coordinator and an optional role line.
+- `npm run qa:roles` (now `scripts/qa-roles.ts`) also fails if "hygienist"
+  would appear as a member of the team, in anything `src/team.config.ts` fills
+  in or in the Team list.
+
+### Not changed
+
+- The registration numbers sent on 11 November are Medicare provider numbers,
+  not AHPRA numbers. They are not anywhere in the repository, the content or
+  the dashboard; every `ahpraNumber` stays empty.
+- No photo changes. The About Us "Who we are" photo in Christine's screenshot
+  is the one 2.6.0 already replaces with the reception photo.
+
+### Database
+
+- Migration `20261111_100000_team_support_fields` adds the three Team list
+  fields.
+- Migration `20261111_110000_team_roster_and_headings`, with its data in
+  `src/sitekit/data/release-2-7-0.ts`: replaces the Our Team cards and the
+  homepage slider only where they are still exactly as shipped, adds the
+  support team section after the cards once (only if the page layout is still
+  the shipped one), adds Dr Rav and the support team to the Team list unless
+  someone of that name is already there, and points the two redirects at the
+  section where they still go to /our-team. Anything skipped is named in the
+  build log. Undoing it removes only what it added.
+
+## [2.6.0] - 2026-11-11
+
+Asked for by the practice on 11 November 2026 (Christine).
+
+### Changed
+
+- About Us (Our story) and New Patients (Getting here): the "Smile With
+  Confidence" sign photo is replaced by the reception photo the practice sent
+  (the lit Tooth n Care sign, the front desk with the tooth logo, and the
+  treatment room corridor beyond). Cropped from the 1672 x 941 original to
+  each slot's shape, with the whole sign and logo in frame:
+  - About Us: `public/images/img-e78e6ffb10.webp`, 1176 x 941 (5:4; the slot
+    shows it 5:4 on desktop and 16:10 on phones and tablets).
+  - New Patients: `public/images/img-3d49338cd8.webp`, 1672 x 637 (21:8).
+  - Description on both: "Tooth n Care reception, with the lit Tooth n Care
+    sign above the front desk and the treatment room corridor beyond".
+- The homepage About photo (v2.4.0) is unchanged.
+
+### Removed
+
+- `public/images/img-d7098759b1.webp` (the old sign photo). No page uses it
+  any more.
+
+### Database
+
+- Migration `20261111_090000_about_reception_photo` makes the same swap in
+  the dashboard, only where the photo is still the old one and none has been
+  chosen there, and the description only where it is still the old one. A
+  slot already changed in the dashboard is left alone and named in the build
+  log. Undoing it restores the old file name, so undo it together with the
+  code.
+
 ## [2.5.0] - 2026-11-06
 
 Getting ready for the practice's confirmation of the oral health team's role
