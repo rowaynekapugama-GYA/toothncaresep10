@@ -12,6 +12,7 @@ import { Notice } from '../ui/fields'
 import { PublishButton } from '../ui/PublishButton'
 import { useToast } from '../ui/Toast'
 import { Icon } from '../ui/icons'
+import { TeamPhotoHelp } from '../ui/TeamPhotoHelp'
 
 export type Member = {
   id: number | string
@@ -24,7 +25,16 @@ export type Member = {
   hidden: boolean
 }
 
-type Labels = { patientExperience: string; clinicalCare: string; layout: 'groups' | 'combined' }
+type Labels = {
+  patientExperience: string
+  clinicalCare: string
+  layout: 'groups' | 'combined'
+  /** the role lines worked out from the groups ticked (combined layout) */
+  roles: { patientExperience: string; clinicalCare: string; both: string }
+}
+
+const derivedRole = (m: Pick<Member, 'patientExperience' | 'clinicalCare'>, r: Labels['roles']) =>
+  m.patientExperience && m.clinicalCare ? r.both : m.patientExperience ? r.patientExperience : m.clinicalCare ? r.clinicalCare : 'Tick a group'
 
 const payloadOf = (m: Member) => ({
   name: m.name.trim(),
@@ -112,8 +122,9 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
   return (
     <>
       <Notice>
-        Dr Nish, Dr Nav, Dr Rav and Zoe are on the Our Team page itself: <Link href={ourTeamHref}>edit the Our Team page</Link> to change their words or photos.
+        The dentists and Zoe are on the Our Team page itself: <Link href={ourTeamHref}>edit the Our Team page</Link> to change their words or photos.
         This list is the support team shown underneath them, in this order.
+        {labels.layout === 'combined' ? ' Each person is shown once, with their role line under their name.' : null}
       </Notice>
       <Notice tone="warn">
         Use first names exactly as each person likes them spelt, and only add a photo once that person has said in writing they are happy for it to be on the website.
@@ -135,11 +146,11 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
             <tr>
               <th>Order</th><th>Name</th><th>{labels.patientExperience}</th><th>{labels.clinicalCare}</th>
               {labels.layout === 'combined' ? <th>Role line (optional)</th> : null}
-              <th>Photo</th><th />
+              <th>Photo</th><th>On website</th><th />
             </tr>
           </thead>
           <tbody>
-            {!rows.length ? <tr><td colSpan={7} className="empty">No one listed yet.</td></tr> : null}
+            {!rows.length ? <tr><td colSpan={8} className="empty">No one listed yet.</td></tr> : null}
             {rows.map((m, i) => (
               <tr key={String(m.id)}>
                 <td style={{ whiteSpace: 'nowrap' }}>
@@ -150,7 +161,7 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
                 <td><input type="checkbox" aria-label={`${m.name}: ${labels.patientExperience}`} checked={m.patientExperience} onChange={(e) => set(m.id, { patientExperience: e.target.checked })} /></td>
                 <td><input type="checkbox" aria-label={`${m.name}: ${labels.clinicalCare}`} checked={m.clinicalCare} onChange={(e) => set(m.id, { clinicalCare: e.target.checked })} /></td>
                 {labels.layout === 'combined'
-                  ? <td><input className="input" aria-label="Role line" placeholder="from the groups ticked" value={m.roleLine} onChange={(e) => set(m.id, { roleLine: e.target.value })} /></td>
+                  ? <td><input className="input" aria-label={`${m.name}: role line`} placeholder={derivedRole(m, labels.roles)} title="Leave empty to use the wording shown, from the groups ticked" value={m.roleLine} onChange={(e) => set(m.id, { roleLine: e.target.value })} /></td>
                   : null}
                 <td style={{ whiteSpace: 'nowrap' }}>
                   {m.photo
@@ -158,6 +169,7 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
                       <button className="btn small" onClick={() => set(m.id, { photo: null })}>Remove photo</button></>
                     : <button className="btn small" onClick={() => setPicking(m)}>{Icon.upload()} Choose photo</button>}
                 </td>
+                <td><label className="check"><input type="checkbox" aria-label={`Show ${m.name} on the website`} checked={!m.hidden} onChange={(e) => set(m.id, { hidden: !e.target.checked })} /><span>{m.hidden ? 'Hidden' : 'Shown'}</span></label></td>
                 <td style={{ whiteSpace: 'nowrap' }}>
                   <button className="btn small primary" disabled={!dirty(m)} onClick={() => save(m)}>Save</button>{' '}
                   <button className="btn small danger" onClick={() => remove(m)}>{Icon.trash()} Remove</button>
@@ -167,7 +179,14 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
           </tbody>
         </table>
       </div>
-      <p className="help" style={{ marginTop: 10 }}>Someone in both groups appears under both headings. Changes show on the website after Publish website.</p>
+      <p className="help" style={{ marginTop: 10 }}>
+        {labels.layout === 'combined'
+          ? 'The role line in grey is what the website shows; type over it only to change the wording for that person. '
+          : 'Someone in both groups appears under both headings. '}
+        Untick On website to take someone off the website for now without removing them (then Save).
+        Changes show on the website after Publish website.
+      </p>
+      <TeamPhotoHelp />
       <p style={{ marginTop: 14 }}><PublishButton /></p>
       {picking ? (
         <MediaPicker

@@ -12,10 +12,17 @@
  * team on the website: in any value src/team.config.ts fills in (the Our Team
  * intro, titles, schema), or in the support team built from content/team.json.
  * The hygienist left in November 2026.
+ *
+ * Since v2.8.0 it also fails if "orthodontist" would appear anywhere on the
+ * website while Dr Dimple is hidden or her specialist registration in
+ * Orthodontics is not confirmed (DR_DIMPLE in src/team.config.ts), and never
+ * allows "orthodontist" as a team role unless that is confirmed. The one
+ * general question in the FAQ ("Should my seven-year-old see an
+ * orthodontist?") is not about a team member and is allowed.
  */
 import { readFileSync, readdirSync } from 'node:fs'
 import path from 'node:path'
-import { teamTokens } from '../src/team.config'
+import { teamTokens, DR_DIMPLE } from '../src/team.config'
 import { supportTeamHtml, type SupportMember } from '../src/lib/supportTeam'
 
 const ROOT = process.cwd()
@@ -61,6 +68,24 @@ for (const m of team) {
   if (!m.hidden && HYGIENIST.test(`${m.role ?? ''} ${m.roleLine ?? ''}`)) { found++; console.log(`FOUND content/team.json: ${m.name} is listed as "${m.role || m.roleLine}"`) }
 }
 if (HYGIENIST.test(supportTeamHtml(team))) { found++; console.log('FOUND the support team section mentions a hygienist') }
+
+// no orthodontist on the website until Dr Dimple shows with confirmed specialist registration
+const ORTHO = /orthodontist/i
+const confirmed = DR_DIMPLE.show && DR_DIMPLE.specialistOrthodontics
+const FAQ_OK = /seven-year-old see an orthodontist\?/gi
+for (const [k, v] of Object.entries(teamTokens())) {
+  if (ORTHO.test(v) && !confirmed) { found++; console.log(`FOUND src/team.config.ts {{site:${k}}} fills in "orthodontist" but Dr Dimple's specialist registration is not confirmed`) }
+}
+if (!confirmed) {
+  for (const f of [...files.map((x) => path.join('content', 'pages', x)), path.join('content', 'site-chrome.json'), path.join('content', 'team.json')]) {
+    const text = readFileSync(path.join(ROOT, f), 'utf8').replace(FAQ_OK, '')
+    const m = text.match(/.{0,50}orthodontist.{0,50}/i)
+    if (m) { found++; console.log(`FOUND ${f}: "orthodontist" while Dr Dimple is hidden or unconfirmed  ...${m[0]}...`) }
+  }
+}
+for (const m of team) {
+  if (!m.hidden && ORTHO.test(`${m.role ?? ''} ${m.roleLine ?? ''}`) && !confirmed) { found++; console.log(`FOUND content/team.json: ${m.name} is listed as "${m.role || m.roleLine}"`) }
+}
 
 console.log(found === 0
   ? 'role titles: none typed into the pages; all come from src/team.config.ts'

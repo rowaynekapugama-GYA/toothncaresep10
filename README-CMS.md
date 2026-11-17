@@ -188,26 +188,44 @@ below. None of them has been deleted.
 
 ## 5. Go live checklist
 
-- [ ] Point DNS at Vercel. **Apex** `toothncare.com.au` as the primary domain,
-      `www` set to **308 redirect** to the apex. Swap the two around if the
-      practice already ranks on `www`.
-- [ ] Set `NEXT_PUBLIC_SERVER_URL` to `https://toothncare.com.au` in the
-      Production environment and redeploy, so canonicals, `og:` tags and the
-      structured data all point at the live domain.
-- [ ] Verify the sending domain in SMTP2GO and publish its DKIM and SPF records.
+The full plan, with the DNS records to change and the ones to keep, is in
+**`docs/GO-LIVE.md`** (v2.8.0). In short:
+
+- [ ] **www is the main address**: `https://www.toothncare.com.au`, with the
+      bare `toothncare.com.au` sending a 308 redirect to it. The old site and
+      Google use www, so the move keeps its standing.
+- [ ] Set `NEXT_PUBLIC_SERVER_URL` to `https://www.toothncare.com.au` in the
+      Production environment and redeploy, so canonicals, `og:` tags, the
+      sitemap, robots.txt and the structured data all point at the live
+      domain. (`DEFAULTS.siteUrl` in `src/site.config.ts` already says www.)
+- [ ] Verify the sending domain in SMTP2GO and publish its DKIM and return
+      path records at the DNS host.
 - [ ] Send a real enquiry from the live form and confirm it arrives at
       `reception@toothncare.com.au`, at the SmileOx intake address and at
       `rowayne@gyaclients.com`, and that it appears under **Enquiries**.
 - [ ] Add the GA4 measurement ID and the Meta Pixel ID under **Site Settings**,
       **Tracking**.
-- [ ] Submit `https://toothncare.com.au/sitemap.xml` in Google Search Console.
-- [ ] Hand the practice `docs/HOW-TO-UPDATE.md` and their editor login.
+- [ ] Submit `https://www.toothncare.com.au/sitemap.xml` in Google Search Console.
+- [ ] Hand the practice `docs/CLIENT-GUIDE.pdf` and their editor logins.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
-      `https://toothncare.com.au/admin/create-first-user` answers 404.
+      `https://www.toothncare.com.au/admin/create-first-user` answers 404.
 
-### Waiting on the practice (11 November 2026)
+### Waiting on the practice (17 November 2026)
+
+- Which email addresses Nish and Christine want for their dashboard logins.
+- Login to the DNS for toothncare.com.au (Webpulse, which runs the
+  nameservers), or the registrar login, so the records can be changed.
+- Dr Dimple: full name, AHPRA number and whether she holds specialist
+  registration in Orthodontics. Then `DR_DIMPLE.show` in `src/team.config.ts`.
+- Dr Rav: whether she would like her full name on the cards, a short bio and
+  a photo.
+- AHPRA registration numbers for Dr Nish, Dr Nav and Zoe.
+- Support team photos, each with that person's written agreement.
+
+### Earlier (11 November 2026)
 
 - Dr Rav: full name, how Rav would like to be shown, a short bio and a photo.
+  (Full name and AHPRA number received 16 November.)
 - AHPRA registration numbers for Dr Nish, Dr Nav, Dr Rav and Zoe. The numbers
   sent on 11 November are Medicare provider numbers and are not published.
 - Holly: surname, or "main receptionist"; Riley's group; the spelling of every
@@ -231,7 +249,6 @@ below. None of them has been deleted.
 | `/offers` | The exact price on the offer, and that the offer period and inclusions are right |
 | `/offers` | The whitening wording |
 | `/teeth-whitening` | Current Philips ZOOM pricing |
-| `/our-clinic` | A professional photo shoot is still recommended. The note about archive images is visible on the page and should come off once real photographs are in. |
 | `/privacy-policy` | Cookie wording, and a review by the practice and a solicitor |
 | `/privacy-policy` | The published date, currently August 2026 |
 | `/terms` | A review by the practice and a solicitor |

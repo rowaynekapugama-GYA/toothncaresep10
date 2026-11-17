@@ -1,5 +1,180 @@
 [
  {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/anti-wrinkle-injections-and-fillers.htm",
+  "to": "/cosmetic-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/childrens-dentistry.htm",
+  "to": "/childrens-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/clear-braces.htm",
+  "to": "/clear-braces",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/conventional-dental-braces.htm",
+  "to": "/metal-braces",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/cosmetic-dentistry.htm",
+  "to": "/cosmetic-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/dental-crowns-and-bridges.htm",
+  "to": "/crowns-and-bridges",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/dental-implants.htm",
+  "to": "/dental-implants",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/dentures.htm",
+  "to": "/dentures",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/emergency.htm",
+  "to": "/emergency",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/general-dentistry.htm",
+  "to": "/general-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/gum-treatment.htm",
+  "to": "/gum-treatment",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/invisalign-clear-aligners.htm",
+  "to": "/clear-aligners",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/laser-treatment.htm",
+  "to": "/laser-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/metal-braces.htm",
+  "to": "/metal-braces",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/mouth-guards-and-splint.htm",
+  "to": "/mouthguards-and-splints",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/new-child-dental-benefit-scheme.htm",
+  "to": "/payment-options#cdbs",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/offers.htm",
+  "to": "/offers",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/oral-hygiene.htm",
+  "to": "/oral-hygiene",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/orthodontics.htm",
+  "to": "/orthodontics",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/pain-free-dentistry.htm",
+  "to": "/new-patients#comfort",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/payment-options.htm",
+  "to": "/payment-options",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/restorative-dentistry.htm",
+  "to": "/restorative-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/root-canal-treatment.htm",
+  "to": "/root-canal-treatment",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/services.htm",
+  "to": "/services",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/single-visit-crowns.htm",
+  "to": "/single-visit-crowns",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/smile-makeover.htm",
+  "to": "/smile-makeover",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/teeth-whitening.htm",
+  "to": "/teeth-whitening",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/tooth-extraction.htm",
+  "to": "/tooth-extraction",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/veneers-and-laminates.htm",
+  "to": "/veneers-and-laminates",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/white-fillings.htm",
+  "to": "/white-fillings",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|ashtonfield|beresfield|bolwarra|bolwarra-heights|chisholm|gilleston-heights|green-hills|louth-park|maitland|metford|morpeth|oakhampton|raworth|raymond-terrace|rutherford|south-maitland|tarro|tenambit|thornton|woodberry)/wisdom-teeth-surgery.htm",
+  "to": "/wisdom-teeth-removal",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(aberglasslyn|gilleston-heights|green-hills|louth-park|oakhampton|raworth|raymond-terrace|tarro)",
+  "to": "/areas-we-serve",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(beresfield|woodberry)",
+  "to": "/dentist-beresfield-woodberry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(bolwarra|bolwarra-heights)",
+  "to": "/dentist-lorn-bolwarra",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(maitland|south-maitland)",
+  "to": "/dentist-maitland",
+  "type": "permanent"
+ },
+ {
   "from": "/about.htm",
   "to": "/about",
   "type": "permanent"
@@ -7,6 +182,11 @@
  {
   "from": "/anti-wrinkle-injections-and-fillers.htm",
   "to": "/cosmetic-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/ashtonfield",
+  "to": "/dentist-ashtonfield",
   "type": "permanent"
  },
  {
@@ -22,6 +202,11 @@
  {
   "from": "/childrens-dentistry.htm",
   "to": "/childrens-dentistry",
+  "type": "permanent"
+ },
+ {
+  "from": "/chisholm",
+  "to": "/dentist-chisholm",
   "type": "permanent"
  },
  {
@@ -102,6 +287,16 @@
  {
   "from": "/metal-braces.htm",
   "to": "/metal-braces",
+  "type": "permanent"
+ },
+ {
+  "from": "/metford",
+  "to": "/dentist-metford",
+  "type": "permanent"
+ },
+ {
+  "from": "/morpeth",
+  "to": "/dentist-morpeth",
   "type": "permanent"
  },
  {
@@ -187,6 +382,11 @@
  {
   "from": "/root-canal-treatment.htm",
   "to": "/root-canal-treatment",
+  "type": "permanent"
+ },
+ {
+  "from": "/rutherford",
+  "to": "/dentist-rutherford",
   "type": "permanent"
  },
  {
@@ -342,6 +542,16 @@
  {
   "from": "/teeth-whitening.htm",
   "to": "/teeth-whitening",
+  "type": "permanent"
+ },
+ {
+  "from": "/tenambit",
+  "to": "/dentist-tenambit",
+  "type": "permanent"
+ },
+ {
+  "from": "/thornton",
+  "to": "/dentist-thornton",
   "type": "permanent"
  },
  {

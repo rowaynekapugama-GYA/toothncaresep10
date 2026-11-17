@@ -377,7 +377,29 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
 | `update-toothncare-v2.7.1.sh` against a copy of the GitHub repository | committed and pushed; pushed tree identical to the zip |
 
-## 17. What could not be tested here
+## 17. Version 2.8.0: team roles, Dr Rav, Dr Dimple (hidden), practice photos, go live guide, run on 17 November 2026
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.7.1 against v2.8.0, whole HTML, with the www address change set aside | 45 identical; the 15 photo slots on 9 pages, Dr Rav's AHPRA line (Our Team, Home), the support team list and the removed old-site fallbacks are the only differences |
+| Every internal link, photo, stylesheet and script (265) | all 200, or a redirect to a 200 |
+| Every address in the old site's sitemap (334), plus every service page in all 21 suburb folders and each folder with and without the closing slash (741 in all) | all end on a 200 in at most three hops |
+| "hygienist", "Dimple", "Ravneet" on any built page | none |
+| "orthodontist" on any built page | only the general FAQ question (and its structured data) |
+| `npm run qa:roles` with "Orthodontist" typed into Our Team | found, fails |
+| Our Team at 320, 390, 768, 1024, 1440 and 1920px | no sideways scrolling; support team 2 to a row on phones, 4 on tablets, 5 on wide screens (5, 5, 2 centred); 12 people, each once, role under the name, in the order Holly, Kathryn, Jorja, Ton, then the Clinical Care Coordinators |
+| Homepage slider | 4 slides and 4 dots, Dr Rav 03/ with her AHPRA line, Zoe 04/; no script errors |
+| `DR_DIMPLE.show = true` (built, then put back) | Dr Dimple card after Dr Rav, slide 04/ with Zoe 05/, 5 dots, intro "Four dentists, an oral health therapist and a support team ..."; no sideways scrolling at any width |
+| `specialistOrthodontics` true as well | role "Orthodontist", intro "Three dentists, a specialist orthodontist, an oral health therapist ..." |
+| New photos at 390 and 1440px | every slot loads, cover cropped as before, no photo twice on a page; files 31 to 237 KB, no EXIF or GPS |
+| Imported dashboard (v2.7.1 state), migrate then pull | 15 photos and 9 wording or layout changes made, order updated, 42 redirects added; the pull gave back the repository's v2.8.0 content byte for byte (pages, Team list, redirects) |
+| Undoing both migrations, then pull | the repository's v2.7.1 content byte for byte |
+| Dashboard with Dr Rav's slider name, an Our Clinic photo and its caption edited, Kathryn moved and Holly given a role line | those left alone and named in the build log; everything else changed; Holly's role line kept. Undoing put back only what the migration changed |
+| Team screen in the browser | role line placeholders show the website's wording; hiding Malal, a role line for Holly and moving Riley all saved and survived a reload; the Our Team preview showed them |
+| Page editor, Dr Rav's photo | the team photo help appears under the photo |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+
+## 18. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

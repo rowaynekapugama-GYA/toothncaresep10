@@ -1,12 +1,4 @@
 {
- "0353d19136": {
-  "alpha": false,
-  "bytes": 104306,
-  "file": "/images/img-0353d19136.webp",
-  "from": "original https://i.imgur.com/hbW30TP.jpeg",
-  "h": 1600,
-  "w": 1200
- },
  "0451df991a": {
   "alpha": false,
   "bytes": 158854,
@@ -31,14 +23,6 @@
   "h": 159,
   "w": 640
  },
- "0a16f6b55c": {
-  "alpha": false,
-  "bytes": 41740,
-  "file": "/images/img-0a16f6b55c.webp",
-  "from": "WEBP",
-  "h": 867,
-  "w": 1300
- },
  "0a9cde5b68": {
   "alpha": false,
   "bytes": 118736,
@@ -54,6 +38,14 @@
   "from": "WEBP",
   "h": 373,
   "w": 560
+ },
+ "0f78085cc7": {
+  "alpha": false,
+  "bytes": 136834,
+  "file": "/images/img-0f78085cc7.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 26-reception-fiddle-leaf, reception with fiddle-leaf fig), crop and resize only, for offers / offers-02-top image-1",
+  "h": 900,
+  "w": 1600
  },
  "12677198d2": {
   "alpha": false,
@@ -127,22 +119,6 @@
   "h": 608,
   "w": 760
  },
- "1f7cba5cc5": {
-  "alpha": false,
-  "bytes": 61840,
-  "file": "/images/img-1f7cba5cc5.webp",
-  "from": "original https://i.imgur.com/GsiMdHr.jpeg",
-  "h": 1600,
-  "w": 1200
- },
- "206de2913e": {
-  "alpha": false,
-  "bytes": 40614,
-  "file": "/images/img-206de2913e.webp",
-  "from": "original https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900",
-  "h": 600,
-  "w": 900
- },
  "26174f482b": {
   "alpha": false,
   "bytes": 21858,
@@ -167,14 +143,6 @@
   "h": 900,
   "w": 1600
  },
- "2b063f35d5": {
-  "alpha": false,
-  "bytes": 50150,
-  "file": "/images/img-2b063f35d5.webp",
-  "from": "WEBP",
-  "h": 518,
-  "w": 920
- },
  "325c8f1992": {
   "alpha": false,
   "bytes": 36216,
@@ -198,6 +166,14 @@
   "from": "WEBP",
   "h": 128,
   "w": 128
+ },
+ "362db70deb": {
+  "alpha": false,
+  "bytes": 58788,
+  "file": "/images/img-362db70deb.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 05-treatment-room-1, treatment room 1), crop and resize only, for dentist-tenambit / dentist-tenambit-05-treatments image-4",
+  "h": 675,
+  "w": 1200
  },
  "3633b2da4e": {
   "alpha": false,
@@ -263,6 +239,22 @@
   "h": 600,
   "w": 900
  },
+ "48e611c9ec": {
+  "alpha": false,
+  "bytes": 31868,
+  "file": "/images/img-48e611c9ec.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 34-treatment-room-2, treatment room 2), crop and resize only, for our-clinic / our-clinic-04-a-few-corners-of-the-practice image-6",
+  "h": 675,
+  "w": 1200
+ },
+ "510487387a": {
+  "alpha": false,
+  "bytes": 89434,
+  "file": "/images/img-510487387a.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 22-reception-desk-plants-2, reception desk with plants), crop and resize only, for our-clinic / our-clinic-04-a-few-corners-of-the-practice image-1",
+  "h": 648,
+  "w": 1152
+ },
  "513beda25c": {
   "alpha": false,
   "bytes": 8590,
@@ -319,6 +311,14 @@
   "h": 1454,
   "w": 1920
  },
+ "64aeb84e1c": {
+  "alpha": false,
+  "bytes": 60526,
+  "file": "/images/img-64aeb84e1c.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 21-entry-niche-plants, entry niche), crop and resize only, for index / index-04-know-us image-1",
+  "h": 648,
+  "w": 1152
+ },
  "6b9feba35d": {
   "alpha": false,
   "bytes": 3256,
@@ -326,6 +326,22 @@
   "from": "WEBP",
   "h": 128,
   "w": 128
+ },
+ "6d6f276c76": {
+  "alpha": false,
+  "bytes": 42316,
+  "file": "/images/img-6d6f276c76.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 03-imaging-room-opg, imaging room), crop and resize only, for our-technology / our-technology-04-fewer-visits-clearer-answers image-1",
+  "h": 941,
+  "w": 1176
+ },
+ "6d8feac066": {
+  "alpha": false,
+  "bytes": 55710,
+  "file": "/images/img-6d8feac066.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 33-exterior-shopfront-sign, shopfront sign), resize only, for contact / contact-02-contact image-1 and index / index-04-know-us image-3",
+  "h": 800,
+  "w": 1200
  },
  "76ca461600": {
   "alpha": false,
@@ -348,6 +364,14 @@
   "bytes": 39682,
   "file": "/images/img-77c908d819.webp",
   "from": "original https://i.imgur.com/Qlw8jHb.jpeg",
+  "h": 900,
+  "w": 1600
+ },
+ "7a2e097922": {
+  "alpha": false,
+  "bytes": 243568,
+  "file": "/images/img-7a2e097922.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 09-waiting-area-window-2, waiting area window), resize only, for new-patients / new-patients-02-top image-1",
   "h": 900,
   "w": 1600
  },
@@ -399,6 +423,14 @@
   "h": 1081,
   "w": 1920
  },
+ "8b2603dcae": {
+  "alpha": false,
+  "bytes": 169472,
+  "file": "/images/img-8b2603dcae.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 07-waiting-area-window-1, waiting area window), crop and resize only, for index / index-04-know-us image-6",
+  "h": 675,
+  "w": 1200
+ },
  "8b932cb032": {
   "alpha": false,
   "bytes": 33032,
@@ -414,14 +446,6 @@
   "from": "WEBP",
   "h": 600,
   "w": 900
- },
- "93537bced9": {
-  "alpha": false,
-  "bytes": 124634,
-  "file": "/images/img-93537bced9.webp",
-  "from": "WEBP",
-  "h": 1013,
-  "w": 1800
  },
  "958d12a1d2": {
   "alpha": false,
@@ -471,14 +495,6 @@
   "h": 428,
   "w": 640
  },
- "a23f5c341d": {
-  "alpha": false,
-  "bytes": 10270,
-  "file": "/images/img-a23f5c341d.webp",
-  "from": "WEBP",
-  "h": 373,
-  "w": 560
- },
  "a599e60aba": {
   "alpha": false,
   "bytes": 40368,
@@ -502,6 +518,14 @@
   "from": "original https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=640",
   "h": 427,
   "w": 640
+ },
+ "ae666fff90": {
+  "alpha": false,
+  "bytes": 70080,
+  "file": "/images/img-ae666fff90.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 01-corridor-glass-doors, corridor glass doors), crop and resize only, for envision-your-smile / envision-your-smile-02-top image-1",
+  "h": 900,
+  "w": 1600
  },
  "af0f4d08d4": {
   "alpha": false,
@@ -535,13 +559,13 @@
   "h": 1000,
   "w": 1500
  },
- "bffd1ee4e3": {
+ "c23038ef65": {
   "alpha": false,
-  "bytes": 14442,
-  "file": "/images/img-bffd1ee4e3.webp",
-  "from": "WEBP",
-  "h": 347,
-  "w": 520
+  "bytes": 76728,
+  "file": "/images/img-c23038ef65.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 20-waiting-window-seat, window seat), crop and resize only, for nervous-patients / nervous-patients-04-your-pace image-1",
+  "h": 648,
+  "w": 810
  },
  "c32aa476e9": {
   "alpha": false,
@@ -599,6 +623,14 @@
   "h": 600,
   "w": 900
  },
+ "d8b59c77ac": {
+  "alpha": false,
+  "bytes": 96142,
+  "file": "/images/img-d8b59c77ac.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 02-coffee-bar-cup, coffee bar), crop and resize only, for our-clinic / our-clinic-04-a-few-corners-of-the-practice image-4",
+  "h": 675,
+  "w": 1200
+ },
  "dbd32bb4bb": {
   "alpha": false,
   "bytes": 73180,
@@ -606,14 +638,6 @@
   "from": "original https://i.imgur.com/LucnYK8.jpeg",
   "h": 900,
   "w": 1600
- },
- "dc466c7abb": {
-  "alpha": false,
-  "bytes": 27492,
-  "file": "/images/img-dc466c7abb.webp",
-  "from": "WEBP",
-  "h": 614,
-  "w": 920
  },
  "e164362e00": {
   "alpha": false,
@@ -671,14 +695,6 @@
   "h": 900,
   "w": 1600
  },
- "ea37d4d5c9": {
-  "alpha": false,
-  "bytes": 117956,
-  "file": "/images/img-ea37d4d5c9.webp",
-  "from": "original https://i.imgur.com/H9g376Q.jpeg",
-  "h": 1448,
-  "w": 1086
- },
  "ea39ffabad": {
   "alpha": false,
   "bytes": 75214,
@@ -719,20 +735,20 @@
   "h": 900,
   "w": 1600
  },
- "fbc10a1b5d": {
+ "fd60f4158f": {
   "alpha": false,
-  "bytes": 23314,
-  "file": "/images/img-fbc10a1b5d.webp",
-  "from": "WEBP",
-  "h": 614,
-  "w": 920
+  "bytes": 107904,
+  "file": "/images/img-fd60f4158f.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 19-waiting-plants-couch, waiting room bench), crop and resize only, for our-clinic / our-clinic-02-top image-1",
+  "h": 648,
+  "w": 1152
  },
- "fe3d21e711": {
+ "ff656f6ae4": {
   "alpha": false,
-  "bytes": 94986,
-  "file": "/images/img-fe3d21e711.webp",
-  "from": "original https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1600",
-  "h": 1200,
-  "w": 1600
+  "bytes": 40648,
+  "file": "/images/img-ff656f6ae4.webp",
+  "from": "client supplied 17 Nov 2026 (practice photo 03-imaging-room-opg, imaging room), crop and resize only, for index / index-04-know-us image-4",
+  "h": 675,
+  "w": 1200
  }
 }

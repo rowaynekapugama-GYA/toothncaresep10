@@ -6,8 +6,11 @@
 export const DEFAULTS = {
   practiceName: 'Tooth n Care',
   tagline: 'Smile With Confidence',
-  /** Overridden by NEXT_PUBLIC_SERVER_URL. Change at go live. */
-  siteUrl: 'https://toothncare.com.au',
+  /**
+   * Overridden by NEXT_PUBLIC_SERVER_URL. www is the main address (the old site
+   * and Google use www; the bare domain redirects to it). See docs/GO-LIVE.md.
+   */
+  siteUrl: 'https://www.toothncare.com.au',
   logo: '/images/img-09b604b050.webp',
   /** Shown when a page has no image of its own. Absolute at render time. */
   ogImage: '/images/img-0451df991a.webp',

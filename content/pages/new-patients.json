@@ -61,15 +61,15 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-93537bced9.webp",
-     "width": "1800",
-     "height": "1013"
+     "value": "/images/img-7a2e097922.webp",
+     "width": "1600",
+     "height": "900"
     },
     {
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The reception desk at Tooth n Care, with the illuminated tooth logo and the corridor beyond"
+     "value": "The waiting area at Tooth n Care, with plants, window seating and an armchair"
     },
     {
      "id": "small-label-above-the-heading-1",

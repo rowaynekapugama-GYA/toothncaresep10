@@ -2,6 +2,111 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.8.0] - 2026-11-17
+
+Christine's emails of 13 to 16 November 2026, and the practice photos she sent
+on 17 November. Update to the existing repository (started from `a48295294c25`,
+v2.7.1).
+
+### Changed
+
+- **Support team, one list.** `SUPPORT_TEAM.layout` is now `'combined'`: one
+  heading ("Our support team"), each person once, with their role under their
+  name. Order: Holly and Kathryn (Patient Experience Coordinator), Jorja and
+  Ton (Patient Experience and Clinical Care Coordinator), then Debbie, Mursel,
+  Christine, Layeba, Malal, Tanu, Libby and Riley (Clinical Care Coordinator).
+  Names unchanged. `/support-team` and `/our-team/support-team` still land on
+  `#support-team`.
+- **Dr Rav.** AHPRA number `DEN0002297808` (Dentist, General registration,
+  from the AHPRA public register sent by Christine) now shows on her card and
+  slide and in her Team list entry. Full name `Dr Ravneet Kaur Arora` stored;
+  the cards still say "Dr Rav". One setting shows the full name instead:
+  `PRACTITIONERS.rav.showFullName` in `src/team.config.ts` (the name fields on
+  Our Team and the homepage slider are now the placeholder `{{site:ravName}}`).
+  Role "Dentist" and the R monogram unchanged.
+- **Practice photos.** Real photos of the practice replace stock, generic and
+  archive images in 15 places on 9 pages (crop and resize only, converted to
+  sRGB WebP, no colour grading, no AI, all metadata including GPS removed).
+  Photos 25 (whitening box) and 28 (NOW OPEN sign) not used. Kept: the About
+  reception photo, the homepage corridor photo and the dentist portraits.
+  12 replaced files are removed from the repository; `img-0451df991a` stays
+  (still the share image on 11 pages, see `docs/GO-LIVE.md`).
+
+| Page | Section (slot) | Old image | New photo (from the pack) | File |
+| --- | --- | --- | --- | --- |
+| Home | 04-know-us (image-1) | `img-3d8678d4cd`, Smile With Confidence corridor (archive) | 21-entry-niche-plants | `img-64aeb84e1c`, 1152 x 648 |
+| Home | 04-know-us (image-3) | `img-d7321cde74`, archive reception photo, a near duplicate of the hero on the same page | 33-exterior-shopfront-sign | `img-6d8feac066`, 1200 x 800 |
+| Home | 04-know-us (image-4) | `img-bffd1ee4e3`, archive treatment room photo | 03-imaging-room-opg | `img-ff656f6ae4`, 1200 x 675 |
+| Home | 04-know-us (image-6) | `img-206de2913e`, stock photo of another clinic | 07-waiting-area-window-1 | `img-8b2603dcae`, 1200 x 675 |
+| New Patients | 02-top (image-1) | `img-93537bced9`, archive reception photo, a near duplicate of Getting here on the same page | 09-waiting-area-window-2 | `img-7a2e097922`, 1600 x 900 |
+| Nervous Patients | 04-your-pace (image-1) | `img-0353d19136`, staff with a patient (no written approval on file) | 20-waiting-window-seat | `img-c23038ef65`, 810 x 648 |
+| Offers | 02-top (image-1) | `img-fe3d21e711`, stock photo (Unsplash) | 26-reception-fiddle-leaf | `img-0f78085cc7`, 1600 x 900 |
+| Our Technology | 04-fewer-visits-clearer-answers (image-1) | `img-1f7cba5cc5`, a person at the X-ray unit (no written approval on file) | 03-imaging-room-opg | `img-6d6f276c76`, 1176 x 941 |
+| Contact | 02-contact (image-1) | `img-ea37d4d5c9`, archive reception detail | 33-exterior-shopfront-sign | `img-6d8feac066`, 1200 x 800 |
+| Envision Your Smile | 02-top (image-1) | `img-0a16f6b55c`, Smile With Confidence corridor (archive) | 01-corridor-glass-doors | `img-ae666fff90`, 1600 x 900 |
+| Dentist Tenambit | 05-treatments (image-4) | `img-a23f5c341d`, Smile With Confidence corridor (archive) | 05-treatment-room-1 | `img-362db70deb`, 1200 x 675 |
+| Our Clinic | 02-top (image-1) | `img-0451df991a`, shopfront with the NOW OPEN A-frame | 19-waiting-plants-couch | `img-fd60f4158f`, 1152 x 648 |
+| Our Clinic | 04-a-few-corners-of-the-practice (image-1) | `img-2b063f35d5`, archive reception photo | 22-reception-desk-plants-2 | `img-510487387a`, 1152 x 648 |
+| Our Clinic | 04-a-few-corners-of-the-practice (image-4) | `img-fbc10a1b5d`, Smile With Confidence corridor (archive) | 02-coffee-bar-cup | `img-d8b59c77ac`, 1200 x 675 |
+| Our Clinic | 04-a-few-corners-of-the-practice (image-6) | `img-dc466c7abb`, archive treatment room photo | 34-treatment-room-2 | `img-48e611c9ec`, 1200 x 675 |
+
+- Our Clinic: the "[VERIFY] a professional photo shoot is still recommended"
+  note under the photos is gone, now the photos are the practice's own.
+- `DEFAULTS.siteUrl` is `https://www.toothncare.com.au` (www is the main
+  address at go live). `NEXT_PUBLIC_SERVER_URL` still overrides it.
+- The homepage team slider no longer points at photos on the old website as a
+  fallback (`data-fb`); those addresses stop working at the switch.
+
+### Added
+
+- **Dr Dimple, ready and hidden.** A card on Our Team (after Dr Rav) and a
+  slide in the homepage slider (after Dr Rav; Zoe becomes 05/), with a D
+  monogram. One switch: `DR_DIMPLE.show` in `src/team.config.ts` (false).
+  `DR_DIMPLE.specialistOrthodontics` (false) makes her role "Orthodontist"
+  only once specialist registration in Orthodontics is confirmed; otherwise
+  "Dentist". Placeholders `{{site:dimpleCard}}`, `{{site:dimpleSlide}}`,
+  `{{site:zoeSlideNum}}`.
+- **Our Team intro counts the team** (`{{site:teamIntroLead}}`):
+  - today: "Three dentists, an oral health therapist and a support team who
+    will actually remember you between visits."
+  - Dr Dimple shown as a dentist: "Four dentists, an oral health therapist and
+    a support team ..."
+  - Dr Dimple shown as a confirmed specialist: "Three dentists, a specialist
+    orthodontist, an oral health therapist and a support team ..."
+- **Team photo colour treatment, by CSS** (`public/styles/common.css`): a soft
+  teal wash from the top corner and a darker base on support team photos and
+  on the Dr Rav and Dr Dimple cards once a photo is added. The photo files are
+  never changed, so anything uploaded in the dashboard matches.
+- **Photo help in the dashboard** (`src/dashboard/ui/TeamPhotoHelp.tsx`): on
+  the Team screen, and next to the photo when a team photo is clicked in the
+  page editor: landscape 4:3, at least 800 x 600, head and shoulders, plain
+  background, "the colour treatment is added automatically".
+- **Team screen:** the role line box shows, in grey, the wording the website
+  will use; an **On website** switch hides someone without removing them.
+- **Old suburb folders redirect** (42 rules): `/<suburb>/<page>.htm` for the
+  31 service pages in all 21 old suburb folders goes where the top level page
+  goes (`/maitland/dental-implants.htm` to `/dental-implants`); each folder
+  itself goes to its suburb page, or `/areas-we-serve`.
+- `docs/GO-LIVE.md`: DNS findings, the switch step by step, what moves with
+  the domain, old address coverage, SMTP2GO, before and after checklists.
+- `docs/CLIENT-GUIDE.md` and `docs/CLIENT-GUIDE.pdf`: a two page guide for the
+  practice, with screenshots.
+- `npm run qa:roles` also fails on "orthodontist" anywhere on the site while
+  Dr Dimple is hidden or unconfirmed (the general FAQ question "Should my
+  seven-year-old see an orthodontist?" is allowed).
+
+### Dashboard (migrations, additive)
+
+- `20261117_090000_practice_photos`: each of the 15 photo slots, only where it
+  still holds the shipped photo and none was chosen in the dashboard; the
+  description and stored size only where still the old ones.
+- `20261117_100000_team_dimple_redirects`: the layout and wording changes
+  above, one piece at a time and only where unchanged; Kathryn moves above
+  Jorja only if Jorja is still straight before her; Dr Rav's Team list entry
+  gets her full name and number only if it has none; the 42 redirects only
+  where that old address has none. Anything changed in the dashboard is left
+  alone and named in the build log.
+
 ## [2.7.1] - 2026-11-13
 
 ### Added

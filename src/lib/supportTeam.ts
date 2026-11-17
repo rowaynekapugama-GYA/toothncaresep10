@@ -42,9 +42,11 @@ function card(m: SupportMember, withRole: boolean): string {
   const photo = m.photo
     ? `<img src="${esc(m.photo)}" alt="${esc(name)}, ${esc(roleOf(m).toLowerCase())} at Tooth n Care" loading="lazy" width="800" height="600">`
     : `<span class="st-mono" aria-hidden="true">${esc(initial)}</span>`
+  // the name, then the role line under it (v2.8.0)
   return `<div class="tcard st-card"><div class="st-photo">${photo}</div><div class="st-body">`
+    + `<h4 class="st-name">${esc(name)}</h4>`
     + (withRole ? `<span class="tcard-role">${esc(roleOf(m))}</span>` : '')
-    + `<h4 class="st-name">${esc(name)}</h4></div></div>`
+    + '</div></div>'
 }
 
 const grid = (people: SupportMember[], withRole: boolean) =>

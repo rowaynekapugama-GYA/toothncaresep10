@@ -7,7 +7,8 @@ the practice. No training required, and nothing here can break the website.
 
 ## Signing in
 
-Go to **toothncare.com.au/admin** and sign in with the email address and
+Go to **www.toothncare.com.au/admin** and sign in (until the website moves to
+that address, use the preview address GYA gave you, followed by **/admin**) with the email address and
 temporary password GYA sent you. The first time, you are asked to choose your
 own password: at least 10 characters, with letters and numbers.
 
@@ -181,23 +182,44 @@ photo to replace it, exactly like any other page. Each dentist's own page is
 under **Pages**, in the **Team** group. Dr Rav's card shows the letter R until
 a photo is added: click it and choose **Upload**.
 
+Dr Rav's name on the cards is shaded, like the phone number: it says "Dr Rav"
+and GYA can switch it to her full name in one place. Dr Dimple's card is ready
+and will be switched on by GYA once her details are confirmed.
+
 ### The support team
 
-**Team** in the menu lists the support team shown on Our Team, under two
-headings: **Patient Experience Coordinators** (reception) and **Clinical Care
-Coordinators** (dental assistants and nurses).
+**Team** in the menu lists the support team shown on Our Team: one list, in
+this order, with each person's role under their name.
 
 - **Add a person**: type their first name, tick their group (or both), press
-  **Add**.
+  **Add**. **Patient Experience Coordinators** are reception; **Clinical Care
+  Coordinators** are dental assistants and nurses.
 - **Change a name or group**: change it in the list and press **Save** on that
   row.
+- **Role line**: the grey wording is what the website shows, worked out from
+  the groups ticked. Type over it only to change the wording for that person,
+  then **Save**. Clear it to go back to the grey wording.
 - **Move someone**: the arrows change the order they appear in.
+- **Hide someone for now**: untick **On website**, then **Save**. They stay in
+  the list, ready to show again.
 - **Remove someone**: **Remove**.
 - **Photo**: **Choose photo**, then press **Save**. Until there is a photo,
   the card shows the first letter of their name.
 
-Then press **Publish website**. Someone ticked in both groups appears under
-both headings.
+Then press **Publish website**.
+
+### Team photos
+
+So every card matches:
+
+- **Landscape, 4:3**, for example 1600 x 1200 pixels, and at least 800 x 600.
+- Head and shoulders in the middle of the frame, with some space above the
+  head.
+- A plain background, such as a wall in the practice.
+- Upload the photo as it is. The website adds the colour treatment itself, so
+  there is no need to edit or filter it.
+- Only once that person has said in writing that they are happy for it to be
+  on the website.
 
 **Names, roles and qualifications must come from the practice.** Never add a
 qualification, a title or an AHPRA registration number that has not been given

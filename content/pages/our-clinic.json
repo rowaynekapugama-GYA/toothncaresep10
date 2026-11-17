@@ -61,15 +61,15 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-0451df991a.webp",
-     "width": "1086",
-     "height": "1448"
+     "value": "/images/img-fd60f4158f.webp",
+     "width": "1152",
+     "height": "648"
     },
     {
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The Tooth n Care shopfront on Lawes Street, East Maitland, with the practice signage above the entrance"
+     "value": "The waiting room at Tooth n Care, with plants and a long upholstered bench"
     },
     {
      "id": "small-label-above-the-heading-1",
@@ -243,15 +243,15 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-2b063f35d5.webp",
-     "width": "920",
-     "height": "600"
+     "value": "/images/img-510487387a.webp",
+     "width": "1152",
+     "height": "648"
     },
     {
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The reception desk at Tooth n Care, with the illuminated tooth logo and the corridor beyond"
+     "value": "The reception desk at Tooth n Care, with the lit tooth logo and indoor plants"
     },
     {
      "id": "image-2",
@@ -285,15 +285,15 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-fbc10a1b5d.webp",
-     "width": "920",
-     "height": "600"
+     "value": "/images/img-d8b59c77ac.webp",
+     "width": "1200",
+     "height": "675"
     },
     {
      "id": "image-description-alt-text-4",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The Smile With Confidence sign lit along the treatment room corridor"
+     "value": "The coffee bar in the Tooth n Care waiting area"
     },
     {
      "id": "image-5",
@@ -313,15 +313,15 @@
      "id": "image-6",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-dc466c7abb.webp",
-     "width": "920",
-     "height": "600"
+     "value": "/images/img-48e611c9ec.webp",
+     "width": "1200",
+     "height": "675"
     },
     {
      "id": "image-description-alt-text-6",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "A treatment room at Tooth n Care, with the chair and equipment ready"
+     "value": "A treatment room at Tooth n Care, with the chair and a screen on the ceiling"
     },
     {
      "id": "image-7",
@@ -367,7 +367,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Photographs of our own practice. <span class=\"verify\">[VERIFY]</span> a professional photo shoot is still recommended before launch - these are the best available archive images."
+     "value": "Photographs of our own practice."
     }
    ]
   },

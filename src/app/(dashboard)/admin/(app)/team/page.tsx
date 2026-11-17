@@ -26,11 +26,18 @@ export default async function TeamScreen() {
     }))
   return (
     <>
-      <div className="pd-head"><div className="grow"><h1>Team</h1><p className="pd-sub">The support team shown on the Our Team page, under {SUPPORT_TEAM.patientExperience.heading} and {SUPPORT_TEAM.clinicalCare.heading}.</p></div></div>
+      <div className="pd-head"><div className="grow"><h1>Team</h1><p className="pd-sub">{SUPPORT_TEAM.layout === 'combined'
+        ? 'The support team shown on the Our Team page, in one list with each person\'s role under their name.'
+        : `The support team shown on the Our Team page, under ${SUPPORT_TEAM.patientExperience.heading} and ${SUPPORT_TEAM.clinicalCare.heading}.`}</p></div></div>
       <TeamEditor
         initial={members}
         ourTeamHref={ourTeamHref}
-        labels={{ patientExperience: SUPPORT_TEAM.patientExperience.heading, clinicalCare: SUPPORT_TEAM.clinicalCare.heading, layout: SUPPORT_TEAM.layout }}
+        labels={{
+          patientExperience: SUPPORT_TEAM.patientExperience.heading,
+          clinicalCare: SUPPORT_TEAM.clinicalCare.heading,
+          layout: SUPPORT_TEAM.layout,
+          roles: { patientExperience: SUPPORT_TEAM.patientExperience.role, clinicalCare: SUPPORT_TEAM.clinicalCare.role, both: SUPPORT_TEAM.both },
+        }}
       />
     </>
   )

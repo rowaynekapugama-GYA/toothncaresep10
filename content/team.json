@@ -36,10 +36,10 @@
   "roleLine": ""
  },
  {
-  "name": "Dr Rav",
+  "name": "Dr Ravneet Kaur Arora",
   "role": "Dentist",
   "credentials": "",
-  "registration": "",
+  "registration": "DEN0002297808",
   "bio": "",
   "photo": null,
   "profileUrl": "",
@@ -60,18 +60,6 @@
   "roleLine": ""
  },
  {
-  "name": "Jorja",
-  "role": "",
-  "credentials": "",
-  "registration": "",
-  "bio": "",
-  "photo": null,
-  "profileUrl": "",
-  "patientExperience": true,
-  "clinicalCare": true,
-  "roleLine": ""
- },
- {
   "name": "Kathryn",
   "role": "",
   "credentials": "",
@@ -81,6 +69,18 @@
   "profileUrl": "",
   "patientExperience": true,
   "clinicalCare": false,
+  "roleLine": ""
+ },
+ {
+  "name": "Jorja",
+  "role": "",
+  "credentials": "",
+  "registration": "",
+  "bio": "",
+  "photo": null,
+  "profileUrl": "",
+  "patientExperience": true,
+  "clinicalCare": true,
   "roleLine": ""
  },
  {

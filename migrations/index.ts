@@ -7,6 +7,8 @@ import * as migration_20261106_090000_role_titles_and_ahpra from './20261106_090
 import * as migration_20261111_100000_team_support_fields from './20261111_100000_team_support_fields';
 import * as migration_20261111_090000_about_reception_photo from './20261111_090000_about_reception_photo';
 import * as migration_20261111_110000_team_roster_and_headings from './20261111_110000_team_roster_and_headings';
+import * as migration_20261117_090000_practice_photos from './20261117_090000_practice_photos';
+import * as migration_20261117_100000_team_dimple_redirects from './20261117_100000_team_dimple_redirects';
 
 export const migrations = [
   {
@@ -53,5 +55,15 @@ export const migrations = [
     up: migration_20261111_110000_team_roster_and_headings.up,
     down: migration_20261111_110000_team_roster_and_headings.down,
     name: '20261111_110000_team_roster_and_headings',
+  },
+  {
+    up: migration_20261117_090000_practice_photos.up,
+    down: migration_20261117_090000_practice_photos.down,
+    name: '20261117_090000_practice_photos',
+  },
+  {
+    up: migration_20261117_100000_team_dimple_redirects.up,
+    down: migration_20261117_100000_team_dimple_redirects.down,
+    name: '20261117_100000_team_dimple_redirects',
   },
 ];

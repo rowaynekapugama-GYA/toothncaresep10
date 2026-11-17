@@ -59,6 +59,10 @@ export type Practitioner = {
   ahpraDivision: Division | ''
   /** The profile page, if there is one. For reference. */
   profilePath: string | null
+  /** Optional. A shorter name for the cards ("Dr Rav"); see showFullName. */
+  shortName?: string
+  /** Optional. true shows the full name above on the cards instead of shortName. */
+  showFullName?: boolean
 }
 
 // ---------------------------------------------------------------------------
@@ -105,14 +109,31 @@ export const PRACTITIONERS = {
     profilePath: '/dr-navneet-karan',
   },
   /**
-   * The third dentist (Christine, 11 Nov 2026). Only the first name is known,
-   * so the cards say "Dr Rav" and "Dentist", with no bio or profile page yet.
+   * The third dentist (Christine, 11 Nov 2026). Registration from the AHPRA
+   * public register (Christine, 16 Nov 2026): Dental Practitioner, Dentist,
+   * General registration. No bio or profile page yet.
+   *
+   * The cards and the homepage slider say "Dr Rav". To show the full name
+   * instead, change showFullName to true (the photo descriptions follow).
    */
   rav: {
-    name: 'Dr Rav', // TODO: awaiting from client (full name and how Rav would like to be shown)
+    name: 'Dr Ravneet Kaur Arora',
+    shortName: 'Dr Rav',
+    showFullName: false,
     roleTitle: null,
-    ahpraNumber: '', // TODO: awaiting from client (the AHPRA number, starting DEN, not the Medicare provider number)
-    ahpraDivision: '', // TODO: awaiting from client (expected: Dentist)
+    ahpraNumber: 'DEN0002297808', // AHPRA public register, sent by Christine 16 Nov 2026
+    ahpraDivision: 'Dentist',
+    profilePath: null,
+  },
+  /**
+   * Dr Dimple (Christine, 13 Nov 2026). Not on the website yet: see DR_DIMPLE
+   * below for the switch that shows her card.
+   */
+  dimple: {
+    name: 'Dr Dimple', // TODO: awaiting from client (full name, as for Dr Rav)
+    roleTitle: null,
+    ahpraNumber: '', // TODO: awaiting from client (the AHPRA number, starting DEN)
+    ahpraDivision: '', // TODO: awaiting from client
     profilePath: null,
   },
   zoe: {
@@ -134,13 +155,39 @@ export const SUPPORT_TEAM = {
   /**
    * 'groups': two groups under their own headings; someone in both groups
    *   (Jorja, Ton) appears in both.
-   * 'combined': one grid, each card with its role line underneath the photo.
+   * 'combined': one grid under the section heading, each person once, with
+   *   their role line under the photo (Christine, 13 Nov 2026). The role line
+   *   comes from the groups ticked on the Team screen, or the Role line typed
+   *   there. Order is the Team screen order.
    */
-  layout: 'groups' as 'groups' | 'combined',
+  layout: 'combined' as 'groups' | 'combined',
   patientExperience: { heading: 'Patient Experience Coordinators', role: 'Patient Experience Coordinator' },
   clinicalCare: { heading: 'Clinical Care Coordinators', role: 'Clinical Care Coordinator' },
   /** The role line for someone in both groups, in the 'combined' layout. */
   both: 'Patient Experience and Clinical Care Coordinator',
+}
+
+// ---------------------------------------------------------------------------
+// Dr Dimple: one switch to show her on the website
+// ---------------------------------------------------------------------------
+
+export const DR_DIMPLE = {
+  /**
+   * false: Dr Dimple is not on the website anywhere.
+   * true: her card shows on Our Team (after Dr Rav), a slide is added to the
+   *   homepage team slider (after Dr Rav), and the Our Team intro counts her.
+   */
+  show: false,
+  /**
+   * true ONLY once the practice has confirmed in writing that Dr Dimple holds
+   * specialist registration in Orthodontics on the AHPRA register. Then her
+   * card says "Orthodontist" and the intro says "a specialist orthodontist".
+   * false: her card says "Dentist" and she is counted with the dentists.
+   * "Orthodontist" is a protected specialist title: never set this on a guess.
+   */
+  specialistOrthodontics: false,
+  /** Optional. Her photo, e.g. '/images/img-xxxxxxxxxx.webp' (800 x 600). Empty shows the letter D. */
+  photo: '',
 }
 
 // ===========================================================================
@@ -186,6 +233,11 @@ export const TEAM_TOKEN_KEYS: string[] = [
   'oralHealthHeading',
   'oralHealthHeadingLower',
   'oralHealthTeamInSentence',
+  'teamIntroLead',
+  'ravName',
+  'dimpleCard',
+  'dimpleSlide',
+  'zoeSlideNum',
   ...KEYS.flatMap((k) => [`${k}Role`, `${k}RoleLower`, `${k}RoleSentence`, `${k}RoleA`, `${k}Ahpra`, `${k}AhpraNumber`, `${k}AhpraDivision`]),
 ]
 
@@ -220,6 +272,13 @@ export function teamTokens(): Record<string, string> {
   out.oralHealthTeamInSentence = given
     || (same ? `${NUMBER[titles.length] ?? titles.length} ${plural(lower(titles[0]))}` : titles.map(withArticle).join(', '))
 
+  // the cards' names: "Dr Rav", or the full name once showFullName is true
+  const rav = PRACTITIONERS.rav as Practitioner
+  out.ravName = checkText('rav.name', rav.showFullName || !rav.shortName ? rav.name : rav.shortName)
+
+  // Dr Dimple, and the Our Team intro that counts the team
+  Object.assign(out, dimpleTokens(out))
+
   for (const [k, v] of Object.entries({
     'SUPPORT_TEAM.patientExperience.heading': SUPPORT_TEAM.patientExperience.heading,
     'SUPPORT_TEAM.patientExperience.role': SUPPORT_TEAM.patientExperience.role,
@@ -228,5 +287,47 @@ export function teamTokens(): Record<string, string> {
     'SUPPORT_TEAM.both': SUPPORT_TEAM.both,
   })) checkText(k, v)
   if (!['groups', 'combined'].includes(SUPPORT_TEAM.layout)) fail(`SUPPORT_TEAM.layout must be 'groups' or 'combined'`)
+  return out
+}
+
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+/** The transparent image the placeholder cards sit on (the letter shows through). */
+const PLACEHOLDER = '/images/img-52e7b1f5ba.webp'
+
+function dimpleTokens(t: Record<string, string>): Record<string, string> {
+  if (typeof DR_DIMPLE.show !== 'boolean' || typeof DR_DIMPLE.specialistOrthodontics !== 'boolean') {
+    fail('DR_DIMPLE.show and DR_DIMPLE.specialistOrthodontics must be true or false')
+  }
+  const photo = checkText('DR_DIMPLE.photo', DR_DIMPLE.photo)
+  if (photo && !/^\/[\w./-]+\.(webp|jpe?g|png)$/i.test(photo)) fail(`DR_DIMPLE.photo "${photo}" must be an image address such as /images/img-xxxxxxxxxx.webp`)
+  const show = DR_DIMPLE.show
+  const specialist = show && DR_DIMPLE.specialistOrthodontics
+  const NUMBER = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six']
+  // Nish, Nav and Rav, and Dr Dimple when she shows as a dentist
+  const dentists = 3 + (show && !specialist ? 1 : 0)
+  const lead = [
+    `${NUMBER[dentists]} dentists`,
+    specialist ? 'a specialist orthodontist' : '',
+    t.oralHealthTeamInSentence,
+  ].filter(Boolean)
+  const out: Record<string, string> = {
+    teamIntroLead: lead.join(', '),
+    dimpleCard: '',
+    dimpleSlide: '',
+    zoeSlideNum: show ? '05/' : '04/',
+  }
+  if (!show) return out
+  const name = esc(checkText('dimple.name', PRACTITIONERS.dimple.name))
+  const role = specialist ? 'Orthodontist' : 'Dentist'
+  const alt = `${name}, ${role.toLowerCase()} at Tooth n Care`
+  const ahpra = t.dimpleAhpra ?? ''
+  const img = `<img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" width="800" height="600" loading="lazy">`
+  out.dimpleCard = '<div class="tcard rv"><div class="tcard-photo tcard-ph">'
+    + (photo ? '' : '<span class="tcard-fallback" aria-hidden="true">D</span>')
+    + `${img}</div><div class="tcard-body"><span class="tcard-role">${role}</span><h3>${name}</h3>${ahpra}</div></div>`
+  out.dimpleSlide = `<div class="tm-slide"><div class="tm-photo"><img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" loading="lazy">`
+    + (photo ? '' : '<span class="tm-fallback"><b>D</b></span>')
+    + `</div><div class="tm-copy"><span class="tm-num">04/</span><span class="tm-role">Say hello to</span><h3 class="tm-name">${name}</h3>${ahpra}`
+    + '<div class="tm-btns"><a class="btn btn-primary" href="/our-team">Meet the team <span class="btn-arrow">&rarr;</span></a></div></div></div>'
   return out
 }

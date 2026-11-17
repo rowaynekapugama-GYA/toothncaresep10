@@ -61,15 +61,15 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-0a16f6b55c.webp",
-     "width": "1300",
-     "height": "867"
+     "value": "/images/img-ae666fff90.webp",
+     "width": "1600",
+     "height": "900"
     },
     {
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The Smile With Confidence sign lit along the treatment room corridor at Tooth n Care"
+     "value": "The corridor at Tooth n Care, with frosted glass doors to the treatment rooms"
     },
     {
      "id": "small-label-above-the-heading-1",

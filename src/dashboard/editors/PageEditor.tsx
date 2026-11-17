@@ -19,6 +19,7 @@ import { cleanInlineHtml, linkForEditing, linkForSaving, textForEditing, textFor
 import { when } from '../lib/format'
 import { AutoTextarea, Notice, useUnsavedWarning } from '../ui/fields'
 import { ImageSlot, MediaPicker, type MediaDoc } from '../ui/MediaPicker'
+import { TeamPhotoHelp, TEAM_PHOTO_SECTIONS } from '../ui/TeamPhotoHelp'
 import { RichInline } from '../ui/RichInline'
 import { SeoPanel, type SeoState } from '../ui/SeoPanel'
 import { PublishButton } from '../ui/PublishButton'
@@ -603,6 +604,7 @@ export function PageEditor(props: PageEditorProps) {
         <div className="pe-card-head"><b>Photo</b>{selected.section ? <span className="chip grey">{selected.section}</span> : null}<button className="btn small ghost" onClick={() => { setSelected(null); markSelected(null) }} aria-label="Close">&times;</button></div>
         {f ? <ImageSlot label="Photo" value={f.value} original={f.original ?? f.value}
           onChange={(v) => { setRef(selected.ref, { value: v.value, media: v.media ?? null }); bump() }} /> : null}
+        {!parseRef(selected.ref).shared && TEAM_PHOTO_SECTIONS.includes(parseRef(selected.ref).key) ? <TeamPhotoHelp /> : null}
         {altInput(selected.alt, 'pe-sel-alt')}
         {linkInput(selected.link, 'pe-sel-imglink')}
       </div>

@@ -255,13 +255,13 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-1f7cba5cc5.webp"
+     "value": "/images/img-6d6f276c76.webp"
     },
     {
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "The panoramic X-ray and 3D imaging unit at Tooth n Care, East Maitland"
+     "value": "The imaging room at Tooth n Care, with the panoramic X-ray unit"
     },
     {
      "id": "small-label-above-the-heading-1",

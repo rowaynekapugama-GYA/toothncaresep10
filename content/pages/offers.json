@@ -61,7 +61,7 @@
      "id": "image-1",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-fe3d21e711.webp",
+     "value": "/images/img-0f78085cc7.webp",
      "width": "1600",
      "height": "900"
     },
@@ -69,7 +69,7 @@
      "id": "image-description-alt-text-1",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "A patient smiling after treatment at Tooth n Care"
+     "value": "The reception desk at Tooth n Care, with the lit tooth logo and the treatment room corridor"
     },
     {
      "id": "small-label-above-the-heading-1",
