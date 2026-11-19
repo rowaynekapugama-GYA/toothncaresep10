@@ -402,7 +402,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "<b style=\"color:var(--white)\">Privacy notice.</b> Anything you send here is stored and handled under the Australian Privacy Principles and used only to answer your enquiry. We never ask for clinical or health information through this form. <span class=\"verify\">[VERIFY]</span> form endpoint not yet connected - submissions are disabled until a secure destination is confirmed."
+     "value": "<b style=\"color:var(--white)\">Privacy notice.</b> Anything you send here is stored and handled under the Australian Privacy Principles and used only to answer your enquiry. We never ask for clinical or health information through this form."
     },
     {
      "id": "button-text-1",

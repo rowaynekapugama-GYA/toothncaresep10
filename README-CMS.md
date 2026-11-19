@@ -215,8 +215,9 @@ The full plan, with the DNS records to change and the ones to keep, is in
 - Which email addresses Nish and Christine want for their dashboard logins.
 - Login to the DNS for toothncare.com.au (Webpulse, which runs the
   nameservers), or the registrar login, so the records can be changed.
-- Dr Dimple: full name, AHPRA number and whether she holds specialist
-  registration in Orthodontics. Then `DR_DIMPLE.show` in `src/team.config.ts`.
+- Dr Dimple (shown as a dentist since v2.8.1): full name, AHPRA number and
+  whether she holds specialist registration in Orthodontics. If she does, set
+  `DR_DIMPLE.specialistOrthodontics` to true in `src/team.config.ts`.
 - Dr Rav: whether she would like her full name on the cards, a short bio and
   a photo.
 - AHPRA registration numbers for Dr Nish, Dr Nav and Zoe.
@@ -243,6 +244,9 @@ The full plan, with the DNS records to change and the ones to keep, is in
 
 ### Open `[VERIFY]` items
 
+The exact wording of each note and the question to ask the practice are in
+`docs/GO-LIVE.md`, section 7a.
+
 | Page | What needs confirming |
 | --- | --- |
 | `/faq` | Whether the practice is a current Invisalign provider and licensed to use the brand name. Until that is confirmed the page says "clear aligner treatment". |
@@ -252,7 +256,6 @@ The full plan, with the DNS records to change and the ones to keep, is in
 | `/privacy-policy` | Cookie wording, and a review by the practice and a solicitor |
 | `/privacy-policy` | The published date, currently August 2026 |
 | `/terms` | A review by the practice and a solicitor |
-| `/contact` | The privacy notice wording |
 
 ### Details checked against the brief
 

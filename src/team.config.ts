@@ -126,8 +126,8 @@ export const PRACTITIONERS = {
     profilePath: null,
   },
   /**
-   * Dr Dimple (Christine, 13 Nov 2026). Not on the website yet: see DR_DIMPLE
-   * below for the switch that shows her card.
+   * Dr Dimple (Christine, 13 and 19 Nov 2026). Shown on the website since
+   * v2.8.1 as a dentist: see DR_DIMPLE below.
    */
   dimple: {
     name: 'Dr Dimple', // TODO: awaiting from client (full name, as for Dr Rav)
@@ -176,12 +176,14 @@ export const DR_DIMPLE = {
    * false: Dr Dimple is not on the website anywhere.
    * true: her card shows on Our Team (after Dr Rav), a slide is added to the
    *   homepage team slider (after Dr Rav), and the Our Team intro counts her.
+   * On since v2.8.1 (Christine, 19 Nov 2026).
    */
-  show: false,
+  show: true,
   /**
    * true ONLY once the practice has confirmed in writing that Dr Dimple holds
-   * specialist registration in Orthodontics on the AHPRA register. Then her
-   * card says "Orthodontist" and the intro says "a specialist orthodontist".
+   * specialist registration in Orthodontics on the AHPRA register (and her
+   * AHPRA number is filled in above). Then her card says "Specialist
+   * Orthodontist" and the intro says "a specialist orthodontist".
    * false: her card says "Dentist" and she is counted with the dentists.
    * "Orthodontist" is a protected specialist title: never set this on a guess.
    */
@@ -318,7 +320,7 @@ function dimpleTokens(t: Record<string, string>): Record<string, string> {
   }
   if (!show) return out
   const name = esc(checkText('dimple.name', PRACTITIONERS.dimple.name))
-  const role = specialist ? 'Orthodontist' : 'Dentist'
+  const role = specialist ? 'Specialist Orthodontist' : 'Dentist'
   const alt = `${name}, ${role.toLowerCase()} at Tooth n Care`
   const ahpra = t.dimpleAhpra ?? ''
   const img = `<img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" width="800" height="600" loading="lazy">`

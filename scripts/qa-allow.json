@@ -143,5 +143,45 @@
   "rule": "best",
   "contains": "Best at 1200 by 630 pixels",
   "note": "Dashboard help text about image size, not a claim."
+ },
+ {
+  "rule": "specialist",
+  "contains": "specialist ? 'Specialist Orthodontist'",
+  "note": "src/team.config.ts: only used when DR_DIMPLE.specialistOrthodontics is true, which needs the practice to confirm specialist registration in Orthodontics (v2.8.1). qa:roles also checks it."
+ },
+ {
+  "rule": "specialist",
+  "contains": "a specialist orthodontist",
+  "note": "The Our Team intro for a confirmed specialist, documented in the CHANGELOG and team.config.ts; only shown when specialist registration is confirmed."
+ },
+ {
+  "rule": "specialist",
+  "contains": "specialist registration",
+  "note": "Explains the AHPRA rule; not a claim."
+ },
+ {
+  "rule": "specialist",
+  "contains": "confirmed specialist",
+  "note": "Documentation of the confirmed-specialist case."
+ },
+ {
+  "rule": "specialist",
+  "contains": "const specialist = show",
+  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+ },
+ {
+  "rule": "specialist",
+  "contains": "!specialist ? 1",
+  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+ },
+ {
+  "rule": "specialist",
+  "contains": "protected specialist title",
+  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+ },
+ {
+  "rule": "specialist",
+  "contains": "her card says \"Specialist",
+  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
  }
 ]

@@ -13,7 +13,7 @@ export const DEFAULTS = {
   siteUrl: 'https://www.toothncare.com.au',
   logo: '/images/img-09b604b050.webp',
   /** Shown when a page has no image of its own. Absolute at render time. */
-  ogImage: '/images/img-0451df991a.webp',
+  ogImage: '/images/img-b0fc5965f7.jpg',
   colours: {
     background: '#0B1112',
     aqua: '#4FD8D2',

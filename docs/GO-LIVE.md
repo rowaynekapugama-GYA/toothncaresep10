@@ -163,10 +163,10 @@ dashboard (**Enquiries**) and emails it through SMTP2GO.
    `rowayne@gyaclients.com`. The address compiled in as a last resort still
    has a placeholder for SmileOx (`smileox-intake-PLACEHOLDER@...` in
    `src/site.config.ts`): replace it once the practice sends the real one.
-4. The Contact page note under the form still says "[VERIFY] form endpoint not
-   yet connected - submissions are disabled until a secure destination is
-   confirmed". Change that wording in the page editor once a test enquiry has
-   arrived.
+4. Send a test enquiry and check it arrives at all three addresses and under
+   **Enquiries**. (The "[VERIFY] form endpoint not yet connected" note under
+   the form was removed in v2.8.1: the form is connected, and every enquiry is
+   saved in the dashboard even if an email fails.)
 
 ## 7. Before the switch
 
@@ -175,20 +175,43 @@ dashboard (**Enquiries**) and emails it through SMTP2GO.
 - [ ] TTLs lowered the day before.
 - [ ] SMTP2GO domain verified, variables set, a test enquiry received at all
       three addresses.
-- [ ] Remaining `[VERIFY]` notes resolved; they show on the live pages:
-      Contact (form note), FAQ (Invisalign wording), Offers (prices and
-      wording), Teeth Whitening (pricing), Privacy Policy and Terms (review).
-- [ ] The share image used when a link is posted on Facebook and the like is
-      still the old shopfront photo with the NOW OPEN A-frame
-      (`/images/img-0451df991a.webp`): the site default
-      (`src/site.config.ts`, `src/dashboard/brand.ts`, and **SEO**, default
-      share image) and the share image on 11 pages (Areas We Serve and the ten
-      suburb pages). It no longer appears on any page itself. Swap it for the
-      new shopfront photo (`/images/img-6d8feac066.webp`) if the practice
-      would rather not show the A-frame.
+- [ ] Every go-live blocker in section 7a answered by the practice and the
+      matching `[VERIFY]` note removed (they show on the live pages).
+- [x] Share image: since v2.8.1 the shopfront photo without the NOW OPEN
+      A-frame, cropped to 1200 x 630 (`/images/img-b0fc5965f7.jpg`), everywhere.
 - [ ] Editor logins created for Nish and Christine through **Users** (once
       their email addresses are confirmed).
 - [ ] `ALLOW_FIRST_USER` not set anywhere.
+
+## 7a. Go-live blockers: questions for the practice
+
+These `[VERIFY]` notes are visible on the pages and stay until the practice
+answers. Nothing in them is changed without the practice's wording (prices and
+legal text especially).
+
+| Page | Note on the page (exact) | Question to ask | When answered |
+| --- | --- | --- | --- |
+| Offers, Philips ZOOM in-chair whitening card | "[VERIFY price]" where the price goes, and "[VERIFY] current price and RRP comparison to be confirmed before publishing." | What is the exact price of in-chair whitening, what does it include, and when does the offer start and end? If you want to show it against the usual price, what is the usual price? (AHPRA: price, inclusions and offer period must all be stated.) | Put the price and period in, remove both notes |
+| Teeth Whitening, cost | "[VERIFY] current pricing to be confirmed before publication." | What does in-chair Philips ZOOM whitening cost now, and the take-home trays? Is the in-chair price still "a discounted rate"? | Add the prices, remove the note |
+| FAQ, orthodontics | "[VERIFY] whether the practice is a current Invisalign provider and licensed to use the brand name - until that's confirmed we describe the treatment generically." | Is the practice a current Invisalign provider (listed on the Invisalign Doctor Locator)? If yes, the page can name Invisalign; if no, it keeps "clear aligners". | Remove the note either way |
+| Privacy Policy, cookies | "[VERIFY] if analytics are added before launch, this section must be updated to name the provider and explain the opt-out." | Will Google Analytics and the Meta Pixel be switched on at launch? If yes, the practice (and its solicitor, if it wishes) needs to approve wording that names them and explains how to opt out. | Update the section, remove the note |
+| Privacy Policy, review | "[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live." | Has the practice (or its solicitor) read and approved the Privacy Policy? | Remove the note |
+| Terms, review | "[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live." | Has the practice (or its solicitor) read and approved the Terms? | Remove the note |
+
+Not a `[VERIFY]` note, but the same AHPRA rule: the other offers on Offers (new
+patient first visit $199, seniors 5% off) state the price and inclusions but
+no offer period. Ask whether they are ongoing (say so) or end on a date.
+
+Also waiting on the practice before go live:
+
+- The DNS login for toothncare.com.au (Webpulse) from Nish.
+- The email addresses Nish and Christine want for their dashboard logins.
+- The SmileOx intake address for enquiries.
+
+Wanted but not blocking: AHPRA numbers for Dr Nish, Dr Nav and Zoe; Dr
+Dimple's full name, AHPRA number and whether she holds specialist
+registration in Orthodontics; how Dr Rav would like her name shown, a bio and
+a photo; support team photos with written consent.
 
 ## 8. After the switch
 

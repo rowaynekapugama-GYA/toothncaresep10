@@ -399,7 +399,24 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | Page editor, Dr Rav's photo | the team photo help appears under the photo |
 | `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
 
-## 18. What could not be tested here
+## 18. Version 2.8.1: Dr Dimple shown, Mursal, share picture, Contact note, run on 19 November 2026
+
+| Check | Result |
+| --- | --- |
+| Start point | `origin/main` at `ca579ba` (v2.8.0); the live preview shows v2.8.0 (support team in one list, Dr Rav's AHPRA line) |
+| Every page in the sitemap (55), v2.8.0 against v2.8.1 | the share picture changes on every page (the site default) and on the 11 pages that name it, in `og:image` and structured data; Contact loses the note; Our Team gains Dr Dimple's card, "Four dentists" and Mursal; Home gains Dr Dimple's slide. Nothing else differs |
+| Every internal link, photo, stylesheet and script (265) | all 200, or a redirect to a 200 |
+| "Mursel", "hygienist", `img-0451df991a` on any built page | none |
+| "orthodontist" on any built page | only the general FAQ question (and its structured data); "orthodontics" only in the menu and service pages |
+| Our Team at 320, 390, 768, 1024, 1440 and 1920px | no sideways scrolling; dentist cards two to a row from 901px with Zoe centred under them (one column below); support team 2, 4 or 5 to a row, 12 people, Mursal 6th |
+| Homepage slider | 5 slides and 5 dots: Dr Nish 01/, Dr Nav 02/, Dr Rav 03/, Dr Dimple 04/, Zoe 05/; no script errors |
+| `specialistOrthodontics = true` (built, then put back) | card "Specialist Orthodontist", intro "Three dentists, a specialist orthodontist, an oral health therapist ..."; `qa:roles` passes; no sideways scrolling at any width |
+| Imported dashboard (v2.8.0 state), migrate then pull | Mursal renamed, share picture changed on 11 pages (structured data on 11), Contact note removed; the pull gave back the repository's v2.8.1 content byte for byte |
+| Undoing the migration, then pull | the repository's v2.8.0 content byte for byte |
+| Dashboard with the name changed to "Mursal B", Morpeth's share picture changed and the Contact wording edited | all three left alone (the build log says the name and the Contact note were left as they are); the other 10 pages' share picture changed |
+| `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
+
+## 19. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |

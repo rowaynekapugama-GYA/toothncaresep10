@@ -9,6 +9,7 @@ import * as migration_20261111_090000_about_reception_photo from './20261111_090
 import * as migration_20261111_110000_team_roster_and_headings from './20261111_110000_team_roster_and_headings';
 import * as migration_20261117_090000_practice_photos from './20261117_090000_practice_photos';
 import * as migration_20261117_100000_team_dimple_redirects from './20261117_100000_team_dimple_redirects';
+import * as migration_20261119_090000_dimple_mursal_share_image from './20261119_090000_dimple_mursal_share_image';
 
 export const migrations = [
   {
@@ -65,5 +66,10 @@ export const migrations = [
     up: migration_20261117_100000_team_dimple_redirects.up,
     down: migration_20261117_100000_team_dimple_redirects.down,
     name: '20261117_100000_team_dimple_redirects',
+  },
+  {
+    up: migration_20261119_090000_dimple_mursal_share_image.up,
+    down: migration_20261119_090000_dimple_mursal_share_image.down,
+    name: '20261119_090000_dimple_mursal_share_image',
   },
 ];

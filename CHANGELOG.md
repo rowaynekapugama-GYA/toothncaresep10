@@ -2,6 +2,69 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.8.1] - 2026-11-19
+
+Christine's email of 19 November 2026. Update to the existing repository
+(started from `ca579ba`, v2.8.0, which is on main and live on the preview).
+
+### Changed
+
+- **Mursal**, not Mursel (Christine's spelling fix), in the Team list
+  (`content/team.json`) and so on the support team card. Historical records
+  (earlier CHANGELOG entries, the v2.7.0 migration data) keep the old spelling
+  as they were.
+- **Dr Dimple is on the website**: `DR_DIMPLE.show = true` in
+  `src/team.config.ts`. Her card is on Our Team after Dr Rav and her slide is
+  04/ in the homepage slider (Zoe 05/), with the D monogram. Her role is
+  "Dentist": `DR_DIMPLE.specialistOrthodontics` stays false until the practice
+  confirms specialist registration in Orthodontics, as "orthodontist" is a
+  protected title. No "orthodontist" or "orthodontics" on her card.
+- **Our Team intro** now reads "Four dentists, an oral health therapist and a
+  support team who will actually remember you between visits." It appears
+  only on Our Team.
+- The confirmed specialist version now says **"Specialist Orthodontist"** on
+  her card (was "Orthodontist"), and the intro "Three dentists, a specialist
+  orthodontist, an oral health therapist and a support team ...". Built and
+  checked, not shipped.
+- **Share picture** (shown when a link is posted on Facebook, Messages and
+  the like): the shopfront photo without the NOW OPEN A-frame (pack photo 33),
+  cropped to 1200 x 630, `/images/img-b0fc5965f7.jpg`. JPEG rather than WebP, so every
+  app that shows link previews can read it. It is now the site default
+  (`src/site.config.ts`, `src/dashboard/brand.ts`) and the picture on Areas We
+  Serve and the ten suburb pages, including their structured data. The old
+  picture (`img-0451df991a.webp`) is removed.
+- **Contact:** the "[VERIFY] form endpoint not yet connected - submissions are
+  disabled until a secure destination is confirmed." note under the form is
+  gone. The form is connected: it posts to `/api/enquiry`, which saves every
+  enquiry in the dashboard and emails it through SMTP2GO. Sending a real test
+  enquiry stays on the go-live checklist.
+
+### Not changed, waiting on the practice
+
+- The other seven `[VERIFY]` notes (Offers twice, Teeth Whitening, FAQ,
+  Privacy Policy twice, Terms) stay on the pages: they need prices, a yes or
+  no on Invisalign, and the practice's approval of legal wording. Each is
+  listed with its exact text and the question to ask in `docs/GO-LIVE.md`,
+  section 7a (new: go-live blockers).
+
+### Dashboard (migration, additive)
+
+- `20261119_090000_dimple_mursal_share_image`: renames the Team list entry
+  only if it still says "Mursel"; changes the share picture on each of the 11
+  pages only where it is still the old one and none was chosen in the
+  dashboard (and in the structured data only where the old address is still
+  there); removes the Contact note only where the wording is still exactly as
+  shipped. Anything else is left alone, and pages still naming the old
+  picture are listed in the build log.
+
+### Also
+
+- `scripts/qa-allow.json`: the Dr Dimple switch wording is recorded as
+  reviewed (it only shows a specialist title once confirmed; `qa:roles`
+  still enforces that).
+- `docs/HOW-TO-UPDATE.md`, `README-CMS.md`: Dr Dimple shown, waiting list and
+  `[VERIFY]` list updated.
+
 ## [2.8.0] - 2026-11-17
 
 Christine's emails of 13 to 16 November 2026, and the practice photos she sent

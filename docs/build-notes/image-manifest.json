@@ -1,12 +1,4 @@
 {
- "0451df991a": {
-  "alpha": false,
-  "bytes": 158854,
-  "file": "/images/img-0451df991a.webp",
-  "from": "original https://i.imgur.com/IiilNx5.jpeg",
-  "h": 1448,
-  "w": 1086
- },
  "0664eb3365": {
   "alpha": false,
   "bytes": 8418,
@@ -534,6 +526,14 @@
   "from": "original https://i.imgur.com/1P9WfJc.jpeg",
   "h": 900,
   "w": 1600
+ },
+ "b0fc5965f7": {
+  "alpha": false,
+  "bytes": 66801,
+  "file": "/images/img-b0fc5965f7.jpg",
+  "from": "client supplied 17 Nov 2026 (practice photo 33-exterior-shopfront-sign), cropped to 1200 x 630 for sharing (Open Graph); JPEG so every app that shows link previews can read it",
+  "h": 630,
+  "w": 1200
  },
  "b3083d64da": {
   "alpha": false,

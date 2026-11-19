@@ -183,8 +183,10 @@ under **Pages**, in the **Team** group. Dr Rav's card shows the letter R until
 a photo is added: click it and choose **Upload**.
 
 Dr Rav's name on the cards is shaded, like the phone number: it says "Dr Rav"
-and GYA can switch it to her full name in one place. Dr Dimple's card is ready
-and will be switched on by GYA once her details are confirmed.
+and GYA can switch it to her full name in one place. Dr Dimple's card (and her
+slide on the Home page) shows the letter D until a photo is added, and her role
+as Dentist. Her title and registration number are looked after by GYA, like Dr
+Rav's.
 
 ### The support team
 
