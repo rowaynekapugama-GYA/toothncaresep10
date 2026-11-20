@@ -360,6 +360,14 @@ export interface Team {
   registration?: string | null;
   bio?: string | null;
   photo?: (number | null) | Media;
+  /**
+   * Set by GYA when a photo is supplied by email (for example /images/team-kathryn.webp). A photo chosen above takes its place.
+   */
+  photoPath?: string | null;
+  /**
+   * Only switch this on once the staff member has agreed to their photo appearing on the website.
+   */
+  photoApproved?: boolean | null;
   profileUrl?: string | null;
   patientExperience?: boolean | null;
   clinicalCare?: boolean | null;
@@ -773,6 +781,8 @@ export interface TeamSelect<T extends boolean = true> {
   registration?: T;
   bio?: T;
   photo?: T;
+  photoPath?: T;
+  photoApproved?: T;
   profileUrl?: T;
   patientExperience?: T;
   clinicalCare?: T;

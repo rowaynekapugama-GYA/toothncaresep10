@@ -6,7 +6,8 @@
  * Who appears: anyone ticked as a Patient Experience Coordinator or a Clinical
  * Care Coordinator, in the Team list's order. Headings, role lines and the
  * layout come from SUPPORT_TEAM in src/team.config.ts. Until someone has a
- * photo, their card shows the first letter of their name.
+ * photo AND their permission is confirmed (photoApproved, v2.9.1), their card
+ * shows the first letter of their name.
  */
 import { SUPPORT_TEAM } from '@/team.config'
 
@@ -16,8 +17,12 @@ export type SupportMember = {
   clinicalCare?: boolean | null
   /** optional wording for the role line in the combined layout */
   roleLine?: string | null
-  /** photo address, if one has been chosen */
+  /** photo address, if one has been chosen in the dashboard */
   photo?: string | null
+  /** a photo supplied by email and loaded by GYA (public/images), used if none is chosen */
+  photoPath?: string | null
+  /** the person has agreed to their photo being on the website (v2.9.1) */
+  photoApproved?: boolean | null
   hidden?: boolean | null
 }
 
@@ -39,8 +44,9 @@ function roleOf(m: SupportMember): string {
 function card(m: SupportMember, withRole: boolean): string {
   const name = String(m.name).trim()
   const initial = name.charAt(0).toUpperCase()
-  const photo = m.photo
-    ? `<img src="${esc(m.photo)}" alt="${esc(name)}, ${esc(roleOf(m).toLowerCase())} at Tooth n Care" loading="lazy" width="800" height="600">`
+  const src = m.photo || m.photoPath || ''
+  const photo = src && m.photoApproved
+    ? `<img src="${esc(src)}" alt="${esc(name)}, ${esc(roleOf(m).toLowerCase())} at Tooth n Care" loading="lazy" width="800" height="600">`
     : `<span class="st-mono" aria-hidden="true">${esc(initial)}</span>`
   // the name, then the role line under it (v2.8.0)
   return `<div class="tcard st-card"><div class="st-photo">${photo}</div><div class="st-body">`

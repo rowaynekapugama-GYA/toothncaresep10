@@ -40,6 +40,30 @@ v2.9.0. Two commits, so either can be held back on its own.
 - The check after every build now also opens each page's own stylesheets, so a
   new page without its styles stops the build.
 
+### Staff photos (second commit)
+
+- **Photo switch per person:** a support team photo now shows on Our Team only
+  once "Show photo on website (permission confirmed)" is ticked (Team screen,
+  for the practice and GYA; `photoApproved` in `content/team.json`). Off, the
+  card is exactly as before (the first letter). On, the photo shows with the
+  automatic teal treatment in the same 4:3 frame, so nothing moves.
+- **Deb, Kathryn, Riley and Layeba:** the photos Christine sent on 20 Nov 2026
+  are loaded (`public/images/team-deb.webp`, `-kathryn`, `-riley`, `-layeba`),
+  each matched by her email's subject or body. Cropped 4:3 and resized only,
+  800 x 600 sRGB WebP, metadata stripped, about 21 to 27 KB each. All four
+  switches are **off** until each person's permission is confirmed. They are
+  also in the Media Library import, described with name and role.
+- **Holly:** her card takes a photo from the Team screen like the others. Her
+  consent is confirmed, so it goes on, shown, as soon as the file arrives.
+- The Team screen has a Replace button and a "Show photo on website
+  (permission confirmed)" column; Remove photo also unticks it.
+- Migration `20261120_120000_staff_photo_switch`: the two Team columns (added
+  only if missing), anyone with a photo already chosen keeps showing it, and
+  the four photos are loaded switched off (only for a person with no photo of
+  their own). A second run changes nothing.
+- `docs/GO-LIVE.md`: the permission log and the questions for the practice;
+  `docs/CLIENT-GUIDE.md` and the PDF: "Showing a staff photo".
+
 ## [2.9.0] - 2026-11-20
 
 Go-live check of the dashboard, the old addresses and SEO, ahead of the planned

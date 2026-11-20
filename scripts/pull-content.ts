@@ -147,6 +147,8 @@ async function main() {
         registration: t.registration ?? '',
         bio: t.bio ?? '',
         photo: mediaUrl(t.photo as never),
+        photoPath: t.photoPath ?? '',
+        photoApproved: !!t.photoApproved,
         profileUrl: t.profileUrl ?? '',
         patientExperience: !!t.patientExperience,
         clinicalCare: !!t.clinicalCare,

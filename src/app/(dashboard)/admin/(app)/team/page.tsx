@@ -21,6 +21,8 @@ export default async function TeamScreen() {
       clinicalCare: !!d.clinicalCare,
       roleLine: String(d.roleLine ?? ''),
       photo: d.photo && typeof d.photo === 'object' ? (d.photo as Member['photo']) : null,
+      photoPath: String(d.photoPath ?? ''),
+      photoApproved: !!d.photoApproved,
       sortOrder: Number(d.sortOrder ?? 0),
       hidden: !!d.hidden,
     }))

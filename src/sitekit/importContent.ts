@@ -123,6 +123,8 @@ export async function importContent(payload: Payload, { overwrite = false } = {}
       credentials: member.credentials ?? '',
       registration: member.registration ?? '',
       bio: member.bio ?? '',
+      photoPath: member.photoPath ?? '',
+      photoApproved: !!member.photoApproved,
       profileUrl: member.profileUrl ?? '',
       patientExperience: !!member.patientExperience,
       clinicalCare: !!member.clinicalCare,

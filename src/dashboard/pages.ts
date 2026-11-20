@@ -205,6 +205,8 @@ export async function tokensFromDashboard(payload: Payload): Promise<Record<stri
     clinicalCare: !!t.clinicalCare,
     roleLine: (t.roleLine as string) ?? '',
     photo: mediaUrl(t.photo as never),
+    photoPath: (t.photoPath as string) ?? '',
+    photoApproved: !!t.photoApproved,
     hidden: !!t.hidden,
   }))
   return tokensFor(mergeSettings(saved), members)

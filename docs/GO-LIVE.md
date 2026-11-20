@@ -310,6 +310,36 @@ data "image"), then sets `PRACTITIONERS.rav.profilePage` to true. The build
 stops if the page is switched on without its bio. Its address stays `/dr-rav`
 whichever name is shown.
 
+## 7c. Staff photos and permission log (v2.9.1)
+
+A support team photo shows on Our Team only once **Show photo on website
+(permission confirmed)** is ticked for that person (Team screen, or
+`photoApproved` in `content/team.json`). Rowayne asked for permission to be
+confirmed before each one is used. The practice can tick it themselves after
+go-live, or GYA can switch it in the repo.
+
+| Person (as on the site) | Photo received | Permission (who confirmed, date) | Shown on site |
+| --- | --- | --- | --- |
+| Debbie (badge says "Deb") | 20 Nov 2026, Christine's email "Last minute staff photos", body "Deb" | not yet confirmed | no (loaded, switch off) |
+| Kathryn | 20 Nov 2026, Christine's email "Kathryn" | not yet confirmed | no (loaded, switch off) |
+| Riley | 20 Nov 2026, Christine's email "Riley" | not yet confirmed | no (loaded, switch off) |
+| Layeba | 20 Nov 2026, Christine's email "Layeba" | not yet confirmed | no (loaded, switch off) |
+| Holly | not received yet | Christine, 20 Nov 2026 | no photo yet (her card is ready; it goes on, shown, once the file arrives) |
+
+Each photo was matched to the person by the subject or body of Christine's
+email, never by the picture. Cropped to 4:3 and resized only (800 x 600 sRGB
+WebP, no metadata), eyes at the same height across the set; nothing edited.
+The four were taken in the same spot, so the end of the practice sign shows at
+the top left of each (the person stands too close to the edge of the frame for
+a head and shoulders crop to leave it out). Kathryn wears the charcoal
+uniform and the others dusty pink: left as it is.
+
+Questions for the practice:
+
+- Debbie or Deb? The site says "Debbie"; her badge says "Deb".
+- If anyone on the support team is under 18, their permission should come from
+  a parent or guardian as well.
+
 ## 8. After the switch
 
 - [ ] `NEXT_PUBLIC_SERVER_URL` is `https://www.toothncare.com.au` in Vercel

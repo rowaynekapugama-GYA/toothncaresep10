@@ -750,5 +750,37 @@
   "from": "client supplied 17 Nov 2026 (practice photo 03-imaging-room-opg, imaging room), crop and resize only, for index / index-04-know-us image-4",
   "h": 675,
   "w": 1200
+ },
+ "team-deb": {
+  "alpha": false,
+  "bytes": 26956,
+  "file": "/images/team-deb.webp",
+  "from": "Christine's email of 20 Nov 2026 (Debbie), cropped 4:3",
+  "h": 600,
+  "w": 800
+ },
+ "team-kathryn": {
+  "alpha": false,
+  "bytes": 21820,
+  "file": "/images/team-kathryn.webp",
+  "from": "Christine's email of 20 Nov 2026 (Kathryn), cropped 4:3",
+  "h": 600,
+  "w": 800
+ },
+ "team-layeba": {
+  "alpha": false,
+  "bytes": 26108,
+  "file": "/images/team-layeba.webp",
+  "from": "Christine's email of 20 Nov 2026 (Layeba), cropped 4:3",
+  "h": 600,
+  "w": 800
+ },
+ "team-riley": {
+  "alpha": false,
+  "bytes": 25030,
+  "file": "/images/team-riley.webp",
+  "from": "Christine's email of 20 Nov 2026 (Riley), cropped 4:3",
+  "h": 600,
+  "w": 800
  }
 }

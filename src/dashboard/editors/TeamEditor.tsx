@@ -21,6 +21,10 @@ export type Member = {
   clinicalCare: boolean
   roleLine: string
   photo: MediaDoc | null
+  /** a photo GYA loaded from an email (public/images), shown if no photo is chosen */
+  photoPath: string
+  /** permission confirmed: only then does the photo show on the website (v2.9.1) */
+  photoApproved: boolean
   sortOrder: number
   hidden: boolean
 }
@@ -42,6 +46,8 @@ const payloadOf = (m: Member) => ({
   clinicalCare: m.clinicalCare,
   roleLine: m.roleLine.trim(),
   photo: m.photo ? m.photo.id : null,
+  photoPath: m.photoPath,
+  photoApproved: m.photoApproved,
   sortOrder: m.sortOrder,
   hidden: m.hidden,
 })
@@ -78,7 +84,7 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
         method: 'POST',
         body: { name, patientExperience: draft.patientExperience, clinicalCare: draft.clinicalCare, roleLine: '', sortOrder, hidden: false },
       })
-      const m: Member = { id: r.doc.id, name, patientExperience: draft.patientExperience, clinicalCare: draft.clinicalCare, roleLine: '', photo: null, sortOrder, hidden: false }
+      const m: Member = { id: r.doc.id, name, patientExperience: draft.patientExperience, clinicalCare: draft.clinicalCare, roleLine: '', photo: null, photoPath: '', photoApproved: false, sortOrder, hidden: false }
       setRows((x) => [...x, m])
       setSaved((s) => ({ ...s, [String(m.id)]: JSON.stringify(payloadOf(m)) }))
       setDraft({ name: '', patientExperience: false, clinicalCare: false })
@@ -127,7 +133,8 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
         {labels.layout === 'combined' ? ' Each person is shown once, with their role line under their name.' : null}
       </Notice>
       <Notice tone="warn">
-        Use first names exactly as each person likes them spelt, and only add a photo once that person has said in writing they are happy for it to be on the website.
+        Use first names exactly as each person likes them spelt. A photo only shows on the website once <b>Show photo on website (permission confirmed)</b> is ticked:
+        only switch this on once the staff member has agreed to their photo appearing on the website.
       </Notice>
 
       <div className="panel">
@@ -146,28 +153,35 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
             <tr>
               <th>Order</th><th>Name</th><th>{labels.patientExperience}</th><th>{labels.clinicalCare}</th>
               {labels.layout === 'combined' ? <th>Role line (optional)</th> : null}
-              <th>Photo</th><th>On website</th><th />
+              <th>Photo</th><th>Show photo on website (permission confirmed)</th><th>On website</th><th />
             </tr>
           </thead>
           <tbody>
-            {!rows.length ? <tr><td colSpan={8} className="empty">No one listed yet.</td></tr> : null}
+            {!rows.length ? <tr><td colSpan={9} className="empty">No one listed yet.</td></tr> : null}
             {rows.map((m, i) => (
               <tr key={String(m.id)}>
                 <td style={{ whiteSpace: 'nowrap' }}>
                   <button className="btn small" aria-label={`Move ${m.name} up`} disabled={busy || i === 0} onClick={() => move(i, -1)}>{Icon.arrowUp()}</button>{' '}
                   <button className="btn small" aria-label={`Move ${m.name} down`} disabled={busy || i === rows.length - 1} onClick={() => move(i, 1)}>{Icon.arrowDown()}</button>
                 </td>
-                <td><input className="input" aria-label="Name" value={m.name} onChange={(e) => set(m.id, { name: e.target.value })} /></td>
+                <td><input className="input" aria-label="Name" style={{ minWidth: 110 }} value={m.name} onChange={(e) => set(m.id, { name: e.target.value })} /></td>
                 <td><input type="checkbox" aria-label={`${m.name}: ${labels.patientExperience}`} checked={m.patientExperience} onChange={(e) => set(m.id, { patientExperience: e.target.checked })} /></td>
                 <td><input type="checkbox" aria-label={`${m.name}: ${labels.clinicalCare}`} checked={m.clinicalCare} onChange={(e) => set(m.id, { clinicalCare: e.target.checked })} /></td>
                 {labels.layout === 'combined'
                   ? <td><input className="input" aria-label={`${m.name}: role line`} placeholder={derivedRole(m, labels.roles)} title="Leave empty to use the wording shown, from the groups ticked" value={m.roleLine} onChange={(e) => set(m.id, { roleLine: e.target.value })} /></td>
                   : null}
                 <td style={{ whiteSpace: 'nowrap' }}>
-                  {m.photo
-                    ? <><img src={mediaSrc(m.photo, 'thumb')} alt="" width={40} height={40} style={{ objectFit: 'cover', borderRadius: 6, verticalAlign: 'middle' }} />{' '}
-                      <button className="btn small" onClick={() => set(m.id, { photo: null })}>Remove photo</button></>
+                  {m.photo || m.photoPath
+                    ? <><img src={m.photo ? mediaSrc(m.photo, 'thumb') : m.photoPath} alt="" width={40} height={40} style={{ objectFit: 'cover', borderRadius: 6, verticalAlign: 'middle' }} />{' '}
+                      <button className="btn small" onClick={() => setPicking(m)}>Replace</button>{' '}
+                      <button className="btn small" onClick={() => set(m.id, { photo: null, photoPath: '', photoApproved: false })}>Remove photo</button></>
                     : <button className="btn small" onClick={() => setPicking(m)}>{Icon.upload()} Choose photo</button>}
+                </td>
+                <td>
+                  <label className="check" title="Only switch this on once the staff member has agreed to their photo appearing on the website.">
+                    <input type="checkbox" aria-label={`Show ${m.name}'s photo on website (permission confirmed)`} disabled={!m.photo && !m.photoPath} checked={m.photoApproved && (!!m.photo || !!m.photoPath)} onChange={(e) => set(m.id, { photoApproved: e.target.checked })} />
+                    <span>{!m.photo && !m.photoPath ? 'No photo yet' : m.photoApproved ? 'Shown' : 'Not shown'}</span>
+                  </label>
                 </td>
                 <td><label className="check"><input type="checkbox" aria-label={`Show ${m.name} on the website`} checked={!m.hidden} onChange={(e) => set(m.id, { hidden: !e.target.checked })} /><span>{m.hidden ? 'Hidden' : 'Shown'}</span></label></td>
                 <td style={{ whiteSpace: 'nowrap' }}>
@@ -184,6 +198,7 @@ export function TeamEditor({ initial, ourTeamHref, labels }: { initial: Member[]
           ? 'The role line in grey is what the website shows; type over it only to change the wording for that person. '
           : 'Someone in both groups appears under both headings. '}
         Untick On website to take someone off the website for now without removing them (then Save).
+        A photo shows only once its permission box is ticked: only switch this on once the staff member has agreed to their photo appearing on the website.
         Changes show on the website after Publish website.
       </p>
       <TeamPhotoHelp />

@@ -7,8 +7,9 @@ import { touchSite } from '../hooks/touchSite'
 // the support team is shown on Our Team straight from this list: anyone ticked
 // as a Patient Experience or Clinical Care Coordinator, in this order. The
 // practice manages it from the dashboard's Team screen.
-// TODO (11 Nov 2026): support team photos to come from Christine, each with
-// that person's written agreement. Names are first names only, as she sent them.
+// Support team photos (v2.9.1): a photo shows on the website only once "Show
+// photo on website (permission confirmed)" is ticked, so a photo can be loaded
+// before the person has agreed. Names are first names only, as Christine sent them.
 
 export const Team: CollectionConfig = {
   slug: 'team',
@@ -42,6 +43,20 @@ export const Team: CollectionConfig = {
     },
     { name: 'bio', type: 'textarea', label: 'About this person' },
     { name: 'photo', type: 'upload', relationTo: 'media', label: 'Photograph' },
+    {
+      name: 'photoPath',
+      type: 'text',
+      label: 'Photo from the website files',
+      admin: { description: 'Set by GYA when a photo is supplied by email (for example /images/team-kathryn.webp). A photo chosen above takes its place.' },
+      validate: (v: unknown) => !v || /^\/images\/[\w.-]+\.(webp|jpe?g|png)$/i.test(String(v)) || 'A photo address such as /images/team-kathryn.webp',
+    },
+    {
+      name: 'photoApproved',
+      type: 'checkbox',
+      defaultValue: false,
+      label: 'Show photo on website (permission confirmed)',
+      admin: { description: 'Only switch this on once the staff member has agreed to their photo appearing on the website.' },
+    },
     { name: 'profileUrl', type: 'text', label: 'Profile page address' },
     // the support team section on Our Team (v2.7.0): tick a group to list someone there
     {

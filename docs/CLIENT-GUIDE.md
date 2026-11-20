@@ -149,7 +149,25 @@ with their role under their name.
 - **Edit:** change the name, group or role line, then **Save** on that row.
 - **Hide for now:** untick **On website**, then **Save**.
 - **Reorder:** the arrows.
-- **Photo:** **Choose photo**, then **Save**.
+- **Photo:** **Choose photo** (or **Replace**), then **Save**.
+
+### Showing a staff photo
+
+A staff photo only shows on the website once **Show photo on website
+(permission confirmed)** is ticked on that person's row. Only switch this on
+once the staff member has agreed to their photo appearing on the website (for
+anyone under 18, a parent or guardian as well).
+
+1. **Team**, find the person.
+2. If there is no photo yet, **Choose photo** and pick or upload it.
+3. Tick **Show photo on website (permission confirmed)**, then **Save** on that
+   row.
+4. **Publish website**.
+
+To take a photo down again, untick the box (or **Remove photo**), **Save**,
+**Publish website**.
+
+![Showing a staff photo](screenshots/client-guide/16-staff-photo.jpg)
 
 The dentists and Zoe are on the Our Team page itself: click their words or
 photo there. Dentists' names, titles and registration details come from the
