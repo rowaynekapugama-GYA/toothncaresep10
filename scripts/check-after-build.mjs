@@ -95,7 +95,17 @@ try {
   }
 } catch { /* no settings file or no page: nothing to compare */ }
 
-const res = spawnSync(process.execPath, ['scripts/seo/check-url-parity.mjs', '--base', base, '--pages', '--no-out', ...absent.flatMap((w) => ['--absent', w])], { stdio: 'inherit' })
+// The address the site was built for (the same order as siteUrl() in src/lib/urls.ts). Before the
+// domain switch that is the preview address on Vercel: canonicals point there, and the pages are kept
+// out of Google on purpose. On the real domain every page must be indexable (v2.9.2).
+const LIVE = 'https://www.toothncare.com.au'
+const site = (process.env.NEXT_PUBLIC_SERVER_URL
+  || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '')
+  || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '')
+  || LIVE).replace(/\/+$/, '')
+const live = site === LIVE && process.env.VERCEL_ENV !== 'preview'
+console.log(`> the site's address for this build: ${live ? site : 'the preview address (not the live domain yet)'}`)
+const res = spawnSync(process.execPath, ['scripts/seo/check-url-parity.mjs', '--base', base, '--site', site, '--pages', '--no-out', ...(live ? [] : ['--allow-noindex']), ...absent.flatMap((w) => ['--absent', w])], { stdio: 'inherit' })
 stop()
 if (privacyProblem) console.error(`\n> PRIVACY: ${privacyProblem}`)
 if (res.status !== 0 || privacyProblem) {

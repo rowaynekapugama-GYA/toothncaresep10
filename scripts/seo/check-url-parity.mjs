@@ -19,6 +19,8 @@
  *                  and og:url on --site, no vercel.app or bare-domain addresses, and every
  *                  internal link and picture answering 200 with no redirect. A photo uploaded
  *                  in the dashboard (/api/media/file/...) that does not answer is a warning
+ *   --allow-noindex  (with --pages) pages marked noindex are fine (a preview, or the site before
+ *                  the domain switch)
  *   --absent TEXT  (with --pages) fail if a page shows this text; repeat for several
  *   --strict-media make that a failure too (use it on the preview, not in the build)
  *   --out FILE     write every row as CSV (default docs/seo/url-parity-<date>.csv, or none with --no-out)
@@ -37,6 +39,8 @@ const has = (name) => args.includes(name)
 
 const BASE = String(opt('--base', 'http://localhost:3000')).replace(/\/+$/, '')
 const SITE = String(opt('--site', 'https://www.toothncare.com.au')).replace(/\/+$/, '')
+const SITE_ORIGIN = new URL(SITE).origin
+const ALLOW_NOINDEX = has('--allow-noindex')
 const LISTS = all('--list').length ? all('--list') : ['docs/seo/old-urls.txt']
 const OLD = opt('--old', '')
 const today = new Date().toISOString().slice(0, 10)
@@ -240,9 +244,13 @@ if (has('--pages')) {
     const same = (v) => v === expect || (p === '/' && v === SITE)
     if (!same(f.canonical)) pageProblems.push(`${p}: canonical is ${f.canonical || 'missing'}, expected ${expect}`)
     if (f.ogUrl && !same(f.ogUrl)) pageProblems.push(`${p}: og:url is ${f.ogUrl}, expected ${expect}`)
-    const bad = html.match(/https?:\/\/[a-z0-9.-]*vercel\.app[^"'\s<]*|https?:\/\/toothncare\.com\.au[^"'\s<]*/gi)
-    if (bad) pageProblems.push(`${p}: points at ${[...new Set(bad)].slice(0, 3).join(', ')}`)
-    if (!f.indexable && !/noindex/i.test(res.headers.get('x-robots-tag') || '')) pageProblems.push(`${p}: in the sitemap but marked noindex`)
+    // addresses on another vercel.app site or the bare domain (the site's own address, --site, is fine:
+    // before the domain switch that is the preview address)
+    const bad = (html.match(/https?:\/\/[a-z0-9.-]*vercel\.app[^"'\s<]*|https?:\/\/toothncare\.com\.au[^"'\s<]*/gi) ?? [])
+      .filter((u) => { try { return new URL(u).origin !== SITE_ORIGIN } catch { return true } })
+    if (bad.length) pageProblems.push(`${p}: points at ${[...new Set(bad)].slice(0, 3).join(', ')}`)
+    // a preview, or the site before the domain switch, is kept out of Google on purpose (--allow-noindex)
+    if (!ALLOW_NOINDEX && !f.indexable && !/noindex/i.test(res.headers.get('x-robots-tag') || '')) pageProblems.push(`${p}: in the sitemap but marked noindex`)
     // internal links and pictures: straight to a 200
     const refs = new Set()
     for (const m of html.matchAll(/<a\b[^>]*\shref=["']([^"']+)["']/gi)) refs.add(m[1])

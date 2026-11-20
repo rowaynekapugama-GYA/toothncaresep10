@@ -2,6 +2,23 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.9.2] - 2026-11-20
+
+### Fixed (first commit)
+
+- **The Vercel build of v2.9.1 stopped at the check after the build**
+  (20 Nov 2026, 10:37 PM). Before the domain switch the site is built for the
+  preview address (`NEXT_PUBLIC_SERVER_URL`), so its canonicals, `og:url` and
+  sitemap point there and a preview is kept out of Google, but the check
+  expected `https://www.toothncare.com.au` and indexable pages, so it flagged
+  every page. The check now uses the address the site was built for (the same
+  order as `siteUrl()`), accepts that address in links, and allows noindex
+  until the site is on the live domain. On www.toothncare.com.au it is as
+  strict as before. Reproduced locally with Vercel's settings: 283 problems
+  with the old check, 0 with the new one. The old-address check, `[VERIFY]`,
+  offers and links are unchanged. Vercel kept serving the last good
+  deployment meanwhile.
+
 ## [2.9.1] - 2026-11-20
 
 Christine's approval, Dr Rav before launch, and the staff photos (Rowayne's
