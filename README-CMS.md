@@ -206,7 +206,8 @@ The full plan, with the DNS records to change and the ones to keep, is in
       appears under **Enquiries**.
 - [x] The practice approved the site, including the Privacy Policy and Terms
       (Christine, 20 Nov 2026, recorded in `GO_LIVE.legalApproved` in
-      `src/golive.config.ts`). The launch date is still to be agreed.
+      `src/golive.config.ts`). The go-live process starts Monday 23 Nov 2026;
+      the exact switch time is to be confirmed.
 - [ ] GA4 and the Meta Pixel only after the Privacy Policy names them (the
       build stops otherwise), then the IDs under **Site Settings**, **Tracking**.
 - [ ] Submit `https://www.toothncare.com.au/sitemap.xml` in Google Search Console.

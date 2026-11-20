@@ -1,6 +1,6 @@
 # Your website dashboard: the guide
 
-For the Tooth n Care team. Version 2.9.1, November 2026. The printable copy is
+For the Tooth n Care team. Version 2.9.2, November 2026. The printable copy is
 `Tooth-n-Care-Website-Guide.pdf`. The longer version, with every screen, is
 `docs/HOW-TO-UPDATE.md`.
 
@@ -177,20 +177,22 @@ practice and are checked by GYA, so please ask GYA to change those.
 
 ### Adding a new dentist's photo and bio
 
-For a dentist who shows a letter instead of a photo (Dr Rav today):
+To replace a dentist's photo, or to add one where a letter shows (Dr Dimple's
+card is set up by GYA, so send hers to GYA):
 
 1. **Team**, then **edit the Our Team page** (the link at the top), or
    **Pages**, **Our Team**.
-2. **Photo:** click the letter on their card, then **Upload** (or **Choose from
-   library**). Use a landscape photo, head and shoulders, plain background, at
-   least 800 x 600 pixels. The colour treatment is added automatically. Check
-   the **Photo description** (their name and "dentist at Tooth n Care").
+2. **Photo:** click the photo (or the letter) on their card, then **Upload**
+   (or **Choose from library**). Use a landscape photo, head and shoulders, at
+   least 800 x 600 pixels, ideally taken in reception like the other dentists'
+   portraits so they match. Check the **Photo description** (their name and
+   "Dentist").
 3. **Bio:** click **Add words** under their name and type two or three
    sentences the dentist has written or approved. Leave it empty and nothing
    shows on the website.
 4. **Save changes**.
 5. Do the same on the **Home** page, in the team slider (their slide has the
-   same letter and an **Add words** line).
+   same photo and an **Add words** line).
 6. **Publish website**.
 
 Their name, title, qualifications and registration number come from the

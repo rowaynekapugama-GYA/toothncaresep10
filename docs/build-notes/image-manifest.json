@@ -639,6 +639,14 @@
   "h": 900,
   "w": 1600
  },
+ "dr-rav": {
+  "alpha": false,
+  "bytes": 40948,
+  "file": "/images/dr-rav.webp",
+  "from": "Christine's email of 20 Nov 2026, 5:35 PM, cropped 4:3 to match Dr Nish and Dr Nav",
+  "h": 900,
+  "w": 1200
+ },
  "e164362e00": {
   "alpha": false,
   "bytes": 92114,

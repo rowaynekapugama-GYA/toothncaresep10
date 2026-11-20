@@ -4,6 +4,9 @@ All notable changes to the Tooth n Care website.
 
 ## [2.9.2] - 2026-11-20
 
+Dr Rav's photo, and the latest from Christine's "New photo" thread (20 Nov
+2026). Update to the existing repository, on top of v2.9.1.
+
 ### Fixed (first commit)
 
 - **The Vercel build of v2.9.1 stopped at the check after the build**
@@ -18,6 +21,42 @@ All notable changes to the Tooth n Care website.
   with the old check, 0 with the new one. The old-address check, `[VERIFY]`,
   offers and links are unchanged. Vercel kept serving the last good
   deployment meanwhile.
+
+### Added (second commit)
+
+- **Dr Rav's photo** (Christine, 5:35 PM: taken in reception to match the
+  other dentists; Dr Nish and Dr Nav keep their current photos, unchanged):
+  `public/images/dr-rav.webp`, 1200 x 900 sRGB WebP, 39 KB, no metadata.
+  Cropped and resized only, so her head size, eye line and position in the
+  frame match the part of Dr Nish's and Dr Nav's photos that the cards and the
+  slider show (the 4:3 middle of their 1600 x 900 files). A 1600 x 900 file
+  like theirs would have meant enlarging the 1448 x 1086 original, so it is
+  4:3, which is exactly what the card and the slide display.
+  - on her Our Team card and her homepage slide, in place of the letter R
+  - on her profile page and in its structured data ("image"), ready for when
+    the page is switched on (it stays off until her bio arrives)
+  - in the Media Library import, so the practice can see and replace it
+  - photo descriptions "Dr Rav, Dentist", from the name setting (so it becomes
+    her full name if `showFullName` is ever switched on)
+  - no colour wash on her card and profile photo, as the other dentists'
+    portraits have none (`no-tint`, `public/styles/common.css`)
+- Migration `20261120_130000_dr_rav_photo`: the same for the dashboard
+  database, only where her card, slide and profile page still show the
+  placeholder and no photo was chosen in the dashboard. A second run changes
+  nothing.
+
+### Changed
+
+- `docs/GO-LIVE.md`, the handover steps and the README: the go-live process
+  starts Monday 23 Nov 2026 (about 8 hours of process and checks, per Rowayne
+  to Christine, 20 Nov); the exact switch time is to be confirmed. "Missing for
+  Dr Rav" is now the bio, qualifications and name choice.
+- The staff photo permission log notes Christine's 5:57 PM "given all ok
+  consent to have photo up" as an open question; the four switches stay off
+  until Rowayne confirms it covers Deb, Kathryn, Riley and Layeba. Holly's
+  photo has still not reached the build.
+- `docs/CLIENT-GUIDE.md` and the PDF: the dentist photo steps no longer use
+  Dr Rav as the example.
 
 ## [2.9.1] - 2026-11-20
 
@@ -116,7 +155,7 @@ repository (started from `f15e43b`, v2.8.1).
 - **The check after the build** stopped its local server properly, so the
   build finishes instead of waiting.
 
-### Added
+### Added (second commit)
 
 - **The go-live switch** (`src/golive.config.ts`, `src/lib/golive.ts`):
   `[VERIFY]` notes never reach a public page, and the $199 new patient visit,
@@ -294,7 +333,7 @@ v2.7.1).
 - The homepage team slider no longer points at photos on the old website as a
   fallback (`data-fb`); those addresses stop working at the switch.
 
-### Added
+### Added (second commit)
 
 - **Dr Dimple, ready and hidden.** A card on Our Team (after Dr Rav) and a
   slide in the homepage slider (after Dr Rav; Zoe becomes 05/), with a D
@@ -346,7 +385,7 @@ v2.7.1).
 
 ## [2.7.1] - 2026-11-13
 
-### Added
+### Added (second commit)
 
 - A favicon: the round tooth mark from the Tooth n Care logo, redrawn as a
   vector from the logo file so it stays sharp at every size, in the site's
@@ -377,7 +416,7 @@ together with 2.6.0.
 - `/support-team` and `/our-team/support-team` now land on the new support
   team section (`/our-team#support-team`).
 
-### Added
+### Added (second commit)
 
 - Dr Rav, the third dentist, on Our Team (between Dr Nav and Zoe) and in the
   homepage team slider (slide 3 of 4), as "Dr Rav", "Dentist". No bio,
@@ -462,7 +501,7 @@ Getting ready for the practice's confirmation of the oral health team's role
 titles and everyone's AHPRA registration numbers (Christine, 5 November).
 Nothing visible changes yet, apart from the three "[VERIFY reg. no.]" markers.
 
-### Added
+### Added (second commit)
 
 - `src/team.config.ts`: the one place for role titles and AHPRA details. It
   holds the oral health team's shared heading, and for Dr Nish, Dr Nav, Zoe and
@@ -533,7 +572,7 @@ Changes the practice asked for on 5 November 2026 (Christine).
   `/support-team` and `/our-team/support-team` to `/our-team` added in 2.3.0
   stay.
 
-### Added
+### Added (second commit)
 
 - `BUILD_WITHOUT_DB=1 npm run build` builds from the content files without
   touching the database, even when a local `.env` points at it. Used by
@@ -618,7 +657,7 @@ The client dashboard is now the GYA standard dashboard, the same one as
 Coastal Dental and Precision Dental. The website itself is unchanged: every
 page renders exactly as before.
 
-### Added
+### Added (second commit)
 
 - The standard dashboard at `/admin`: branded sign in page, dark sidebar
   (Dashboard, Pages, Blog Posts, Media Library, Team, Enquiries, SEO, Site
@@ -707,7 +746,7 @@ The pages are unchanged: all 59 have the same markup and head tags as 2.0.0.
 Ported the approved static build to the GYA Site Kit and added the client
 dashboard. The design, wording and addresses are unchanged.
 
-### Added
+### Added (second commit)
 
 - Payload CMS dashboard at `/admin`, on Neon Postgres with pictures on Vercel
   Blob. Fixed menu, plain language labels, the practice's own colours.

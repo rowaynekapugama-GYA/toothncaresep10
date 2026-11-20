@@ -1115,13 +1115,13 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-52e7b1f5ba.webp"
+     "value": "/images/dr-rav.webp"
     },
     {
      "id": "image-description-alt-text-4",
      "label": "Image description (alt text)",
      "type": "alt",
-     "value": "{{site:ravName}}"
+     "value": "{{site:ravName}}, Dentist"
     },
     {
      "id": "text-11",

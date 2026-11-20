@@ -6,8 +6,9 @@ the DNS host or Vercel: this is the plan for the switch.
 
 - **Client approval:** Christine confirmed on 20 Nov 2026 that the practice is
   happy to go ahead (Rowayne, 11:01 AM, on the existing handover).
-- **Launch date:** not confirmed (Monday 23 Nov was proposed). GYA and the
-  practice will confirm it together.
+- **Go-live process starts Monday 23 Nov 2026** (about 8 hours of process
+  and checks, per Rowayne to Christine, 20 Nov, 2:06 PM, after her "Ok all
+  good to go ahead" at 2:00 PM). The exact switch time is to be confirmed.
 - This is a status update only: nothing here asks for the site to be published
   or for logins to be created.
 
@@ -208,8 +209,8 @@ dashboard (**Enquiries**) and emails it through SMTP2GO.
 ## 7. Before the switch
 
 - [x] The practice has approved the staging site (Christine, 20 Nov 2026).
-- [ ] The launch date agreed with the practice (Monday 23 Nov was proposed,
-      not confirmed).
+- [x] Go-live process starts Monday 23 Nov 2026 (about 8 hours of process
+      and checks). The exact switch time is to be confirmed.
 - [x] Privacy Policy and Terms: approved with the whole site (Christine,
       20 Nov 2026), recorded in `GO_LIVE.legalApproved`.
 - [ ] Christine's one-line confirmation that the approval includes the
@@ -274,39 +275,42 @@ and Zoe; Dr Dimple's full name, AHPRA number and whether she holds specialist
 registration in Orthodontics; how Dr Rav would like her name shown, a bio and
 a photo; support team photos with written consent; the SmileOX intake address.
 
-## 7b. Dr Rav before launch (v2.9.1)
+## 7b. Dr Rav before launch (v2.9.1, photo v2.9.2)
 
-Nish asked for Dr Rav before launch (Christine, 20 Nov 2026). She is already
-on the website as a dentist: Our Team card "Dr Rav", role Dentist, her AHPRA
-line (DEN0002297808), and her homepage slide, both with the letter R instead
-of a photo. What the dentists have, side by side:
+Nish asked for Dr Rav before launch (Christine, 20 Nov 2026). She is on the
+website as a dentist: Our Team card "Dr Rav", role Dentist, her AHPRA line
+(DEN0002297808), and her homepage slide. Since v2.9.2 both show her photo
+(Christine, 20 Nov 2026, 5:35 PM, taken in reception to match the other
+dentists' portraits; Dr Nish and Dr Nav keep theirs). What the dentists have,
+side by side:
 
 | | Dr Nish | Dr Nav | Dr Rav | Dr Dimple |
 | --- | --- | --- | --- | --- |
-| Photo on the card | yes | yes | letter R (photo slot ready) | letter D |
+| Photo on the card | yes | yes | yes (v2.9.2) | letter D |
 | Short bio on the card | yes | yes | ready, empty ("Add words" in the dashboard) | no |
 | Qualifications | on the profile page | on the profile page (BDS, FRACDS) | ready on her profile page, empty | no |
 | AHPRA line | ready, number not supplied yet | ready, number not supplied yet | shown | ready, number not supplied yet |
 | Own profile page | `/dr-nisheeth-agrawal` | `/dr-navneet-karan` | ready at `/dr-rav`, switched off | no |
-| Homepage slide | photo, bio, interests, View profile | the same | letter R, name, AHPRA line; bio line and View profile ready | letter D, name |
+| Homepage slide | photo, bio, interests, View profile | the same | photo, name, AHPRA line; bio line and View profile ready | letter D, name |
 | Related cards on other pages | on Dr Nav's page | on Dr Nish's page | none (her own page links Dr Nish and Dr Nav) | none |
 | Structured data (Person) | on the profile page | on the profile page | ready on her profile page, with the AHPRA number | none |
 
 **Missing for Dr Rav** (from the practice, in writing):
 
-1. An approved photo: head and shoulders, plain background, landscape, at
-   least 800 x 600.
-2. A short bio, written or approved by Dr Rav.
-3. Her qualifications: degree, university and year.
-4. Whether to show "Dr Rav" or her full name, "Dr Ravneet Kaur Arora"
+1. A short bio, written or approved by Dr Rav.
+2. Her qualifications: degree, university and year.
+3. Whether to show "Dr Rav" or her full name, "Dr Ravneet Kaur Arora"
    (`PRACTITIONERS.rav.showFullName` in `src/team.config.ts`).
-5. Optional: languages or areas of interest she would like listed.
+4. Optional: languages or areas of interest she would like listed.
+
+Her photo arrived on 20 Nov 2026 and is on her card, her slide and her
+(hidden) profile page, including its structured data.
 
 **When they arrive:** the photo and bio go on her card and slide in the
 dashboard (the practice can do this too: `docs/CLIENT-GUIDE.md`, "Adding a new
 dentist's photo and bio"). For her profile page, GYA fills in
-`content/pages/dr-rav.json` (bio, qualifications, photo, and the structured
-data "image"), then sets `PRACTITIONERS.rav.profilePage` to true. The build
+`content/pages/dr-rav.json` (bio and qualifications; the photo and the
+structured data "image" are in since v2.9.2), then sets `PRACTITIONERS.rav.profilePage` to true. The build
 stops if the page is switched on without its bio. Its address stays `/dr-rav`
 whichever name is shown.
 
@@ -324,7 +328,7 @@ go-live, or GYA can switch it in the repo.
 | Kathryn | 20 Nov 2026, Christine's email "Kathryn" | not yet confirmed | no (loaded, switch off) |
 | Riley | 20 Nov 2026, Christine's email "Riley" | not yet confirmed | no (loaded, switch off) |
 | Layeba | 20 Nov 2026, Christine's email "Layeba" | not yet confirmed | no (loaded, switch off) |
-| Holly | not received yet | Christine, 20 Nov 2026 | no photo yet (her card is ready; it goes on, shown, once the file arrives) |
+| Holly | attached to Christine's 5:57 PM email, but the file has not reached the build yet | Christine, 20 Nov 2026 | no photo yet (her card is ready; it goes on, shown, once the file arrives) |
 
 Each photo was matched to the person by the subject or body of Christine's
 email, never by the picture. Cropped to 4:3 and resized only (800 x 600 sRGB
@@ -333,6 +337,15 @@ The four were taken in the same spot, so the end of the practice sign shows at
 the top left of each (the person stands too close to the edge of the frame for
 a head and shoulders crop to leave it out). Kathryn wears the charcoal
 uniform and the others dusty pink: left as it is.
+
+**Open question (20 Nov, 5:57 PM):** Christine wrote "Holly / And given all
+ok consent to have photo up". That may mean everyone has agreed, not only
+Holly. Until Rowayne confirms it covers Deb, Kathryn, Riley and Layeba, their
+switches stay off. To switch all four on: in `content/team.json`, change
+`"photoApproved": false` to `true` for Debbie, Kathryn, Riley and Layeba (the
+four entries with a `photoPath`), or in the dashboard, Team, tick **Show photo
+on website (permission confirmed)** on those four rows, Save each, then
+Publish website. Then update the table above.
 
 Questions for the practice:
 

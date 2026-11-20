@@ -263,6 +263,9 @@
    The photo files themselves are never changed. Cards still waiting for a photo (the letter) are left as they are. */
 .st-photo:has(img)::after,.tcard-ph:has(img:not([src$="img-52e7b1f5ba.webp"]))::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(160deg,rgba(15,156,147,.16),rgba(11,21,22,0) 42%,rgba(11,21,22,.42))}
 .st-photo img,.tcard-ph img{filter:saturate(.94) contrast(1.02)}
+/* v2.9.2: a dentist portrait taken to match the others (Dr Rav) shows as they do, with no wash */
+.tcard-photo.tcard-ph.no-tint:has(img)::after,.profile-photo.tcard-ph.no-tint:has(img)::after{content:none}
+.tcard-ph.no-tint img{filter:none}
 /* v2.9.0: when the go-live switches leave a card out (src/golive.config.ts), a card left on its own
    in a two-column grid uses the full width instead of sitting in half of it */
 .info-grid.cols-2>.info-card:only-child,.offer-grid>.offer-card:only-child{grid-column:1/-1;max-width:640px}
