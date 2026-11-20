@@ -2,6 +2,44 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.9.1] - 2026-11-20
+
+Christine's approval, Dr Rav before launch, and the staff photos (Rowayne's
+emails of 20 November 2026). Update to the existing repository, on top of
+v2.9.0. Two commits, so either can be held back on its own.
+
+### Approval, launch date and Dr Rav (first commit)
+
+- **Client approval recorded:** Christine confirmed on 20 Nov 2026 that the
+  practice is happy to go ahead. The launch date is not confirmed (Monday
+  23 Nov was proposed): the Monday wording is gone from `docs/GO-LIVE.md`, the
+  handover steps and the update script.
+- **Privacy Policy and Terms:** treated as approved with the whole site, as
+  both were on the preview Christine reviewed. `GO_LIVE.legalApproved` in
+  `src/golive.config.ts` now reads Christine Zammit, 2026-11-20, approval of
+  the whole site, so the build no longer warns. Their reviewer notes were
+  already left out by the go-live switch, so the pages do not change.
+- **Dr Rav ready for her photo and bio**, nothing invented and nothing shown
+  until filled in:
+  - an empty "Add words" line under her name on the Our Team card and on her
+    homepage slide, which the practice can fill in from the dashboard. Empty,
+    it renders nothing (new `data-hide-empty` marker, `src/lib/parts.ts`)
+  - her profile page, `content/pages/dr-rav.json` at `/dr-rav`, built from Dr
+    Nav's layout with her name, "Dentist", her AHPRA line and a Person entry
+    in the structured data. It stays off the website (no page, no link, not in
+    the sitemap or the 404 list) until `PRACTITIONERS.rav.profilePage` is
+    true, and the build stops if it is switched on before the page has its
+    bio. The address stays `/dr-rav` whichever name is shown.
+  - the "View profile" links on her card and slide appear with the page.
+  - structured data leaves out the see-through placeholder picture behind a
+    monogram, so no page claims it as a photo.
+- Migration `20261120_110000_rav_profile_ready`: the same card and slide
+  change for the dashboard database, only where the layout is still as v2.9.0
+  had it; a second run changes nothing.
+- `docs/CLIENT-GUIDE.md` and the PDF: "Adding a new dentist's photo and bio".
+- The check after every build now also opens each page's own stylesheets, so a
+  new page without its styles stops the build.
+
 ## [2.9.0] - 2026-11-20
 
 Go-live check of the dashboard, the old addresses and SEO, ahead of the planned

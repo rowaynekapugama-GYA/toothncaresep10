@@ -1,9 +1,15 @@
 # Going live on toothncare.com.au
 
 Written 17 November 2026 for v2.8.0, updated 20 November 2026 for v2.9.0
-(the go-live check). Nothing here has been changed at the domain, the DNS host
-or Vercel: this is the plan for the switch, planned for **Monday 23 November
-2026, after Nish's OK**.
+(the go-live check) and v2.9.1. Nothing here has been changed at the domain,
+the DNS host or Vercel: this is the plan for the switch.
+
+- **Client approval:** Christine confirmed on 20 Nov 2026 that the practice is
+  happy to go ahead (Rowayne, 11:01 AM, on the existing handover).
+- **Launch date:** not confirmed (Monday 23 Nov was proposed). GYA and the
+  practice will confirm it together.
+- This is a status update only: nothing here asks for the site to be published
+  or for logins to be created.
 
 ## 0. Where v2.9.0 leaves things (20 November 2026)
 
@@ -25,8 +31,11 @@ or Vercel: this is the plan for the switch, planned for **Monday 23 November
 - **Handover:** logins are created only after the switch, by
   `docs/HANDOVER-STEPS-FOR-GYA.md`. The practice guide is
   `docs/Tooth-n-Care-Website-Guide.pdf`.
-- **Before Monday:** the practice approves the Privacy Policy and Terms (then
-  fill in `GO_LIVE.legalApproved`, section 7a), and the rest of section 7.
+- **Privacy Policy and Terms:** treated as approved with the whole site
+  (Christine, 20 Nov 2026; both pages were on the preview she reviewed, linked
+  from every page's footer). `GO_LIVE.legalApproved` records it. GYA has asked
+  her to confirm in one line that the approval includes those two pages.
+- **Before the launch date:** the rest of section 7.
 
 ## 1. Where things are today
 
@@ -198,10 +207,14 @@ dashboard (**Enquiries**) and emails it through SMTP2GO.
 
 ## 7. Before the switch
 
-- [ ] The practice has approved the staging site (Nish's OK).
-- [ ] The practice has approved the Privacy Policy and Terms, and
-      `GO_LIVE.legalApproved` in `src/golive.config.ts` names who and when
-      (the build and the update script remind you until it does).
+- [x] The practice has approved the staging site (Christine, 20 Nov 2026).
+- [ ] The launch date agreed with the practice (Monday 23 Nov was proposed,
+      not confirmed).
+- [x] Privacy Policy and Terms: approved with the whole site (Christine,
+      20 Nov 2026), recorded in `GO_LIVE.legalApproved`.
+- [ ] Christine's one-line confirmation that the approval includes the
+      Privacy Policy and Terms (asked for; Rowayne to decide if it is needed
+      before the switch).
 - [ ] DNS login from Nish (section 1).
 - [ ] TTLs lowered the day before.
 - [ ] SMTP2GO domain verified, variables set, a test enquiry received at both
@@ -246,7 +259,7 @@ dashed outline and a yellow note, so editing a page never loses them.
 | "[VERIFY] current pricing to be confirmed..." | Teeth Whitening, cost | The practice's current prices for in-chair whitening and take-home trays (typed in by GYA) |
 | "[VERIFY] whether the practice is a current Invisalign provider..." | FAQ, orthodontics (and its structured data) | Invisalign yes or no. Yes: GYA may name Invisalign. No: it stays "clear aligners". The note stays hidden either way |
 | "[VERIFY] if analytics are added before launch..." | Privacy Policy, cookies | Only matters if GA4 or the Meta Pixel is switched on. The build stops if an ID is set while the policy still says "only the cookies necessary" |
-| "[VERIFY] to be reviewed by the practice..." | Privacy Policy and Terms | The practice's approval (Monday). Fill in `GO_LIVE.legalApproved` |
+| "[VERIFY] to be reviewed by the practice..." | Privacy Policy and Terms | Approved with the whole site (Christine, 20 Nov 2026), recorded in `GO_LIVE.legalApproved`. The note stays hidden |
 
 Generic wording is left where an offer is hidden: the FAQ keeps "Yes. New
 patients can book online any time." and the Offers page keeps the CDBS card.
@@ -260,6 +273,42 @@ Still waiting on the practice (not blocking): AHPRA numbers for Dr Nish, Dr Nav
 and Zoe; Dr Dimple's full name, AHPRA number and whether she holds specialist
 registration in Orthodontics; how Dr Rav would like her name shown, a bio and
 a photo; support team photos with written consent; the SmileOX intake address.
+
+## 7b. Dr Rav before launch (v2.9.1)
+
+Nish asked for Dr Rav before launch (Christine, 20 Nov 2026). She is already
+on the website as a dentist: Our Team card "Dr Rav", role Dentist, her AHPRA
+line (DEN0002297808), and her homepage slide, both with the letter R instead
+of a photo. What the dentists have, side by side:
+
+| | Dr Nish | Dr Nav | Dr Rav | Dr Dimple |
+| --- | --- | --- | --- | --- |
+| Photo on the card | yes | yes | letter R (photo slot ready) | letter D |
+| Short bio on the card | yes | yes | ready, empty ("Add words" in the dashboard) | no |
+| Qualifications | on the profile page | on the profile page (BDS, FRACDS) | ready on her profile page, empty | no |
+| AHPRA line | ready, number not supplied yet | ready, number not supplied yet | shown | ready, number not supplied yet |
+| Own profile page | `/dr-nisheeth-agrawal` | `/dr-navneet-karan` | ready at `/dr-rav`, switched off | no |
+| Homepage slide | photo, bio, interests, View profile | the same | letter R, name, AHPRA line; bio line and View profile ready | letter D, name |
+| Related cards on other pages | on Dr Nav's page | on Dr Nish's page | none (her own page links Dr Nish and Dr Nav) | none |
+| Structured data (Person) | on the profile page | on the profile page | ready on her profile page, with the AHPRA number | none |
+
+**Missing for Dr Rav** (from the practice, in writing):
+
+1. An approved photo: head and shoulders, plain background, landscape, at
+   least 800 x 600.
+2. A short bio, written or approved by Dr Rav.
+3. Her qualifications: degree, university and year.
+4. Whether to show "Dr Rav" or her full name, "Dr Ravneet Kaur Arora"
+   (`PRACTITIONERS.rav.showFullName` in `src/team.config.ts`).
+5. Optional: languages or areas of interest she would like listed.
+
+**When they arrive:** the photo and bio go on her card and slide in the
+dashboard (the practice can do this too: `docs/CLIENT-GUIDE.md`, "Adding a new
+dentist's photo and bio"). For her profile page, GYA fills in
+`content/pages/dr-rav.json` (bio, qualifications, photo, and the structured
+data "image"), then sets `PRACTITIONERS.rav.profilePage` to true. The build
+stops if the page is switched on without its bio. Its address stays `/dr-rav`
+whichever name is shown.
 
 ## 8. After the switch
 

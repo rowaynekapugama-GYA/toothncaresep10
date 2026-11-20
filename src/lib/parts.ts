@@ -59,6 +59,22 @@ export function renderPart(part: Part, overrides?: Record<string, string>): stri
   return out
 }
 
+/**
+ * Optional wording (v2.9.1): an element marked data-hide-empty in a layout is
+ * left out of the website while its words are empty, and loses the marker once
+ * they are filled in. The dashboard keeps it, showing "Add words", so the
+ * practice can fill it in. Used for Dr Rav's bio, which stays empty until she
+ * supplies one.
+ */
+const OPTIONAL = /<(p|li|em|div)\b([^>]*\sdata-hide-empty(?:="")?[^>]*)>([\s\S]*?)<\/\1>/g
+/** No words in it: icons (svg) and empty tags do not count. */
+const noWords = (inner: string) => !inner.replace(/<svg\b[\s\S]*?<\/svg>/g, '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim()
+export function dropEmptyOptional(html: string): string {
+  if (!html.includes('data-hide-empty')) return html
+  return html.replace(OPTIONAL, (whole, tag: string, attrs: string, inner: string) =>
+    noWords(inner) ? '' : `<${tag}${attrs.replace(/\sdata-hide-empty(?:="")?/, '')}>${inner}</${tag}>`)
+}
+
 /** A part whose every image slot is empty is not rendered at all. */
 export function isEmptySlot(part: Part): boolean {
   const images = part.fields.filter((f) => f.type === 'image')

@@ -10,14 +10,35 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import { allSlugs, getChrome, getPage } from '../src/lib/content'
+import { allPageFiles as allSlugs, getChrome, getPage } from '../src/lib/content'
 import { siteTokens } from '../src/lib/site'
 import { renderBody } from '../src/dashboard/render'
 import { chromeFieldEditable } from '../src/dashboard/pages'
 
-const strip = (html: string) => html
-  .replace(/<span class="pd-tok" contenteditable="false" data-pdt="[^"]*">/g, '\u0000')
-  .replace(/\u0000([^<]*?)<\/span>/g, '$1')
+/** Unwrap the editor's token markers, including a token whose value holds its own markup (Dr Rav's AHPRA line, v2.9.1). */
+function unwrapTokens(html: string): string {
+  const OPEN = /<span class="pd-tok" contenteditable="false" data-pdt="[^"]*">/g
+  let out = ''
+  let i = 0
+  let m: RegExpExecArray | null
+  while ((m = OPEN.exec(html))) {
+    const re = /<span\b[^>]*>|<\/span>/g
+    re.lastIndex = m.index + m[0].length
+    let depth = 1
+    let t: RegExpExecArray | null
+    let close = -1
+    while ((t = re.exec(html))) {
+      if (t[0][1] === '/') { if (--depth === 0) { close = t.index; break } } else depth++
+    }
+    if (close < 0) break
+    out += html.slice(i, m.index) + html.slice(m.index + m[0].length, close)
+    i = close + '</span>'.length
+    OPEN.lastIndex = i
+  }
+  return out + html.slice(i)
+}
+
+const strip = (html: string) => unwrapTokens(html)
   .replace(/<pd-e data-pde="[^"]*" data-t="[a-z]+">/g, '')
   .replace(/<\/pd-e>/g, '')
   .replace(/ data-(pde|pdi|pda|pdh|pds|pdc|pdo)="[^"]*"/g, '')

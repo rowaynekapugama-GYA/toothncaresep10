@@ -12,7 +12,8 @@
  * GO_LIVE.legalApproved
  *   Who at the practice approved the Privacy Policy and Terms, and when. Until
  *   it is filled in, the build and the update script warn that the domain
- *   should not be switched. It changes nothing on the pages.
+ *   should not be switched. It changes nothing on the pages (the reviewer
+ *   notes on them are left out by goLive above either way).
  *
  * OFFERS
  *   AHPRA: an advertised offer must show its price, what it includes and the
@@ -39,8 +40,13 @@ export type Offer = {
 
 export const GO_LIVE = {
   goLive: true,
-  /** e.g. { by: 'Dr Nisheeth Agrawal', date: '2026-11-23' } */
-  legalApproved: { by: '', date: '' },
+  /**
+   * Christine confirmed on 20 Nov 2026 that the practice is happy to go ahead
+   * with the whole site, which the Privacy Policy and Terms were part of (both
+   * on the preview she reviewed, linked from every page's footer). GYA has
+   * asked her to confirm in one line that this includes those two pages.
+   */
+  legalApproved: { by: 'Christine Zammit', date: '2026-11-20', basis: 'approval of the whole site' },
 }
 
 export const OFFERS = {

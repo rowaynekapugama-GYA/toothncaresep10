@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactElement } from 'react'
 import { createElement } from 'react'
-import { renderPart, type Part } from '@/lib/parts'
+import { dropEmptyOptional, renderPart, type Part } from '@/lib/parts'
 import { applyTokens } from '@/lib/tokens'
 import { applyGoLive, sectionEnd } from '@/lib/golive'
 
@@ -117,6 +117,6 @@ export default function RawPart({
   return createElement(part.tag, {
     ...props,
     suppressHydrationWarning: true,
-    dangerouslySetInnerHTML: { __html: applyGoLive(applyTokens(renderPart(part, overrides), tokens)) },
+    dangerouslySetInnerHTML: { __html: dropEmptyOptional(applyGoLive(applyTokens(renderPart(part, overrides), tokens))) },
   })
 }

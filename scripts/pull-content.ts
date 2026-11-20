@@ -4,6 +4,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { getPayload } from 'payload'
 import config from '@payload-config'
+import { hiddenPageSlugs } from '../src/team.config'
 import { docToPage, orderedPage, sectionDocToPart, mediaUrl, settingsFileFromGlobal, type PageDoc } from '../src/sitekit/sync'
 import type { Part } from '../src/lib/parts'
 import { cleanPostBody } from '../src/sitekit/sanitize'
@@ -177,6 +178,8 @@ async function main() {
   for (const file of fs.readdirSync(path.join(CONTENT, 'pages'))) {
     if (!file.endsWith('.json')) continue
     const page = JSON.parse(fs.readFileSync(path.join(CONTENT, 'pages', file), 'utf8')) as { path?: string }
+    // a page kept off the website until it is switched on (Dr Rav's profile) is not a known address yet
+    if (hiddenPageSlugs().includes(file.slice(0, -5))) continue
     if (page.path) knownPaths.add(page.path)
   }
   if (posts.docs.length > 0) {

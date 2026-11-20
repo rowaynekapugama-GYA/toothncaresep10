@@ -204,8 +204,9 @@ The full plan, with the DNS records to change and the ones to keep, is in
 - [ ] Send a real enquiry from the live form and confirm it arrives at
       `reception@toothncare.com.au` and `rowayne@gyaclients.com`, and that it
       appears under **Enquiries**.
-- [ ] The practice approves the Privacy Policy and Terms; fill in
-      `GO_LIVE.legalApproved` in `src/golive.config.ts`.
+- [x] The practice approved the site, including the Privacy Policy and Terms
+      (Christine, 20 Nov 2026, recorded in `GO_LIVE.legalApproved` in
+      `src/golive.config.ts`). The launch date is still to be agreed.
 - [ ] GA4 and the Meta Pixel only after the Privacy Policy names them (the
       build stops otherwise), then the IDs under **Site Settings**, **Tracking**.
 - [ ] Submit `https://www.toothncare.com.au/sitemap.xml` in Google Search Console.

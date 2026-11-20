@@ -1,7 +1,7 @@
 # Handing the dashboard to Tooth n Care (GYA only)
 
-Do this **after go-live** (planned Monday 23 November 2026, after Nish's OK),
-once the domain is switched and the after-switch steps in `docs/GO-LIVE.md`
+Do this **after go-live** (the launch date is still to be confirmed with the
+practice; Monday 23 November 2026 was proposed), once the domain is switched and the after-switch steps in `docs/GO-LIVE.md`
 are done, so the practice signs in at www.toothncare.com.au/admin from day
 one. No logins are created before then.
 

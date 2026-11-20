@@ -63,6 +63,11 @@ export type Practitioner = {
   shortName?: string
   /** Optional. true shows the full name above on the cards instead of shortName. */
   showFullName?: boolean
+  /**
+   * Optional. true puts this person's profile page (and the View profile links
+   * to it) on the website. Only for a page that is kept hidden until ready.
+   */
+  profilePage?: boolean
 }
 
 // ---------------------------------------------------------------------------
@@ -111,10 +116,25 @@ export const PRACTITIONERS = {
   /**
    * The third dentist (Christine, 11 Nov 2026). Registration from the AHPRA
    * public register (Christine, 16 Nov 2026): Dental Practitioner, Dentist,
-   * General registration. No bio or profile page yet.
+   * General registration.
    *
    * The cards and the homepage slider say "Dr Rav". To show the full name
    * instead, change showFullName to true (the photo descriptions follow).
+   *
+   * Ready for her photo and bio (v2.9.1, Nish asked for her before launch,
+   * 20 Nov 2026). Nothing shows until it is filled in, and nothing is invented:
+   *   - photo: the practice (or GYA) clicks her photo on the Our Team page and
+   *     on the homepage team slider in the dashboard, as for the others
+   *   - short bio: the empty "Add words" line under her name on the Our Team
+   *     card and on her homepage slide (dashboard)
+   *   - profile page: content/pages/dr-rav.json, at /dr-rav (kept short, so
+   *     the address never changes whichever name is shown). It is NOT on the
+   *     website (no page, no link, not in the sitemap) until profilePage is
+   *     true, and the build stops if it is switched on before the page has its
+   *     bio (the first paragraph under "Dentist at Tooth n Care"). Her
+   *     qualifications go in the list under it, one per line, as she supplies
+   *     them. When it goes on, also set the "image" in its structured data to
+   *     her photo.
    */
   rav: {
     name: 'Dr Ravneet Kaur Arora',
@@ -123,7 +143,8 @@ export const PRACTITIONERS = {
     roleTitle: null,
     ahpraNumber: 'DEN0002297808', // AHPRA public register, sent by Christine 16 Nov 2026
     ahpraDivision: 'Dentist',
-    profilePath: null,
+    profilePath: '/dr-rav',
+    profilePage: false,
   },
   /**
    * Dr Dimple (Christine, 13 and 19 Nov 2026). Shown on the website since
@@ -197,6 +218,14 @@ export const DR_DIMPLE = {
 // ===========================================================================
 
 export type PractitionerKey = keyof typeof PRACTITIONERS
+
+/** Dr Rav's profile page: content/pages/dr-rav.json, at /dr-rav. */
+export const RAV_PROFILE = { slug: 'dr-rav', path: '/dr-rav', bioSection: 'dr-rav-03-about', bioField: 'paragraph-1' }
+
+/** Pages that exist in content/ but are kept off the website until switched on above. */
+export function hiddenPageSlugs(): string[] {
+  return (PRACTITIONERS.rav as Practitioner).profilePage ? [] : [RAV_PROFILE.slug]
+}
 const KEYS = Object.keys(PRACTITIONERS) as PractitionerKey[]
 
 const AHPRA_FORMAT = /^[A-Z]{3}\d{10}$/
@@ -237,6 +266,8 @@ export const TEAM_TOKEN_KEYS: string[] = [
   'oralHealthTeamInSentence',
   'teamIntroLead',
   'ravName',
+  'ravProfileLink',
+  'ravSlideProfile',
   'dimpleCard',
   'dimpleSlide',
   'zoeSlideNum',
@@ -277,6 +308,10 @@ export function teamTokens(): Record<string, string> {
   // the cards' names: "Dr Rav", or the full name once showFullName is true
   const rav = PRACTITIONERS.rav as Practitioner
   out.ravName = checkText('rav.name', rav.showFullName || !rav.shortName ? rav.name : rav.shortName)
+  // the View profile links to her page, only once the page is switched on (v2.9.1)
+  if (typeof (rav.profilePage ?? false) !== 'boolean') fail('rav.profilePage must be true or false')
+  out.ravProfileLink = rav.profilePage ? `<em><a href="${RAV_PROFILE.path}">View profile <span class="btn-arrow">&rarr;</span></a></em>` : ''
+  out.ravSlideProfile = rav.profilePage ? `<a class="btn btn-ghost" href="${RAV_PROFILE.path}">View profile <span class="btn-arrow">&rarr;</span></a>` : ''
 
   // Dr Dimple, and the Our Team intro that counts the team
   Object.assign(out, dimpleTokens(out))

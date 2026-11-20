@@ -247,6 +247,8 @@ if (has('--pages')) {
     const refs = new Set()
     for (const m of html.matchAll(/<a\b[^>]*\shref=["']([^"']+)["']/gi)) refs.add(m[1])
     for (const m of html.matchAll(/<img\b[^>]*\ssrc=["']([^"']+)["']/gi)) refs.add(m[1])
+    // the page's own stylesheets too (a new page without its styles looks broken, v2.9.1)
+    for (const m of html.matchAll(/<link\b[^>]*\srel=["']stylesheet["'][^>]*\shref=["'](\/styles\/[^"']+)["']/gi)) refs.add(m[1])
     for (const ref of refs) {
       if (/^(mailto:|tel:|#|javascript:|data:)/i.test(ref)) continue
       let u

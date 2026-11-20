@@ -9,6 +9,7 @@ const URL_KEYS = new Set([
 ])
 
 const STAGING = /https?:\/\/toothncare\.vercel\.app/g
+const PLACEHOLDER_IMAGE = '/images/img-52e7b1f5ba.webp'
 
 /** An entry marked "offer": "key" (or "a+b") is left out while that offer is switched off (src/golive.config.ts). */
 const offerOff = (v: unknown) =>
@@ -27,6 +28,8 @@ function walk(node: unknown, key?: string): unknown {
     const out: Record<string, unknown> = {}
     for (const [k, v] of Object.entries(obj)) {
       if (k === 'ahpraRegistration' || k === 'ahpraDivision' || k === 'offer') continue
+      // the see-through placeholder behind a monogram is not a photo of anyone (Dr Rav, v2.9.1)
+      if (k === 'image' && typeof v === 'string' && v.endsWith(PLACEHOLDER_IMAGE)) continue
       out[k] = walk(v, k)
     }
     // AHPRA details from src/team.config.ts: the placeholders "ahpraRegistration"

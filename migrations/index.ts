@@ -12,6 +12,7 @@ import * as migration_20261117_100000_team_dimple_redirects from './20261117_100
 import * as migration_20261119_090000_dimple_mursal_share_image from './20261119_090000_dimple_mursal_share_image';
 import * as migration_20261120_090000_blob_upload_columns from './20261120_090000_blob_upload_columns';
 import * as migration_20261120_100000_golive_offers_verify from './20261120_100000_golive_offers_verify';
+import * as migration_20261120_110000_rav_profile_ready from './20261120_110000_rav_profile_ready';
 
 export const migrations = [
   {
@@ -83,5 +84,10 @@ export const migrations = [
     up: migration_20261120_100000_golive_offers_verify.up,
     down: migration_20261120_100000_golive_offers_verify.down,
     name: '20261120_100000_golive_offers_verify',
+  },
+  {
+    up: migration_20261120_110000_rav_profile_ready.up,
+    down: migration_20261120_110000_rav_profile_ready.down,
+    name: '20261120_110000_rav_profile_ready',
   },
 ];

@@ -1,7 +1,11 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import known from '../content/known-paths.json'
+import { hiddenPageSlugs, RAV_PROFILE } from './team.config'
 
 const KNOWN = new Set(known as string[])
+// Dr Rav's profile page counts as soon as it is switched on in src/team.config.ts,
+// even before the next database build rewrites the list (v2.9.1)
+if (!hiddenPageSlugs().includes(RAV_PROFILE.slug)) KNOWN.add(RAV_PROFILE.path)
 
 /** Prefixes the site serves that are not editable pages. */
 const NOT_FOUND = '/page-not-found'

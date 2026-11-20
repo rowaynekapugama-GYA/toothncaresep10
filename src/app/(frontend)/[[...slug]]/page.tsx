@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import PageBody from '@/components/PageBody'
-import { allSlugs, getPage } from '@/lib/content'
+import { allSlugs, getPage, isHiddenPage } from '@/lib/content'
 import { absolute, isPreview, siteUrl } from '@/lib/urls'
 import { DEFAULTS } from '@/site.config'
 import { getSeoDefaults } from '@/lib/seo'
@@ -27,7 +27,8 @@ export function generateStaticParams(): { slug?: string[] }[] {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = getPage(slugFrom((await params).slug))
+  const slug = slugFrom((await params).slug)
+  const page = isHiddenPage(slug) ? null : getPage(slug)
   if (!page) return {}
   // titles and descriptions can hold {{site:...}} placeholders (role titles from src/team.config.ts)
   const tokens = siteTokens()
@@ -64,7 +65,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const page = getPage(slugFrom((await params).slug))
+  const slug = slugFrom((await params).slug)
+  // a page kept off the website until it is switched on (src/team.config.ts) is not found
+  const page = isHiddenPage(slug) ? null : getPage(slug)
   if (!page) notFound()
   return <PageBody page={page} />
 }
