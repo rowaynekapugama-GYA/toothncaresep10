@@ -111,6 +111,8 @@ export const SiteSettings: GlobalConfig = {
             {
               name: 'enquiryRecipients',
               type: 'array',
+              // v2.9.0: GYA only, through the API as well as on screen
+              access: { create: adminFieldOnly, update: adminFieldOnly },
               label: 'Who receives enquiries',
               labels: { singular: 'Address', plural: 'Addresses' },
               admin: {

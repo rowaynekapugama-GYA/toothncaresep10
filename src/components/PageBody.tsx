@@ -6,6 +6,7 @@ import { getChrome, isEmptySlot, type Page } from '@/lib/content'
 import { rewriteJsonLd } from '@/lib/jsonld'
 import { siteTokens } from '@/lib/site'
 import { applyTokens } from '@/lib/tokens'
+import { OFFER_EXPIRY_SCRIPT, applyGoLiveScript, offerReport, sectionHidden } from '@/lib/golive'
 
 function PageStyles({ slug }: { slug: string }): ReactElement {
   // the order matches the two inline style blocks the approved build shipped,
@@ -34,7 +35,8 @@ export default function PageBody({ page }: { page: Page }): ReactElement {
 
     if (step.startsWith('section:')) {
       const section = page.sections[Number(step.slice(8))]
-      if (!section || isEmptySlot(section)) continue
+      // an offer whose period is not confirmed is left off the public page (src/golive.config.ts)
+      if (!section || isEmptySlot(section) || sectionHidden(section.attrs)) continue
       out.push(<RawPart key={section.key} part={section} tokens={tokens} />)
       continue
     }
@@ -47,7 +49,7 @@ export default function PageBody({ page }: { page: Page }): ReactElement {
         script.src ? (
           <script key={`s-${i}`} type={script.type ?? undefined} src={script.src} async />
         ) : (
-          <script key={`s-${i}`} dangerouslySetInnerHTML={{ __html: script.inline ?? '' }} />
+          <script key={`s-${i}`} dangerouslySetInnerHTML={{ __html: applyGoLiveScript(script.inline ?? '') }} />
         ),
       )
       continue
@@ -63,6 +65,7 @@ export default function PageBody({ page }: { page: Page }): ReactElement {
       <PageStyles slug={page.slug} />
       {out}
       {hasForm ? <EnquiryScript tokens={tokens} /> : null}
+      {offerReport().some((o) => o.state.active && o.state.end) ? <script dangerouslySetInnerHTML={{ __html: OFFER_EXPIRY_SCRIPT }} /> : null}
       {page.jsonLd.map((block, i) => (
         <script
           key={`ld-${i}`}

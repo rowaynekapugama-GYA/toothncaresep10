@@ -642,7 +642,8 @@
    "tag": "section",
    "attrs": {
     "class": "pg",
-    "id": "offer"
+    "id": "offer",
+    "data-offer": "newPatient"
    },
    "template": "<div class=\"wrap\">\n  <div class=\"sec-head rv\"><span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span><h2>{{heading-1}}</h2></div>\n    <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p>\n    <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-2}}</p>\n  <p class=\"fine rv\" style=\"margin-top:16px\">{{small-print-1}}</p>\n  <div class=\"p-hero-ctas rv\" style=\"margin-top:24px\"><a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a><a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a></div>\n</div>",
    "fields": [

@@ -1,5 +1,6 @@
 /** Small text helpers shared by the dashboard screens and the page preview. */
 import { TEAM_TOKEN_KEYS } from '@/team.config'
+import { GOLIVE_TOKEN_KEYS } from '@/lib/golive'
 
 export function esc(s: unknown): string {
   return String(s ?? '')
@@ -43,6 +44,8 @@ const TOKENS = [
   'twitter', 'logo', 'blogLink',
   // role titles and AHPRA details from src/team.config.ts: {zoe-role}, {nish-ahpra} ...
   ...TEAM_TOKEN_KEYS,
+  // descriptions that name offers, from src/golive.config.ts
+  ...GOLIVE_TOKEN_KEYS,
 ]
 const kebab = (k: string) => k.replace(/[A-Z0-9]+/g, (m) => '-' + m.toLowerCase())
 const TO_FRIENDLY = new Map(TOKENS.map((k) => [k, kebab(k)]))

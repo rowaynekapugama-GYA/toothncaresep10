@@ -6,9 +6,9 @@
   "title": "Current Offers | Tooth n Care East Maitland",
   "canonical": "https://toothncare.vercel.app/offers",
   "ogTitle": "Current Offers | Tooth n Care East Maitland",
-  "ogDescription": "New patient visit for $199 or no-gap, CDBS children’s dental bulk billed, in-chair whitening and a 5% seniors discount - full terms shown up front.",
+  "ogDescription": "{{site:offersSummary}}",
   "ogType": "website",
-  "description": "New patient visit for $199 or no-gap, CDBS children’s dental bulk billed, in-chair whitening and a 5% seniors discount - full terms shown up front."
+  "description": "{{site:offersSummary}}"
  },
  "jsonLd": [
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"name\": \"{{site:practiceName}}\",\n  \"description\": \"Modern family, cosmetic and emergency dental studio in East Maitland, NSW.\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"areaServed\": [\"East Maitland\", \"Maitland\", \"Hunter Valley\"],\n  \"openingHoursSpecification\": [\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"},\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Saturday\", \"opens\": \"09:00\", \"closes\": \"16:00\"}\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"hasMap\": \"{{site:mapUrl}}\"\n}",
@@ -124,7 +124,7 @@
     "class": "pg",
     "id": "current"
    },
-   "template": "\n  <div class=\"wrap\">\n    <div class=\"sec-head rv\">\n      <span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span>\n      <h2>{{heading-1}}</h2>\n    </div>\n    <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p>\n    <div class=\"offer-grid\">\n      <div class=\"offer-card rv\">\n        <span class=\"price\">{{text-1}}</span>\n        <h3>{{sub-heading-1}}</h3>\n        <p>{{paragraph-1}}</p>\n        <ul>\n          <li>{{list-item-1}}</li>\n          <li>{{list-item-2}}</li>\n        </ul>\n        <p class=\"terms\">{{paragraph-2}}</p>\n        <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n      </div>\n      <div class=\"offer-card rv\">\n        <span class=\"price\">{{text-2}}</span>\n        <h3>{{sub-heading-2}}</h3>\n        <p>{{paragraph-3}}</p>\n        <ul>\n          <li>{{list-item-3}}</li>\n          <li>{{list-item-4}}</li>\n        </ul>\n        <p class=\"terms\">{{paragraph-4}}</p>\n        <a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a>\n      </div>\n      <div class=\"offer-card rv\">\n        <span class=\"price\">{{text-3}}</span>\n        <h3>{{sub-heading-3}}</h3>\n        <p>{{paragraph-5}}</p>\n        <p class=\"terms\">{{paragraph-6}}</p>\n        <a class=\"btn btn-primary\" href=\"{{button-link-3}}\" target=\"_blank\" rel=\"noopener\">{{button-text-3}}</a>\n      </div>\n      <div class=\"offer-card rv\">\n        <span class=\"price\">{{text-4}}</span>\n        <h3>{{sub-heading-4}}</h3>\n        <p>{{paragraph-7}}</p>\n        <p class=\"terms\">{{paragraph-8}}</p>\n        <a class=\"btn btn-ghost\" href=\"{{button-link-4}}\">{{button-text-4}}</a>\n      </div>\n    </div>\n    <p class=\"rv\" style=\"margin-top:26px;font-size:13.5px;color:var(--grey-2)\">{{paragraph-9}}</p>\n  </div>\n",
+   "template": "\n  <div class=\"wrap\">\n    <div class=\"sec-head rv\">\n      <span class=\"eyebrow\">{{small-label-above-the-heading-1}}</span>\n      <h2>{{heading-1}}</h2>\n    </div>\n    <p class=\"lead rv\" style=\"margin-top:18px\">{{intro-paragraph-1}}</p>\n    <div class=\"offer-grid\">\n      <!--offer:newPatient--><div class=\"offer-card rv\">\n        <span class=\"price\">{{text-1}}</span>\n        <h3>{{sub-heading-1}}</h3>\n        <p>{{paragraph-1}}</p>\n        <ul>\n          <li>{{list-item-1}}</li>\n          <li>{{list-item-2}}</li>\n        </ul>\n        <p class=\"terms\">{{paragraph-2}}</p>\n        <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n      </div><!--/offer-->\n      <!--offer:whitening--><div class=\"offer-card rv\">\n        <span class=\"price\">{{text-2}}</span>\n        <h3>{{sub-heading-2}}</h3>\n        <p>{{paragraph-3}}</p>\n        <ul>\n          <li>{{list-item-3}}</li>\n          <li>{{list-item-4}}</li>\n        </ul>\n        <p class=\"terms\">{{paragraph-4}}</p>\n        <a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a>\n      </div><!--/offer-->\n      <div class=\"offer-card rv\">\n        <span class=\"price\">{{text-3}}</span>\n        <h3>{{sub-heading-3}}</h3>\n        <p>{{paragraph-5}}</p>\n        <p class=\"terms\">{{paragraph-6}}</p>\n        <a class=\"btn btn-primary\" href=\"{{button-link-3}}\" target=\"_blank\" rel=\"noopener\">{{button-text-3}}</a>\n      </div>\n      <!--offer:seniors--><div class=\"offer-card rv\">\n        <span class=\"price\">{{text-4}}</span>\n        <h3>{{sub-heading-4}}</h3>\n        <p>{{paragraph-7}}</p>\n        <p class=\"terms\">{{paragraph-8}}</p>\n        <a class=\"btn btn-ghost\" href=\"{{button-link-4}}\">{{button-text-4}}</a>\n      </div><!--/offer-->\n    </div>\n    <p class=\"rv\" style=\"margin-top:26px;font-size:13.5px;color:var(--grey-2)\">{{paragraph-9}}</p>\n  </div>\n",
    "fields": [
     {
      "id": "small-label-above-the-heading-1",
@@ -226,7 +226,7 @@
      "id": "paragraph-4",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Whitening is only appropriate for some teeth and some conditions - we&rsquo;ll assess yours first and tell you honestly what to expect. <span class=\"verify\">[VERIFY]</span> current price and RRP comparison to be confirmed before publishing."
+     "value": "Whitening is only appropriate for some teeth and some conditions - we&rsquo;ll assess yours first and tell you honestly what to expect. <span class=\"verify\">[VERIFY] current price and RRP comparison to be confirmed before publishing.</span>"
     },
     {
      "id": "button-link-2",
@@ -382,7 +382,7 @@
      "id": "text-2",
      "label": "Text",
      "type": "richtext",
-     "value": "What the $199 first visit actually involves."
+     "value": "What the <span class=\"offer offer-newPatient\">$199 </span>first visit actually involves."
     },
     {
      "id": "link-label-2",

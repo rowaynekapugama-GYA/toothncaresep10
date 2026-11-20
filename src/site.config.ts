@@ -47,10 +47,12 @@ export const DEFAULTS = {
     instagram: 'https://instagram.com/toothncare',
     twitter: 'https://twitter.com/toothncareau',
   },
-  /** Fallback recipients, used when Site Settings has none. */
+  /**
+   * Fallback recipients, used when Site Settings has none. The SmileOX intake
+   * address is added in Site Settings once the practice sends the real one.
+   */
   enquiryRecipients: [
     'reception@toothncare.com.au',
-    'smileox-intake-PLACEHOLDER@toothncare.com.au',
     'rowayne@gyaclients.com',
   ],
   tracking: { ga4: '', metaPixel: '' },

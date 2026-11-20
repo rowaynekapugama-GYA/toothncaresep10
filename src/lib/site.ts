@@ -1,3 +1,4 @@
+import { goLiveTokens } from '@/lib/golive'
 import fs from 'node:fs'
 import path from 'node:path'
 import { DEFAULTS } from '@/site.config'
@@ -92,6 +93,8 @@ export function tokensFor(s: SiteSettings, team: SupportMember[] = []): Record<s
     ...teamTokens(),
     // the support team on Our Team, from the dashboard's Team list
     ...supportTeamTokens(team),
+    // descriptions that name offers, from src/golive.config.ts
+    ...goLiveTokens(),
   }
 }
 

@@ -1246,7 +1246,8 @@
    "tag": "section",
    "attrs": {
     "class": "offer-strip",
-    "id": "offers"
+    "id": "offers",
+    "data-offer": "newPatient"
    },
    "template": "\n  <div class=\"os-bg\" aria-hidden=\"true\"></div>\n  <div class=\"wrap offer-strip-inner rv\">\n    <div class=\"os-copy\">\n      <span class=\"offer-tag\">{{text-1}}</span>\n      <h2>{{heading-1}}</h2>\n      <p>{{paragraph-1}}</p>\n      <p class=\"os-fine\">{{paragraph-2}}</p>\n    </div>\n    <div class=\"os-ctas\">\n      <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n      <a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a>\n    </div>\n  </div>\n",
    "fields": [

@@ -61,3 +61,6 @@ if (process.env.DATABASE_URL && !withoutDb) {
 
 console.log('> building the site')
 run('npx', ['next', 'build'])
+
+// every old address still lands in one hop, and no [VERIFY] note or broken link is published (v2.9.0)
+run('node', ['scripts/check-after-build.mjs'])

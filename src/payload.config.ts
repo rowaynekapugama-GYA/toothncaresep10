@@ -58,6 +58,9 @@ export default buildConfig({
   plugins: [
     vercelBlobStorage({
       enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
+      // v2.9.0: the plugin's columns (prefix, _objectKey) exist whether or not a
+      // token is set, so the database is the same locally and on Vercel.
+      alwaysInsertFields: true,
       collections: { media: true },
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
     }),

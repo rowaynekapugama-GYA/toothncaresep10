@@ -49,12 +49,12 @@ copy of the list in `.env.example`.
 | --- | --- | --- |
 | `DATABASE_URL` | Neon Postgres connection string. Vercel adds this when you connect Neon. | Yes |
 | `PAYLOAD_SECRET` | A random string of at least 32 characters (`openssl rand -hex 32` makes one). Sessions are signed with it. Do not change it after go live or everyone is logged out. The build stops with a clear message if `DATABASE_URL` is set and this is missing or short. | Yes |
-| `NEXT_PUBLIC_SERVER_URL` | The address the dashboard is used on, no trailing slash. Sign in only works from this address and from Vercel's own addresses for the deployment, so set it to the domain people will actually type. Changing it needs a redeploy. Staging: the `cms` preview address while testing, then `https://toothncaresep10.vercel.app` once merged. Live: `https://toothncare.com.au` | Yes |
+| `NEXT_PUBLIC_SERVER_URL` | The address the dashboard is used on, no trailing slash. Sign in only works from this address and from Vercel's own addresses for the deployment, so set it to the domain people will actually type. Changing it needs a redeploy. Staging: the `cms` preview address while testing, then `https://toothncaresep10.vercel.app` once merged. Live: `https://www.toothncare.com.au` | Yes |
 | `BLOB_READ_WRITE_TOKEN` | Vercel Blob. Without it, uploads are written to disk and lost on the next deploy. | Yes |
 | `PUBLISH_HOOK_URL` | The deploy hook. The **Publish website** button calls it. Without it the button explains that publishing is not set up yet, and nothing is lost. | Yes |
 | `SMTP2GO_API_KEY` | Enquiry email. Without it the form saves the enquiry and tells the visitor to ring instead. | Yes |
 | `MAIL_FROM` | The from address. It has to be on a domain verified in SMTP2GO. Suggested: `website@toothncare.com.au` | Yes |
-| `MAIL_TO` | Comma separated fallback recipients. Site Settings takes priority; this is used only if that list is empty. | Recommended |
+| `MAIL_TO` | Comma separated fallback recipients. Site Settings takes priority; this is used only if that list is empty. Real addresses only: an address that looks like a placeholder is skipped. | Recommended |
 | `ALLOW_FIRST_USER` | Set to `true` only while you create the first login, then delete it and redeploy. While it is not `true`, `/admin/create-first-user` answers 404 and nobody can register without an administrator. | One-off |
 
 ### What to set up in SMTP2GO
@@ -64,8 +64,8 @@ copy of the list in `.env.example`.
    rejected or lands in spam.
 2. Create an **API key** with permission to send email. Put it in
    `SMTP2GO_API_KEY`.
-3. Check that `reception@toothncare.com.au` and the SmileOx intake address both
-   accept mail from SMTP2GO.
+3. Check that `reception@toothncare.com.au` (and the SmileOX intake address,
+   once the practice supplies it) accept mail from SMTP2GO.
 
 ---
 
@@ -189,7 +189,8 @@ below. None of them has been deleted.
 ## 5. Go live checklist
 
 The full plan, with the DNS records to change and the ones to keep, is in
-**`docs/GO-LIVE.md`** (v2.8.0). In short:
+**`docs/GO-LIVE.md`** (updated for v2.9.0, with the go-live switch in section
+7a and the old address check in `docs/SEO-URL-PARITY.md`). In short:
 
 - [ ] **www is the main address**: `https://www.toothncare.com.au`, with the
       bare `toothncare.com.au` sending a 308 redirect to it. The old site and
@@ -201,12 +202,16 @@ The full plan, with the DNS records to change and the ones to keep, is in
 - [ ] Verify the sending domain in SMTP2GO and publish its DKIM and return
       path records at the DNS host.
 - [ ] Send a real enquiry from the live form and confirm it arrives at
-      `reception@toothncare.com.au`, at the SmileOx intake address and at
-      `rowayne@gyaclients.com`, and that it appears under **Enquiries**.
-- [ ] Add the GA4 measurement ID and the Meta Pixel ID under **Site Settings**,
-      **Tracking**.
+      `reception@toothncare.com.au` and `rowayne@gyaclients.com`, and that it
+      appears under **Enquiries**.
+- [ ] The practice approves the Privacy Policy and Terms; fill in
+      `GO_LIVE.legalApproved` in `src/golive.config.ts`.
+- [ ] GA4 and the Meta Pixel only after the Privacy Policy names them (the
+      build stops otherwise), then the IDs under **Site Settings**, **Tracking**.
 - [ ] Submit `https://www.toothncare.com.au/sitemap.xml` in Google Search Console.
-- [ ] Hand the practice `docs/CLIENT-GUIDE.pdf` and their editor logins.
+- [ ] After the switch, logins for the practice by
+      `docs/HANDOVER-STEPS-FOR-GYA.md`, with
+      `docs/Tooth-n-Care-Website-Guide.pdf`.
 - [ ] Confirm `ALLOW_FIRST_USER` is not set in any environment, and that
       `https://www.toothncare.com.au/admin/create-first-user` answers 404.
 
@@ -242,20 +247,14 @@ The full plan, with the DNS records to change and the ones to keep, is in
 - AHPRA registration numbers for every practitioner. Edit `src/team.config.ts`;
   an empty number shows nothing on the site.
 
-### Open `[VERIFY]` items
+### Open `[VERIFY]` items and unconfirmed offers
 
-The exact wording of each note and the question to ask the practice are in
+Since v2.9.0 none of them reaches a public page: the go-live switch
+(`src/golive.config.ts`) leaves out every `[VERIFY]` note, and the $199 new
+patient visit, the 5% seniors discount and the discounted ZOOM whitening until
+their offer period (and the whitening price) is entered. The wording is
+unchanged and still in the dashboard. What each one needs from the practice:
 `docs/GO-LIVE.md`, section 7a.
-
-| Page | What needs confirming |
-| --- | --- |
-| `/faq` | Whether the practice is a current Invisalign provider and licensed to use the brand name. Until that is confirmed the page says "clear aligner treatment". |
-| `/offers` | The exact price on the offer, and that the offer period and inclusions are right |
-| `/offers` | The whitening wording |
-| `/teeth-whitening` | Current Philips ZOOM pricing |
-| `/privacy-policy` | Cookie wording, and a review by the practice and a solicitor |
-| `/privacy-policy` | The published date, currently August 2026 |
-| `/terms` | A review by the practice and a solicitor |
 
 ### Details checked against the brief
 
@@ -271,7 +270,7 @@ The exact wording of each note and the question to ask the practice are in
 | Instagram | `instagram.com/toothncare` | not stated in the brief | **to confirm** |
 | X (Twitter) | `twitter.com/toothncareau` | not stated in the brief | **to confirm** |
 | Health funds | HCF, Bupa, Medibank, nib, CBHS, Teachers Health, Defence Health, Australian Unity, GMHBA, CDBS; Humm and DentiCare payment plans | not stated in the brief | to confirm |
-| SmileOx intake address | `smileox-intake-PLACEHOLDER@toothncare.com.au` | not supplied | **needed before go live** |
+| SmileOx intake address | none yet (enquiries go to reception and rowayne@gyaclients.com) | not supplied | add in Site Settings once supplied |
 
 The phone number, address, email and booking link are written into the pages as
 `{{site:phone}}`, `{{site:email}}` and so on. Changing them once in **Site
@@ -339,13 +338,16 @@ or angle brackets stops the build with a message saying which line to fix.
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Run locally on port 3000 |
-| `npm run build` | Migrate, pull from the database, build |
+| `npm run build` | Migrate, pull from the database, build, then check the built site (old addresses, `[VERIFY]` notes, hidden offers, links; `POSTBUILD_CHECK=0` skips it). Output: `.next` (Vercel's Next.js preset, nothing to set) |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run seed` | Load `content/*.json` into the database. `-- --overwrite` resets it |
 | `npm run pull` | Write the database out to `content/*.json` |
-| `npm run qa` | Typecheck, banned wording, secrets, external pictures, role titles, editor parity |
+| `npm run qa` | Typecheck, banned wording, secrets, external pictures, role titles, editor parity, the go-live switch, and the check of the last build |
 | `npm run qa:roles` | Fails if a role title or a registration placeholder is typed into a page instead of coming from `src/team.config.ts` |
-| `npm run qa:editor` | Proves the page editor shows exactly the page the website renders, on all 59 pages |
+| `npm run qa:editor` | Proves the page editor shows exactly the page the website renders, on all 58 pages |
+| `npm run qa:golive` | The go-live switch on fixed dates |
+| `npm run qa:built` | The check after the build, on the last build |
+| `npm run qa:parity -- --base <address> --pages` | The old address and page check against any running site (`docs/SEO-URL-PARITY.md`) |
 
 ---
 

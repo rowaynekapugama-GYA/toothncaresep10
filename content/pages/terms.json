@@ -235,7 +235,7 @@
      "id": "paragraph-11",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Questions about these terms can go to <a href=\"{{site:emailHref}}\">{{site:email}}</a> or {{site:phone}}. <span class=\"verify\">[VERIFY]</span> to be reviewed by the practice, and by a solicitor if the practice wishes, before going live."
+     "value": "Questions about these terms can go to <a href=\"{{site:emailHref}}\">{{site:email}}</a> or {{site:phone}}. <span class=\"verify\">[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live.</span>"
     }
    ]
   },

@@ -42,7 +42,18 @@ function LibraryItem({ doc, onClose, onSaved, onDeleted }: { doc: MediaDoc; onCl
     } catch (e) { toast((e as Error).message, 'bad') } finally { setBusy(false) }
   }
   async function remove() {
-    if (!window.confirm('Delete this photo? Any page still using it will lose the photo the next time you publish.')) return
+    setBusy(true)
+    let use: { places: string[]; canDeleteInUse: boolean } = { places: [], canDeleteInUse: false }
+    try { use = await api(`/api/dashboard/media-usage/${doc.id}`) } catch { /* the server checks again */ }
+    setBusy(false)
+    if (use.places.length && !use.canDeleteInUse) {
+      toast(`This photo is still used on ${use.places.join(', ')}. Replace it there first, or use Upload a replacement to change it everywhere.`, 'bad')
+      return
+    }
+    const msg = use.places.length
+      ? `This photo is still used on ${use.places.join(', ')}. Delete it anyway? Those places lose the photo the next time the website is published.`
+      : 'Delete this photo? It is not used anywhere on the website.'
+    if (!window.confirm(msg)) return
     setBusy(true)
     try {
       await api(`/api/media/${doc.id}`, { method: 'DELETE' })
@@ -64,7 +75,7 @@ function LibraryItem({ doc, onClose, onSaved, onDeleted }: { doc: MediaDoc; onCl
           <TextInput label="Default description (alt text)" value={alt} onChange={setAlt} help="Used when this photo is added to a page or post. Each page can still have its own." />
           <div className="field"><span className="lab">Replace this photo</span>
             <button className="btn" disabled={busy} onClick={() => fileRef.current?.click()}>{Icon.upload()} Upload a replacement</button>
-            <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => { replace(e.target.files?.[0]); e.target.value = '' }} />
+            <input ref={fileRef} type="file" accept="image/*,.heic,.heif" hidden onChange={(e) => { replace(e.target.files?.[0]); e.target.value = '' }} />
             <div className="help">The new photo takes this one&apos;s place on every page that uses it.</div></div>
           <div className="field"><span className="lab">Address</span><input className="input" readOnly value={src} onFocus={(e) => e.target.select()} /></div>
         </div>

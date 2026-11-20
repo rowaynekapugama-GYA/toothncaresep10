@@ -119,6 +119,12 @@ export function SettingsForm({ initial, isAdmin, contactPageHref }: { initial: S
           </Notice>
         </Panel>
 
+        <Panel id="funds" title="Health funds">
+          <Notice tone="info" icon={Icon.info()}>
+            <p>The health funds the practice works with are written on the Payment Options page and in a few page sections, as part of the approved wording, so they are not set here. Ask GYA to change the list, so it changes everywhere it appears.</p>
+          </Notice>
+        </Panel>
+
         <Panel id="social" title="Social links" intro="The icons in the footer link to these.">
           <TextInput label="Facebook" value={s.socials.facebook} onChange={(v) => setSoc({ facebook: v })} />
           <TextInput label="Instagram" value={s.socials.instagram} onChange={(v) => setSoc({ instagram: v })} />

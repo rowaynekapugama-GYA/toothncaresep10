@@ -5,7 +5,8 @@ import { getSettings, siteTokens } from '@/lib/site'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-const SMTP2GO_ENDPOINT = 'https://api.smtp2go.com/v3/email/send'
+// SMTP2GO_API_URL is only for local tests (a stand-in that records the email instead of sending it)
+const SMTP2GO_ENDPOINT = process.env.SMTP2GO_API_URL || 'https://api.smtp2go.com/v3/email/send'
 
 /** Minimum seconds between the form rendering and being submitted. */
 const MIN_FILL_SECONDS = 3
@@ -35,13 +36,18 @@ const escapeHtml = (v: string) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string,
   )
 
+const EMAIL = /^[^\s@<>]+@[^\s@<>]+\.[a-z]{2,}$/i
+const NOT_REAL = /placeholder|smileox-intake(?=@)|\btbc\b|xxx|@example\.|\.invalid$|\.test$/i
+
 /**
  * Site Settings first, then the environment, then the addresses compiled into
  * the site. A missing setting can never silently drop a lead.
  */
 function recipients(): string[] {
   const fromSettings = (getSettings().enquiryRecipients as unknown as string[] | undefined) ?? []
-  const clean = (list: string[]) => list.map((s) => String(s).trim()).filter(Boolean)
+  // Only real addresses: a placeholder left in a setting is never emailed.
+  const clean = (list: string[]) =>
+    list.map((s) => String(s).trim()).filter((s) => EMAIL.test(s) && !NOT_REAL.test(s))
   const settings = clean(fromSettings)
   if (settings.length) return settings
   const fromEnv = clean((process.env.MAIL_TO || '').split(','))

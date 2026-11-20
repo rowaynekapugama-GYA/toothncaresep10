@@ -17,6 +17,7 @@
  */
 import type { Chrome, Field, Page, Part } from '@/lib/parts'
 import { applyTokens } from '@/lib/tokens'
+import { sectionHidden } from '@/lib/golive'
 
 const FONTS =
   'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Figtree:wght@300;400;500;600;700&family=Great+Vibes&display=swap'
@@ -169,7 +170,7 @@ export function renderBody(page: Page, o: RenderOptions): string {
       const s = page.sections[Number(step.slice(8))]
       if (!s || isEmptySlot(s)) continue
       out.push(o.editable
-        ? partHtml(s, markTemplate(s.template, `s:${s.key}`, s.fields), o.tokens, ` data-pds="${attrEsc(s.key)}"`)
+        ? partHtml(s, markTemplate(s.template, `s:${s.key}`, s.fields), o.tokens, ` data-pds="${attrEsc(s.key)}"${sectionHidden(s.attrs) ? ' data-pdo="off"' : ''}`)
         : partHtml(s, plainInner(s), o.tokens))
       continue
     }
@@ -231,4 +232,7 @@ img.pd-sel,img.pd-sel:hover{outline:3px solid #4FD8D2;outline-offset:-3px}
 .rv{opacity:1!important;transform:none!important}
 .acc-body{max-height:none!important;opacity:1!important;margin-top:14px!important}
 #progress{display:none!important}
+span.offer{outline:1px dashed rgba(255,196,0,.75);outline-offset:2px}
+[data-pdo=off]{outline:2px dashed rgba(255,196,0,.75);outline-offset:-6px}
+.pd-golive{position:relative;z-index:50;margin:0;padding:10px 16px;background:#3b2f00;color:#ffe08a;font:500 13px/1.45 system-ui,sans-serif}
 </style>`

@@ -2,6 +2,101 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.9.0] - 2026-11-20
+
+Go-live check of the dashboard, the old addresses and SEO, ahead of the planned
+switch on Monday 23 November (after Nish's OK). Update to the existing
+repository (started from `f15e43b`, v2.8.1).
+
+### Fixed
+
+- **Photo uploads with Vercel Blob:** the `media` table was missing the
+  `prefix` and `_objectkey` columns the Blob storage plugin writes, so with a
+  Blob token set the Media Library answered with an error (500) and uploads
+  failed. New migration `20261120_090000_blob_upload_columns` adds them (if
+  not already there), and the plugin now always writes them
+  (`alwaysInsertFields: true`). `payload migrate:create` reports no schema
+  changes left. The live preview is very likely affected until this deploys.
+- **A brand new database** now migrates from scratch: migration
+  `20261104_100000_team_and_directions` read columns that only exist after
+  later migrations; it now removes the old team row with plain SQL.
+- **Large phone photos** (6 to 10 MB, 4032 x 3024) are made smaller in the
+  browser (longest side 2400, then 2000 or 1600 if needed) before they upload,
+  so they no longer hit Vercel's 4.5 MB request limit. A 7.6 MB photo uploaded
+  as 0.9 MB and was stored as a 2400 x 1800 WebP.
+- **iPhone photos (HEIC):** converted in the browser where it can, otherwise a
+  plain message explains how to send it as a JPG. Too-large uploads also get a
+  plain message instead of a generic error.
+- **Deleting a photo that is still used:** an Editor is stopped and shown where
+  it is used (pages, share pictures, team, posts, settings); an Admin is warned
+  with the same list first. Also enforced on the server.
+- **Redirect chains:** old suburb folders with a closing slash (`/maitland/`)
+  took two hops. Next.js no longer strips closing slashes by itself
+  (`skipTrailingSlashRedirect`), 11 rules send each folder straight to its
+  page, and a final rule removes a closing slash from anything else in one hop.
+- **The check after the build** stopped its local server properly, so the
+  build finishes instead of waiting.
+
+### Added
+
+- **The go-live switch** (`src/golive.config.ts`, `src/lib/golive.ts`):
+  `[VERIFY]` notes never reach a public page, and the $199 new patient visit,
+  the 5% seniors discount and the discounted ZOOM whitening show only once
+  their offer period (and, for whitening, the price) is entered. Dated offers
+  drop off by themselves after their end date. The wording itself is
+  unchanged: the dashboard still shows it, outlined, with a note. The Offers
+  and Payment Options descriptions and the home page's site search list follow
+  the switch. See `docs/GO-LIVE.md` section 7a for what each hidden item needs.
+- **Migration `20261120_100000_golive_offers_verify`:** the same marks in a
+  database imported before v2.9.0, plus the 11 slash redirects. Each value
+  changes only where it is still exactly as v2.8.1 shipped it, so dashboard
+  edits are kept and named in the build log; a second run changes nothing.
+- **Checks after every build** (`scripts/check-after-build.mjs`, also
+  `npm run qa:built`): every one of the 770 old addresses
+  (`docs/seo/old-urls.txt`) must land in one redirect with no 404; every page
+  in the sitemap, plus the Privacy Policy and Terms, must answer 200, carry no
+  `[VERIFY]` or "to be confirmed" wording and no words of a switched-off
+  offer, have its canonical on www, and link only to addresses that answer 200
+  directly; GA4 or the Meta Pixel may only be switched on once the Privacy
+  Policy stops saying "only the cookies necessary". Dashboard photos
+  (`/api/media/file/...`) that do not answer during the build are a warning,
+  never a failure. A reminder prints until `GO_LIVE.legalApproved` is filled in.
+- `npm run qa:golive`: the switch on fixed dates (off, before the start, first
+  and last day, after the end, combined offers, the whitening price).
+- `scripts/seo/check-url-parity.mjs` and `scripts/seo/export-live-site.sh`
+  (curl and perl only): export the live site's addresses, titles,
+  descriptions, canonicals and tracking codes, and compare them with the new
+  site. Results: `docs/SEO-URL-PARITY.md`, `docs/seo/url-parity-2026-11-20.csv`.
+- **Docs:** `docs/CLIENT-GUIDE.md` rewritten for the practice (photos, wording,
+  undo, the blog, enquiries, what to ask GYA, the AHPRA rules) with new
+  screenshots, and `docs/Tooth-n-Care-Website-Guide.pdf` (replaces
+  `CLIENT-GUIDE.pdf`); `docs/HANDOVER-STEPS-FOR-GYA.md`;
+  `docs/CHROME-DASHBOARD-CHECK.md`; `docs/GO-LIVE.md` updated.
+- `qa:banned` fails on a placeholder email address.
+
+### Changed
+
+- **Editors can no longer** change a page's address, hide a page from Google,
+  change the enquiry recipients or switch the whole site to noindex (GYA only,
+  in the dashboard and on the server). The SEO tab shows "Changing a page's
+  address can affect Google rankings. Please ask GYA."
+- **Enquiry recipients:** the made-up SmileOX intake address is gone from the
+  compiled fallback, `content/site-settings.json`, `.env.example` and (by the
+  migration) the database. Enquiries go to reception and
+  rowayne@gyaclients.com until the real address is added in Site Settings, and
+  the form never emails an address that looks like a placeholder.
+- Site Settings explains where opening hours and health funds are changed.
+- Upload boxes accept iPhone photos and say that large photos are made smaller.
+
+### Not changed
+
+- No price, offer wording or legal wording was edited; hidden items come back
+  word for word.
+- Next.js stays on 16.4.4 in this release. 16.4.5 (3 November 2026) fixes
+  seven advisories, mostly in `use cache` and the image optimiser (this site
+  uses neither) and one about HttpOnly cookies on Edge routes. Recommended as
+  its own small release after go-live, with a full test.
+
 ## [2.8.1] - 2026-11-19
 
 Christine's email of 19 November 2026. Update to the existing repository

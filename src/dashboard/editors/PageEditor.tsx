@@ -39,6 +39,8 @@ export type PageEditorProps = {
   defaultOg: string
   defaultTitle: string
   lastmod: string | null
+  /** what GYA's go-live switches leave off this page on the website (src/golive.config.ts) */
+  goLiveNote?: string | null
 }
 
 type Img = { ref: string; alt: string | null; link: string | null }
@@ -655,6 +657,7 @@ export function PageEditor(props: PageEditorProps) {
                   <p><b>Click any photo</b> to replace it.</p>
                   <p>Press <b>Save changes</b> when you are done, then <b>Publish website</b> to put it live.</p>
                 </div>
+                {props.goLiveNote ? <div className="pe-tip" style={{ background: '#fff6d6', borderColor: '#e6c35a' }}><p>{props.goLiveNote}</p></div> : null}
                 {selectionCard()}
                 <h3 className="pe-h">Photos on this page ({images.length})</h3>
                 {!images.length && !loading ? <p className="help">This page has no photos that can be changed here.</p> : null}

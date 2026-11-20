@@ -2,6 +2,7 @@ import type { CSSProperties, ReactElement } from 'react'
 import { createElement } from 'react'
 import { renderPart, type Part } from '@/lib/parts'
 import { applyTokens } from '@/lib/tokens'
+import { applyGoLive, sectionEnd } from '@/lib/golive'
 
 const RENAME: Record<string, string> = {
   class: 'className',
@@ -108,11 +109,14 @@ export default function RawPart({
   for (const [k, v] of Object.entries(part.attrs)) {
     attrs[k] = typeof v === 'string' ? applyTokens(v, tokens) : v
   }
+  // an offer section that shows until a date carries it, for the expiry script (src/lib/golive.ts)
+  const until = sectionEnd(part.attrs)
+  if (until) attrs['data-offer-end'] = until
   const props = toProps(attrs)
   if (VOID.has(part.tag)) return createElement(part.tag, props)
   return createElement(part.tag, {
     ...props,
     suppressHydrationWarning: true,
-    dangerouslySetInnerHTML: { __html: applyTokens(renderPart(part, overrides), tokens) },
+    dangerouslySetInnerHTML: { __html: applyGoLive(applyTokens(renderPart(part, overrides), tokens)) },
   })
 }

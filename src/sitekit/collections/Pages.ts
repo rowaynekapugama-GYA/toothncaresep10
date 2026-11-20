@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { adminOnly, adminOrEditor } from '../access'
+import { adminFieldOnly, adminOnly, adminOrEditor } from '../access'
 import { seoFields } from '../fields/seo'
 import { touchSite } from '../hooks/touchSite'
 
@@ -44,6 +44,8 @@ export const Pages: CollectionConfig = {
       unique: true,
       index: true,
       label: 'Page file name',
+      // v2.9.0: a page's address is GYA's to change (Google rankings), even through the API
+      access: { update: adminFieldOnly },
       admin: { readOnly: true, position: 'sidebar' },
     },
     {
@@ -51,6 +53,8 @@ export const Pages: CollectionConfig = {
       type: 'text',
       required: true,
       label: 'Web address',
+      // v2.9.0: a page's address is GYA's to change (Google rankings), even through the API
+      access: { update: adminFieldOnly },
       admin: { readOnly: true, position: 'sidebar' },
     },
     {

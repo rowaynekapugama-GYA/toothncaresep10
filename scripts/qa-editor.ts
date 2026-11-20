@@ -20,7 +20,7 @@ const strip = (html: string) => html
   .replace(/\u0000([^<]*?)<\/span>/g, '$1')
   .replace(/<pd-e data-pde="[^"]*" data-t="[a-z]+">/g, '')
   .replace(/<\/pd-e>/g, '')
-  .replace(/ data-(pde|pdi|pda|pdh|pds|pdc)="[^"]*"/g, '')
+  .replace(/ data-(pde|pdi|pda|pdh|pds|pdc|pdo)="[^"]*"/g, '')
 
 const chrome = getChrome()
 const tokens = siteTokens()

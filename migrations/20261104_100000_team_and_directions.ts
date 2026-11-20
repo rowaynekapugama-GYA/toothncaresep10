@@ -1,4 +1,4 @@
-import type { MigrateUpArgs, MigrateDownArgs } from '@payloadcms/db-postgres'
+import { sql, type MigrateUpArgs, type MigrateDownArgs } from '@payloadcms/db-postgres'
 import { RELEASE_2_3_0 } from '../src/sitekit/data/release-2-3-0'
 import { partToSectionDoc, sectionDocToPart, type SectionDoc } from '../src/sitekit/sync'
 import type { Part } from '../src/lib/parts'
@@ -22,7 +22,7 @@ const imageId = (v: unknown) => (v && typeof v === 'object' ? (v as { id?: unkno
 const plain = (p: PartJson) => JSON.stringify({ t: p.template, a: p.attrs, f: p.fields.map((f) => [f.id, f.type, f.value]) })
 const asPart = (row: Row): PartJson => sectionDocToPart({ ...row, content: row.content.map((c) => ({ ...c, image: null })) })
 
-export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   const skipped: string[] = []
   const r = RELEASE_2_3_0 as unknown as {
     pages: { slug: string; sections: { key: string; old: PartJson; new: PartJson }[]; jsonLd?: { old: string[]; new: string[] }; bodyScripts?: { old: unknown[]; new: unknown[] } }[]
@@ -91,8 +91,10 @@ export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
     else await payload.create({ collection: 'redirects', data: red as never, req, overrideAccess: true })
   }
 
+  // Plain SQL (v2.9.0): the Payload API reads every column the Team list has
+  // today, some of which a brand new database only gets in a later migration.
   for (const profileUrl of r.deleteTeamProfiles) {
-    await payload.delete({ collection: 'team', where: { profileUrl: { equals: profileUrl } }, req, overrideAccess: true })
+    await db.execute(sql`DELETE FROM "team" WHERE "profile_url" = ${profileUrl}`)
   }
 
   payload.logger.info(`v2.3.0 content changes applied to the dashboard.${skipped.length ? ' Left alone: ' + skipped.join('; ') : ''}`)

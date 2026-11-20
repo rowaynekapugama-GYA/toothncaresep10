@@ -1,0 +1,773 @@
+# Every address from the old site (and earlier preview addresses) that must keep working.
+# One path per line, then a tab and where it came from. Read by scripts/seo/check-url-parity.mjs
+# and by the check after every build. Add the Search Console and backlink exports here as they arrive.
+/	live sitemap
+/awards.htm	live sitemap
+/about.htm	live sitemap
+/meet-our-teams.htm	live sitemap
+/tour-our-clinic.htm	live sitemap
+/our-technology.htm	live sitemap
+/payment-options.htm	live sitemap
+/community.htm	live sitemap
+/sponsorships-and-associations.htm	live sitemap
+/new-patient.htm	live sitemap
+/services.htm	live sitemap
+/general-dentistry.htm	live sitemap
+/oral-hygiene.htm	live sitemap
+/tooth-extraction.htm	live sitemap
+/gum-treatment.htm	live sitemap
+/laser-treatment.htm	live sitemap
+/mouth-guards-and-splint.htm	live sitemap
+/root-canal-treatment.htm	live sitemap
+/wisdom-teeth-surgery.htm	live sitemap
+/cosmetic-dentistry.htm	live sitemap
+/teeth-whitening.htm	live sitemap
+/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/veneers-and-laminates.htm	live sitemap
+/smile-makeover.htm	live sitemap
+/orthodontics.htm	live sitemap
+/invisalign-clear-aligners.htm	live sitemap
+/clear-braces.htm	live sitemap
+/metal-braces.htm	live sitemap
+/restorative-dentistry.htm	live sitemap
+/white-fillings.htm	live sitemap
+/dental-implants.htm	live sitemap
+/dental-crowns-and-bridges.htm	live sitemap
+/single-visit-crowns.htm	live sitemap
+/dentures.htm	live sitemap
+/childrens-dentistry.htm	live sitemap
+/pain-free-dentistry.htm	live sitemap
+/conventional-dental-braces.htm	live sitemap
+/new-child-dental-benefit-scheme.htm	live sitemap
+/offers.htm	live sitemap
+/emergency.htm	live sitemap
+/photo-gallery.htm	live sitemap
+/video-gallery.htm	live sitemap
+/contact.htm	live sitemap
+/market-area.htm	live sitemap
+/aberglasslyn/	live sitemap
+/ashtonfield/	live sitemap
+/beresfield/	live sitemap
+/bolwarra/	live sitemap
+/bolwarra-heights/	live sitemap
+/chisholm/	live sitemap
+/gilleston-heights/	live sitemap
+/green-hills/	live sitemap
+/louth-park/	live sitemap
+/maitland/	live sitemap
+/metford/	live sitemap
+/morpeth/	live sitemap
+/oakhampton/	live sitemap
+/raworth/	live sitemap
+/raymond-terrace/	live sitemap
+/rutherford/	live sitemap
+/south-maitland/	live sitemap
+/tarro/	live sitemap
+/tenambit/	live sitemap
+/thornton/	live sitemap
+/woodberry/	live sitemap
+/aberglasslyn/services.htm	live sitemap
+/aberglasslyn/general-dentistry.htm	live sitemap
+/aberglasslyn/oral-hygiene.htm	live sitemap
+/aberglasslyn/tooth-extraction.htm	live sitemap
+/aberglasslyn/gum-treatment.htm	live sitemap
+/aberglasslyn/laser-treatment.htm	live sitemap
+/aberglasslyn/mouth-guards-and-splint.htm	live sitemap
+/aberglasslyn/root-canal-treatment.htm	live sitemap
+/aberglasslyn/wisdom-teeth-surgery.htm	live sitemap
+/aberglasslyn/cosmetic-dentistry.htm	live sitemap
+/aberglasslyn/teeth-whitening.htm	live sitemap
+/aberglasslyn/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/aberglasslyn/veneers-and-laminates.htm	live sitemap
+/aberglasslyn/smile-makeover.htm	live sitemap
+/aberglasslyn/orthodontics.htm	live sitemap
+/aberglasslyn/invisalign-clear-aligners.htm	live sitemap
+/aberglasslyn/clear-braces.htm	live sitemap
+/aberglasslyn/metal-braces.htm	live sitemap
+/aberglasslyn/restorative-dentistry.htm	live sitemap
+/aberglasslyn/white-fillings.htm	live sitemap
+/aberglasslyn/dental-implants.htm	live sitemap
+/aberglasslyn/dental-crowns-and-bridges.htm	live sitemap
+/aberglasslyn/single-visit-crowns.htm	live sitemap
+/aberglasslyn/dentures.htm	live sitemap
+/aberglasslyn/childrens-dentistry.htm	live sitemap
+/aberglasslyn/pain-free-dentistry.htm	live sitemap
+/aberglasslyn/conventional-dental-braces.htm	live sitemap
+/aberglasslyn/new-child-dental-benefit-scheme.htm	live sitemap
+/aberglasslyn/emergency.htm	live sitemap
+/aberglasslyn/offers.htm	live sitemap
+/aberglasslyn/payment-options.htm	live sitemap
+/ashtonfield/services.htm	live sitemap
+/ashtonfield/general-dentistry.htm	live sitemap
+/ashtonfield/oral-hygiene.htm	live sitemap
+/ashtonfield/tooth-extraction.htm	live sitemap
+/ashtonfield/gum-treatment.htm	live sitemap
+/ashtonfield/laser-treatment.htm	live sitemap
+/ashtonfield/mouth-guards-and-splint.htm	live sitemap
+/ashtonfield/root-canal-treatment.htm	live sitemap
+/ashtonfield/wisdom-teeth-surgery.htm	live sitemap
+/ashtonfield/cosmetic-dentistry.htm	live sitemap
+/ashtonfield/teeth-whitening.htm	live sitemap
+/ashtonfield/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/ashtonfield/veneers-and-laminates.htm	live sitemap
+/ashtonfield/smile-makeover.htm	live sitemap
+/ashtonfield/orthodontics.htm	live sitemap
+/ashtonfield/invisalign-clear-aligners.htm	live sitemap
+/ashtonfield/clear-braces.htm	live sitemap
+/ashtonfield/metal-braces.htm	live sitemap
+/ashtonfield/restorative-dentistry.htm	live sitemap
+/ashtonfield/white-fillings.htm	live sitemap
+/ashtonfield/dental-implants.htm	live sitemap
+/ashtonfield/dental-crowns-and-bridges.htm	live sitemap
+/ashtonfield/single-visit-crowns.htm	live sitemap
+/ashtonfield/dentures.htm	live sitemap
+/ashtonfield/childrens-dentistry.htm	live sitemap
+/ashtonfield/pain-free-dentistry.htm	live sitemap
+/ashtonfield/conventional-dental-braces.htm	live sitemap
+/ashtonfield/new-child-dental-benefit-scheme.htm	live sitemap
+/ashtonfield/emergency.htm	live sitemap
+/ashtonfield/offers.htm	live sitemap
+/ashtonfield/payment-options.htm	live sitemap
+/beresfield/services.htm	live sitemap
+/beresfield/general-dentistry.htm	live sitemap
+/beresfield/oral-hygiene.htm	live sitemap
+/beresfield/tooth-extraction.htm	live sitemap
+/beresfield/gum-treatment.htm	live sitemap
+/beresfield/laser-treatment.htm	live sitemap
+/beresfield/mouth-guards-and-splint.htm	live sitemap
+/beresfield/root-canal-treatment.htm	live sitemap
+/beresfield/wisdom-teeth-surgery.htm	live sitemap
+/beresfield/cosmetic-dentistry.htm	live sitemap
+/beresfield/teeth-whitening.htm	live sitemap
+/beresfield/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/beresfield/veneers-and-laminates.htm	live sitemap
+/beresfield/smile-makeover.htm	live sitemap
+/beresfield/orthodontics.htm	live sitemap
+/beresfield/invisalign-clear-aligners.htm	live sitemap
+/beresfield/clear-braces.htm	live sitemap
+/beresfield/metal-braces.htm	live sitemap
+/beresfield/restorative-dentistry.htm	live sitemap
+/beresfield/white-fillings.htm	live sitemap
+/beresfield/dental-implants.htm	live sitemap
+/beresfield/dental-crowns-and-bridges.htm	live sitemap
+/beresfield/single-visit-crowns.htm	live sitemap
+/beresfield/dentures.htm	live sitemap
+/beresfield/childrens-dentistry.htm	live sitemap
+/beresfield/pain-free-dentistry.htm	live sitemap
+/beresfield/conventional-dental-braces.htm	live sitemap
+/beresfield/new-child-dental-benefit-scheme.htm	live sitemap
+/beresfield/emergency.htm	live sitemap
+/beresfield/offers.htm	live sitemap
+/beresfield/payment-options.htm	live sitemap
+/bolwarra/services.htm	live sitemap
+/bolwarra/general-dentistry.htm	live sitemap
+/bolwarra/oral-hygiene.htm	live sitemap
+/bolwarra/tooth-extraction.htm	live sitemap
+/bolwarra/gum-treatment.htm	live sitemap
+/bolwarra/laser-treatment.htm	live sitemap
+/bolwarra/mouth-guards-and-splint.htm	live sitemap
+/bolwarra/root-canal-treatment.htm	live sitemap
+/bolwarra/wisdom-teeth-surgery.htm	live sitemap
+/bolwarra/cosmetic-dentistry.htm	live sitemap
+/bolwarra/teeth-whitening.htm	live sitemap
+/bolwarra/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/bolwarra/veneers-and-laminates.htm	live sitemap
+/bolwarra/smile-makeover.htm	live sitemap
+/bolwarra/orthodontics.htm	live sitemap
+/bolwarra/invisalign-clear-aligners.htm	live sitemap
+/bolwarra/clear-braces.htm	live sitemap
+/bolwarra/metal-braces.htm	live sitemap
+/bolwarra/restorative-dentistry.htm	live sitemap
+/bolwarra/white-fillings.htm	live sitemap
+/bolwarra/dental-implants.htm	live sitemap
+/bolwarra/dental-crowns-and-bridges.htm	live sitemap
+/bolwarra/single-visit-crowns.htm	live sitemap
+/bolwarra/dentures.htm	live sitemap
+/bolwarra/childrens-dentistry.htm	live sitemap
+/bolwarra/pain-free-dentistry.htm	live sitemap
+/bolwarra/conventional-dental-braces.htm	live sitemap
+/bolwarra/new-child-dental-benefit-scheme.htm	live sitemap
+/bolwarra/emergency.htm	live sitemap
+/bolwarra/offers.htm	live sitemap
+/bolwarra/payment-options.htm	live sitemap
+/bolwarra-heights/services.htm	live sitemap
+/bolwarra-heights/general-dentistry.htm	live sitemap
+/bolwarra-heights/oral-hygiene.htm	live sitemap
+/bolwarra-heights/tooth-extraction.htm	live sitemap
+/bolwarra-heights/gum-treatment.htm	live sitemap
+/bolwarra-heights/laser-treatment.htm	live sitemap
+/bolwarra-heights/mouth-guards-and-splint.htm	live sitemap
+/bolwarra-heights/root-canal-treatment.htm	live sitemap
+/bolwarra-heights/wisdom-teeth-surgery.htm	live sitemap
+/bolwarra-heights/cosmetic-dentistry.htm	live sitemap
+/bolwarra-heights/teeth-whitening.htm	live sitemap
+/bolwarra-heights/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/bolwarra-heights/veneers-and-laminates.htm	live sitemap
+/bolwarra-heights/smile-makeover.htm	live sitemap
+/bolwarra-heights/orthodontics.htm	live sitemap
+/bolwarra-heights/invisalign-clear-aligners.htm	live sitemap
+/bolwarra-heights/clear-braces.htm	live sitemap
+/bolwarra-heights/metal-braces.htm	live sitemap
+/bolwarra-heights/restorative-dentistry.htm	live sitemap
+/bolwarra-heights/white-fillings.htm	live sitemap
+/bolwarra-heights/dental-implants.htm	live sitemap
+/bolwarra-heights/dental-crowns-and-bridges.htm	live sitemap
+/bolwarra-heights/single-visit-crowns.htm	live sitemap
+/bolwarra-heights/dentures.htm	live sitemap
+/bolwarra-heights/childrens-dentistry.htm	live sitemap
+/bolwarra-heights/pain-free-dentistry.htm	live sitemap
+/bolwarra-heights/conventional-dental-braces.htm	live sitemap
+/bolwarra-heights/new-child-dental-benefit-scheme.htm	live sitemap
+/bolwarra-heights/emergency.htm	live sitemap
+/bolwarra-heights/offers.htm	live sitemap
+/bolwarra-heights/payment-options.htm	live sitemap
+/chisholm/services.htm	live sitemap
+/chisholm/general-dentistry.htm	live sitemap
+/chisholm/oral-hygiene.htm	live sitemap
+/chisholm/tooth-extraction.htm	live sitemap
+/chisholm/gum-treatment.htm	live sitemap
+/chisholm/laser-treatment.htm	live sitemap
+/chisholm/mouth-guards-and-splint.htm	live sitemap
+/chisholm/root-canal-treatment.htm	live sitemap
+/chisholm/wisdom-teeth-surgery.htm	live sitemap
+/chisholm/cosmetic-dentistry.htm	live sitemap
+/chisholm/teeth-whitening.htm	live sitemap
+/chisholm/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/chisholm/veneers-and-laminates.htm	live sitemap
+/chisholm/smile-makeover.htm	live sitemap
+/chisholm/orthodontics.htm	live sitemap
+/chisholm/invisalign-clear-aligners.htm	live sitemap
+/chisholm/clear-braces.htm	live sitemap
+/chisholm/metal-braces.htm	live sitemap
+/chisholm/restorative-dentistry.htm	live sitemap
+/chisholm/white-fillings.htm	live sitemap
+/chisholm/dental-implants.htm	live sitemap
+/chisholm/dental-crowns-and-bridges.htm	live sitemap
+/chisholm/single-visit-crowns.htm	live sitemap
+/chisholm/dentures.htm	live sitemap
+/chisholm/childrens-dentistry.htm	live sitemap
+/chisholm/pain-free-dentistry.htm	live sitemap
+/chisholm/conventional-dental-braces.htm	live sitemap
+/chisholm/new-child-dental-benefit-scheme.htm	live sitemap
+/chisholm/emergency.htm	live sitemap
+/chisholm/offers.htm	live sitemap
+/chisholm/payment-options.htm	live sitemap
+/gilleston-heights/services.htm	live sitemap
+/gilleston-heights/general-dentistry.htm	live sitemap
+/gilleston-heights/oral-hygiene.htm	live sitemap
+/gilleston-heights/tooth-extraction.htm	live sitemap
+/gilleston-heights/gum-treatment.htm	live sitemap
+/gilleston-heights/laser-treatment.htm	live sitemap
+/gilleston-heights/mouth-guards-and-splint.htm	live sitemap
+/gilleston-heights/root-canal-treatment.htm	live sitemap
+/gilleston-heights/wisdom-teeth-surgery.htm	live sitemap
+/gilleston-heights/cosmetic-dentistry.htm	live sitemap
+/gilleston-heights/teeth-whitening.htm	live sitemap
+/gilleston-heights/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/gilleston-heights/veneers-and-laminates.htm	live sitemap
+/gilleston-heights/smile-makeover.htm	live sitemap
+/gilleston-heights/orthodontics.htm	live sitemap
+/gilleston-heights/invisalign-clear-aligners.htm	live sitemap
+/gilleston-heights/clear-braces.htm	live sitemap
+/gilleston-heights/metal-braces.htm	live sitemap
+/gilleston-heights/restorative-dentistry.htm	live sitemap
+/gilleston-heights/white-fillings.htm	live sitemap
+/gilleston-heights/dental-implants.htm	live sitemap
+/gilleston-heights/dental-crowns-and-bridges.htm	live sitemap
+/gilleston-heights/single-visit-crowns.htm	live sitemap
+/gilleston-heights/dentures.htm	live sitemap
+/gilleston-heights/childrens-dentistry.htm	live sitemap
+/gilleston-heights/pain-free-dentistry.htm	live sitemap
+/gilleston-heights/conventional-dental-braces.htm	live sitemap
+/gilleston-heights/new-child-dental-benefit-scheme.htm	live sitemap
+/gilleston-heights/emergency.htm	live sitemap
+/gilleston-heights/offers.htm	live sitemap
+/gilleston-heights/payment-options.htm	live sitemap
+/green-hills/services.htm	live sitemap
+/green-hills/general-dentistry.htm	live sitemap
+/green-hills/oral-hygiene.htm	live sitemap
+/green-hills/tooth-extraction.htm	live sitemap
+/green-hills/gum-treatment.htm	live sitemap
+/green-hills/laser-treatment.htm	live sitemap
+/green-hills/mouth-guards-and-splint.htm	live sitemap
+/green-hills/root-canal-treatment.htm	live sitemap
+/green-hills/wisdom-teeth-surgery.htm	live sitemap
+/green-hills/cosmetic-dentistry.htm	live sitemap
+/green-hills/teeth-whitening.htm	live sitemap
+/green-hills/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/green-hills/veneers-and-laminates.htm	live sitemap
+/green-hills/smile-makeover.htm	live sitemap
+/green-hills/orthodontics.htm	live sitemap
+/green-hills/invisalign-clear-aligners.htm	live sitemap
+/green-hills/clear-braces.htm	live sitemap
+/green-hills/metal-braces.htm	live sitemap
+/green-hills/restorative-dentistry.htm	live sitemap
+/green-hills/white-fillings.htm	live sitemap
+/green-hills/dental-implants.htm	live sitemap
+/green-hills/dental-crowns-and-bridges.htm	live sitemap
+/green-hills/single-visit-crowns.htm	live sitemap
+/green-hills/dentures.htm	live sitemap
+/green-hills/childrens-dentistry.htm	live sitemap
+/green-hills/pain-free-dentistry.htm	live sitemap
+/green-hills/conventional-dental-braces.htm	live sitemap
+/green-hills/new-child-dental-benefit-scheme.htm	live sitemap
+/green-hills/emergency.htm	live sitemap
+/green-hills/offers.htm	live sitemap
+/green-hills/payment-options.htm	live sitemap
+/louth-park/services.htm	live sitemap
+/louth-park/general-dentistry.htm	live sitemap
+/louth-park/oral-hygiene.htm	live sitemap
+/louth-park/tooth-extraction.htm	live sitemap
+/louth-park/gum-treatment.htm	live sitemap
+/louth-park/laser-treatment.htm	live sitemap
+/louth-park/mouth-guards-and-splint.htm	live sitemap
+/louth-park/root-canal-treatment.htm	live sitemap
+/louth-park/wisdom-teeth-surgery.htm	live sitemap
+/louth-park/cosmetic-dentistry.htm	live sitemap
+/louth-park/teeth-whitening.htm	live sitemap
+/louth-park/anti-wrinkle-injections-and-fillers.htm	live sitemap
+/louth-park/veneers-and-laminates.htm	live sitemap
+/louth-park/smile-makeover.htm	live sitemap
+/louth-park/orthodontics.htm	live sitemap
+/louth-park/invisalign-clear-aligners.htm	live sitemap
+/louth-park/clear-braces.htm	live sitemap
+/louth-park/metal-braces.htm	live sitemap
+/louth-park/restorative-dentistry.htm	live sitemap
+/louth-park/white-fillings.htm	live sitemap
+/louth-park/dental-implants.htm	live sitemap
+/louth-park/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/louth-park/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/maitland/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/metford/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/morpeth/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/oakhampton/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raworth/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/raymond-terrace/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/rutherford/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/south-maitland/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tarro/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/tenambit/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/thornton/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/services.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/general-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/oral-hygiene.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/tooth-extraction.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/gum-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/laser-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/mouth-guards-and-splint.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/root-canal-treatment.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/wisdom-teeth-surgery.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/cosmetic-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/teeth-whitening.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/anti-wrinkle-injections-and-fillers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/veneers-and-laminates.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/smile-makeover.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/orthodontics.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/invisalign-clear-aligners.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/clear-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/metal-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/restorative-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/white-fillings.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/dental-implants.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/dental-crowns-and-bridges.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/single-visit-crowns.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/dentures.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/childrens-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/pain-free-dentistry.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/conventional-dental-braces.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/new-child-dental-benefit-scheme.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/emergency.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/offers.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/woodberry/payment-options.htm	same pattern as the sitemap (the live sitemap file is cut off)
+/veneer-and-laminates.htm	live homepage link
+/aberglasslyn	folder without the closing slash
+/ashtonfield	folder without the closing slash
+/beresfield	folder without the closing slash
+/bolwarra	folder without the closing slash
+/bolwarra-heights	folder without the closing slash
+/chisholm	folder without the closing slash
+/gilleston-heights	folder without the closing slash
+/green-hills	folder without the closing slash
+/louth-park	folder without the closing slash
+/maitland	folder without the closing slash
+/metford	folder without the closing slash
+/morpeth	folder without the closing slash
+/oakhampton	folder without the closing slash
+/raworth	folder without the closing slash
+/raymond-terrace	folder without the closing slash
+/rutherford	folder without the closing slash
+/south-maitland	folder without the closing slash
+/tarro	folder without the closing slash
+/tenambit	folder without the closing slash
+/thornton	folder without the closing slash
+/woodberry	folder without the closing slash
+/children-dentistry.htm	earlier site address (redirect rule)
+/mouthguards-and-splint.htm	earlier site address (redirect rule)
+/our-team/dr-navneet-karan	earlier site address (redirect rule)
+/our-team/dr-nisheeth-agrawal	earlier site address (redirect rule)
+/our-team/support-team	earlier site address (redirect rule)
+/our-team/zoe-xu	earlier site address (redirect rule)
+/services/cosmetic-dentistry	earlier site address (redirect rule)
+/services/cosmetic-dentistry/smile-makeover	earlier site address (redirect rule)
+/services/cosmetic-dentistry/teeth-whitening	earlier site address (redirect rule)
+/services/cosmetic-dentistry/veneers-and-laminates	earlier site address (redirect rule)
+/services/dental-implants	earlier site address (redirect rule)
+/services/general-dentistry	earlier site address (redirect rule)
+/services/general-dentistry/check-ups	earlier site address (redirect rule)
+/services/general-dentistry/laser-dentistry	earlier site address (redirect rule)
+/services/general-dentistry/root-canal-treatment	earlier site address (redirect rule)
+/services/general-dentistry/tooth-extraction	earlier site address (redirect rule)
+/services/general-dentistry/wisdom-teeth-removal	earlier site address (redirect rule)
+/services/orthodontics	earlier site address (redirect rule)
+/services/orthodontics/clear-aligners	earlier site address (redirect rule)
+/services/orthodontics/clear-braces	earlier site address (redirect rule)
+/services/orthodontics/metal-braces	earlier site address (redirect rule)
+/services/preventative-dentistry	earlier site address (redirect rule)
+/services/preventative-dentistry/childrens-dentistry	earlier site address (redirect rule)
+/services/preventative-dentistry/gum-treatment	earlier site address (redirect rule)
+/services/preventative-dentistry/mouthguards-and-splints	earlier site address (redirect rule)
+/services/preventative-dentistry/oral-hygiene	earlier site address (redirect rule)
+/services/restorative-dentistry	earlier site address (redirect rule)
+/services/restorative-dentistry/crowns-and-bridges	earlier site address (redirect rule)
+/services/restorative-dentistry/dentures	earlier site address (redirect rule)
+/services/restorative-dentistry/single-visit-crowns	earlier site address (redirect rule)
+/services/restorative-dentistry/white-fillings	earlier site address (redirect rule)
+/support-team	earlier site address (redirect rule)

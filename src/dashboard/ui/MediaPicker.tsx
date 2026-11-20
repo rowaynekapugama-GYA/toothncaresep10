@@ -38,9 +38,9 @@ export function DropZone({ onFiles, multiple = true, label }: { onFiles: (f: Fil
       onDrop={(e) => { e.preventDefault(); setOver(false); onFiles(Array.from(e.dataTransfer.files).filter((f) => f.type.startsWith('image/'))) }}>
       <p>{label || 'Drag photos here, or'}</p>
       <button type="button" className="btn primary" onClick={() => input.current?.click()}>{Icon.upload()} Upload from your computer</button>
-      <input ref={input} type="file" accept="image/*" multiple={multiple} hidden
+      <input ref={input} type="file" accept="image/*,.heic,.heif" multiple={multiple} hidden
         onChange={(e) => { onFiles(Array.from(e.target.files || [])); e.target.value = '' }} />
-      <div className="help" style={{ marginTop: 8 }}>JPG, PNG or WebP up to {MAX_UPLOAD_MB} MB. Large photos are resized automatically.</div>
+      <div className="help" style={{ marginTop: 8 }}>JPG, PNG or WebP, and iPhone photos. Large photos are made smaller automatically before they upload.</div>
     </div>
   )
 }
@@ -129,7 +129,7 @@ export function ImageSlot({ value, original, onChange, label = 'Photo' }: {
             <button type="button" className="btn small ghost" onClick={() => onChange({ value: original, media: null })}>Put back the original photo</button>
           ) : null}
           <span className="file">{src ? decodeURIComponent(src.split('/').pop() || '') : ''}</span>
-          <input ref={file} type="file" accept="image/*" hidden onChange={(e) => { upload(e.target.files?.[0]); e.target.value = '' }} />
+          <input ref={file} type="file" accept="image/*,.heic,.heif" hidden onChange={(e) => { upload(e.target.files?.[0]); e.target.value = '' }} />
         </div>
       </div>
       {picking ? <MediaPicker onClose={() => setPicking(false)} onPick={(d) => { setPicking(false); onChange({ value: mediaSrc(d), media: d.id, alt: d.alt }) }} /> : null}

@@ -25,7 +25,8 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     meta.title = String(body.seo.title ?? '')
     meta.description = String(body.seo.description ?? '')
     meta.ogImage = body.seo.ogImageMedia ?? null
-    meta.noindex = !!body.seo.noindex
+    // hiding a page from Google is GYA's call (v2.9.0); the practice's saves keep what is set
+    if (user.role === 'admin') meta.noindex = !!body.seo.noindex
     if (user.role === 'admin' && typeof body.seo.canonical === 'string') meta.canonical = body.seo.canonical.trim()
   } else if (meta.ogImage && typeof meta.ogImage === 'object') {
     meta.ogImage = (meta.ogImage as { id: number }).id

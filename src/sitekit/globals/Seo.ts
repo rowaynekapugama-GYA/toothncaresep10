@@ -1,5 +1,5 @@
 import type { GlobalConfig } from 'payload'
-import { adminOrEditor } from '../access'
+import { adminFieldOnly, adminOrEditor } from '../access'
 import { touchSiteGlobal } from '../hooks/touchSite'
 
 /** The search engine defaults a page falls back to when it sets nothing itself. */
@@ -32,6 +32,8 @@ export const Seo: GlobalConfig = {
     {
       name: 'noindexSite',
       type: 'checkbox',
+      // v2.9.0: GYA only, through the API as well as on screen
+      access: { update: adminFieldOnly },
       defaultValue: false,
       label: 'Hide the whole site from Google',
       admin: { description: 'Only tick this before the site goes live.' },

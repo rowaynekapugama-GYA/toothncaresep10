@@ -416,10 +416,148 @@ the reviewed list), no secrets, no pictures from another site, editor parity
 | Dashboard with the name changed to "Mursal B", Morpeth's share picture changed and the Contact wording edited | all three left alone (the build log says the name and the Contact note were left as they are); the other 10 pages' share picture changed |
 | `npm run build`, `npm run qa` | clean; editor parity 58 of 58 |
 
-## 19. What could not be tested here
+## 19. Version 2.9.0: go-live check of the dashboard, URLs and SEO, run on 20 November 2026
+
+How it was run: the production build (`next start`) against a local Postgres
+16 database made **from the migrations alone** (no copy of anyone's data),
+seeded the way Vercel's first build seeds it, with a stand-in for Vercel Blob
+(a dummy `BLOB_READ_WRITE_TOKEN`, so the real Blob plugin code runs) and a
+stand-in for SMTP2GO that records what would be sent. Two local test logins,
+one Admin and one Editor, with made-up addresses (`@example.com`) and test
+passwords; no real login was created anywhere. Every screen was driven in
+Chromium (Playwright) as each role. Every test edit was put back: after
+"Reset to the repository's content" the pull gave back the repository's
+content byte for byte.
+
+### Dashboard, Editor and Admin
+
+| Area | Check | Editor | Admin | Note |
+| --- | --- | --- | --- | --- |
+| Sign in | wrong password message is plain | - | pass | That email and password do not match. Please try again. |
+| Sign in | forgotten password help on the sign-in page | - | pass |  |
+| Sign in | signs in | - | pass |  |
+| Sidebar | Dashboard opens | pass | pass |  |
+| Sidebar | Pages opens | pass | pass |  |
+| Sidebar | Blog Posts opens | pass | pass |  |
+| Sidebar | Media Library opens | pass | pass |  |
+| Sidebar | Team opens | pass | pass |  |
+| Sidebar | Enquiries opens | pass | pass |  |
+| Sidebar | SEO opens | pass | pass |  |
+| Sidebar | Site Settings opens | pass | pass |  |
+| Sidebar | Redirects opens | - | pass |  |
+| Sidebar | Users opens | - | pass |  |
+| Users | adds an editor with a temporary password | - | pass |  |
+| Sign out | signs out to the sign-in page | - | pass |  |
+| Sign in | temporary password goes to Choose a new password | pass | - |  |
+| Sign in | new password saved, dashboard opens | pass | - | http://localhost:3000/admin |
+| Sidebar | Redirects and Users not shown | pass | - | Dashboard/Pages/Blog Posts/Media Library/Team/Enquiries/SEO/Site Settings |
+| Dashboard | no Import or Reset tools for the practice | pass | - |  |
+| Restrictions | /admin/users refused | pass | - | 404 -> /admin/users |
+| Restrictions | /admin/redirects refused | pass | - | 404 -> /admin/redirects |
+| Restrictions | /cms refused | pass | - | 200 -> /cms/unauthorized |
+| Restrictions | cannot change a page address (slug) through the API | pass | - | the request is accepted but the address stays "about" |
+| Restrictions | cannot delete a page | pass | - | DELETE 403 |
+| Restrictions | cannot add a redirect | pass | - | POST 403 |
+| Restrictions | cannot add a user | pass | - | POST 403 |
+| Restrictions | cannot hide the whole site from Google | pass | - | the request is accepted but the switch stays off |
+| Restrictions | cannot change enquiry recipients | pass | - | the request is accepted but the list is unchanged |
+| Restrictions | cannot see tracking IDs | pass | - | not in the settings an Editor receives |
+| Media Library | upload JPG (0.7 MB) | pass | - | Photo uploaded. Click it to add a description. |
+| Media Library | upload PNG | pass | - | Photo uploaded. Click it to add a description. |
+| Media Library | upload large phone photo (7.6 MB, 4032 x 3024) | pass | - | made smaller in the browser and sent as 0.92 MB; stored as a 2400 x 1800 WebP |
+| Media Library | upload iPhone HEIC photo | pass | - | test-iphone-photo.heic is an iPhone photo in HEIC format, which this browser cannot open. Please upload it as a JPG: on the iPhone, open Settings, Camera, Forma |
+| Media Library | search finds the photo | pass | - | 1 shown for "test phone" |
+| Media Library | edit a description | pass | - | Saved. |
+| Media Library | Replace everywhere (upload a replacement) | pass | - | Photo replaced everywhere it is used. Publish website to put it live. |
+| Media Library | delete an unused photo | pass | - | Photo deleted.; asked: Delete this photo? It is not used anywhere on the website. |
+| Page editor | edit words in place, accent word kept | pass | pass | We’re here to care today today; We’re here to care today |
+| Page editor | change a button's link | pass | pass |  |
+| Page editor | replace the hero photo (under its overlay) | pass | pass | a Media Library photo (/api/media/file/...) |
+| Page editor | edit the photo description | pass | pass |  |
+| Page editor | desktop and mobile view | pass | pass | mobile frame 390px; mobile frame 390px |
+| Page editor | unsaved changes warning before leaving | pass | pass | You have unsaved changes. Leave without saving?; You have unsaved changes. Leave without saving? |
+| Page editor | Save changes | pass | pass |  |
+| Page editor | View the page (preview link) | pass | pass | / |
+| Page editor | SEO tab: title, description, share picture and the address note | pass | pass |  |
+| Page editor | SEO tab: Hide from Google and canonical for GYA | - | pass |  |
+| Page editor | Sections: hide and show a section | pass | pass | Get to know us; Get to know us |
+| Page editor | Sections: drag to reorder | pass | pass | Hero banner / Explore our services / We’re here to care / Get to know us -> Hero banner / We’re here to care / Explore our services / Get to know us; Hero banne |
+| Page editor | footer opening hours are editable | pass | pass | c:footer/answer-1; c:footer/answer-1 |
+| Page editor | Publish website gives a plain answer | pass | pass | Publishing is not set up yet.; Publishing is not set up yet. |
+| Team | team photo on the Our Team page shows the photo help (4:3, colour automatic) | pass | pass |  |
+| Pages | every page opens in the editor with editable words (58) | pass | - | 58 of 58 |
+| Page editor | SEO tab: no Hide from Google switch for the practice | pass | - |  |
+| Team | edit a role line and save | pass | pass | Holly saved. Press Publish website when you are ready.; Holly saved. Press Publish website when you are ready. |
+| Team | add a support team photo and save | pass | pass | Holly saved. Press Publish website when you are ready.; Holly saved. Press Publish website when you are ready. |
+| Team | photo help on the Team screen (4:3, at least 800 x 600, colour automatic) | pass | pass |  |
+| Media Library | deleting a photo that is in use warns first, with where it is used | - | pass | This photo is still used on the Dentist in East Maitland page, Holly on the Team screen, the blog post "Test post from the dashboard check". Delete it anyway? T |
+| Site Settings | opening hours explained (edited in the footer and on Contact) | pass | pass |  |
+| Site Settings | health funds explained (part of the approved wording, ask GYA) | pass | pass |  |
+| Site Settings | GYA-only fields shown to GYA | - | pass |  |
+| Site Settings | change the phone number and save | pass | pass | Settings saved. Press Publish website to put them live.; Settings saved. Press Publish website to put them live. |
+| SEO screen | title and description verdicts shown | pass | pass | Good, Too long, Yes, Short, Missing; Good, Too long, Short |
+| SEO screen | Worth a look filter | pass | pass | 23 rows; 22 rows |
+| SEO screen | Edit pop-up opens | pass | pass |  |
+| Media Library | deleting a photo that is in use is refused, with where it is used | pass | - | This photo is still used on the Dentist in East Maitland page, Holly on the Team screen. Replace it there first, or use Upload a replacement to change it everyw |
+| Site Settings | GYA-only fields (tracking, enquiry recipients, hide from Google) not shown | pass | - |  |
+| Blog | write with a heading, a list, a link and an inline photo | pass | - | h2, list, link to /contact and an inline photo saved |
+| Blog | featured photo and share picture chosen | pass | - | 2 photo slots |
+| Blog | publish the post | pass | - | status published in the dashboard |
+| Enquiries | Contact form sends | pass (visitor) | - | Thank you. Your message is on its way and we will be in touch shortly. |
+| Enquiries | email handed to SMTP2GO (stand-in): recipients and from-address | pass (visitor) | - | to reception@toothncare.com.au and rowayne@gyaclients.com, from "Tooth n Care Website" website@toothncare.com.au (the first run also went to the SmileOX placeholder: fixed, see below) |
+| Enquiries | the enquiry is listed, with the page it came from | pass | - |  |
+| Enquiries | tick Followed up | pass | - |  |
+| Enquiries | add a note | pass | - |  |
+| Enquiries | download as CSV | pass | - | 200 text/csv; charset=utf-8 |
+| Enquiries | enquiries and the CSV need a sign in | pass (visitor) | - | CSV 401, list 403 |
+| Enquiries | attachments | pass (visitor) | - | the Contact form takes no attachments, so there is nothing to download |
+| Publish | upload a photo in the Media Library, put it on the Home page, save | pass | - | test-photo-1mb-2.webp, served from /api/media/file/ |
+| Publish | a build from the database shows the edits (words, link, photo description, uploaded photo) | - | pass | Home has the edited heading, link, description and the uploaded photo |
+| Publish | the check after the build accepts dashboard photos (/api/media/file) | - | pass | build passed; the local Blob stand-in cannot serve the file, so it is a warning, not a failure |
+| Publish | the published post is on /blog, has its own page and is in the sitemap | - | pass | /blog/test-post-from-the-dashboard-check 200, in sitemap.xml |
+| Publish | Reset to the repository's content, then pull: content/ is byte for byte the release | - | pass | diff -r: no differences (pages, team, site settings, posts, redirects) |
+| Blog | unpublish a post (back to a draft) | pass | - | status published -> draft |
+| Blog | delete the post | pass | - |  |
+| Pages | every page opens in the editor with editable words (58), no errors | pass | pass | 58 of 58; 58 of 58 |
+
+A dash means the line does not apply to that role (for example Users and
+Redirects are GYA only) or was run once for both.
+
+### Database and build
+
+| Check | Result |
+| --- | --- |
+| Start point | `origin/main` at `f15e43b` (v2.8.1) |
+| Brand new database, `payload migrate` | all 14 migrations run (failed at `20261104` before the fix) |
+| Media Library with a Blob token, before `20261120_090000` | 500 on `/api/media` (columns `prefix` and `_objectkey` missing); after it: 200, uploads work |
+| `payload migrate:create` after all migrations | "No schema changes detected" |
+| Imported database (v2.8.1 state), migrate then pull | 37 values marked, 11 redirects added, the SmileOX placeholder removed; the pull gave back the repository's v2.9.0 content byte for byte |
+| Running the v2.9.0 migration a second time | nothing changed ("37 already marked", 0 redirects added) |
+| Database edited in the dashboard (team name, Contact wording, a share picture, the Teeth Whitening cost wording), then migrate | the edits kept; the Teeth Whitening wording named in the build log as edited; everything else marked |
+| Undoing the migration (`migrate:down`), then pull | the v2.8.1 content byte for byte, apart from the placeholder recipient, which is not put back by design |
+| Database build (`npm run build` with the test database) after dashboard edits | the edits, the uploaded photo and the published post are on the built site; the post is on `/blog` and in the sitemap; the check after the build passed (the uploaded photo could not be served by the stand-in, so it is a warning) |
+| `npm run build` (repository content), `npm run qa` | clean: typecheck, banned words (0 em dashes), secrets, images, roles, editor parity 58 of 58, `qa:golive` 15 of 15, the check after the build |
+
+### Website
+
+| Check | Result |
+| --- | --- |
+| Every page in the sitemap (55), v2.8.1 against v2.9.0 | 31 identical. 24 differ, all from the go-live switch: the $199 offer strip and suburb offer sections gone, the cost cards and FAQ answers that name an unconfirmed offer gone, `[VERIFY]` notes gone from Offers, Teeth Whitening and FAQ (Privacy and Terms, which are not in the sitemap, also lose theirs), the Offers and Payment Options descriptions without the hidden offers |
+| Every internal link, photo, stylesheet and script (265) | all 200, or a redirect to a 200 |
+| Old addresses (770) | 1 same address, 769 in one redirect, 0 chains, 0 not found |
+| Every page in the sitemap plus Privacy and Terms (57): canonical on www, no `vercel.app` or bare-domain address, no `[VERIFY]` or "to be confirmed", no "$199", "5% seniors", "seniors discount" or "discounted rate", every link and picture 200 directly (5,175) | 0 problems |
+| The same page check against the v2.8.1 build | fails on 24 pages for the offer words and on Offers, Teeth Whitening, FAQ, Privacy and Terms for `[VERIFY]` (so the check works) |
+| GA4 ID set in Site Settings with the current Privacy Policy (tried, then put back) | the build stops with a plain message |
+| Go-live switch with dates (`npm run qa:golive`) | hidden before the start date, shown on the first and last day with the end date for the browser, hidden the day after; "+" offers need both; whitening needs its price confirmed |
+| Enquiry recipients | reception and rowayne@gyaclients.com only; a placeholder or made-up SmileOX address in any setting is skipped |
+| Em dashes in the repository | 0 |
+
+## 20. What could not be tested here
 
 | What | Why | What to do |
 | --- | --- | --- |
-| A real enquiry arriving in all three inboxes | No SMTP2GO key and no access to the mailboxes | Send one from the preview address once the key is set, and confirm it lands at reception, at the SmileOx intake address and at rowayne@gyaclients.com |
-| Neon and Vercel Blob | They live in your Vercel account | Follow section 1 of `README-CMS.md`. Everything was tested against a local Postgres with the same migrations. |
+| A real enquiry arriving in both inboxes | No SMTP2GO key and no access to the mailboxes | Send one from the preview address once the key is set, and confirm it lands at reception and at rowayne@gyaclients.com (and the SmileOX intake address once it is added) |
+| Neon and Vercel Blob | They live in your Vercel account | Everything was tested against a local Postgres with the same migrations and a Blob stand-in. On the preview: `docs/CHROME-DASHBOARD-CHECK.md` (uploads, a test post, runtime logs, the read-only column check) |
 | The live deploy hook | Created in your Vercel project | The button is wired and reports clearly when the hook is missing |
+| Publish website with a real deploy hook, and dashboard photos served from Blob | Need the Vercel project | `docs/CHROME-DASHBOARD-CHECK.md` lines 5, 9 and 12 |
+| The live site's raw HTML (tracking codes, verification tags, every title) | Only a summary of the live pages could be read from here | `bash scripts/seo/export-live-site.sh` on a Mac, then upload the zip |

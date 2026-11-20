@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Banned wording check for GYA sites.
- * Fails the build on em dashes and on AHPRA sensitive superlatives.
+ * Fails on em dashes and placeholder email addresses; lists AHPRA sensitive
+ * superlatives for a person to review.
  * Known approved phrases live in scripts/qa-allow.json.
  */
 import { readFileSync, existsSync } from 'node:fs'
@@ -27,6 +28,7 @@ const RULES = [
   { id: 'premier', re: /\bpremier\b/gi, why: 'AHPRA: superlative.' },
   { id: 'leading', re: /\bleading\b/gi, why: 'AHPRA: superlative.' },
   { id: 'number-one', re: /\b(#1|number one)\b/gi, why: 'AHPRA: superlative.' },
+  { id: 'placeholder-email', re: /[a-z0-9._-]*(?:placeholder|smileox-intake)[a-z0-9._-]*@[a-z0-9.-]+/gi, why: 'A placeholder email address: never email it. Leave it out until the real one is supplied.' },
 ]
 
 const allowPath = path.join(ROOT, 'scripts', 'qa-allow.json')
@@ -68,7 +70,7 @@ for (const file of walk(ROOT)) {
         continue
       }
       const rel = path.relative(ROOT, file)
-      if (rule.id === 'em-dash') {
+      if (rule.id === 'em-dash' || rule.id === 'placeholder-email') {
         hard++
         console.log(`FAIL  ${rel}:${line}  ${rule.why}`)
       } else {

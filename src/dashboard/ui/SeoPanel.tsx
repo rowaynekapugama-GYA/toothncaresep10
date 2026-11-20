@@ -49,8 +49,13 @@ export function SeoPanel({ seo, onChange, url, defaultOg, titleHint, showCanonic
           <div className="help">Kept for reference. The website always points Google at the page&apos;s own address on the live domain.</div>
         </div>
       ) : null}
-      <Toggle label="Hide this page from Google (noindex)" checked={seo.noindex} onChange={(v) => set({ noindex: v })}
-        help="The page stays on the website but search engines are asked not to list it, and it is left out of the sitemap." />
+      {showCanonical ? (
+        <Toggle label="Hide this page from Google (noindex)" checked={seo.noindex} onChange={(v) => set({ noindex: v })}
+          help="The page stays on the website but search engines are asked not to list it, and it is left out of the sitemap." />
+      ) : seo.noindex ? <p className="help">This page is hidden from Google. Ask GYA to change that.</p> : null}
+      <div className="help" style={{ marginTop: 14 }}>
+        <b>This page&apos;s address</b>: <code>{BRAND.domain}{url}</code>. Changing a page&apos;s address can affect Google rankings. Please ask GYA.
+      </div>
     </div>
   )
 }

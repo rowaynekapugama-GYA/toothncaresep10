@@ -1,7 +1,32 @@
 # Going live on toothncare.com.au
 
-Written 17 November 2026 for v2.8.0. Nothing here has been changed at the
-domain, the DNS host or Vercel: this is the plan for the switch.
+Written 17 November 2026 for v2.8.0, updated 20 November 2026 for v2.9.0
+(the go-live check). Nothing here has been changed at the domain, the DNS host
+or Vercel: this is the plan for the switch, planned for **Monday 23 November
+2026, after Nish's OK**.
+
+## 0. Where v2.9.0 leaves things (20 November 2026)
+
+- **Dashboard:** every Editor and Admin check passed on a local copy of the
+  production build with a database made from the migrations alone (results in
+  `docs/VERIFICATION.md` section 19). Fixed on the way: photo uploads with Vercel
+  Blob (two database columns were missing, so the Media Library failed with
+  Blob switched on), large phone photos, iPhone photos, deleting a photo that is
+  still in use, and the Editor role (page addresses, hiding a page from Google,
+  enquiry recipients and the whole-site noindex switch are now GYA only).
+  Still to check on Vercel itself: `docs/CHROME-DASHBOARD-CHECK.md`.
+- **Old addresses:** all 770 known addresses land on a working page in one
+  redirect, no chains, no 404s. The build now stops if that changes.
+  `docs/SEO-URL-PARITY.md`.
+- **[VERIFY] notes and offers:** the go-live switch (`src/golive.config.ts`,
+  section 7a) keeps every `[VERIFY]` note and every offer without a confirmed
+  period off the public pages. Nothing in the wording was changed: the words
+  are still in the dashboard, outlined, and come back when the switch says so.
+- **Handover:** logins are created only after the switch, by
+  `docs/HANDOVER-STEPS-FOR-GYA.md`. The practice guide is
+  `docs/Tooth-n-Care-Website-Guide.pdf`.
+- **Before Monday:** the practice approves the Privacy Policy and Terms (then
+  fill in `GO_LIVE.legalApproved`, section 7a), and the rest of section 7.
 
 ## 1. Where things are today
 
@@ -128,10 +153,13 @@ same way).
 | Suburb service pages, such as `/maitland/dental-implants.htm` | the same page as the top level rule (`/dental-implants`) | 31 (v2.8.0) |
 | Suburb folders, such as `/maitland/` | the suburb page (`/dentist-maitland`), or `/areas-we-serve` for suburbs without one of their own | 11 (v2.8.0) |
 
-All 308 (permanent). Tested on the v2.8.0 build: all 334 listed addresses,
-plus every suburb folder with and without the closing slash and every service
-page in all 21 suburb folders (741 addresses), end on a working page in at
-most three hops.
+All 308 (permanent). Since v2.9.0, 770 addresses (the 334 in the sitemap,
+the same pattern in every suburb folder, every folder with and without the
+closing slash, and the addresses of earlier redirect rules;
+`docs/seo/old-urls.txt`) are checked after every build: each lands on a
+working page in **one** redirect, or the build stops. The 11 suburb folder
+rules now also match the folder with its closing slash, which used to take
+two hops. Details and the SEO team's list: `docs/SEO-URL-PARITY.md`.
 
 Suburb folders without a page of their own (to `/areas-we-serve`):
 Aberglasslyn, Gillieston Heights (`/gilleston-heights/`), Green Hills, Louth
@@ -158,68 +186,99 @@ dashboard (**Enquiries**) and emails it through SMTP2GO.
 2. In Vercel, Production: `SMTP2GO_API_KEY` (from SMTP2GO, **Sending, API
    Keys**), `MAIL_FROM` (for example `website@toothncare.com.au`) and
    `MAIL_TO` (comma separated, used only if Site Settings has no recipients).
-3. In the dashboard, **Site Settings**, enquiry recipients:
-   `reception@toothncare.com.au`, the SmileOx intake address and
-   `rowayne@gyaclients.com`. The address compiled in as a last resort still
-   has a placeholder for SmileOx (`smileox-intake-PLACEHOLDER@...` in
-   `src/site.config.ts`): replace it once the practice sends the real one.
-4. Send a test enquiry and check it arrives at all three addresses and under
+3. In the dashboard, **Site Settings**, enquiry recipients (GYA only):
+   `reception@toothncare.com.au` and `rowayne@gyaclients.com`. Add the
+   SmileOx intake address there once the practice sends the real one. Until
+   then no SmileOx address is used anywhere (v2.9.0 took the placeholder out,
+   and the form never emails an address that looks like a placeholder).
+4. Send a test enquiry and check it arrives at both addresses and under
    **Enquiries**. (The "[VERIFY] form endpoint not yet connected" note under
    the form was removed in v2.8.1: the form is connected, and every enquiry is
    saved in the dashboard even if an email fails.)
 
 ## 7. Before the switch
 
-- [ ] The practice has approved the staging site.
+- [ ] The practice has approved the staging site (Nish's OK).
+- [ ] The practice has approved the Privacy Policy and Terms, and
+      `GO_LIVE.legalApproved` in `src/golive.config.ts` names who and when
+      (the build and the update script remind you until it does).
 - [ ] DNS login from Nish (section 1).
 - [ ] TTLs lowered the day before.
-- [ ] SMTP2GO domain verified, variables set, a test enquiry received at all
-      three addresses.
-- [ ] Every go-live blocker in section 7a answered by the practice and the
-      matching `[VERIFY]` note removed (they show on the live pages).
+- [ ] SMTP2GO domain verified, variables set, a test enquiry received at both
+      addresses. Check that Vercel's `MAIL_TO` (if set) holds no made-up
+      SmileOX address: the form now skips one, but it should not be there.
+- [ ] v2.9.0 deployed to the preview and `docs/CHROME-DASHBOARD-CHECK.md` run
+      (Blob uploads, a test post, the runtime logs, the read-only Neon check).
+- [ ] `docs/SEO-URL-PARITY.md` sent to the SEO team; their exports added and
+      the check run again.
+- [x] `[VERIFY]` notes: kept off the public pages by the go-live switch since
+      v2.9.0 (section 7a). The answers are still wanted.
 - [x] Share image: since v2.8.1 the shopfront photo without the NOW OPEN
       A-frame, cropped to 1200 x 630 (`/images/img-b0fc5965f7.jpg`), everywhere.
-- [ ] Editor logins created for Nish and Christine through **Users** (once
-      their email addresses are confirmed).
+- [ ] `PUBLISH_HOOK_URL` set in Vercel (Production) to a deploy hook on the
+      `main` branch, so **Publish website** works. Until then it says
+      "Publishing is not set up yet." and changes only go live with the next push.
 - [ ] `ALLOW_FIRST_USER` not set anywhere.
+- [ ] No practice logins yet: they come after the switch
+      (`docs/HANDOVER-STEPS-FOR-GYA.md`).
 
-## 7a. Go-live blockers: questions for the practice
+## 7a. The go-live switch and what each hidden item needs
 
-These `[VERIFY]` notes are visible on the pages and stay until the practice
-answers. Nothing in them is changed without the practice's wording (prices and
-legal text especially).
+`src/golive.config.ts` (GYA only, the practice cannot change it). With
+`goLive: true` (the default since v2.9.0):
 
-| Page | Note on the page (exact) | Question to ask | When answered |
-| --- | --- | --- | --- |
-| Offers, Philips ZOOM in-chair whitening card | "[VERIFY price]" where the price goes, and "[VERIFY] current price and RRP comparison to be confirmed before publishing." | What is the exact price of in-chair whitening, what does it include, and when does the offer start and end? If you want to show it against the usual price, what is the usual price? (AHPRA: price, inclusions and offer period must all be stated.) | Put the price and period in, remove both notes |
-| Teeth Whitening, cost | "[VERIFY] current pricing to be confirmed before publication." | What does in-chair Philips ZOOM whitening cost now, and the take-home trays? Is the in-chair price still "a discounted rate"? | Add the prices, remove the note |
-| FAQ, orthodontics | "[VERIFY] whether the practice is a current Invisalign provider and licensed to use the brand name - until that's confirmed we describe the treatment generically." | Is the practice a current Invisalign provider (listed on the Invisalign Doctor Locator)? If yes, the page can name Invisalign; if no, it keeps "clear aligners". | Remove the note either way |
-| Privacy Policy, cookies | "[VERIFY] if analytics are added before launch, this section must be updated to name the provider and explain the opt-out." | Will Google Analytics and the Meta Pixel be switched on at launch? If yes, the practice (and its solicitor, if it wishes) needs to approve wording that names them and explains how to opt out. | Update the section, remove the note |
-| Privacy Policy, review | "[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live." | Has the practice (or its solicitor) read and approved the Privacy Policy? | Remove the note |
-| Terms, review | "[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live." | Has the practice (or its solicitor) read and approved the Terms? | Remove the note |
+- no `[VERIFY]` note reaches a public page (the build stops if one does), and
+- an offer shows only once its period is known: `ongoing: true` (the practice
+  confirms in writing it has no end date) or a `start` and `end` date
+  (`'YYYY-MM-DD'`, Sydney time). A dated offer drops off by itself after its
+  end date: at the next build, and in visitors' browsers on the day.
 
-Not a `[VERIFY]` note, but the same AHPRA rule: the other offers on Offers (new
-patient first visit $199, seniors 5% off) state the price and inclusions but
-no offer period. Ask whether they are ongoing (say so) or end on a date.
+Change a value, commit and push (or run the next update script); Vercel
+rebuilds. The dashboard still shows every hidden word, card and answer with a
+dashed outline and a yellow note, so editing a page never loses them.
 
-Also waiting on the practice before go live:
+| Hidden on the website | Where | What brings it back |
+| --- | --- | --- |
+| $199 or no-gap new patient first visit | Home offer strip, Offers card, New Patients card, 10 suburb pages' offer section, the six service cost cards, Check-ups and Scale, Clean & Oral Hygiene cost wording, four FAQ answers and the FAQ structured data, the Offers description, the site search list | The offer period from the practice: `OFFERS.newPatient` gets `ongoing: true` or `start` and `end` |
+| 5% seniors discount | Offers card, Payment Options card and description, one FAQ answer (needs both offers) | The same for `OFFERS.seniors` |
+| Philips ZOOM in-chair whitening "at a discounted rate" | Offers card, Teeth Whitening cost wording | The price, what it includes and the period. GYA types the practice's price into the Offers card (dashboard or content), removes "[VERIFY price]", then sets `priceConfirmed: true` and the period |
+| "[VERIFY] current price and RRP comparison..." | Offers, whitening card | The same answer as above |
+| "[VERIFY] current pricing to be confirmed..." | Teeth Whitening, cost | The practice's current prices for in-chair whitening and take-home trays (typed in by GYA) |
+| "[VERIFY] whether the practice is a current Invisalign provider..." | FAQ, orthodontics (and its structured data) | Invisalign yes or no. Yes: GYA may name Invisalign. No: it stays "clear aligners". The note stays hidden either way |
+| "[VERIFY] if analytics are added before launch..." | Privacy Policy, cookies | Only matters if GA4 or the Meta Pixel is switched on. The build stops if an ID is set while the policy still says "only the cookies necessary" |
+| "[VERIFY] to be reviewed by the practice..." | Privacy Policy and Terms | The practice's approval (Monday). Fill in `GO_LIVE.legalApproved` |
 
-- The DNS login for toothncare.com.au (Webpulse) from Nish.
-- The email addresses Nish and Christine want for their dashboard logins.
-- The SmileOx intake address for enquiries.
+Generic wording is left where an offer is hidden: the FAQ keeps "Yes. New
+patients can book online any time." and the Offers page keeps the CDBS card.
+The approved wording comes back exactly as it was once the offer is on.
 
-Wanted but not blocking: AHPRA numbers for Dr Nish, Dr Nav and Zoe; Dr
-Dimple's full name, AHPRA number and whether she holds specialist
+Not changed by the switch: the CDBS card ($0 bulk billed, a government
+scheme, with its terms) and the "Offers current as of August 2026 ... next
+review February 2027" line under the cards.
+
+Still waiting on the practice (not blocking): AHPRA numbers for Dr Nish, Dr Nav
+and Zoe; Dr Dimple's full name, AHPRA number and whether she holds specialist
 registration in Orthodontics; how Dr Rav would like her name shown, a bio and
-a photo; support team photos with written consent.
+a photo; support team photos with written consent; the SmileOX intake address.
 
 ## 8. After the switch
 
+- [ ] `NEXT_PUBLIC_SERVER_URL` is `https://www.toothncare.com.au` in Vercel
+      Production and the latest production deployment was redeployed after
+      setting it (section 3).
 - [ ] `https://toothncare.com.au` and `http://www.toothncare.com.au` both land
       on `https://www.toothncare.com.au` with a padlock.
-- [ ] Spot check old addresses: `/dental-implants.htm`, `/maitland/`,
-      `/maitland/dental-implants.htm`, `/meet-our-teams.htm`.
-- [ ] Send a test enquiry from the live form; check all three inboxes and
+- [ ] The URL check against the real domain:
+      `node scripts/seo/check-url-parity.mjs --base https://www.toothncare.com.au --pages --strict-media`
+      (0 chains, 0 not found, 0 problems).
+- [ ] Sign in at `https://www.toothncare.com.au/admin`. The
+      `toothncaresep10.vercel.app` address no longer accepts dashboard sign in
+      and saving (expected: it is not an allowed origin once the custom domain
+      is production); use the real address from now on.
+- [ ] **Publish website** works: `PUBLISH_HOOK_URL` is a deploy hook on
+      `main` (Vercel, Settings, Git, Deploy Hooks). Press it once and watch a
+      deployment start.
+- [ ] Send a test enquiry from the live form; check both inboxes and
       **Enquiries**.
 - [ ] Email still arriving at the practice (send one to reception from an
       outside address).
@@ -231,12 +290,17 @@ a photo; support team photos with written consent.
       `https://www.toothncare.com.au/` and the booking link to the online
       booking page.
 - [ ] Bing Webmaster Tools: import from Search Console.
-- [ ] GA4 and Meta Pixel IDs in **Site Settings**, **Tracking**, and a real
-      visit showing in GA4 Realtime.
+- [ ] GA4 and Meta Pixel only once the practice has approved Privacy Policy
+      wording that names them (the build stops otherwise). Then the IDs in
+      **Site Settings**, **Tracking**, and a real visit in GA4 Realtime.
+- [ ] Logins for the practice: `docs/HANDOVER-STEPS-FOR-GYA.md`.
+- [ ] Tell the practice the old site's tawk.to chat box is gone.
 - [ ] A week later: Vercel logs and Search Console for 404s from old
       addresses not covered above.
 - [ ] After 30 days with no issues: cancel the old hosting, keeping the DNS
       (or move the DNS somewhere the practice controls first).
+- [ ] Separate release after go-live: Next.js 16.4.5 (security fixes released
+      3 November 2026; see the v2.9.0 CHANGELOG entry).
 
 ## 9. Worth raising with the practice (not part of the switch)
 

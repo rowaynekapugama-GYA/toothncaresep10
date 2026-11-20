@@ -235,7 +235,7 @@
      "id": "paragraph-13",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "This site uses only the cookies necessary for it to function, such as remembering whether you have selected light or dark mode. We do not use advertising cookies or sell browsing data. <span class=\"verify\">[VERIFY]</span> if analytics are added before launch, this section must be updated to name the provider and explain the opt-out."
+     "value": "This site uses only the cookies necessary for it to function, such as remembering whether you have selected light or dark mode. We do not use advertising cookies or sell browsing data. <span class=\"verify\">[VERIFY] if analytics are added before launch, this section must be updated to name the provider and explain the opt-out.</span>"
     },
     {
      "id": "heading-9",
@@ -259,7 +259,7 @@
      "id": "paragraph-15",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "We review this policy periodically. This version was published in August 2026. <span class=\"verify\">[VERIFY]</span> to be reviewed by the practice, and by a solicitor if the practice wishes, before going live."
+     "value": "We review this policy periodically. This version was published in August 2026. <span class=\"verify\">[VERIFY] to be reviewed by the practice, and by a solicitor if the practice wishes, before going live.</span>"
     }
    ]
   },

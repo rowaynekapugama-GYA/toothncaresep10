@@ -533,7 +533,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Most health funds cover two examinations and cleans per calendar year, claimable on the spot through HICAPS. If you&rsquo;re a new patient, a scale and clean is included in the $199 or no-gap first visit. Eligible children can be bulk billed through CDBS."
+     "value": "Most health funds cover two examinations and cleans per calendar year, claimable on the spot through HICAPS.<span class=\"offer offer-newPatient\"> If you&rsquo;re a new patient, a scale and clean is included in the $199 or no-gap first visit.</span> Eligible children can be bulk billed through CDBS."
     },
     {
      "id": "small-print-1",

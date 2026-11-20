@@ -1,187 +1,207 @@
 [
- {
-  "rule": "specialist",
-  "contains": "by a specialist",
-  "note": "Referral to a registered specialist, which is the correct use of the word."
- },
- {
-  "rule": "specialist",
-  "contains": "referral to a specialist",
-  "note": "Referral to a registered specialist."
- },
- {
-  "rule": "specialist",
-  "contains": "reviewed by the practice, and by a s",
-  "note": "A note asking a solicitor to review the page."
- },
- {
-  "rule": "guarantee",
-  "contains": "cannot be guaranteed",
-  "note": "A disclaimer, not a claim."
- },
- {
-  "rule": "guarantee",
-  "contains": "rather than guaranteed",
-  "note": "A disclaimer, not a claim."
- },
- {
-  "rule": "guarantee",
-  "contains": "not actual patients or guaranteed results",
-  "note": "A disclaimer, not a claim."
- },
- {
-  "rule": "number-one",
-  "contains": "number one reason treatment overruns",
-  "note": "About missed appointments, not about the practice."
- },
- {
-  "rule": "best",
-  "contains": "best available archive images",
-  "note": "An internal note flagged as VERIFY, to be removed once the photo shoot happens."
- },
- {
-  "rule": "best",
-  "contains": "best effort",
-  "note": "A code comment about error handling."
- },
- {
-  "rule": "pain-free",
-  "contains": "/pain-free-dentistry.htm",
-  "note": "An address on the old site that is redirected. Not wording shown to anyone."
- },
- {
-  "rule": "specialist",
-  "contains": "needs a specialist",
-  "note": "Referral to a registered specialist."
- },
- {
-  "rule": "specialist",
-  "contains": "registered specialist",
-  "note": "Says plainly that the practice is not a specialist practice."
- },
- {
-  "rule": "best",
-  "contains": "likely to work best for you",
-  "note": "About treatment options for one patient, not a claim about the practice."
- },
- {
-  "rule": "best",
-  "contains": "whatever suits you best",
-  "note": "About the reader's own preference."
- },
- {
-  "rule": "best",
-  "contains": "rather than the best possible one",
-  "note": "A disclaimer about outcomes."
- },
- {
-  "rule": "best",
-  "contains": "best time to ring",
-  "note": "About when the phone is quiet."
- },
- {
-  "rule": "specialist",
-  "contains": "referral to a paediatric specialist",
-  "note": "Referral to a registered specialist."
- },
- {
-  "rule": "pain-free",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "painless",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "guarantee",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "best",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "expert",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "specialist",
-  "contains": "\"guaranteed\", \"best\"",
-  "note": "The client guide listing the words the practice must not use."
- },
- {
-  "rule": "pain-free",
-  "contains": "No claims such as &ldquo;pain-free&rdquo;",
-  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
- },
- {
-  "rule": "guarantee",
-  "contains": "&ldquo;guaranteed&rdquo;, &ldquo;best",
-  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
- },
- {
-  "rule": "best",
-  "contains": "&ldquo;best&rdquo; or &ldquo;expert",
-  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
- },
- {
-  "rule": "expert",
-  "contains": "&ldquo;expert&rdquo;, and no w",
-  "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
- },
- {
-  "rule": "best",
-  "contains": "Titles work best between",
-  "note": "Dashboard help text about title length, not a claim."
- },
- {
-  "rule": "best",
-  "contains": "Best at 1200 by 630 pixels",
-  "note": "Dashboard help text about image size, not a claim."
- },
- {
-  "rule": "specialist",
-  "contains": "specialist ? 'Specialist Orthodontist'",
-  "note": "src/team.config.ts: only used when DR_DIMPLE.specialistOrthodontics is true, which needs the practice to confirm specialist registration in Orthodontics (v2.8.1). qa:roles also checks it."
- },
- {
-  "rule": "specialist",
-  "contains": "a specialist orthodontist",
-  "note": "The Our Team intro for a confirmed specialist, documented in the CHANGELOG and team.config.ts; only shown when specialist registration is confirmed."
- },
- {
-  "rule": "specialist",
-  "contains": "specialist registration",
-  "note": "Explains the AHPRA rule; not a claim."
- },
- {
-  "rule": "specialist",
-  "contains": "confirmed specialist",
-  "note": "Documentation of the confirmed-specialist case."
- },
- {
-  "rule": "specialist",
-  "contains": "const specialist = show",
-  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
- },
- {
-  "rule": "specialist",
-  "contains": "!specialist ? 1",
-  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
- },
- {
-  "rule": "specialist",
-  "contains": "protected specialist title",
-  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
- },
- {
-  "rule": "specialist",
-  "contains": "her card says \"Specialist",
-  "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
- }
+  {
+    "rule": "specialist",
+    "contains": "by a specialist",
+    "note": "Referral to a registered specialist, which is the correct use of the word."
+  },
+  {
+    "rule": "specialist",
+    "contains": "referral to a specialist",
+    "note": "Referral to a registered specialist."
+  },
+  {
+    "rule": "specialist",
+    "contains": "reviewed by the practice, and by a s",
+    "note": "A note asking a solicitor to review the page."
+  },
+  {
+    "rule": "guarantee",
+    "contains": "cannot be guaranteed",
+    "note": "A disclaimer, not a claim."
+  },
+  {
+    "rule": "guarantee",
+    "contains": "rather than guaranteed",
+    "note": "A disclaimer, not a claim."
+  },
+  {
+    "rule": "guarantee",
+    "contains": "not actual patients or guaranteed results",
+    "note": "A disclaimer, not a claim."
+  },
+  {
+    "rule": "number-one",
+    "contains": "number one reason treatment overruns",
+    "note": "About missed appointments, not about the practice."
+  },
+  {
+    "rule": "best",
+    "contains": "best available archive images",
+    "note": "An internal note flagged as VERIFY, to be removed once the photo shoot happens."
+  },
+  {
+    "rule": "best",
+    "contains": "best effort",
+    "note": "A code comment about error handling."
+  },
+  {
+    "rule": "pain-free",
+    "contains": "/pain-free-dentistry.htm",
+    "note": "An address on the old site that is redirected. Not wording shown to anyone."
+  },
+  {
+    "rule": "specialist",
+    "contains": "needs a specialist",
+    "note": "Referral to a registered specialist."
+  },
+  {
+    "rule": "specialist",
+    "contains": "registered specialist",
+    "note": "Says plainly that the practice is not a specialist practice."
+  },
+  {
+    "rule": "best",
+    "contains": "likely to work best for you",
+    "note": "About treatment options for one patient, not a claim about the practice."
+  },
+  {
+    "rule": "best",
+    "contains": "whatever suits you best",
+    "note": "About the reader's own preference."
+  },
+  {
+    "rule": "best",
+    "contains": "rather than the best possible one",
+    "note": "A disclaimer about outcomes."
+  },
+  {
+    "rule": "best",
+    "contains": "best time to ring",
+    "note": "About when the phone is quiet."
+  },
+  {
+    "rule": "specialist",
+    "contains": "referral to a paediatric specialist",
+    "note": "Referral to a registered specialist."
+  },
+  {
+    "rule": "pain-free",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "painless",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "guarantee",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "best",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "expert",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "specialist",
+    "contains": "\"guaranteed\", \"best\"",
+    "note": "The client guide listing the words the practice must not use."
+  },
+  {
+    "rule": "pain-free",
+    "contains": "No claims such as &ldquo;pain-free&rdquo;",
+    "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+  },
+  {
+    "rule": "guarantee",
+    "contains": "&ldquo;guaranteed&rdquo;, &ldquo;best",
+    "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+  },
+  {
+    "rule": "best",
+    "contains": "&ldquo;best&rdquo; or &ldquo;expert",
+    "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+  },
+  {
+    "rule": "expert",
+    "contains": "&ldquo;expert&rdquo;, and no w",
+    "note": "The dashboard's AHPRA reminder quoting the words the practice must not use."
+  },
+  {
+    "rule": "best",
+    "contains": "Titles work best between",
+    "note": "Dashboard help text about title length, not a claim."
+  },
+  {
+    "rule": "best",
+    "contains": "Best at 1200 by 630 pixels",
+    "note": "Dashboard help text about image size, not a claim."
+  },
+  {
+    "rule": "specialist",
+    "contains": "specialist ? 'Specialist Orthodontist'",
+    "note": "src/team.config.ts: only used when DR_DIMPLE.specialistOrthodontics is true, which needs the practice to confirm specialist registration in Orthodontics (v2.8.1). qa:roles also checks it."
+  },
+  {
+    "rule": "specialist",
+    "contains": "a specialist orthodontist",
+    "note": "The Our Team intro for a confirmed specialist, documented in the CHANGELOG and team.config.ts; only shown when specialist registration is confirmed."
+  },
+  {
+    "rule": "specialist",
+    "contains": "specialist registration",
+    "note": "Explains the AHPRA rule; not a claim."
+  },
+  {
+    "rule": "specialist",
+    "contains": "confirmed specialist",
+    "note": "Documentation of the confirmed-specialist case."
+  },
+  {
+    "rule": "specialist",
+    "contains": "const specialist = show",
+    "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+  },
+  {
+    "rule": "specialist",
+    "contains": "!specialist ? 1",
+    "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+  },
+  {
+    "rule": "specialist",
+    "contains": "protected specialist title",
+    "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+  },
+  {
+    "rule": "specialist",
+    "contains": "her card says \"Specialist",
+    "note": "src/team.config.ts: the Dr Dimple switch, which only shows a specialist title once the practice confirms specialist registration (v2.8.1)."
+  },
+  {
+    "rule": "specialist",
+    "contains": "\"expert\" or \"specialist\" (unless",
+    "note": "Client guide: the AHPRA reminder names the banned words (v2.9.0)."
+  },
+  {
+    "rule": "leading",
+    "contains": "\"best\", \"leading\", \"expert\"",
+    "note": "Client guide: the AHPRA reminder names the banned words (v2.9.0)."
+  },
+  {
+    "rule": "best",
+    "contains": "**Best:** phone the person",
+    "note": "GYA handover steps: about sending passwords, not advertising (v2.9.0)."
+  },
+  {
+    "rule": "best",
+    "contains": "Old titles use \"Best Dental Clinic\"",
+    "note": "SEO parity notes: quotes the old site's titles to flag them (v2.9.0)."
+  }
 ]

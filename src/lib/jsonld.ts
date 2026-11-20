@@ -1,4 +1,5 @@
 import { siteUrl } from '@/lib/urls'
+import { applyGoLiveText, offerState } from '@/lib/golive'
 
 /** Keys whose values are URLs and therefore have to be absolute. */
 const URL_KEYS = new Set([
@@ -9,18 +10,23 @@ const URL_KEYS = new Set([
 
 const STAGING = /https?:\/\/toothncare\.vercel\.app/g
 
+/** An entry marked "offer": "key" (or "a+b") is left out while that offer is switched off (src/golive.config.ts). */
+const offerOff = (v: unknown) =>
+  !!v && typeof v === 'object' && typeof (v as Record<string, unknown>).offer === 'string'
+  && String((v as Record<string, unknown>).offer).split('+').some((k) => !offerState(k.trim()).active)
+
 function walk(node: unknown, key?: string): unknown {
   if (typeof node === 'string') {
-    let out = node.replace(STAGING, siteUrl())
+    let out = applyGoLiveText(node).replace(STAGING, siteUrl())
     if (key && URL_KEYS.has(key) && out.startsWith('/')) out = siteUrl() + out
     return out
   }
-  if (Array.isArray(node)) return node.map((v) => walk(v, key))
+  if (Array.isArray(node)) return node.filter((v) => !offerOff(v)).map((v) => walk(v, key))
   if (node && typeof node === 'object') {
     const obj = node as Record<string, unknown>
     const out: Record<string, unknown> = {}
     for (const [k, v] of Object.entries(obj)) {
-      if (k === 'ahpraRegistration' || k === 'ahpraDivision') continue
+      if (k === 'ahpraRegistration' || k === 'ahpraDivision' || k === 'offer') continue
       out[k] = walk(v, k)
     }
     // AHPRA details from src/team.config.ts: the placeholders "ahpraRegistration"

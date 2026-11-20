@@ -4,6 +4,7 @@ import { PageEditor } from '@/dashboard/editors/PageEditor'
 import { sectionsForEditor, sharedPartsForEditor } from '@/dashboard/pages'
 import { mediaUrl, type PageDoc } from '@/sitekit/sync'
 import { BRAND } from '@/dashboard/brand'
+import { goLiveNoteFor } from '@/dashboard/golive-note'
 
 export const dynamic = 'force-dynamic'
 
@@ -44,6 +45,7 @@ export default async function EditPage({ params }: { params: Promise<{ id: strin
       defaultOg={defaultOg}
       defaultTitle={`${String(d.title)} | ${BRAND.name}`}
       lastmod={d.updatedAt ? String(d.updatedAt) : null}
+      goLiveNote={goLiveNoteFor(d.sections as never)}
     />
   )
 }

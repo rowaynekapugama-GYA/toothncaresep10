@@ -160,7 +160,17 @@
   "type": "permanent"
  },
  {
+  "from": "/:area(aberglasslyn|gilleston-heights|green-hills|louth-park|oakhampton|raworth|raymond-terrace|tarro)/",
+  "to": "/areas-we-serve",
+  "type": "permanent"
+ },
+ {
   "from": "/:area(beresfield|woodberry)",
+  "to": "/dentist-beresfield-woodberry",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(beresfield|woodberry)/",
   "to": "/dentist-beresfield-woodberry",
   "type": "permanent"
  },
@@ -170,7 +180,17 @@
   "type": "permanent"
  },
  {
+  "from": "/:area(bolwarra|bolwarra-heights)/",
+  "to": "/dentist-lorn-bolwarra",
+  "type": "permanent"
+ },
+ {
   "from": "/:area(maitland|south-maitland)",
+  "to": "/dentist-maitland",
+  "type": "permanent"
+ },
+ {
+  "from": "/:area(maitland|south-maitland)/",
   "to": "/dentist-maitland",
   "type": "permanent"
  },
@@ -186,6 +206,11 @@
  },
  {
   "from": "/ashtonfield",
+  "to": "/dentist-ashtonfield",
+  "type": "permanent"
+ },
+ {
+  "from": "/ashtonfield/",
   "to": "/dentist-ashtonfield",
   "type": "permanent"
  },
@@ -206,6 +231,11 @@
  },
  {
   "from": "/chisholm",
+  "to": "/dentist-chisholm",
+  "type": "permanent"
+ },
+ {
+  "from": "/chisholm/",
   "to": "/dentist-chisholm",
   "type": "permanent"
  },
@@ -295,7 +325,17 @@
   "type": "permanent"
  },
  {
+  "from": "/metford/",
+  "to": "/dentist-metford",
+  "type": "permanent"
+ },
+ {
   "from": "/morpeth",
+  "to": "/dentist-morpeth",
+  "type": "permanent"
+ },
+ {
+  "from": "/morpeth/",
   "to": "/dentist-morpeth",
   "type": "permanent"
  },
@@ -386,6 +426,11 @@
  },
  {
   "from": "/rutherford",
+  "to": "/dentist-rutherford",
+  "type": "permanent"
+ },
+ {
+  "from": "/rutherford/",
   "to": "/dentist-rutherford",
   "type": "permanent"
  },
@@ -550,7 +595,17 @@
   "type": "permanent"
  },
  {
+  "from": "/tenambit/",
+  "to": "/dentist-tenambit",
+  "type": "permanent"
+ },
+ {
   "from": "/thornton",
+  "to": "/dentist-thornton",
+  "type": "permanent"
+ },
+ {
+  "from": "/thornton/",
   "to": "/dentist-thornton",
   "type": "permanent"
  },

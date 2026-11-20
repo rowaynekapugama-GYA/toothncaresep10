@@ -7,6 +7,9 @@ const redirects = JSON.parse(readFileSync(new URL('./content/redirects.json', im
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
+  // v2.9.0: the trailing slash is handled by the last redirect below instead, so an
+  // old folder address such as /maitland/ reaches its page in one hop, not two
+  skipTrailingSlashRedirect: true,
   poweredByHeader: false,
   images: {
     // Vercel image optimisation is capped account wide, so the repo ships
@@ -14,11 +17,16 @@ const nextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    return redirects.map((r) => ({
-      source: r.from,
-      destination: r.to,
-      permanent: r.type !== 'temporary',
-    }))
+    return [
+      ...redirects.map((r) => ({
+        source: r.from,
+        destination: r.to,
+        permanent: r.type !== 'temporary',
+      })),
+      // any other address ending in a slash goes to the same address without it (308),
+      // as trailingSlash: false did before; checked after every rule above
+      { source: '/:path+/', destination: '/:path+', permanent: true },
+    ]
   },
   async headers() {
     return [

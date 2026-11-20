@@ -447,7 +447,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "A new patient examination, treatment plan, X-rays, scale and clean and fluoride is no-gap with a participating health fund rebating $199 or more, or a flat $199 without cover. New patients only, and a $50 booking deposit applies and comes off the visit. Most funds cover two examinations and cleans per year."
+     "value": "<span class=\"offer offer-newPatient\">A new patient examination, treatment plan, X-rays, scale and clean and fluoride is no-gap with a participating health fund rebating $199 or more, or a flat $199 without cover. New patients only, and a $50 booking deposit applies and comes off the visit. </span>Most funds cover two examinations and cleans per year."
     },
     {
      "id": "small-print-1",
