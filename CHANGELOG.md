@@ -2,6 +2,36 @@
 
 All notable changes to the Tooth n Care website.
 
+## [2.9.3] - 2026-11-21
+
+The team photos, and the practice's copy corrections of 21 Nov 2026 (Nish's
+clinician bios, four surgeries, the whitening price). Update to the existing
+repository, on top of v2.9.2 (`ce5727f`).
+
+### Added (first commit)
+
+- **Support team photos on the website**: Debbie, Kathryn, Riley and Layeba
+  (loaded in v2.9.1), plus Holly and Christine. Permission: Christine, 20 Nov
+  2026 5:57 PM, "given all ok consent to have photo up", sent with the staff
+  photos; Rowayne asked on 21 Nov 2026 for the team photos to be added.
+  Logged in `docs/GO-LIVE.md` section 7c.
+  - `public/images/team-holly.webp`: the newer of Christine's two photos of
+    Holly (7:54 PM, "slightly better quality than my first"), as Rowayne
+    asked.
+  - `public/images/team-christine.webp`: the photo Christine sent of herself
+    (7:59 PM).
+  - Both matched by the name on Christine's email, never by the picture;
+    800 x 600 WebP, no metadata, cropped and resized only, with the same crop
+    rule as the other four (560 x 420 of the 1448 x 1086 original, face in
+    the middle, eyes at the same height). Christine's photo was taken closer,
+    so it uses a slightly wider crop (680 x 510) and the top of her hair is
+    cropped.
+  - Migration `20261121_100000_staff_photos_on`: loads the two new photos
+    and switches on "Show photo on website (permission confirmed)" for the
+    six, only where the row still has the photo GYA loaded and no photo was
+    chosen in the dashboard. Undo switches them off again.
+  - Manifest and photo descriptions updated.
+
 ## [2.9.2] - 2026-11-20
 
 Dr Rav's photo, and the latest from Christine's "New photo" thread (20 Nov

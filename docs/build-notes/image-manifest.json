@@ -790,5 +790,21 @@
   "from": "Christine's email of 20 Nov 2026 (Riley), cropped 4:3",
   "h": 600,
   "w": 800
+ },
+ "team-holly": {
+  "alpha": false,
+  "bytes": 24240,
+  "file": "/images/team-holly.webp",
+  "from": "Christine's email of 20 Nov 2026, 7:54 PM (Holly, the newer of her two photos), cropped 4:3",
+  "h": 600,
+  "w": 800
+ },
+ "team-christine": {
+  "alpha": false,
+  "bytes": 25160,
+  "file": "/images/team-christine.webp",
+  "from": "Christine's email of 20 Nov 2026, 7:59 PM (her own photo), cropped 4:3",
+  "h": 600,
+  "w": 800
  }
 }

@@ -15,6 +15,7 @@ import * as migration_20261120_100000_golive_offers_verify from './20261120_1000
 import * as migration_20261120_110000_rav_profile_ready from './20261120_110000_rav_profile_ready';
 import * as migration_20261120_120000_staff_photo_switch from './20261120_120000_staff_photo_switch';
 import * as migration_20261120_130000_dr_rav_photo from './20261120_130000_dr_rav_photo';
+import * as migration_20261121_100000_staff_photos_on from './20261121_100000_staff_photos_on';
 
 export const migrations = [
   {
@@ -101,5 +102,10 @@ export const migrations = [
     up: migration_20261120_130000_dr_rav_photo.up,
     down: migration_20261120_130000_dr_rav_photo.down,
     name: '20261120_130000_dr_rav_photo',
+  },
+  {
+    up: migration_20261121_100000_staff_photos_on.up,
+    down: migration_20261121_100000_staff_photos_on.down,
+    name: '20261121_100000_staff_photos_on',
   },
 ];
