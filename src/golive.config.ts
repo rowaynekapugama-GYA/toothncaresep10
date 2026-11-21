@@ -54,8 +54,13 @@ export const OFFERS = {
   newPatient: { label: 'New patient first visit ($199 or no-gap)', ongoing: false, start: '', end: '' },
   /** 5% off treatment for patients 60 and over (Offers, Payment Options). */
   seniors: { label: 'Seniors discount (5%, 60 and over)', ongoing: false, start: '', end: '' },
-  /** Philips ZOOM in-chair whitening at a discounted rate (Offers, Teeth Whitening). */
-  whitening: { label: 'Philips ZOOM in-chair whitening', ongoing: false, start: '', end: '', priceConfirmed: false },
+  /**
+   * Philips ZOOM in-chair whitening at a discounted rate (Offers, Teeth Whitening).
+   * Price from Nish via Christine, 21 Nov 2026: $750, including a take-home
+   * whitening kit valued at $350 at no extra cost. Still needed before it can
+   * show: the offer period, and the usual price behind "discounted rate".
+   */
+  whitening: { label: 'Philips ZOOM in-chair whitening ($750)', ongoing: false, start: '', end: '', priceConfirmed: true },
 } satisfies Record<string, Offer>
 
 export type OfferKey = keyof typeof OFFERS

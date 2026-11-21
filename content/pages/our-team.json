@@ -179,7 +179,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Nearly ten years looking after Hunter smiles, with a special interest in veneers, wisdom teeth surgery, dentures and full-mouth rehabilitation.{{site:nishAhpra}}"
+     "value": "Dr Nish founded Tooth n Care and has more than 20 years of experience in dentistry. He has worked across Newcastle and the Hunter since moving to Australia in 2008. His clinical interests include cosmetic dentistry, veneers, wisdom teeth surgery, complex extractions and full-mouth rehabilitation. Outside the clinic, he enjoys cricket and travelling.{{site:nishAhpra}}"
     },
     {
      "id": "link-label-1",
@@ -223,7 +223,7 @@
      "id": "paragraph-2",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "A Fellow of the Royal Australasian College of Dental Surgeons, working across Newcastle and the Hunter since 2017. Calm, unhurried, happiest with the tricky cases.{{site:navAhpra}}"
+     "value": "Dr Nav has worked across Newcastle and the Hunter since 2017. He graduated from Charles Sturt University and has clinical interests in dental implants, full-mouth rehabilitation, cosmetic dentistry and clear aligners.{{site:navAhpra}}"
     },
     {
      "id": "link-label-2",
@@ -293,7 +293,7 @@
      "id": "paragraph-3",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Preventative and restorative care for every age, from children&rsquo;s check-ups to gum disease management - and never in a rush to explain things properly.{{site:zoeAhpra}}"
+     "value": "Zoe&rsquo;s interests include preventive care, children&rsquo;s dentistry, gum health and patient education.{{site:zoeAhpra}}"
     },
     {
      "id": "link-label-3",
@@ -305,7 +305,7 @@
      "id": "paragraph-4",
      "label": "Paragraph",
      "type": "richtext",
-     "value": ""
+     "value": "Dr Rav practises general dentistry with an interest in cosmetic dentistry. She takes time to listen and explain treatment options clearly."
     }
    ]
   },
@@ -396,7 +396,7 @@
      "id": "text-2",
      "label": "Text",
      "type": "richtext",
-     "value": "Five surgeries, a recovery room and a coffee bay."
+     "value": "Four surgeries, a recovery room and a coffee bay."
     },
     {
      "id": "link-label-2",

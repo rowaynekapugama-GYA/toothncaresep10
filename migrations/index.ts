@@ -16,6 +16,7 @@ import * as migration_20261120_110000_rav_profile_ready from './20261120_110000_
 import * as migration_20261120_120000_staff_photo_switch from './20261120_120000_staff_photo_switch';
 import * as migration_20261120_130000_dr_rav_photo from './20261120_130000_dr_rav_photo';
 import * as migration_20261121_100000_staff_photos_on from './20261121_100000_staff_photos_on';
+import * as migration_20261121_110000_client_copy_21nov from './20261121_110000_client_copy_21nov';
 
 export const migrations = [
   {
@@ -107,5 +108,10 @@ export const migrations = [
     up: migration_20261121_100000_staff_photos_on.up,
     down: migration_20261121_100000_staff_photos_on.down,
     name: '20261121_100000_staff_photos_on',
+  },
+  {
+    up: migration_20261121_110000_client_copy_21nov.up,
+    down: migration_20261121_110000_client_copy_21nov.down,
+    name: '20261121_110000_client_copy_21nov',
   },
 ];

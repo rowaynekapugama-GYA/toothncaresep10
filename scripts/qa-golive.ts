@@ -27,7 +27,7 @@ ok('on: description names the $199 visit', goLiveTokens('2026-12-01').offersSumm
 ok('newPatient+seniors needs both', applyGoLive('<!--offer:newPatient+seniors-->X<!--/offer-->', '2026-12-01') === '')
 Object.assign(OFFERS.seniors, { ongoing: true })
 ok('newPatient+seniors both on: shown, ends with the dated one', applyGoLive('<!--offer:newPatient+seniors-->X<!--/offer-->', '2026-12-01').includes('offer-end:2026-12-31'))
-Object.assign(OFFERS.whitening, { ongoing: true })
+Object.assign(OFFERS.whitening, { ongoing: true, priceConfirmed: false })
 ok('whitening ongoing but price not confirmed: off', applyGoLiveText('ZOOM<span class="offer offer-whitening"> at a discounted rate</span>') === 'ZOOM')
 Object.assign(OFFERS.whitening, { priceConfirmed: true })
 ok('whitening price confirmed: on, mark removed in text', applyGoLiveText('ZOOM<span class="offer offer-whitening"> at a discounted rate</span>') === 'ZOOM at a discounted rate')

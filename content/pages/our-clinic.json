@@ -6,9 +6,9 @@
   "title": "Tour Our Clinic | Tooth n Care East Maitland",
   "canonical": "https://toothncare.vercel.app/our-clinic",
   "ogTitle": "Tour Our Clinic | Tooth n Care East Maitland",
-  "ogDescription": "Five surgeries, a dedicated X-ray room with 3D CBCT, a sterilisation room, recovery room with massage chair, coffee bay, kids’ play area and rear parking.",
+  "ogDescription": "Four surgeries, a dedicated X-ray room with 3D CBCT, a sterilisation room, recovery room with massage chair, coffee bay, kids’ play area and rear parking.",
   "ogType": "website",
-  "description": "Five surgeries, a dedicated X-ray room with 3D CBCT, a sterilisation room, recovery room with massage chair, coffee bay, kids’ play area and rear parking."
+  "description": "Four surgeries, a dedicated X-ray room with 3D CBCT, a sterilisation room, recovery room with massage chair, coffee bay, kids’ play area and rear parking."
  },
  "jsonLd": [
   "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dentist\",\n  \"name\": \"{{site:practiceName}}\",\n  \"description\": \"Modern family, cosmetic and emergency dental studio in East Maitland, NSW.\",\n  \"telephone\": \"{{site:phoneE164}}\",\n  \"email\": \"{{site:email}}\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"{{site:street}}\",\n    \"addressLocality\": \"{{site:suburb}}\",\n    \"postalCode\": \"{{site:postcode}}\",\n    \"addressRegion\": \"{{site:state}}\",\n    \"addressCountry\": \"AU\"\n  },\n  \"areaServed\": [\"East Maitland\", \"Maitland\", \"Hunter Valley\"],\n  \"openingHoursSpecification\": [\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"},\n    {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Saturday\", \"opens\": \"09:00\", \"closes\": \"16:00\"}\n  ],\n  \"sameAs\": [\n    \"{{site:facebook}}\",\n    \"{{site:instagram}}\",\n    \"{{site:twitter}}\"\n  ],\n  \"hasMap\": \"{{site:mapUrl}}\"\n}",
@@ -147,13 +147,13 @@
      "id": "sub-heading-1",
      "label": "Sub heading",
      "type": "richtext",
-     "value": "Five surgeries"
+     "value": "Four surgeries"
     },
     {
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Five fully equipped treatment rooms, so appointments run to time and emergencies can be squeezed in without turning the day upside down."
+     "value": "Four fully equipped treatment rooms, so appointments run to time and emergencies can be squeezed in without turning the day upside down."
     },
     {
      "id": "sub-heading-2",

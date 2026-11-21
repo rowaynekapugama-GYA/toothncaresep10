@@ -14,7 +14,7 @@ export function goLiveNoteFor(sections: Row[]): string | null {
   const notes = GO_LIVE.goLive && text.includes('class="verify"')
   if (!off.length && !notes) return null
   const parts: string[] = []
-  if (off.length) parts.push(`${off.map((o) => o.label).join(', ')}: not shown on the website until GYA confirms the offer period${off.some((o) => o.key === 'whitening') ? ' (and the whitening price)' : ''}. Those words, cards and answers are still here, outlined, so editing never loses them.`)
+  if (off.length) parts.push(`${off.map((o) => o.label).join(', ')}: not shown on the website until GYA confirms the offer period${off.some((o) => o.state.reason === 'price not confirmed') ? ' (and the whitening price)' : ''}. Those words, cards and answers are still here, outlined, so editing never loses them.`)
   if (notes) parts.push('The yellow [VERIFY] notes are reminders for GYA and never show on the website.')
   return parts.join(' ')
 }

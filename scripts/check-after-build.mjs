@@ -44,7 +44,7 @@ try {
 
 // Offers switched off in src/golive.config.ts: their tell-tale words must not reach a public page.
 // (Read with a pattern so this check needs no TypeScript; the dates are Sydney dates.)
-const OFFER_WORDS = { newPatient: ['$199'], seniors: ['5% seniors', 'seniors discount'], whitening: ['discounted rate'] }
+const OFFER_WORDS = { newPatient: ['$199'], seniors: ['5% seniors', 'seniors discount'], whitening: ['discounted rate', '$750', 'valued at $350'] }
 const absent = []
 try {
   const cfg = readFileSync('src/golive.config.ts', 'utf8')

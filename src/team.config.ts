@@ -151,7 +151,9 @@ export const PRACTITIONERS = {
    * v2.8.1 as a dentist: see DR_DIMPLE below.
    */
   dimple: {
-    name: 'Dr Dimple', // TODO: awaiting from client (full name, as for Dr Rav)
+    name: 'Dr Dimple Sharma', // Nish's clinician bios, forwarded by Christine 21 Nov 2026
+    shortName: 'Dr Dimple',
+    showFullName: false,
     roleTitle: null,
     ahpraNumber: '', // TODO: awaiting from client (the AHPRA number, starting DEN)
     ahpraDivision: '', // TODO: awaiting from client
@@ -211,6 +213,14 @@ export const DR_DIMPLE = {
   specialistOrthodontics: false,
   /** Optional. Her photo, e.g. '/images/img-xxxxxxxxxx.webp' (800 x 600). Empty shows the letter D. */
   photo: '',
+  /**
+   * Optional. One or two sentences under her name on her card and her slide.
+   * Empty shows nothing. From Nish's clinician bios (Christine, 21 Nov 2026),
+   * as GYA shortened them for the cards. Her qualifications (Bachelor of Dental
+   * Surgery; Master of Dental Surgery in Orthodontics) are not shown until the
+   * practice confirms their exact names.
+   */
+  bio: 'Dr Dimple has a special interest in orthodontics, clear aligners and digital dentistry.',
 }
 
 // ===========================================================================
@@ -354,17 +364,19 @@ function dimpleTokens(t: Record<string, string>): Record<string, string> {
     zoeSlideNum: show ? '05/' : '04/',
   }
   if (!show) return out
-  const name = esc(checkText('dimple.name', PRACTITIONERS.dimple.name))
+  const d: Practitioner = PRACTITIONERS.dimple
+  const name = esc(checkText('dimple.name', d.showFullName || !d.shortName ? d.name : d.shortName))
+  const bio = DR_DIMPLE.bio ? esc(checkText('DR_DIMPLE.bio', DR_DIMPLE.bio)) : ''
   const role = specialist ? 'Specialist Orthodontist' : 'Dentist'
   const alt = `${name}, ${role.toLowerCase()} at Tooth n Care`
   const ahpra = t.dimpleAhpra ?? ''
   const img = `<img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" width="800" height="600" loading="lazy">`
   out.dimpleCard = '<div class="tcard rv"><div class="tcard-photo tcard-ph">'
     + (photo ? '' : '<span class="tcard-fallback" aria-hidden="true">D</span>')
-    + `${img}</div><div class="tcard-body"><span class="tcard-role">${role}</span><h3>${name}</h3>${ahpra}</div></div>`
+    + `${img}</div><div class="tcard-body"><span class="tcard-role">${role}</span><h3>${name}</h3>${ahpra}${bio ? `<p>${bio}</p>` : ''}</div></div>`
   out.dimpleSlide = `<div class="tm-slide"><div class="tm-photo"><img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" loading="lazy">`
     + (photo ? '' : '<span class="tm-fallback"><b>D</b></span>')
-    + `</div><div class="tm-copy"><span class="tm-num">04/</span><span class="tm-role">Say hello to</span><h3 class="tm-name">${name}</h3>${ahpra}`
+    + `</div><div class="tm-copy"><span class="tm-num">04/</span><span class="tm-role">Say hello to</span><h3 class="tm-name">${name}</h3>${ahpra}${bio ? `<p class="tm-bio">${bio}</p>` : ''}`
     + '<div class="tm-btns"><a class="btn btn-primary" href="/our-team">Meet the team <span class="btn-arrow">&rarr;</span></a></div></div></div>'
   return out
 }

@@ -32,6 +32,37 @@ repository, on top of v2.9.2 (`ce5727f`).
     chosen in the dashboard. Undo switches them off again.
   - Manifest and photo descriptions updated.
 
+### Changed (second commit)
+
+- **Clinician bios** (Nish, to Christine 20 Nov 2026 10:30 PM; forwarded
+  21 Nov 2026), as Rowayne shortened them for the cards (21 Nov 2026,
+  7:51 AM):
+  - Our Team cards for Dr Nish, Dr Nav, Dr Rav and Zoe; Dr Rav's homepage
+    slide and her profile page (still switched off).
+  - Dr Dimple: full name "Dr Dimple Sharma" kept for reference, the card and
+    slide still say "Dr Dimple"; a one-line bio on her card and slide
+    (`DR_DIMPLE.bio`). Title stays Dentist.
+  - Not added until the practice confirms the exact names: Dr Nav's
+    Postgraduate Diploma and ICOI Fellowship, Dr Dimple's degrees. Dr Rav's
+    qualifications are still to come.
+- **Dr Nish's experience**: his bio says more than 20 years in dentistry, in
+  the Hunter since 2008. Every "nearly ten years" (or "close to a decade")
+  was corrected: his card and homepage slide, his profile page (intro, about,
+  the highlights line, the page description and the structured data), and
+  the about paragraph on ten suburb pages. Only those words changed.
+- **Four surgeries, not five** (Nish, 21 Nov 2026): Our Clinic heading,
+  wording and page description, and the "Tour Our Clinic" card on Our Team. The
+  recovery room stays.
+- **Whitening price**: $750, including a take-home whitening kit valued at
+  $350 at no extra cost (Nish, 21 Nov 2026), on the Offers card and in the
+  Teeth Whitening cost wording; `OFFERS.whitening.priceConfirmed` is now
+  true. The offer still shows only once its period is set, so the public
+  pages do not change yet. The dashboard note no longer asks for the price.
+  The check after the build also looks for "$750" while the offer is off.
+- Migration `20261121_110000_client_copy_21nov` makes the same changes in the
+  dashboard database, only where the words are still exactly as before.
+  Undo puts them back.
+
 ## [2.9.2] - 2026-11-20
 
 Dr Rav's photo, and the latest from Christine's "New photo" thread (20 Nov

@@ -255,9 +255,8 @@ dashed outline and a yellow note, so editing a page never loses them.
 | --- | --- | --- |
 | $199 or no-gap new patient first visit | Home offer strip, Offers card, New Patients card, 10 suburb pages' offer section, the six service cost cards, Check-ups and Scale, Clean & Oral Hygiene cost wording, four FAQ answers and the FAQ structured data, the Offers description, the site search list | The offer period from the practice: `OFFERS.newPatient` gets `ongoing: true` or `start` and `end` |
 | 5% seniors discount | Offers card, Payment Options card and description, one FAQ answer (needs both offers) | The same for `OFFERS.seniors` |
-| Philips ZOOM in-chair whitening "at a discounted rate" | Offers card, Teeth Whitening cost wording | The price, what it includes and the period. GYA types the practice's price into the Offers card (dashboard or content), removes "[VERIFY price]", then sets `priceConfirmed: true` and the period |
-| "[VERIFY] current price and RRP comparison..." | Offers, whitening card | The same answer as above |
-| "[VERIFY] current pricing to be confirmed..." | Teeth Whitening, cost | The practice's current prices for in-chair whitening and take-home trays (typed in by GYA) |
+| Philips ZOOM in-chair whitening, $750 including a take-home whitening kit valued at $350 at no extra cost (price from Nish via Christine, 21 Nov 2026, in since v2.9.3, `priceConfirmed: true`) | Offers card, Teeth Whitening cost wording | The offer period from the practice (`ongoing: true`, or `start` and `end`). Also: "at a discounted rate" needs the usual price it is discounted from, or GYA takes those words out; and the practice should be able to show the kit is worth $350 |
+| "[VERIFY] offer period, and the usual price behind discounted rate..." | Offers, whitening card | The same answer as above. The note stays hidden either way |
 | "[VERIFY] whether the practice is a current Invisalign provider..." | FAQ, orthodontics (and its structured data) | Invisalign yes or no. Yes: GYA may name Invisalign. No: it stays "clear aligners". The note stays hidden either way |
 | "[VERIFY] if analytics are added before launch..." | Privacy Policy, cookies | Only matters if GA4 or the Meta Pixel is switched on. The build stops if an ID is set while the policy still says "only the cookies necessary" |
 | "[VERIFY] to be reviewed by the practice..." | Privacy Policy and Terms | Approved with the whole site (Christine, 20 Nov 2026), recorded in `GO_LIVE.legalApproved`. The note stays hidden |
@@ -271,11 +270,13 @@ scheme, with its terms) and the "Offers current as of August 2026 ... next
 review February 2027" line under the cards.
 
 Still waiting on the practice (not blocking): AHPRA numbers for Dr Nish, Dr Nav
-and Zoe; Dr Dimple's full name, AHPRA number and whether she holds specialist
-registration in Orthodontics; how Dr Rav would like her name shown, a bio and
-a photo; support team photos with written consent; the SmileOX intake address.
+and Zoe; Dr Dimple's AHPRA number and whether she holds specialist
+registration in Orthodontics (her full name, Dr Dimple Sharma, arrived with
+Nish's bios on 21 Nov 2026); how Dr Rav would like her name shown and her
+qualifications; the exact names of Dr Nav's and Dr Dimple's further
+qualifications; the whitening offer period; the SmileOX intake address.
 
-## 7b. Dr Rav before launch (v2.9.1, photo v2.9.2)
+## 7b. Dr Rav before launch (v2.9.1, photo v2.9.2, bio v2.9.3)
 
 Nish asked for Dr Rav before launch (Christine, 20 Nov 2026). She is on the
 website as a dentist: Our Team card "Dr Rav", role Dentist, her AHPRA line
@@ -287,21 +288,38 @@ side by side:
 | | Dr Nish | Dr Nav | Dr Rav | Dr Dimple |
 | --- | --- | --- | --- | --- |
 | Photo on the card | yes | yes | yes (v2.9.2) | letter D |
-| Short bio on the card | yes | yes | ready, empty ("Add words" in the dashboard) | no |
+| Short bio on the card | yes (v2.9.3, from his own bio) | yes (v2.9.3) | yes (v2.9.3) | yes (v2.9.3) |
 | Qualifications | on the profile page | on the profile page (BDS, FRACDS) | ready on her profile page, empty | no |
 | AHPRA line | ready, number not supplied yet | ready, number not supplied yet | shown | ready, number not supplied yet |
 | Own profile page | `/dr-nisheeth-agrawal` | `/dr-navneet-karan` | ready at `/dr-rav`, switched off | no |
-| Homepage slide | photo, bio, interests, View profile | the same | photo, name, AHPRA line; bio line and View profile ready | letter D, name |
+| Homepage slide | photo, bio, interests, View profile | the same | photo, name, AHPRA line, bio (v2.9.3); View profile ready | letter D, name, bio (v2.9.3) |
 | Related cards on other pages | on Dr Nav's page | on Dr Nish's page | none (her own page links Dr Nish and Dr Nav) | none |
 | Structured data (Person) | on the profile page | on the profile page | ready on her profile page, with the AHPRA number | none |
 
+**Bios (v2.9.3).** Nish sent bios for Dr Nish, Dr Nav, Dr Rav, Zoe and
+Dr Dimple (to Christine, 20 Nov 2026 10:30 PM; forwarded 21 Nov 2026
+7:50 AM). The Our Team cards, Dr Rav's and Dr Dimple's homepage slides and
+Dr Rav's (hidden) profile page use the shortened versions Rowayne wrote for
+the cards (21 Nov 2026, 7:51 AM). Dr Nish's bio says more than 20 years in
+dentistry and the Hunter since 2008, so every "nearly ten years" on the site
+was corrected (his card, slide, profile page and its description and
+structured data, and ten suburb pages). Not added until the practice confirms
+the exact names: Dr Nav's Postgraduate Diploma in Aesthetic and Restorative
+Dentistry and ICOI Fellowship; Dr Dimple's Bachelor of Dental Surgery and
+Master of Dental Surgery in Orthodontics (her title stays Dentist). Zoe's
+profile already lists her two degrees, as in the new bio.
+
 **Missing for Dr Rav** (from the practice, in writing):
 
-1. A short bio, written or approved by Dr Rav.
-2. Her qualifications: degree, university and year.
-3. Whether to show "Dr Rav" or her full name, "Dr Ravneet Kaur Arora"
+1. Her qualifications: degree, university and year.
+2. Whether to show "Dr Rav" or her full name. Nish's bio calls her
+   "Dr Ravneet Kaur"; the AHPRA register (16 Nov 2026) has "Dr Ravneet Kaur
+   Arora", which the site keeps for the structured data
    (`PRACTITIONERS.rav.showFullName` in `src/team.config.ts`).
-4. Optional: languages or areas of interest she would like listed.
+3. Optional: languages or areas of interest she would like listed.
+
+Her profile page has the photo and the bio and can go on with one switch
+(`PRACTITIONERS.rav.profilePage`), but would show no qualifications yet.
 
 Her photo arrived on 20 Nov 2026 and is on her card, her slide and her
 (hidden) profile page, including its structured data.
@@ -314,7 +332,7 @@ structured data "image" are in since v2.9.2), then sets `PRACTITIONERS.rav.profi
 stops if the page is switched on without its bio. Its address stays `/dr-rav`
 whichever name is shown.
 
-## 7c. Staff photos and permission log (v2.9.1)
+## 7c. Staff photos and permission log (v2.9.1, on in v2.9.3)
 
 A support team photo shows on Our Team only once **Show photo on website
 (permission confirmed)** is ticked for that person (Team screen, or
@@ -324,11 +342,12 @@ go-live, or GYA can switch it in the repo.
 
 | Person (as on the site) | Photo received | Permission (who confirmed, date) | Shown on site |
 | --- | --- | --- | --- |
-| Debbie (badge says "Deb") | 20 Nov 2026, Christine's email "Last minute staff photos", body "Deb" | not yet confirmed | no (loaded, switch off) |
-| Kathryn | 20 Nov 2026, Christine's email "Kathryn" | not yet confirmed | no (loaded, switch off) |
-| Riley | 20 Nov 2026, Christine's email "Riley" | not yet confirmed | no (loaded, switch off) |
-| Layeba | 20 Nov 2026, Christine's email "Layeba" | not yet confirmed | no (loaded, switch off) |
-| Holly | attached to Christine's 5:57 PM email, but the file has not reached the build yet | Christine, 20 Nov 2026 | no photo yet (her card is ready; it goes on, shown, once the file arrives) |
+| Debbie (badge says "Deb") | 20 Nov 2026, Christine's email "Last minute staff photos", body "Deb" | Christine, 20 Nov 2026 5:57 PM ("given all ok consent to have photo up"); Rowayne, 21 Nov 2026 | yes (v2.9.3) |
+| Kathryn | 20 Nov 2026 6:52 PM, Christine's email "Kathryn" | the same | yes (v2.9.3) |
+| Riley | 20 Nov 2026 6:53 PM, Christine's email "Riley" | the same | yes (v2.9.3) |
+| Layeba | 20 Nov 2026, Christine's email "Layeba" | the same | yes (v2.9.3) |
+| Holly | 20 Nov 2026 7:54 PM, Christine's email "Holly" ("slightly better quality than my first"; the first was in the 5:57 PM email) | Christine, 20 Nov 2026 | yes (v2.9.3) |
+| Christine | 20 Nov 2026 7:59 PM, Christine's email "Christine", her own photo ("used a different photo that I had in my phone") | Christine herself, sending it for the website | yes (v2.9.3) |
 
 Each photo was matched to the person by the subject or body of Christine's
 email, never by the picture. Cropped to 4:3 and resized only (800 x 600 sRGB
@@ -338,14 +357,13 @@ the top left of each (the person stands too close to the edge of the frame for
 a head and shoulders crop to leave it out). Kathryn wears the charcoal
 uniform and the others dusty pink: left as it is.
 
-**Open question (20 Nov, 5:57 PM):** Christine wrote "Holly / And given all
-ok consent to have photo up". That may mean everyone has agreed, not only
-Holly. Until Rowayne confirms it covers Deb, Kathryn, Riley and Layeba, their
-switches stay off. To switch all four on: in `content/team.json`, change
-`"photoApproved": false` to `true` for Debbie, Kathryn, Riley and Layeba (the
-four entries with a `photoPath`), or in the dashboard, Team, tick **Show photo
-on website (permission confirmed)** on those four rows, Save each, then
-Publish website. Then update the table above.
+**Switched on in v2.9.3.** Christine wrote "Holly / And given all ok consent
+to have photo up" with the staff photos (20 Nov 2026, 5:57 PM), and Rowayne
+asked on 21 Nov 2026 for the team photos to be added. Holly's and Christine's
+photos use the same crop as the others (Christine's was taken closer, so her
+head is a little larger and the top of her hair is cropped). To take a photo
+down: dashboard, Team, untick **Show photo on website (permission
+confirmed)** on that row, Save, Publish website.
 
 Questions for the practice:
 

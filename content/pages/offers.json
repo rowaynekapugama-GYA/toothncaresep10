@@ -196,7 +196,7 @@
      "id": "text-2",
      "label": "Text",
      "type": "richtext",
-     "value": "<span class=\"verify\">[VERIFY price]</span>"
+     "value": "$750"
     },
     {
      "id": "sub-heading-2",
@@ -208,7 +208,7 @@
      "id": "paragraph-3",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Professional whitening completed in the practice in about an hour, at a discounted rate, with your gums and lips protected throughout."
+     "value": "Professional whitening completed in the practice in about an hour, at a discounted rate, with your gums and lips protected throughout. Includes a take-home whitening kit valued at $350 at no extra cost."
     },
     {
      "id": "list-item-3",
@@ -226,7 +226,7 @@
      "id": "paragraph-4",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "Whitening is only appropriate for some teeth and some conditions - we&rsquo;ll assess yours first and tell you honestly what to expect. <span class=\"verify\">[VERIFY] current price and RRP comparison to be confirmed before publishing.</span>"
+     "value": "Whitening is only appropriate for some teeth and some conditions - we&rsquo;ll assess yours first and tell you honestly what to expect. <span class=\"verify\">[VERIFY] offer period, and the usual price behind &ldquo;discounted rate&rdquo;, to be confirmed before publishing.</span>"
     },
     {
      "id": "button-link-2",

@@ -545,7 +545,7 @@
      "id": "paragraph-1",
      "label": "Paragraph",
      "type": "richtext",
-     "value": "We offer in-chair Philips ZOOM whitening<span class=\"offer offer-whitening\"> at a discounted rate</span> and custom take-home trays. <span class=\"verify\">[VERIFY] current pricing to be confirmed before publication.</span> Whitening is a cosmetic treatment, so health fund rebates are usually minimal or nil - we&rsquo;ll be clear about that before you book."
+     "value": "We offer in-chair Philips ZOOM whitening<span class=\"offer offer-whitening\"> at a discounted rate</span> and custom take-home trays.<span class=\"offer offer-whitening\"> Philips ZOOM in-chair whitening is $750, including a take-home whitening kit valued at $350 at no extra cost.</span> Whitening is a cosmetic treatment, so health fund rebates are usually minimal or nil - we&rsquo;ll be clear about that before you book."
     },
     {
      "id": "small-print-1",
