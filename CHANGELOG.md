@@ -2,6 +2,14 @@
 
 All notable changes to the Tooth n Care website.
 
+## [Unreleased]
+
+- **Client guide** (`docs/CLIENT-GUIDE.md` and `Tooth-n-Care-Website-Guide.pdf`,
+  version 2.9.3): a "Where to change what" table at the start; new
+  screenshots of the Team screen with the staff photos switched on, the team
+  photo help on Dr Rav's card, and a dentist's card in the page editor
+  (replacing ones that showed the old bios and the letter R).
+
 ## [2.9.3] - 2026-11-21
 
 The team photos, and the practice's copy corrections of 21 Nov 2026 (Nish's

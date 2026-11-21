@@ -1,12 +1,30 @@
 # Your website dashboard: the guide
 
-For the Tooth n Care team. Version 2.9.2, November 2026. The printable copy is
+For the Tooth n Care team. Version 2.9.3, November 2026. The printable copy is
 `Tooth-n-Care-Website-Guide.pdf`. The longer version, with every screen, is
 `docs/HOW-TO-UPDATE.md`.
 
 Nothing you do in the dashboard can break the website. Changes are saved in
 the dashboard first and only reach the website when you press **Publish
 website**, so you can try things and look before anyone else sees them.
+
+## Where to change what
+
+| To change | Go to | Then |
+| --- | --- | --- |
+| Words on any page | **Pages**, **Edit** next to the page | Click the words and type, **Save changes** |
+| A photo on a page | **Pages**, open the page, click the photo | **Choose from library** or **Upload**, **Save changes** |
+| All your photos in one place | **Media Library** | Upload, describe, replace or delete |
+| A dentist's photo or bio | **Pages**, **Our Team** (and **Home** for the slider) | Click their photo or words |
+| Support team names, roles and photos | **Team** | Change the row, **Save** on that row |
+| Phone, email, address, booking link, socials | **Site Settings** | Change it once, it updates everywhere |
+| Opening hours | Any page's footer, and the **Contact** page | Click the hours and type |
+| Blog posts | **Blog Posts**, **Write a new post** | **Publish this post** |
+| Enquiries from the website form | **Enquiries** | Tick **Followed up**, add a note |
+| Google titles and descriptions | **SEO**, or a page's **SEO** tab | Type, **Save changes** |
+
+Whatever you change, it reaches the website only when you press **Publish
+website** (top right). The website updates a few minutes later.
 
 ## 1. Signing in
 
@@ -182,6 +200,9 @@ card is set up by GYA, so send hers to GYA):
 
 1. **Team**, then **edit the Our Team page** (the link at the top), or
    **Pages**, **Our Team**.
+
+   ![A dentist's card in the page editor](screenshots/client-guide/17-dentist-card.jpg)
+
 2. **Photo:** click the photo (or the letter) on their card, then **Upload**
    (or **Choose from library**). Use a landscape photo, head and shoulders, at
    least 800 x 600 pixels, ideally taken in reception like the other dentists'
