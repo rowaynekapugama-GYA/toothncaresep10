@@ -2,13 +2,75 @@
 
 All notable changes to the Tooth n Care website.
 
-## [Unreleased]
+## [2.10.0] - 2026-11-25
 
+Nish's review of the preview on a laptop (Christine's emails of 21 Nov 2026,
+9:11 PM to 10:42 PM). Update to the existing repository, on top of v2.9.3
+(`64c43b8`). Not live yet: this round is for the practice to approve.
+
+### Changed
+
+- **Header** (email "Font"): the address and email in the top bar are larger
+  (11 to 13 px), medium weight, and in the aqua they used to turn on hover
+  (`#7FF6F0`, white on hover); the logo is larger (46 to 54 px tall on
+  desktop); the menu is a little larger and bolder (11.5 px 500 to 12.5 px
+  600); the phone number and Book Online buttons are larger and bolder
+  (12 to 13 px, 500 to 600), the phone button now with a bright edge on a dark
+  fill and white text. The homepage banner's Book Online and phone buttons
+  match (14 to 15 px, 600). The header keeps its height at every width.
+  - 1024 to 1240 px: a step smaller (logo 46 px, menu 11.5 px) so the menu
+    still fits on one row with the new item.
+  - Below 1024 px tablets use the phone menu (logo, Book Online, menu
+    button). Before, the desktop menu pushed Book Online off the screen at
+    768 px.
+  - Phones up to 430 px: the logo is a little smaller so the menu button is
+    fully on screen (it sat partly off the right edge at 390 px).
+  - Light mode (the footer switch): the top bar words are a deep teal so they
+    stay readable.
+- **Menu** (emails "Font" and "Re: Font"): a "New Patients & Offers" item
+  between Services and Fees, with New Patient Offer (shown only while that
+  offer is switched on), Current Offers and New Patients Welcome; the same in
+  the phone menu. "Fees & Payment Options" becomes "Fees & Payments", as the
+  phone menu already says, so the menu fits.
+- **Homepage new patient offer**: the section moves up to just after "We're
+  here to care", and lists what the first visit includes (full exam,
+  treatment plan, X-rays, scale and clean, fluoride, all from its approved
+  wording). It still shows only once the offer period is set in
+  `src/golive.config.ts`, so the public homepage does not change yet. The
+  Offers page's new patient card gets the anchor `#new-patient-offer`.
+- **Service photos** (email "Stock Photos"): the Cosmetic Dentistry tile now
+  shows teeth whitening (the photo already used for Teeth Whitening on the
+  Cosmetic Dentistry page); the Restorative Dentistry tile and page banner
+  show crowns and a bridge (the photo already used for Crowns & Bridges).
+  The Preventative tile is unchanged: the old cosmetic photo is a clear
+  aligner in its case, not a mouthguard.
+- **Dr Dimple**: her photo (email "Dr Dimple", 9:11 PM) on her Our Team card
+  and homepage slide, cropped to match Dr Rav's portrait. Her card and slide
+  no longer carry the orthodontics line added in v2.9.3: no orthodontics
+  wording until her registration is confirmed. Title stays Dentist.
+- Migration `20261125_100000_review_21nov` makes the menu, offer section and
+  photo changes in the dashboard database, only where nothing was changed
+  there. Undo puts v2.9.3 back.
+
+### Added
+
+- **Tooth glow** (email "Background"), an option for Nish to see, switched
+  off: `LOOK.toothGlow` in `src/look.config.ts`. A faint glow of the tooth
+  from the site's own icons behind "Your Visits & Our Practice" (FAQ), "What
+  we use the laser for" and "Related pages" (Our Team). Not on the Laser
+  Dentistry banner, which is a photo. Dark mode only.
 - **Client guide** (`docs/CLIENT-GUIDE.md` and `Tooth-n-Care-Website-Guide.pdf`,
   version 2.9.3): a "Where to change what" table at the start; new
   screenshots of the Team screen with the staff photos switched on, the team
   photo help on Dr Rav's card, and a dentist's card in the page editor
   (replacing ones that showed the old bios and the letter R).
+
+### Fixed
+
+- The go-live switch treated any span whose class started with "offer" as an
+  offer, so the "New Patients" tag on the homepage offer section would have
+  disappeared once the offer was switched on. Only the class "offer" itself
+  counts now (a check added to `qa:golive`).
 
 ## [2.9.3] - 2026-11-21
 

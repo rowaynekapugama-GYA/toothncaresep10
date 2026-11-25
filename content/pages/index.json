@@ -160,6 +160,98 @@
    ]
   },
   {
+   "key": "index-07-offers",
+   "kind": "offers",
+   "label": "$199 or no-gap first visit",
+   "tag": "section",
+   "attrs": {
+    "class": "offer-strip",
+    "id": "offers",
+    "data-offer": "newPatient"
+   },
+   "template": "\n  <div class=\"os-bg\" aria-hidden=\"true\"></div>\n  <div class=\"wrap offer-strip-inner rv\">\n    <div class=\"os-copy\">\n      <span class=\"offer-tag\">{{text-1}}</span>\n      <h2>{{heading-1}}</h2>\n      <p>{{paragraph-1}}</p>\n      <ul class=\"os-list\">\n        <li>{{list-item-1}}</li>\n        <li>{{list-item-2}}</li>\n        <li>{{list-item-3}}</li>\n        <li>{{list-item-4}}</li>\n        <li>{{list-item-5}}</li>\n      </ul>\n      <p class=\"os-fine\">{{paragraph-2}}</p>\n    </div>\n    <div class=\"os-ctas\">\n      <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n      <a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a>\n    </div>\n  </div>\n",
+   "fields": [
+    {
+     "id": "text-1",
+     "label": "Text",
+     "type": "richtext",
+     "value": "New Patients"
+    },
+    {
+     "id": "heading-1",
+     "label": "Heading",
+     "type": "richtext",
+     "value": "$199 or <span class=\"accent\">no-gap</span> first visit"
+    },
+    {
+     "id": "paragraph-1",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "Your first visit covers a full exam, treatment plan, X-rays, scale and clean, and fluoride - no-gap with a participating health fund, or a flat $199 without cover."
+    },
+    {
+     "id": "paragraph-2",
+     "label": "Paragraph",
+     "type": "richtext",
+     "value": "New patients only. A $50 deposit applies and comes off your visit. <a href=\"/offers\">See full offer details and terms</a>."
+    },
+    {
+     "id": "button-link-1",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:bookingUrl}}"
+    },
+    {
+     "id": "button-text-1",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "Book Online"
+    },
+    {
+     "id": "button-link-2",
+     "label": "Button link",
+     "type": "href",
+     "value": "{{site:phoneHref}}"
+    },
+    {
+     "id": "button-text-2",
+     "label": "Button text",
+     "type": "richtext",
+     "value": "&#9743; Call {{site:phone}}"
+    },
+    {
+     "id": "list-item-1",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Full exam"
+    },
+    {
+     "id": "list-item-2",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Treatment plan"
+    },
+    {
+     "id": "list-item-3",
+     "label": "List item",
+     "type": "richtext",
+     "value": "X-rays"
+    },
+    {
+     "id": "list-item-4",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Scale and clean"
+    },
+    {
+     "id": "list-item-5",
+     "label": "List item",
+     "type": "richtext",
+     "value": "Fluoride"
+    }
+   ]
+  },
+  {
    "key": "index-03-services",
    "kind": "content",
    "label": "Explore our services",
@@ -263,7 +355,7 @@
      "id": "image-3",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-325c8f1992.webp"
+     "value": "/images/img-f4fe7ffc4c.webp"
     },
     {
      "id": "image-description-alt-text-3",
@@ -299,7 +391,7 @@
      "id": "image-4",
      "label": "Image",
      "type": "image",
-     "value": "/images/img-185b536179.webp"
+     "value": "/images/img-2732f36440.webp"
     },
     {
      "id": "image-description-alt-text-4",
@@ -1242,68 +1334,6 @@
      "label": "Paragraph",
      "type": "richtext",
      "value": "Dr Rav practises general dentistry with an interest in cosmetic dentistry. She takes time to listen and explain treatment options clearly."
-    }
-   ]
-  },
-  {
-   "key": "index-07-offers",
-   "kind": "offers",
-   "label": "$199 or no-gap first visit",
-   "tag": "section",
-   "attrs": {
-    "class": "offer-strip",
-    "id": "offers",
-    "data-offer": "newPatient"
-   },
-   "template": "\n  <div class=\"os-bg\" aria-hidden=\"true\"></div>\n  <div class=\"wrap offer-strip-inner rv\">\n    <div class=\"os-copy\">\n      <span class=\"offer-tag\">{{text-1}}</span>\n      <h2>{{heading-1}}</h2>\n      <p>{{paragraph-1}}</p>\n      <p class=\"os-fine\">{{paragraph-2}}</p>\n    </div>\n    <div class=\"os-ctas\">\n      <a class=\"btn btn-primary\" href=\"{{button-link-1}}\" target=\"_blank\" rel=\"noopener\">{{button-text-1}}</a>\n      <a class=\"btn btn-ghost\" href=\"{{button-link-2}}\">{{button-text-2}}</a>\n    </div>\n  </div>\n",
-   "fields": [
-    {
-     "id": "text-1",
-     "label": "Text",
-     "type": "richtext",
-     "value": "New Patients"
-    },
-    {
-     "id": "heading-1",
-     "label": "Heading",
-     "type": "richtext",
-     "value": "$199 or <span class=\"accent\">no-gap</span> first visit"
-    },
-    {
-     "id": "paragraph-1",
-     "label": "Paragraph",
-     "type": "richtext",
-     "value": "Your first visit covers a full exam, treatment plan, X-rays, scale and clean, and fluoride - no-gap with a participating health fund, or a flat $199 without cover."
-    },
-    {
-     "id": "paragraph-2",
-     "label": "Paragraph",
-     "type": "richtext",
-     "value": "New patients only. A $50 deposit applies and comes off your visit. <a href=\"/offers\">See full offer details and terms</a>."
-    },
-    {
-     "id": "button-link-1",
-     "label": "Button link",
-     "type": "href",
-     "value": "{{site:bookingUrl}}"
-    },
-    {
-     "id": "button-text-1",
-     "label": "Button text",
-     "type": "richtext",
-     "value": "Book Online"
-    },
-    {
-     "id": "button-link-2",
-     "label": "Button link",
-     "type": "href",
-     "value": "{{site:phoneHref}}"
-    },
-    {
-     "id": "button-text-2",
-     "label": "Button text",
-     "type": "richtext",
-     "value": "&#9743; Call {{site:phone}}"
     }
    ]
   },

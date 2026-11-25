@@ -806,5 +806,13 @@
   "from": "Christine's email of 20 Nov 2026, 7:59 PM (her own photo), cropped 4:3",
   "h": 600,
   "w": 800
+ },
+ "dr-dimple": {
+  "alpha": false,
+  "bytes": 43570,
+  "file": "/images/dr-dimple.webp",
+  "from": "Christine's email \"Dr Dimple\", 21 Nov 2026 9:11 PM (1448 x 1086), crop and resize only to match Dr Rav's portrait",
+  "h": 900,
+  "w": 1200
  }
 }

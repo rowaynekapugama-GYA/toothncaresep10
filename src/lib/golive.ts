@@ -66,9 +66,10 @@ function closingSpan(html: string, from: number): number {
 }
 
 /** Quick test: is anything on this piece marked at all ("verify", "offer" or "offer offer-<key>")? */
-const MARKED = /class="(?:verify|offer)\b/
+// "offer" as a whole class name: class="offer offer-whitening", never class="offer-tag" (v2.10.0 fix)
+const MARKED = /class="(?:verify|offer)(?=[\s"])/
 
-const OPEN_MARK = /<span\b(?=[^>]*\bclass="(verify|offer)\b[^"]*")[^>]*>/gi
+const OPEN_MARK = /<span\b(?=[^>]*\bclass="(verify|offer)(?=[\s"])[^"]*")[^>]*>/gi
 
 /** Rewrites the marked spans; `decide` returns 'drop', 'keep' or a replacement opening tag. */
 function eachMarkedSpan(html: string, decide: (kind: string, tag: string) => 'drop' | 'keep' | 'unwrap' | { open: string }): { html: string; dropped: number } {

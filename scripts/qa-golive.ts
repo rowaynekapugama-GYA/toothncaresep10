@@ -31,6 +31,7 @@ Object.assign(OFFERS.whitening, { ongoing: true, priceConfirmed: false })
 ok('whitening ongoing but price not confirmed: off', applyGoLiveText('ZOOM<span class="offer offer-whitening"> at a discounted rate</span>') === 'ZOOM')
 Object.assign(OFFERS.whitening, { priceConfirmed: true })
 ok('whitening price confirmed: on, mark removed in text', applyGoLiveText('ZOOM<span class="offer offer-whitening"> at a discounted rate</span>') === 'ZOOM at a discounted rate')
+ok('a class that only starts with offer (offer-tag) is left alone', applyGoLive('<span class="offer-tag">New Patients</span>') === '<span class="offer-tag">New Patients</span>')
 ok('verify notes always dropped', applyGoLive('A. <span class="verify">[VERIFY] check.</span>') === 'A.')
 
 console.log(failed ? `\n${failed} go-live check${failed === 1 ? '' : 's'} failed` : '\ngo-live switches: all checks passed')

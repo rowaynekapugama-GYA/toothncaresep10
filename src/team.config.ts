@@ -211,8 +211,12 @@ export const DR_DIMPLE = {
    * "Orthodontist" is a protected specialist title: never set this on a guess.
    */
   specialistOrthodontics: false,
-  /** Optional. Her photo, e.g. '/images/img-xxxxxxxxxx.webp' (800 x 600). Empty shows the letter D. */
-  photo: '',
+  /**
+   * Optional. Her photo, e.g. '/images/img-xxxxxxxxxx.webp' (800 x 600). Empty shows the letter D.
+   * v2.10.0: the photo Christine sent on 21 Nov 2026, 9:11 PM (email "Dr Dimple"),
+   * cropped and resized only to match Dr Rav's portrait.
+   */
+  photo: '/images/dr-dimple.webp',
   /**
    * Optional. One or two sentences under her name on her card and her slide.
    * Empty shows nothing. From Nish's clinician bios (Christine, 21 Nov 2026),
@@ -220,7 +224,10 @@ export const DR_DIMPLE = {
    * Surgery; Master of Dental Surgery in Orthodontics) are not shown until the
    * practice confirms their exact names.
    */
-  bio: 'Dr Dimple has a special interest in orthodontics, clear aligners and digital dentistry.',
+  // v2.10.0: empty again. No orthodontics wording on her card or slide until her
+  // AHPRA number and registration are confirmed (Rowayne, 25 Nov 2026). The v2.9.3
+  // line was: 'Dr Dimple has a special interest in orthodontics, clear aligners and digital dentistry.'
+  bio: '',
 }
 
 // ===========================================================================
@@ -371,7 +378,7 @@ function dimpleTokens(t: Record<string, string>): Record<string, string> {
   const alt = `${name}, ${role.toLowerCase()} at Tooth n Care`
   const ahpra = t.dimpleAhpra ?? ''
   const img = `<img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" width="800" height="600" loading="lazy">`
-  out.dimpleCard = '<div class="tcard rv"><div class="tcard-photo tcard-ph">'
+  out.dimpleCard = `<div class="tcard rv"><div class="tcard-photo tcard-ph${photo ? ' no-tint' : ''}">`
     + (photo ? '' : '<span class="tcard-fallback" aria-hidden="true">D</span>')
     + `${img}</div><div class="tcard-body"><span class="tcard-role">${role}</span><h3>${name}</h3>${ahpra}${bio ? `<p>${bio}</p>` : ''}</div></div>`
   out.dimpleSlide = `<div class="tm-slide"><div class="tm-photo"><img src="${esc(photo || PLACEHOLDER)}" alt="${alt}" loading="lazy">`

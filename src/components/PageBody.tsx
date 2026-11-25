@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from 'react'
 import RawPart from '@/components/RawPart'
 import EnquiryScript from '@/components/EnquiryScript'
+import { LOOK, TOOTH_GLOW_PAGES } from '@/look.config'
 import StickyBar from '@/components/StickyBar'
 import { getChrome, isEmptySlot, type Page } from '@/lib/content'
 import { rewriteJsonLd } from '@/lib/jsonld'
@@ -19,6 +20,8 @@ function PageStyles({ slug }: { slug: string }): ReactElement {
       <link rel="stylesheet" href={`/styles/pages/${slug}.b.css`} precedence="site" />
       {/* loaded last so the phone and tablet fixes win */}
       <link rel="stylesheet" href="/styles/mobile-fixes.css" precedence="site" />
+      {/* v2.10.0: the optional tooth glow, only on its pages and only while switched on */}
+      {LOOK.toothGlow && TOOTH_GLOW_PAGES[slug] ? <link rel="stylesheet" href={`/styles/glow/${slug}.css`} precedence="site" /> : null}
     </>
   )
 }

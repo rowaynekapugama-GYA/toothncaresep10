@@ -371,6 +371,42 @@ Questions for the practice:
 - If anyone on the support team is under 18, their permission should come from
   a parent or guardian as well.
 
+## 7d. Nish's review of 21 Nov 2026 (v2.10.0): still to confirm
+
+Christine, 21 Nov 2026 4:28 PM: Nish "has picked up a few more things ... so
+maybe not so ready". **No domain switch until the practice approves v2.10.0.**
+
+The homepage now has a New Patient Offer section (moved up, under "We're here
+to care") and the menu has "New Patients & Offers". Like every offer, the
+section and the "New Patient Offer" menu link stay off the public pages until
+`OFFERS.newPatient` has its period (`ongoing: true`, or `start` and `end`) in
+`src/golive.config.ts`. Before that can be set, the practice confirms in
+writing:
+
+| # | Question for the practice | Why |
+| --- | --- | --- |
+| 1 | When does the new patient offer start and end, or is it ongoing? | AHPRA: every offer shows its period |
+| 2 | Is it for new patients of every age, or adults only? | Who qualifies |
+| 3 | Is the gap waived for every health fund, or only participating funds? (The site says "participating health fund"; the old site said "ALL health fund patients") | The two disagree |
+| 4 | Is the gap waived only when the fund pays at least $199, as the old site said? | Condition to print with the price |
+| 5 | Is it still a flat $199 for patients without health cover? | The price |
+| 6 | Does the first visit include all of: full exam, treatment plan, X-rays, scale and clean, fluoride? Which X-rays (for example two bitewings)? | Inclusions |
+| 7 | Is anything excluded (for example a full mouth X-ray or 3D scan, or extra treatment found on the day)? | Conditions |
+| 8 | Does the $50 deposit apply to every new patient booking, and does it always come off the visit? | Condition already on the site |
+| 9 | Whitening: when does the $750 offer start and end, or is it ongoing? | AHPRA: period |
+| 10 | Whitening: is the usual price $1,000 (the old site said "Usually $1000")? If not, we take out "discounted rate" | A discount needs the usual price |
+| 11 | Whitening: what is the take-home kit worth on its own (the site says $350)? | The value has to be the real price |
+| 12 | Saturdays: still 9am to 4pm, and does the $50 deposit apply to every booking or only Saturdays? | Old-site wording |
+| 13 | Payment plans: still through humm, interest free? Any fees or minimum amount? | Old-site wording; credit terms |
+| 14 | Kids: the old site said "Save $1056" under CDBS. The site now says up to $1,158 over two calendar years (the 2026 to 2027 cap). OK to keep that, without a "save" figure? | Government cap, changes each year |
+
+Not used from the old site on purpose: "Save $1056" (out of date), "So why
+wait!", "TODAY" and "In an EMERGENCY book your appointment today!" (urgency
+wording), and "for free" (written "at no extra cost").
+
+The Offers page's other cards (seniors 5%, whitening) are unchanged and stay
+off until their periods are set.
+
 ## 8. After the switch
 
 - [ ] `NEXT_PUBLIC_SERVER_URL` is `https://www.toothncare.com.au` in Vercel
